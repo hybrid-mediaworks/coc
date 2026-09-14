@@ -1,0 +1,19 @@
+(function(){'use strict';const cfg=window.FSF_Config||{};const WRAPPER='.'+(cfg.wrapperClass||'facility-image-wrapper');const DEBUG=cfg.debug===!0;function log(...args){if(DEBUG)console.log('[FacilitySliderFix]',...args)}
+const phpSaysEmpty=cfg.galleryEmpty===!0||cfg.galleryEmpty==='1';const phpSaysHasImages=cfg.galleryEmpty===!1||cfg.galleryEmpty==='';if(phpSaysHasImages){log('PHP confirmed gallery has images — JS layer exiting.');return}
+function wrapperIsEmpty(wrapper){const realSlides=wrapper.querySelectorAll('.swiper-wrapper > .swiper-slide:not(.swiper-slide-duplicate)');if(realSlides.length===0){const swiperEl=wrapper.querySelector('.swiper')||wrapper.querySelector('.swiper-container');if(swiperEl&&swiperEl.swiper){const nonClones=Array.from(swiperEl.swiper.slides||[]).filter((s)=>!s.classList.contains('swiper-slide-duplicate'));log('Swiper instance found. Real slides:',nonClones.length);return nonClones.length===0}
+log('No real slides found and no Swiper instance.');return!0}
+for(const slide of realSlides){if(slideHasRealImage(slide)){log('Real image found in slide — wrapper is NOT empty.');return!1}}
+log('All slides checked — no real images found.');return!0}
+function slideHasRealImage(slide){const imgs=slide.querySelectorAll('img');for(const img of imgs){const candidates=[img.getAttribute('src'),img.getAttribute('data-src'),img.getAttribute('data-lazy-src'),img.getAttribute('data-lazy'),img.getAttribute('data-srcset'),img.getAttribute('srcset'),];for(const src of candidates){if(!src||src.trim()==='')continue;if(/^data:image\/svg/.test(src)||/^data:image\/gif/.test(src)||src.includes('elementor-placeholder')||src.includes('placeholder')){continue}
+return!0}}
+return!1}
+function hideWrapper(wrapper){if(wrapper.dataset.fsfHidden==='1')return;wrapper.dataset.fsfHidden='1';log('Empty gallery detected. Hiding container:',wrapper);const namedContainer=wrapper.closest('.facility-slider-section');if(namedContainer){Object.assign(namedContainer.style,{display:'none',margin:'0',padding:'0',minHeight:'0',});log('Hid named container (.facility-slider-section):',namedContainer);return}
+const parentCon=wrapper.closest('.e-con, .elementor-section');if(parentCon){Object.assign(parentCon.style,{display:'none',margin:'0',padding:'0',minHeight:'0',});log('Hid nearest Elementor container (fallback):',parentCon);return}
+Object.assign(wrapper.style,{display:'none',visibility:'hidden',height:'0',minHeight:'0',overflow:'hidden',margin:'0',padding:'0',})}
+function checkAllWrappers(){document.querySelectorAll(WRAPPER).forEach((wrapper)=>{if(wrapperIsEmpty(wrapper)){hideWrapper(wrapper)}})}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',checkAllWrappers)}else{checkAllWrappers()}
+window.addEventListener('load',checkAllWrappers);document.addEventListener('DOMContentLoaded',function(){if(typeof elementorFrontend==='undefined')return;elementorFrontend.hooks.addAction('frontend/element_ready/global',function($scope){if(!$scope||!$scope[0])return;if(!$scope[0].querySelector(WRAPPER))return;setTimeout(checkAllWrappers,150)})});function startObserver(){let debounceTimer=null;const observer=new MutationObserver(function(mutations){let relevant=!1;for(const mutation of mutations){for(const node of mutation.addedNodes){if(node.nodeType!==1)continue;if(node.matches(WRAPPER)||node.querySelector(WRAPPER)){relevant=!0;break}}
+if(relevant)break}
+if(!relevant)return;clearTimeout(debounceTimer);debounceTimer=setTimeout(checkAllWrappers,200)});observer.observe(document.body,{childList:!0,subtree:!0,});setTimeout(()=>{observer.disconnect();log('MutationObserver disconnected after 15s.')},15_000);log('MutationObserver started.')}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',startObserver)}else{startObserver()}
+log('Facility Slider Fix JS loaded. PHP says empty:',phpSaysEmpty)})()
