@@ -520,7 +520,7 @@ export default function MentalHealthDisorders(props: Record<string, string>) {
                                 <div className="e-con-inner">
                                   <div className="elementor-element elementor-element-d279927 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                     <div className="elementor-widget-container">
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%20436'%3E%3C/svg%3E" alt="" width={1920} height={436} className="attachment-full size-full wp-image-54438" />
+                                      <Image src="/images/00ce44d668da2f26957081222f71256c.webp" alt="" width={1920} height={436} className="attachment-full size-full wp-image-54438" />
                                     </div>
                                   </div>
                                   <div className="elementor-element elementor-element-c2193c0 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -547,7 +547,7 @@ export default function MentalHealthDisorders(props: Record<string, string>) {
                                 <div className="e-con-inner">
                                   <div className="elementor-element elementor-element-d279927 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                     <div className="elementor-widget-container">
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201280'%3E%3C/svg%3E" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-54442" />
+                                      <Image src="/images/cdb59969d24ca38247e7d73f6a0d5d3f.webp" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-54442" />
                                     </div>
                                   </div>
                                   <div className="elementor-element elementor-element-c2193c0 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -572,7 +572,7 @@ export default function MentalHealthDisorders(props: Record<string, string>) {
                                 <div className="e-con-inner">
                                   <div className="elementor-element elementor-element-d279927 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                     <div className="elementor-widget-container">
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201280'%3E%3C/svg%3E" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-54442" />
+                                      <Image src="/images/cdb59969d24ca38247e7d73f6a0d5d3f.webp" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-54442" />
                                     </div>
                                   </div>
                                   <div className="elementor-element elementor-element-c2193c0 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -597,7 +597,7 @@ export default function MentalHealthDisorders(props: Record<string, string>) {
                                 <div className="e-con-inner">
                                   <div className="elementor-element elementor-element-d279927 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                     <div className="elementor-widget-container">
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201280'%3E%3C/svg%3E" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-54442" />
+                                      <Image src="/images/cdb59969d24ca38247e7d73f6a0d5d3f.webp" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-54442" />
                                     </div>
                                   </div>
                                   <div className="elementor-element elementor-element-c2193c0 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -622,7 +622,7 @@ export default function MentalHealthDisorders(props: Record<string, string>) {
                                 <div className="e-con-inner">
                                   <div className="elementor-element elementor-element-d279927 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                     <div className="elementor-widget-container">
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201280'%3E%3C/svg%3E" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-54442" />
+                                      <Image src="/images/cdb59969d24ca38247e7d73f6a0d5d3f.webp" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-54442" />
                                     </div>
                                   </div>
                                   <div className="elementor-element elementor-element-c2193c0 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -647,7 +647,7 @@ export default function MentalHealthDisorders(props: Record<string, string>) {
                                 <div className="e-con-inner">
                                   <div className="elementor-element elementor-element-d279927 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                     <div className="elementor-widget-container">
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201280'%3E%3C/svg%3E" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-54442" />
+                                      <Image src="/images/cdb59969d24ca38247e7d73f6a0d5d3f.webp" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-54442" />
                                     </div>
                                   </div>
                                   <div className="elementor-element elementor-element-c2193c0 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -777,28 +777,28 @@ export default function MentalHealthDisorders(props: Record<string, string>) {
                           <div className="swiper-slide swiper-slide-prev" role="group" aria-roledescription="slide" aria-label="1 / 4" style={{"width":"369.333px","marginRight":"48px","visibility":"visible"}}>
                             <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-250-1-68b941b299489.webp" style={{"fontSize":"16px"}}>
                               <figure className="swiper-slide-inner">
-                                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20669'%3E%3C/svg%3E" alt="rectangle-250-1-68b941b299489.webp" width={1200} height={669} className="swiper-slide-image entered exited" />
+                                <Image src="/images/23e32effef01be710b967e625e1cf775.webp" alt="rectangle-250-1-68b941b299489.webp" width={1200} height={669} className="swiper-slide-image entered exited" />
                               </figure>
                             </Link>
                           </div>
                           <div className="swiper-slide swiper-slide-active" role="group" aria-roledescription="slide" aria-label="2 / 4" style={{"width":"369.333px","marginRight":"48px","visibility":"visible"}}>
                             <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-251-1-1-68b941b47d396.webp" style={{"fontSize":"16px"}}>
                               <figure className="swiper-slide-inner">
-                                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20669'%3E%3C/svg%3E" alt="rectangle-251-1-1-68b941b47d396.webp" width={1200} height={669} className="swiper-slide-image entered exited" />
+                                <Image src="/images/53730dd809d76bf3c4ee8d4c6192136f.webp" alt="rectangle-251-1-1-68b941b47d396.webp" width={1200} height={669} className="swiper-slide-image entered exited" />
                               </figure>
                             </Link>
                           </div>
                           <div className="swiper-slide swiper-slide-next" role="group" aria-roledescription="slide" aria-label="3 / 4" style={{"width":"369.333px","marginRight":"48px","visibility":"visible"}}>
                             <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-250-2-68b941b9428a8.webp" style={{"fontSize":"16px"}}>
                               <figure className="swiper-slide-inner">
-                                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20669'%3E%3C/svg%3E" alt="rectangle-250-2-68b941b9428a8.webp" width={1200} height={669} className="swiper-slide-image entered exited" />
+                                <Image src="/images/8c6bc9fc5ffdc0e4b55f4fd4cd84435e.webp" alt="rectangle-250-2-68b941b9428a8.webp" width={1200} height={669} className="swiper-slide-image entered exited" />
                               </figure>
                             </Link>
                           </div>
                           <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 / 4" style={{"width":"369.333px","marginRight":"48px","visibility":"visible"}}>
                             <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-251-2-68b941bad8a4b.webp" style={{"fontSize":"16px"}}>
                               <figure className="swiper-slide-inner">
-                                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20669'%3E%3C/svg%3E" alt="rectangle-251-2-68b941bad8a4b.webp" width={1200} height={669} className="swiper-slide-image" />
+                                <Image src="/images/d170e5150e665f38cabc754c85b76d78.webp" alt="rectangle-251-2-68b941bad8a4b.webp" width={1200} height={669} className="swiper-slide-image" />
                               </figure>
                             </Link>
                           </div>
@@ -975,7 +975,7 @@ export default function MentalHealthDisorders(props: Record<string, string>) {
                     </div>
                     <div className="elementor-element elementor-element-64db1be3 elementor-widget__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20580%20319'%3E%3C/svg%3E" alt="" width={580} height={319} className="attachment-full size-full wp-image-54432" />
+                        <Image src="/images/c0b07725778080957911708859362980.webp" alt="" width={580} height={319} className="attachment-full size-full wp-image-54432" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-7ce3f99f elementor-widget__width-inherit elementor-hidden-mobile elementor-widget elementor-widget-image" data-widget_type="image.default">
@@ -985,7 +985,7 @@ export default function MentalHealthDisorders(props: Record<string, string>) {
                     </div>
                     <div className="elementor-element elementor-element-6f3dbcc1 elementor-widget__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20580%20319'%3E%3C/svg%3E" alt="" width={580} height={319} className="attachment-full size-full wp-image-54434" />
+                        <Image src="/images/f0011968a01e8adbc23e8dcef59ef872.webp" alt="" width={580} height={319} className="attachment-full size-full wp-image-54434" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-5a09283d elementor-widget__width-inherit elementor-hidden-mobile elementor-widget elementor-widget-image" data-widget_type="image.default">
@@ -1003,7 +1003,7 @@ export default function MentalHealthDisorders(props: Record<string, string>) {
                     <div className="elementor-element elementor-element-6ddc9189 elementor-widget__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
                         <Link href="/check-your-insurance/" style={{"fontSize":"16px"}}>
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20580%20319'%3E%3C/svg%3E" alt="" width={580} height={319} className="attachment-full size-full wp-image-54437" />
+                          <Image src="/images/e9c3dac8b493ffbe58eae0def0ffd908.webp" alt="" width={580} height={319} className="attachment-full size-full wp-image-54437" />
                         </Link>
                       </div>
                     </div>

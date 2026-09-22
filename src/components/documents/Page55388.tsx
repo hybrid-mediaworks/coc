@@ -564,7 +564,7 @@ export default function Page55388(props: Record<string, string>) {
         <div className="elementor-element elementor-element-7d709e2c e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-326d410d elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20265%20510'%3E%3C/svg%3E" alt="" width={265} height={510} className="attachment-full size-full wp-image-55419" />
+              <Image src="/images/c4d2c02f2d54c8bec3f436c874cae0e6.webp" alt="" width={265} height={510} className="attachment-full size-full wp-image-55419" />
             </div>
           </div>
           <div className="elementor-element elementor-element-5f8ad3ac elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -799,7 +799,7 @@ export default function Page55388(props: Record<string, string>) {
           <div className="elementor-element elementor-element-a1367db e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-element elementor-element-c485deb elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20814%20340'%3E%3C/svg%3E" alt="" width={814} height={340} className="attachment-full size-full wp-image-55443" />
+                <Image src="/images/4af66265bf6362facbc77e4919987c3a.webp" alt="" width={814} height={340} className="attachment-full size-full wp-image-55443" />
               </div>
             </div>
           </div>
@@ -1150,7 +1150,7 @@ export default function Page55388(props: Record<string, string>) {
           </div>
           <div className="elementor-element elementor-element-6a5cf32 elementor-widget__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20580%20319'%3E%3C/svg%3E" alt="" width={580} height={319} className="attachment-full size-full wp-image-5482" />
+              <Image src="/images/5c1a988eb3d165645e44248fe29405cc.webp" alt="" width={580} height={319} className="attachment-full size-full wp-image-5482" />
             </div>
           </div>
           <div className="elementor-element elementor-element-f8e5316 elementor-widget__width-inherit elementor-hidden-mobile elementor-widget elementor-widget-image" data-widget_type="image.default">
@@ -1160,7 +1160,7 @@ export default function Page55388(props: Record<string, string>) {
           </div>
           <div className="elementor-element elementor-element-a8f795b elementor-widget__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20580%20319'%3E%3C/svg%3E" alt="" width={580} height={319} className="attachment-full size-full wp-image-5481" />
+              <Image src="/images/f3958e2d5c85f00b267155f8aa234875.webp" alt="" width={580} height={319} className="attachment-full size-full wp-image-5481" />
             </div>
           </div>
           <div className="elementor-element elementor-element-03db848 elementor-widget__width-inherit elementor-hidden-mobile elementor-widget elementor-widget-image" data-widget_type="image.default">
@@ -1175,7 +1175,7 @@ export default function Page55388(props: Record<string, string>) {
           </div>
           <div className="elementor-element elementor-element-972d38f elementor-widget__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20580%20319'%3E%3C/svg%3E" alt="" width={580} height={319} className="attachment-full size-full wp-image-5480" />
+              <Image src="/images/6d4112acc4dce5f4421eef76ecc43231.webp" alt="" width={580} height={319} className="attachment-full size-full wp-image-5480" />
             </div>
           </div>
         </div>

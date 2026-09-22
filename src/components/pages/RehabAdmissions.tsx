@@ -109,7 +109,7 @@ Starts Here
                       Last Page Visited
                     </h3>
                     <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
+                      <Image src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
                       Last Page Visited:
                     </h3>
                     <div className="jg-guided-visited-list">
@@ -118,10 +118,10 @@ Starts Here
                   </div>
                   <div className="jg-guided-col jg-guided-center">
                     <div className="jg-guided-img-wrap">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
+                      <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
                       <div className="jg-guided-img-label">
                         <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
+                          <Image src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
                           Current Guided Tour Page:
                         </h3>
                       </div>
@@ -143,7 +143,7 @@ Starts Here
                       <li className="jg-guided-divider" style={{"fontSize":"20px"}}></li>
                       <li style={{"fontSize":"20px"}}>
                         <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
+                          <Image src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
                           View Full Guided Site Tour
                         </span>
                       </li>
@@ -237,10 +237,10 @@ Starts Here
                     </div>
                     <div className="jg-guided-col jg-guided-center">
                       <div className="jg-guided-img-wrap">
-                        <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" width={382} height={398} className="jg-guided-img" />
+                        <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" width={382} height={398} className="jg-guided-img" />
                         <div className="jg-guided-img-label jg-guided-img-label-cta">
                           <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
+                            <Image src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
                             View Full Guided Site Tour
                           </span>
                         </div>
@@ -603,12 +603,12 @@ Starts Here
                 <div className="elementor-image-carousel swiper-wrapper" aria-live="off" id="swiper-wrapper-7c28672744fae8dd" style={{"transitionDuration":"0ms","transform":"none"}}>
                   <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 of 2" style={{"visibility":"visible"}}>
                     <figure className="swiper-slide-inner">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20620%20438'%3E%3C/svg%3E" alt="Figure → rectangle-251-1-1-68b941b47d396" width={620} height={438} className="swiper-slide-image" />
+                      <Image src="/images/76be5c83aca8d78a8838fd7b20eb8e48.webp" alt="Figure → rectangle-251-1-1-68b941b47d396" width={620} height={438} className="swiper-slide-image" />
                     </figure>
                   </div>
                   <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 of 2" style={{"visibility":"visible"}}>
                     <figure className="swiper-slide-inner">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20620%20438'%3E%3C/svg%3E" alt="Figure → rectangle-250-1-68b941b299489" width={620} height={438} className="swiper-slide-image" />
+                      <Image src="/images/6c80124a0d9626c8f736b59089047e4f.webp" alt="Figure → rectangle-250-1-68b941b299489" width={620} height={438} className="swiper-slide-image" />
                     </figure>
                   </div>
                 </div>

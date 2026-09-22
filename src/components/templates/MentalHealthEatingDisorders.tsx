@@ -45,7 +45,7 @@ export default function Untitled() {
                   </p>
                   <p className="wp-block-paragraph">BDD can affect people differently. Some might worry a lot about specific parts of their body, like their nose, skin, or hair. Others might focus on their overall body shape or size. The important thing to remember is that BDD is a serious mental health issue, but help is available. With the right treatment, people with BDD can learn to see themselves in a healthier way and live much happier lives.</p>
                   <figure className="wp-block-image aligncenter size-large">
-                    <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20684'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20684'%3E%3C/svg%3E" alt="image depicting body dysmorphic disorder symptoms" className="wp-image-3287 entered exited" />
+                    <link rel="preload" as="image" href="/images/739f8725838cb5ae668233271c222835.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/739f8725838cb5ae668233271c222835.webp" alt="image depicting body dysmorphic disorder symptoms" className="wp-image-3287 entered exited" />
                   </figure>
                   <span id="elementor-toc__heading-anchor-2" className="elementor-menu-anchor "></span>
                   <h2 className="wp-block-heading">
@@ -450,7 +450,7 @@ export default function Untitled() {
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-45c91d9 elementor-widget elementor-widget-image" data-widget_type="image.default">
                 <div className="elementor-widget-container">
-                  <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="an image of people who got help at Connections Mental Health" className="attachment-thumbnail size-thumbnail wp-image-46" />
+                  <img loading="lazy" src="/images/c8b90f1d1dd09295b0b501ea7b89f965.webp" alt="an image of people who got help at Connections Mental Health" className="attachment-thumbnail size-thumbnail wp-image-46" />
                 </div>
               </div>
             </div>

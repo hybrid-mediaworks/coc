@@ -75,7 +75,7 @@ export default function Untitled() {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-d32ee28 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202560%201119'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202560%201119'%3E%3C/svg%3E" alt="image of man representing the question what does crippling depression feel like" className="attachment-full size-full wp-image-1923" />
+                        <link rel="preload" as="image" href="/images/e942ebc1208af354cce5e037d925ef2a.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/e942ebc1208af354cce5e037d925ef2a.webp" alt="image of man representing the question what does crippling depression feel like" className="attachment-full size-full wp-image-1923" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-16a234f elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -300,7 +300,7 @@ export default function Untitled() {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-a60c631 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="person getting therapy representing agoraphobia medication" className="attachment-thumbnail size-thumbnail wp-image-1353" />
+                        <img loading="lazy" src="/images/dd27409bf0377db649713a2eff9c5908.webp" alt="person getting therapy representing agoraphobia medication" className="attachment-thumbnail size-thumbnail wp-image-1353" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-a2883e0 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -535,7 +535,7 @@ export default function Untitled() {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-6e6d286 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="group therapy session representing psychiatric intervention" className="attachment-thumbnail size-thumbnail wp-image-1355" />
+                        <img loading="lazy" src="/images/dd27409bf0377db649713a2eff9c5908.webp" alt="group therapy session representing psychiatric intervention" className="attachment-thumbnail size-thumbnail wp-image-1355" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-b23fdc8 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">

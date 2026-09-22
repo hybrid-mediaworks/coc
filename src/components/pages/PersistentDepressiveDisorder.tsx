@@ -113,7 +113,7 @@ export default function PersistentDepressiveDisorder(props: Record<string, strin
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-d32ee28 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="woman has hand on face representing Schizoaffective Disorder" className="attachment-thumbnail size-thumbnail wp-image-1709" />
+                        <link rel="preload" as="image" href="/images/e2cad7fe6ca51979451d3bf6d08505e6.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/e2cad7fe6ca51979451d3bf6d08505e6.webp" alt="woman has hand on face representing Schizoaffective Disorder" className="attachment-thumbnail size-thumbnail wp-image-1709" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-16a234f elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -573,7 +573,7 @@ export default function PersistentDepressiveDisorder(props: Record<string, strin
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-a60c631 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="an image of people who got help with PMDD treatment" className="attachment-thumbnail size-thumbnail wp-image-809" />
+                        <img loading="lazy" src="/images/8cfad023484adad9573358f04ad5b4ce.webp" alt="an image of people who got help with PMDD treatment" className="attachment-thumbnail size-thumbnail wp-image-809" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-a2883e0 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -656,7 +656,7 @@ export default function PersistentDepressiveDisorder(props: Record<string, strin
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-6e6d286 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="an image of clients during pdd treatment" className="attachment-thumbnail size-thumbnail wp-image-1685" />
+                        <img loading="lazy" src="/images/8cfad023484adad9573358f04ad5b4ce.webp" alt="an image of clients during pdd treatment" className="attachment-thumbnail size-thumbnail wp-image-1685" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-b23fdc8 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">

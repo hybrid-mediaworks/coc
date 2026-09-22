@@ -140,7 +140,7 @@ export default function Contact(props: Record<string, string>) {
                           <div className="elementor-widget-wrap elementor-element-populated">
                             <div className="elementor-element elementor-element-fca6679 elementor-widget elementor-widget-image" data-widget_type="image.default">
                               <div className="elementor-widget-container">
-                                <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20178'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20178'%3E%3C/svg%3E" alt="an icon of a therapy session" className="attachment-full size-full wp-image-316" />
+                                <link rel="preload" as="image" href="/images/5f63e7ed8fb4db74263ff8f08ef9c0e0.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/5f63e7ed8fb4db74263ff8f08ef9c0e0.webp" alt="an icon of a therapy session" className="attachment-full size-full wp-image-316" />
                               </div>
                             </div>
                             <div className="elementor-element elementor-element-ee5ba50 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -155,7 +155,7 @@ export default function Contact(props: Record<string, string>) {
                             </div>
                             <div className="elementor-element elementor-element-bec9fd1 elementor-widget elementor-widget-image" data-widget_type="image.default">
                               <div className="elementor-widget-container">
-                                <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20171%20165'%3E%3C/svg%3E" alt="an icon of people together" className="attachment-full size-full wp-image-315" />
+                                <img loading="lazy" src="/images/0a245fa90b0c1cb9a91494b9ea20feb1.webp" alt="an icon of people together" className="attachment-full size-full wp-image-315" />
                               </div>
                             </div>
                             <div className="elementor-element elementor-element-1a4c391 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -168,7 +168,7 @@ export default function Contact(props: Record<string, string>) {
                             </div>
                             <div className="elementor-element elementor-element-9611bfb elementor-widget elementor-widget-image" data-widget_type="image.default">
                               <div className="elementor-widget-container">
-                                <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20177%20156'%3E%3C/svg%3E" alt="an icon of a house" className="attachment-full size-full wp-image-314" />
+                                <img loading="lazy" src="/images/721d610f1fb463adc7e7436fdd2c8f62.webp" alt="an icon of a house" className="attachment-full size-full wp-image-314" />
                               </div>
                             </div>
                             <div className="elementor-element elementor-element-b19c94c elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -206,7 +206,7 @@ export default function Contact(props: Record<string, string>) {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-c241eb5 elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="an image of people who got help at Connections Mental Health" className="attachment-thumbnail size-thumbnail wp-image-46" />
+                        <img loading="lazy" src="/images/52b974ece3c12eb1c823d80fbeb1f1d9.webp" alt="an image of people who got help at Connections Mental Health" className="attachment-thumbnail size-thumbnail wp-image-46" />
                       </div>
                     </div>
                   </div>
@@ -277,7 +277,7 @@ export default function Contact(props: Record<string, string>) {
                             <h3 className="jg-guided-heading">Last Page Visited</h3>
                             <h3 className="jg-guided-heading jg-icon-list">
                               {" "}
-                              <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" className="jg-guided-heading-icon" />
+                              <img loading="lazy" src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" className="jg-guided-heading-icon" />
                               {"Last Page Visited: "}
                             </h3>
                             <div className="jg-guided-visited-list">
@@ -286,11 +286,11 @@ export default function Contact(props: Record<string, string>) {
                           </div>
                           <div className="jg-guided-col jg-guided-center">
                             <div className="jg-guided-img-wrap">
-                              <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" className="jg-guided-img jg-guided-current-img" />
+                              <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img jg-guided-current-img" />
                               <div className="jg-guided-img-label">
                                 <h3 className="jg-guided-heading jg-icon-list">
                                   {" "}
-                                  <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" className="jg-guided-heading-icon" />
+                                  <img loading="lazy" src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" className="jg-guided-heading-icon" />
                                   {" Current Guided Tour Page: "}
                                 </h3>
                                 <strong className="jg-guided-current-label"></strong>
@@ -309,7 +309,7 @@ export default function Contact(props: Record<string, string>) {
                               <li className="jg-guided-divider"></li>
                               <li>
                                 <span className="jg-guided-next-link jg-guided-view-full">
-                                  <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" className="jg-guided-view-full-icon" />
+                                  <img loading="lazy" src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" className="jg-guided-view-full-icon" />
                                   {" View Full Guided Site Tour"}
                                 </span>
                               </li>
@@ -380,10 +380,10 @@ export default function Contact(props: Record<string, string>) {
                             </div>
                             <div className="jg-guided-col jg-guided-center">
                               <div className="jg-guided-img-wrap">
-                                <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" className="jg-guided-img" />
+                                <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img" />
                                 <div className="jg-guided-img-label jg-guided-img-label-cta">
                                   <span className="jg-guided-next-link jg-guided-view-full">
-                                    <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" className="jg-guided-view-full-icon" />
+                                    <img loading="lazy" src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" className="jg-guided-view-full-icon" />
                                     {" View Full Guided Site Tour"}
                                   </span>
                                 </div>

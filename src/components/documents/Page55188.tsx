@@ -408,7 +408,7 @@ export default function Page55188(props: Record<string, string>) {
                       Last Page Visited
                     </h3>
                     <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
+                      <Image src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
                       Last Page Visited:
                     </h3>
                     <div className="jg-guided-visited-list">
@@ -417,10 +417,10 @@ export default function Page55188(props: Record<string, string>) {
                   </div>
                   <div className="jg-guided-col jg-guided-center">
                     <div className="jg-guided-img-wrap">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
+                      <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
                       <div className="jg-guided-img-label">
                         <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
+                          <Image src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
                           Current Guided Tour Page:
                         </h3>
                       </div>
@@ -442,7 +442,7 @@ export default function Page55188(props: Record<string, string>) {
                       <li className="jg-guided-divider" style={{"fontSize":"20px"}}></li>
                       <li style={{"fontSize":"20px"}}>
                         <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
+                          <Image src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
                           View Full Guided Site Tour
                         </span>
                       </li>
@@ -471,10 +471,10 @@ export default function Page55188(props: Record<string, string>) {
                   </div>
                   <div className="jg-guided-col jg-guided-center">
                     <div className="jg-guided-img-wrap">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
+                      <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
                       <div className="jg-guided-img-label">
                         <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
+                          <Image src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
                           Current Guided Tour Page:
                         </h3>
                       </div>
@@ -496,7 +496,7 @@ export default function Page55188(props: Record<string, string>) {
                       <li className="jg-guided-divider" style={{"fontSize":"20px"}}></li>
                       <li style={{"fontSize":"20px"}}>
                         <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
+                          <Image src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
                           View Full Guided Site Tour
                         </span>
                       </li>
@@ -697,7 +697,7 @@ export default function Page55188(props: Record<string, string>) {
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-97f7c99 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
-                                    <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20240%20240'%3E%3C/svg%3E" alt="" width={240} height={240} className="attachment-full size-full wp-image-60374" />
+                                    <Image src="/images/1cf85e05e9985e133f25794d63bb4b85.webp" alt="" width={240} height={240} className="attachment-full size-full wp-image-60374" />
                                   </div>
                                 </div>
                                 <div className="elementor-element elementor-element-e44d52e e-con-full e-flex e-con e-child">
@@ -731,7 +731,7 @@ export default function Page55188(props: Record<string, string>) {
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-97f7c99 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
-                                    <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20240%20240'%3E%3C/svg%3E" alt="" width={240} height={240} className="attachment-full size-full wp-image-60372" />
+                                    <Image src="/images/804e4c64c330c6d28a0da99e71aece82.webp" alt="" width={240} height={240} className="attachment-full size-full wp-image-60372" />
                                   </div>
                                 </div>
                                 <div className="elementor-element elementor-element-e44d52e e-con-full e-flex e-con e-child">
@@ -819,7 +819,7 @@ export default function Page55188(props: Record<string, string>) {
                                   <div className="elementor-element elementor-element-9544cc6 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                     <div className="elementor-widget-container">
                                       <Link href="/staff/sean-oneill-clinical-director/" style={{"fontSize":"16px"}}>
-                                        <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20240%20240'%3E%3C/svg%3E" alt="" width={240} height={240} className="attachment-full size-full wp-image-60368" />
+                                        <Image src="/images/9b82b045fe822b81c6517ddc0d504046.webp" alt="" width={240} height={240} className="attachment-full size-full wp-image-60368" />
                                       </Link>
                                     </div>
                                   </div>
@@ -885,7 +885,7 @@ export default function Page55188(props: Record<string, string>) {
                                   <div className="elementor-element elementor-element-9544cc6 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                     <div className="elementor-widget-container">
                                       <Link href="/staff/joana-constante-freitas/" style={{"fontSize":"16px"}}>
-                                        <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201254%201254'%3E%3C/svg%3E" alt="" width={1254} height={1254} className="attachment-full size-full wp-image-60574" />
+                                        <Image src="/images/413dfb0c45802158652346807d711c32.webp" alt="" width={1254} height={1254} className="attachment-full size-full wp-image-60574" />
                                       </Link>
                                     </div>
                                   </div>
@@ -938,7 +938,7 @@ Outside of therapy, I enjoy spending time in nature, practicing my spirituality,
                                   <div className="elementor-element elementor-element-9544cc6 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                     <div className="elementor-widget-container">
                                       <Link href="/staff/huy-nguyen/" style={{"fontSize":"16px"}}>
-                                        <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201254%201254'%3E%3C/svg%3E" alt="" width={1254} height={1254} className="attachment-full size-full wp-image-60573" />
+                                        <Image src="/images/3dca046b4a9f1de96169b534cd89ffaa.webp" alt="" width={1254} height={1254} className="attachment-full size-full wp-image-60573" />
                                       </Link>
                                     </div>
                                   </div>
@@ -989,7 +989,7 @@ My hope is not to help clients avoid the waves that life inevitably brings, but 
                                   <div className="elementor-element elementor-element-9544cc6 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                     <div className="elementor-widget-container">
                                       <Link href="/staff/ryan-ruiz-therapist/" style={{"fontSize":"16px"}}>
-                                        <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20240%20240'%3E%3C/svg%3E" alt="" width={240} height={240} className="attachment-full size-full wp-image-60370" />
+                                        <Image src="/images/bc4252fbea8f7112f63594473a85f9c7.webp" alt="" width={240} height={240} className="attachment-full size-full wp-image-60370" />
                                       </Link>
                                     </div>
                                   </div>
@@ -1242,7 +1242,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                       <div className="g-corner"></div>
                     </div>
                     <div className="g-item">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20684'%3E%3C/svg%3E" alt="Gallery image" width={1024} height={684} className="entered exited" />
+                      <Image src="/images/65fe4f777be715f93dec12aba7b82b57.webp" alt="Gallery image" width={1024} height={684} className="entered exited" />
                       <div className="g-overlay"></div>
                       <div className="g-line"></div>
                       <div className="g-corner"></div>
@@ -1310,42 +1310,42 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
           <div className="elementor-element elementor-element-96ff0fa e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-element elementor-element-12dc315 elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20117%2066'%3E%3C/svg%3E" alt="" width={117} height={66} className="attachment-full size-full wp-image-55243 entered exited" />
+                <Image src="/images/413db0771819b578b0eefa5cb809045c.webp" alt="" width={117} height={66} className="attachment-full size-full wp-image-55243 entered exited" />
               </div>
             </div>
           </div>
           <div className="elementor-element elementor-element-66fe225 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-element elementor-element-393f5e9 elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20102%2041'%3E%3C/svg%3E" alt="" width={102} height={41} className="attachment-full size-full wp-image-55263 entered exited" />
+                <Image src="/images/ff3bbdb9dd9eb42994b592aba4be41d2.webp" alt="" width={102} height={41} className="attachment-full size-full wp-image-55263 entered exited" />
               </div>
             </div>
           </div>
           <div className="elementor-element elementor-element-37a97ce e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-element elementor-element-0f9fa7e elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20148%2099'%3E%3C/svg%3E" alt="" width={148} height={99} className="attachment-full size-full wp-image-55264 entered exited" />
+                <Image src="/images/139ea969287d9b1bb336faee7f3bdfcc.webp" alt="" width={148} height={99} className="attachment-full size-full wp-image-55264 entered exited" />
               </div>
             </div>
           </div>
           <div className="elementor-element elementor-element-d98b3c7 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-element elementor-element-692a358 elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20114%20114'%3E%3C/svg%3E" alt="" width={114} height={114} className="attachment-full size-full wp-image-55265 entered exited" />
+                <Image src="/images/536652e9482e223de6b3078d1fbc26c4.webp" alt="" width={114} height={114} className="attachment-full size-full wp-image-55265 entered exited" />
               </div>
             </div>
           </div>
           <div className="elementor-element elementor-element-8d06513 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-element elementor-element-dcc9e99 elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20109%2030'%3E%3C/svg%3E" alt="" width={109} height={30} className="attachment-full size-full wp-image-55266 entered exited" />
+                <Image src="/images/331757f56364ac02bc2742c8b7218101.webp" alt="" width={109} height={30} className="attachment-full size-full wp-image-55266 entered exited" />
               </div>
             </div>
           </div>
           <div className="elementor-element elementor-element-00d92e9 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-element elementor-element-a782af9 elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20128%2072'%3E%3C/svg%3E" alt="" width={128} height={72} className="attachment-full size-full wp-image-55267 entered exited" />
+                <Image src="/images/d2c895fc6c481549b4d7ad9d6ee588eb.webp" alt="" width={128} height={72} className="attachment-full size-full wp-image-55267 entered exited" />
               </div>
             </div>
           </div>
@@ -1421,35 +1421,35 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                 <div className="swiper-slide swiper-slide-prev" role="group" aria-roledescription="slide" aria-label="1 / 5" style={{"width":"602px","marginRight":"20px","visibility":"visible"}}>
                   <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/02/palm-beach-drug-rehab-backyard-1-68b95ea049deb-66.webp" style={{"fontSize":"16px"}}>
                     <figure className="swiper-slide-inner">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201282'%3E%3C/svg%3E" alt="palm-beach-drug-rehab-backyard-1-68b95ea049deb-66.webp" width={1920} height={1282} className="swiper-slide-image entered exited" />
+                      <Image src="/images/cec0bcb8bc2d9a6e84492081335e5e59.webp" alt="palm-beach-drug-rehab-backyard-1-68b95ea049deb-66.webp" width={1920} height={1282} className="swiper-slide-image entered exited" />
                     </figure>
                   </Link>
                 </div>
                 <div className="swiper-slide swiper-slide-active" role="group" aria-roledescription="slide" aria-label="2 / 5" style={{"width":"602px","marginRight":"20px","visibility":"visible"}}>
                   <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/02/palm-beach-drug-rehab-backyard-grills-68b95e9d01f94-66.webp" style={{"fontSize":"16px"}}>
                     <figure className="swiper-slide-inner">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20684'%3E%3C/svg%3E" alt="palm-beach-drug-rehab-backyard-grills-68b95e9d01f94-66.webp" width={1024} height={684} className="swiper-slide-image entered exited" />
+                      <Image src="/images/d3af4a15ecd0eb1058044c88671cdb0b.webp" alt="palm-beach-drug-rehab-backyard-grills-68b95e9d01f94-66.webp" width={1024} height={684} className="swiper-slide-image entered exited" />
                     </figure>
                   </Link>
                 </div>
                 <div className="swiper-slide swiper-slide-next" role="group" aria-roledescription="slide" aria-label="3 / 5" style={{"width":"602px","marginRight":"20px","visibility":"visible"}}>
                   <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/02/palm-beach-drug-rehab-backyard-corn-hole-68b95d6fdd1fe-66.webp" style={{"fontSize":"16px"}}>
                     <figure className="swiper-slide-inner">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20684'%3E%3C/svg%3E" alt="palm-beach-drug-rehab-backyard-corn-hole-68b95d6fdd1fe-66.webp" width={1024} height={684} className="swiper-slide-image" />
+                      <Image src="/images/e180d862f5632f00b50d150b826561e0.webp" alt="palm-beach-drug-rehab-backyard-corn-hole-68b95d6fdd1fe-66.webp" width={1024} height={684} className="swiper-slide-image" />
                     </figure>
                   </Link>
                 </div>
                 <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 / 5" style={{"width":"602px","marginRight":"20px","visibility":"visible"}}>
                   <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/02/palm-beach-drug-rehab-backyard-hammock-68b95d73673bf-66.webp" style={{"fontSize":"16px"}}>
                     <figure className="swiper-slide-inner">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20684'%3E%3C/svg%3E" alt="palm-beach-drug-rehab-backyard-hammock-68b95d73673bf-66.webp" width={1024} height={684} className="swiper-slide-image" />
+                      <Image src="/images/706d6837fe519c1b632c8d4b2289a07e.webp" alt="palm-beach-drug-rehab-backyard-hammock-68b95d73673bf-66.webp" width={1024} height={684} className="swiper-slide-image" />
                     </figure>
                   </Link>
                 </div>
                 <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 / 5" style={{"width":"602px","marginRight":"20px","visibility":"visible"}}>
                   <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/02/lake-worth-drug-rehab-living-roo-68b95d6e7bf09-66.webp" style={{"fontSize":"16px"}}>
                     <figure className="swiper-slide-inner">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201280'%3E%3C/svg%3E" alt="lake-worth-drug-rehab-living-roo-68b95d6e7bf09-66.webp" width={1920} height={1280} className="swiper-slide-image" />
+                      <Image src="/images/8b7625086941cf3d910b4d7198c137fe.webp" alt="lake-worth-drug-rehab-living-roo-68b95d6e7bf09-66.webp" width={1920} height={1280} className="swiper-slide-image" />
                     </figure>
                   </Link>
                 </div>
@@ -1481,7 +1481,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
           <div className="elementor-element elementor-element-e92d0b2 e-con-full e-flex e-con e-child">
             <div className="elementor-element elementor-element-3cf2854 elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20608%20530'%3E%3C/svg%3E" alt="" width={608} height={530} className="attachment-full size-full wp-image-55270" />
+                <Image src="/images/d1299b97fc52a8e046d021d3fe8b84b3.webp" alt="" width={608} height={530} className="attachment-full size-full wp-image-55270" />
               </div>
             </div>
             <div className="elementor-element elementor-element-4014041 elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}" data-widget_type="heading.default">
@@ -1644,7 +1644,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
         </div>
         <div className="elementor-element elementor-element-704d0a0 elementor-widget elementor-widget-image" data-widget_type="image.default">
           <div className="elementor-widget-container">
-            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201440'%3E%3C/svg%3E" alt="" width={1920} height={1440} className="attachment-full size-full wp-image-55285" />
+            <Image src="/images/ba2bc5a07053f59773802f1cc37fdf17.webp" alt="" width={1920} height={1440} className="attachment-full size-full wp-image-55285" />
           </div>
         </div>
       </div>
@@ -1861,7 +1861,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
           <div className="elementor-element elementor-element-eee5169 e-con-full e-flex e-con e-child">
             <div className="elementor-element elementor-element-10e063c elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201280'%3E%3C/svg%3E" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-55311" />
+                <Image src="/images/3153829171ddb4727a24c54124a0b7a2.webp" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-55311" />
               </div>
             </div>
           </div>
@@ -2070,7 +2070,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
             <div className="elementor-element elementor-element-a2ecc5c e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
               <div className="elementor-element elementor-element-7172025 elementor-widget elementor-widget-image" data-widget_type="image.default">
                 <div className="elementor-widget-container">
-                  <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20629%20342'%3E%3C/svg%3E" alt="" width={629} height={342} className="attachment-full size-full wp-image-54943" />
+                  <Image src="/images/591aac2e82089f231e0d54825acc03fb.webp" alt="" width={629} height={342} className="attachment-full size-full wp-image-54943" />
                 </div>
               </div>
               <div className="elementor-element elementor-element-68eb52c elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -2273,7 +2273,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-acb6ffb elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5170" />
+                          <Image src="/images/8b6692baf8f1fb21416d166c324eb35d.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5170" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-7a8170b elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">
@@ -2311,7 +2311,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-a79145d elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5171" />
+                          <Image src="/images/3ac51f8e6f87d0755721591a1aab6be6.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5171" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-6dea68a elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">
@@ -2349,7 +2349,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-b4492c5 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5172" />
+                          <Image src="/images/26871c8e32172bf2351bd2d2707380b3.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5172" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-0aff00a elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">
@@ -2387,7 +2387,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-e7a3261 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5173" />
+                          <Image src="/images/0d34a157a76881eb761ad69d0d1524cf.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5173" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-cdb8155 elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">

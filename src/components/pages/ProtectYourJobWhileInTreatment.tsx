@@ -191,7 +191,7 @@ export default function Page() {
                             Last Page Visited
                           </h3>
                           <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
+                            <Image src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
                             Last Page Visited:
                           </h3>
                           <div className="jg-guided-visited-list">
@@ -200,10 +200,10 @@ export default function Page() {
                         </div>
                         <div className="jg-guided-col jg-guided-center">
                           <div className="jg-guided-img-wrap">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
+                            <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
                             <div className="jg-guided-img-label">
                               <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
+                                <Image src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
                                 Current Guided Tour Page:
                               </h3>
                             </div>
@@ -225,7 +225,7 @@ export default function Page() {
                             <li className="jg-guided-divider" style={{"fontSize":"20px"}}></li>
                             <li style={{"fontSize":"20px"}}>
                               <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full">
-                                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
+                                <Image src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
                                 View Full Guided Site Tour
                               </span>
                             </li>
@@ -319,10 +319,10 @@ export default function Page() {
                           </div>
                           <div className="jg-guided-col jg-guided-center">
                             <div className="jg-guided-img-wrap">
-                              <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" width={382} height={398} className="jg-guided-img" />
+                              <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" width={382} height={398} className="jg-guided-img" />
                               <div className="jg-guided-img-label jg-guided-img-label-cta">
                                 <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full">
-                                  <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
+                                  <Image src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
                                   View Full Guided Site Tour
                                 </span>
                               </div>
@@ -1274,19 +1274,19 @@ wages.
               <div className="elementor-element elementor-element-e1fee89 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                 <div className="elementor-element elementor-element-75298e0 elementor-widget elementor-widget-image" data-widget_type="image.default">
                   <div className="elementor-widget-container">
-                    <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20600'%3E%3C/svg%3E" alt="" width={300} height={600} className="attachment-full size-full wp-image-60004 entered exited" />
+                    <Image src="/images/7906a6d8eaa984e07bda315b89b544fa.webp" alt="" width={300} height={600} className="attachment-full size-full wp-image-60004 entered exited" />
                   </div>
                 </div>
               </div>
               <div className="elementor-element elementor-element-7ae9622 e-con-full e-flex e-con e-child">
                 <div className="elementor-element elementor-element-3427f46 elementor-widget elementor-widget-image" data-widget_type="image.default">
                   <div className="elementor-widget-container">
-                    <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20285'%3E%3C/svg%3E" alt="" width={300} height={285} className="attachment-full size-full wp-image-60005" />
+                    <Image src="/images/f49fe900496e4942f25c67cd21f59b90.webp" alt="" width={300} height={285} className="attachment-full size-full wp-image-60005" />
                   </div>
                 </div>
                 <div className="elementor-element elementor-element-0b1a911 elementor-widget elementor-widget-image" data-widget_type="image.default">
                   <div className="elementor-widget-container">
-                    <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20285'%3E%3C/svg%3E" alt="" width={300} height={285} className="attachment-full size-full wp-image-60006 entered exited" />
+                    <Image src="/images/890cb7e1313eed16e0eadec81a796b03.webp" alt="" width={300} height={285} className="attachment-full size-full wp-image-60006 entered exited" />
                   </div>
                 </div>
               </div>
@@ -1750,7 +1750,7 @@ wages.
                                       <div className="elementor-element elementor-element-9544cc6 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                         <div className="elementor-widget-container">
                                           <Link href="/staff/joana-constante-freitas/" style={{"fontSize":"16px"}}>
-                                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201254%201254'%3E%3C/svg%3E" alt="" width={1254} height={1254} className="attachment-full size-full wp-image-60574" />
+                                            <Image src="/images/413dfb0c45802158652346807d711c32.webp" alt="" width={1254} height={1254} className="attachment-full size-full wp-image-60574" />
                                           </Link>
                                         </div>
                                       </div>
@@ -1803,7 +1803,7 @@ Outside of therapy, I enjoy spending time in nature, practicing my spirituality,
                                       <div className="elementor-element elementor-element-9544cc6 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                         <div className="elementor-widget-container">
                                           <Link href="/staff/huy-nguyen/" style={{"fontSize":"16px"}}>
-                                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201254%201254'%3E%3C/svg%3E" alt="" width={1254} height={1254} className="attachment-full size-full wp-image-60573" />
+                                            <Image src="/images/3dca046b4a9f1de96169b534cd89ffaa.webp" alt="" width={1254} height={1254} className="attachment-full size-full wp-image-60573" />
                                           </Link>
                                         </div>
                                       </div>
@@ -1854,7 +1854,7 @@ My hope is not to help clients avoid the waves that life inevitably brings, but 
                                       <div className="elementor-element elementor-element-9544cc6 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                         <div className="elementor-widget-container">
                                           <Link href="/staff/ryan-ruiz-therapist/" style={{"fontSize":"16px"}}>
-                                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20240%20240'%3E%3C/svg%3E" alt="" width={240} height={240} className="attachment-full size-full wp-image-60370" />
+                                            <Image src="/images/1cf85e05e9985e133f25794d63bb4b85.webp" alt="" width={240} height={240} className="attachment-full size-full wp-image-60370" />
                                           </Link>
                                         </div>
                                       </div>

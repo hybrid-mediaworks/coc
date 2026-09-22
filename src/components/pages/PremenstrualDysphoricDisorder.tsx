@@ -114,7 +114,7 @@ export default function PremenstrualDysphoricDisorder(props: Record<string, stri
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-d32ee28 elementor-hidden-desktop elementor-widget__width-initial elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202560%201053'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202560%201053'%3E%3C/svg%3E" alt="an image of someone representing how to stop someone who self harms" />
+                        <link rel="preload" as="image" href="/images/55e7101fbb3af82ece5c2b201764a37c.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/55e7101fbb3af82ece5c2b201764a37c.webp" alt="an image of someone representing how to stop someone who self harms" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-16a234f elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -843,7 +843,7 @@ export default function PremenstrualDysphoricDisorder(props: Record<string, stri
                     </div>
                     <div className="elementor-element elementor-element-03afdc4 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="woman learning about the best coping skills for anxiety" className="attachment-thumbnail size-thumbnail wp-image-1696" />
+                        <img loading="lazy" src="/images/62a53470a3578a277d11987c637fa09a.webp" alt="woman learning about the best coping skills for anxiety" className="attachment-thumbnail size-thumbnail wp-image-1696" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-cd9ef8e elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
@@ -1071,7 +1071,7 @@ export default function PremenstrualDysphoricDisorder(props: Record<string, stri
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-6e6d286 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="image of two women learning healthy coping skills for anxiety at Connections Mental health" className="attachment-thumbnail size-thumbnail wp-image-1698" />
+                        <img loading="lazy" src="/images/5d27e1f5f5cbd4175b3c11ce1aaf187e.webp" alt="image of two women learning healthy coping skills for anxiety at Connections Mental health" className="attachment-thumbnail size-thumbnail wp-image-1698" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-b23fdc8 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">

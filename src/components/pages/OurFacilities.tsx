@@ -10,19 +10,19 @@ const gridData0 = [
     "image": "/images/de344e3ffd650c39fe44b324b19623ee.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202560%201707'%3E%3C/svg%3E"
+    "image": "/images/de344e3ffd650c39fe44b324b19623ee.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%202880'%3E%3C/svg%3E"
+    "image": "/images/ee0e655e5d2ecbbf9986716e3892ca9b.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201280'%3E%3C/svg%3E"
+    "image": "/images/2302f3e28939b22743a3eed2009a6f3c.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%201280'%3E%3C/svg%3E"
+    "image": "/images/1331cde3073f43dbc4c033d28cb34e60.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%202881'%3E%3C/svg%3E"
+    "image": "/images/a2d0c20277f324822eac62b8f3e8dd41.webp"
   }
 ] as const;
 
@@ -31,46 +31,46 @@ const gridData1 = [
     "image": "/images/0a1d5e53c0230dbe3c2a32cbdee8c643.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20681'%3E%3C/svg%3E"
+    "image": "/images/75a8659e4d7000abe3bb4040c3d49486.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20657'%3E%3C/svg%3E"
+    "image": "/images/d919547ef0b24fcbfa0206b707561bf0.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20664'%3E%3C/svg%3E"
+    "image": "/images/93a14095ac83036fedcedeef4abbcc5b.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201023%20574'%3E%3C/svg%3E"
+    "image": "/images/8cecec90e1515dc495e0061d5bf6e9ad.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20681'%3E%3C/svg%3E"
+    "image": "/images/70dff66b2de87e27c8aa6d9f4f2eb51c.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20581'%3E%3C/svg%3E"
+    "image": "/images/5c422a67d289459f0a5695e0d082fe78.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20578'%3E%3C/svg%3E"
+    "image": "/images/031f125e32260cec5f08b340919206ca.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20473%20768'%3E%3C/svg%3E"
+    "image": "/images/2d23614b6c02720a4ea78e5b54b35d94.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20674'%3E%3C/svg%3E"
+    "image": "/images/83c80cd885be3c2b041758b41ff712b2.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20681'%3E%3C/svg%3E"
+    "image": "/images/69a385d47f42fd63c94b47f5ac8d8ee7.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20681'%3E%3C/svg%3E"
+    "image": "/images/bd8057be4812f5b9318212b47e2371a6.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201023%20574'%3E%3C/svg%3E"
+    "image": "/images/c861d9e86ebc5c1762c6d7c8286a9573.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201023%20574'%3E%3C/svg%3E"
+    "image": "/images/4d4253424b4a1738a2111ff69aedff74.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201023%20574'%3E%3C/svg%3E"
+    "image": "/images/bb2a8b7861e98f355e24a6ee5cbd609f.webp"
   }
 ] as const;
 
@@ -143,7 +143,7 @@ export default function Untitled() {
                           </div>
                           <div className="jg-guided-col jg-guided-center">
                             <div className="jg-guided-img-wrap">
-                              <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" className="jg-guided-img jg-guided-current-img" />
+                              <link rel="preload" as="image" href="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img jg-guided-current-img" />
                               <div className="jg-guided-img-label">
                                 <h3 className="jg-guided-heading jg-icon-list">
                                   {" "}
@@ -237,7 +237,7 @@ export default function Untitled() {
                             </div>
                             <div className="jg-guided-col jg-guided-center">
                               <div className="jg-guided-img-wrap">
-                                <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" className="jg-guided-img" />
+                                <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img" />
                                 <div className="jg-guided-img-label jg-guided-img-label-cta">
                                   <span className="jg-guided-next-link jg-guided-view-full">
                                     <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Frame45te4t.svg" width={28} height={28} alt="" className="jg-guided-view-full-icon" />

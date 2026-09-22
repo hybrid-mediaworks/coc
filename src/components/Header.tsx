@@ -55,7 +55,7 @@ export default function Header() {
                                 <ul>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/staff/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2022%2020'%3E%3C/svg%3E" alt="" width={22} height={20} />{" "}
+                                      <Image src="/images/27ed4d2d0dc2c46ce70c38ec066cf4a6.svg" alt="" width={22} height={20} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Staff
                                       </span>
@@ -63,7 +63,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/our-facilities/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2022%2021'%3E%3C/svg%3E" alt="" width={22} height={21} />{" "}
+                                      <Image src="/images/e516147b79eae477168c68e63c126c1f.svg" alt="" width={22} height={21} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Our Facilities
                                       </span>
@@ -83,7 +83,7 @@ export default function Header() {
                                 <ul>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/blog/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2022%2022'%3E%3C/svg%3E" alt="" width={22} height={22} />{" "}
+                                      <Image src="/images/58201a1a4d6a3a6db7600dbfa5796db0.svg" alt="" width={22} height={22} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Blog
                                       </span>
@@ -91,7 +91,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/faq/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2025%2021'%3E%3C/svg%3E" alt="" width={25} height={21} />{" "}
+                                      <Image src="/images/6da3f4d66f65fce411d2d95542cdeaf4.svg" alt="" width={25} height={21} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         FAQ
                                       </span>
@@ -99,7 +99,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/check-your-insurance/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2025%2025'%3E%3C/svg%3E" alt="" width={25} height={25} />{" "}
+                                      <Image src="/images/fed56e18d1dca765e36fc252d169eccf.svg" alt="" width={25} height={25} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Insurance Verification
                                       </span>
@@ -128,7 +128,7 @@ export default function Header() {
                         </div>
                       </div>
                       <div className="mobile-image-footer">
-                        <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20292%20194'%3E%3C/svg%3E" alt="Menu CTA Image" width={292} height={194} className="mobile-geo-img" />
+                        <Image src="/images/1e49fa0fa53e2635e6a8ceee1774104c.webp" alt="Menu CTA Image" width={292} height={194} className="mobile-geo-img" />
                       </div>
                     </div>
                   </div>
@@ -172,7 +172,7 @@ export default function Header() {
                                 <ul>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/therapy/orange-county-ca/" style={{"fontSize":"14px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2022%2026'%3E%3C/svg%3E" alt="" width={22} height={26} />{" "}
+                                      <Image src="/images/f5d584da9eb33763b18f68aed871769d.svg" alt="" width={22} height={26} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Orange County
                                       </span>
@@ -209,7 +209,7 @@ export default function Header() {
                                           </Link>
                                         </div>
                                         <div className="geo_image_box">
-                                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20432%20180'%3E%3C/svg%3E" alt="Location Preview" width={432} height={180} className="geo-preview-img" />
+                                          <Image src="/images/786e9014dcdfcad323252c17e59f1d34.webp" alt="Location Preview" width={432} height={180} className="geo-preview-img" />
                                         </div>
                                       </div>
                                     </div>
@@ -244,7 +244,7 @@ export default function Header() {
                                       </Link>
                                     </div>
                                     <div className="geo_image_box">
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20432%20180'%3E%3C/svg%3E" alt="Location Preview" width={432} height={180} className="geo-preview-img" />
+                                      <Image src="/images/786e9014dcdfcad323252c17e59f1d34.webp" alt="Location Preview" width={432} height={180} className="geo-preview-img" />
                                     </div>
                                   </div>
                                 </div>
@@ -295,7 +295,7 @@ export default function Header() {
                         </div>
                       </div>
                       <div className="mobile-image-footer">
-                        <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20736%20526'%3E%3C/svg%3E" alt="Menu CTA Image" width={736} height={526} className="mobile-geo-img" />
+                        <Image src="/images/af117d424162946636056965b8e5a3e5.webp" alt="Menu CTA Image" width={736} height={526} className="mobile-geo-img" />
                       </div>
                     </div>
                   </div>
@@ -325,7 +325,7 @@ export default function Header() {
                                 <ul>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/anxiety-disorders/generalized-anxiety-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2022%2022'%3E%3C/svg%3E" alt="" width={22} height={22} />{" "}
+                                      <Image src="/images/5dbbde033fa0fa06a74007d7ac0688a5.svg" alt="" width={22} height={22} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Generalized Anxiety Disorder
                                       </span>
@@ -333,7 +333,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/anxiety-disorders/panic-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2097%20119'%3E%3C/svg%3E" alt="" width={97} height={119} />{" "}
+                                      <Image src="/images/3e02b281eb57e05c175d7e609548a804.svg" alt="" width={97} height={119} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Panic Disorder
                                       </span>
@@ -341,7 +341,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/anxiety-disorders/obsessive-compulsive-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20120%20131'%3E%3C/svg%3E" alt="" width={120} height={131} />{" "}
+                                      <Image src="/images/a6c8f88cc0ea63b17478a00382e7425a.svg" alt="" width={120} height={131} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Obsessive Compulsive Disorder
                                       </span>
@@ -349,7 +349,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/anxiety-disorders/social-anxiety-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2023%2030'%3E%3C/svg%3E" alt="" width={23} height={30} />{" "}
+                                      <Image src="/images/f65e6694cf0da3d2436801e25d704197.svg" alt="" width={23} height={30} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Social Anxiety Disorder
                                       </span>
@@ -357,7 +357,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/anxiety-disorders/agoraphobia/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20120%20134'%3E%3C/svg%3E" alt="" width={120} height={134} />{" "}
+                                      <Image src="/images/bbcc51bb45d63e67e7fbbd78a65d2c9c.svg" alt="" width={120} height={134} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Agoraphobia
                                       </span>
@@ -377,7 +377,7 @@ export default function Header() {
                                 <ul>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/mood-disorders/depression/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2022%2022'%3E%3C/svg%3E" alt="" width={22} height={22} />{" "}
+                                      <Image src="/images/911b1d233285d550d8d32391f5c92127.svg" alt="" width={22} height={22} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Depression Treatment (MentalHealth National)
                                       </span>
@@ -385,7 +385,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/mood-disorders/bipolar/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2022%2022'%3E%3C/svg%3E" alt="" width={22} height={22} />{" "}
+                                      <Image src="/images/3806c0a26309c669d491075447c23bbd.svg" alt="" width={22} height={22} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Bipolar Disorder
                                       </span>
@@ -393,7 +393,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/mood-disorders/premenstrual-dysphoric-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20110%20107'%3E%3C/svg%3E" alt="" width={110} height={107} />{" "}
+                                      <Image src="/images/d3234e69c57910d81c55af00d90c9ab6.svg" alt="" width={110} height={107} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Premenstrual Dysphoric Disorder
                                       </span>
@@ -401,7 +401,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/mood-disorders/disruptive-mood-dysregulation-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20120%2068'%3E%3C/svg%3E" alt="" width={120} height={68} />{" "}
+                                      <Image src="/images/caaf522eac30e5a2fe75db4033b30d05.svg" alt="" width={120} height={68} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Disruptive Mood Dysregulation Disorder
                                       </span>
@@ -409,7 +409,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/mood-disorders/depression/major-depressive-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20120%20120'%3E%3C/svg%3E" alt="" width={120} height={120} />{" "}
+                                      <Image src="/images/5d15bc062e8fbc462e45f3e31a08adc0.svg" alt="" width={120} height={120} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Major Depressive Disorder
                                       </span>
@@ -417,7 +417,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/mood-disorders/persistent-depressive-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2060%20109'%3E%3C/svg%3E" alt="" width={60} height={109} />{" "}
+                                      <Image src="/images/90157e102c2263f216144e90c6c9df75.svg" alt="" width={60} height={109} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Persistent Depressive Disorder
                                       </span>
@@ -425,7 +425,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/mood-disorders/seasonal-affective-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20121'%3E%3C/svg%3E" alt="" width={100} height={121} />{" "}
+                                      <Image src="/images/a1caa54f4972adc59a9f5adb8ac21eef.svg" alt="" width={100} height={121} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Seasonal Affective Disorder
                                       </span>
@@ -445,7 +445,7 @@ export default function Header() {
                                 <ul>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/therapy/trauma-disorder/ptsd/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20116%20116'%3E%3C/svg%3E" alt="" width={116} height={116} />{" "}
+                                      <Image src="/images/8d2e48f66afd469c5f036c9e9265b9cd.svg" alt="" width={116} height={116} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Post Traumatic Stress Disorder
                                       </span>
@@ -453,7 +453,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/trauma-disorder/adjustment-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20120%2094'%3E%3C/svg%3E" alt="" width={120} height={94} />{" "}
+                                      <Image src="/images/94b06ece97f71c801f98054c23d7501c.svg" alt="" width={120} height={94} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Adjustment Disorder
                                       </span>
@@ -473,7 +473,7 @@ export default function Header() {
                                 <ul>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/personality-disorders/borderline-personality-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20120%2068'%3E%3C/svg%3E" alt="" width={120} height={68} />{" "}
+                                      <Image src="/images/4fdca121dcf79c1d4cc8321cde218feb.svg" alt="" width={120} height={68} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Borderline Personality Disorder
                                       </span>
@@ -481,7 +481,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/personality-disorders/antisocial-personality-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2081%20120'%3E%3C/svg%3E" alt="" width={81} height={120} />{" "}
+                                      <Image src="/images/23599cafb0395514f7729d253ff3ce3d.svg" alt="" width={81} height={120} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Antisocial Personality Disorder
                                       </span>
@@ -489,7 +489,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/personality-disorders/dissociative-identity-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20120%2068'%3E%3C/svg%3E" alt="" width={120} height={68} />{" "}
+                                      <Image src="/images/f8d4696735c13c9b90e8b6437f863220.svg" alt="" width={120} height={68} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Dissociative Identity Disorder
                                       </span>
@@ -497,7 +497,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/personality-disorders/histrionic-personality-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20117%20118'%3E%3C/svg%3E" alt="" width={117} height={118} />{" "}
+                                      <Image src="/images/a0500c475c2579a8a0b7255bdd324e4a.svg" alt="" width={117} height={118} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Histrionic Personality Disorder
                                       </span>
@@ -505,7 +505,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/personality-disorders/paranoid-personality-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20120%2090'%3E%3C/svg%3E" alt="" width={120} height={90} />{" "}
+                                      <Image src="/images/d3ed9edd110d5249c1da13f52ff43efc.svg" alt="" width={120} height={90} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Paranoid Personality Disorder
                                       </span>
@@ -525,7 +525,7 @@ export default function Header() {
                                 <ul>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/psychotic-disorders/schizophrenia/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2094%2080'%3E%3C/svg%3E" alt="" width={94} height={80} />{" "}
+                                      <Image src="/images/bc6015be077fdcab4d6022b59dd1e3c2.svg" alt="" width={94} height={80} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Schizophrenia
                                       </span>
@@ -533,7 +533,7 @@ export default function Header() {
                                   </li>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/psychotic-disorders/schizoaffective-disorder/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2094%20105'%3E%3C/svg%3E" alt="" width={94} height={105} />{" "}
+                                      <Image src="/images/0cc834b4efd68474c50fa6f1a2dffdb3.svg" alt="" width={94} height={105} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         Schizoaffective Disorder
                                       </span>
@@ -553,7 +553,7 @@ export default function Header() {
                                 <ul>
                                   <li style={{"fontSize":"16px"}}>
                                     <Link className="" href="/mental-health/neurodevelopment-disorder/adhd/" style={{"fontSize":"16px"}}>
-                                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2083%20115'%3E%3C/svg%3E" alt="" width={83} height={115} />{" "}
+                                      <Image src="/images/01e99182a280fdd4991e7e30c02c845c.svg" alt="" width={83} height={115} />{" "}
                                       <span className="unhovered-label" style={{"fontSize":"14px"}}>
                                         ADHD
                                       </span>
@@ -575,7 +575,7 @@ export default function Header() {
                         </div>
                       </div>
                       <div className="mobile-image-footer">
-                        <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20736%20526'%3E%3C/svg%3E" alt="Menu CTA Image" width={736} height={526} className="mobile-geo-img" />
+                        <Image src="/images/af117d424162946636056965b8e5a3e5.webp" alt="Menu CTA Image" width={736} height={526} className="mobile-geo-img" />
                       </div>
                     </div>
                   </div>
@@ -610,7 +610,7 @@ export default function Header() {
                               <ul>
                                 <li style={{"fontSize":"16px"}}>
                                   <Link href="/mental-health/therapy/cognitive-behavioral-therapy-cbt/" style={{"fontSize":"16px"}}>
-                                    <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2025%2025'%3E%3C/svg%3E" alt="" width={25} height={25} />{" "}
+                                    <Image src="/images/ca88b37032dbbd9c77a17cf7bdcc17b8.svg" alt="" width={25} height={25} />{" "}
                                     <span className="unhovered-label" style={{"fontSize":"16px"}}>
                                       Cognitive Behavioral Therapy
                                     </span>
@@ -621,7 +621,7 @@ export default function Header() {
                                 </li>
                                 <li style={{"fontSize":"16px"}}>
                                   <Link href="/mental-health/therapy/dbt/" style={{"fontSize":"16px"}}>
-                                    <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2025%2025'%3E%3C/svg%3E" alt="" width={25} height={25} />{" "}
+                                    <Image src="/images/2ed314bfdea9426e6b289e45db2c747a.svg" alt="" width={25} height={25} />{" "}
                                     <span className="unhovered-label" style={{"fontSize":"16px"}}>
                                       Dialectical Behavioral Therapy
                                     </span>
@@ -632,7 +632,7 @@ export default function Header() {
                                 </li>
                                 <li style={{"fontSize":"16px"}}>
                                   <Link href="/mental-health/therapy/seeking-safety/" style={{"fontSize":"16px"}}>
-                                    <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2022%2022'%3E%3C/svg%3E" alt="" width={22} height={22} />{" "}
+                                    <Image src="/images/8d70adc9f9d4b777d49ccc717b9dae3f.svg" alt="" width={22} height={22} />{" "}
                                     <span className="unhovered-label" style={{"fontSize":"16px"}}>
                                       Seeking Safety Treatment
                                     </span>
@@ -643,7 +643,7 @@ export default function Header() {
                                 </li>
                                 <li style={{"fontSize":"16px"}}>
                                   <Link href="/mental-health/therapy/motivational-interviewing/" style={{"fontSize":"16px"}}>
-                                    <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2022%2022'%3E%3C/svg%3E" alt="" width={22} height={22} />{" "}
+                                    <Image src="/images/3e6ed2e4608a97ecbf5c790ae71ebc7f.svg" alt="" width={22} height={22} />{" "}
                                     <span className="unhovered-label" style={{"fontSize":"16px"}}>
                                       Motivational Interviewing
                                     </span>
@@ -654,7 +654,7 @@ export default function Header() {
                                 </li>
                                 <li style={{"fontSize":"16px"}}>
                                   <Link href="/mental-health/therapy/medication-management/" style={{"fontSize":"16px"}}>
-                                    <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2025%2025'%3E%3C/svg%3E" alt="" width={25} height={25} />{" "}
+                                    <Image src="/images/f55b936efdc943bf6b886f70cf817a64.svg" alt="" width={25} height={25} />{" "}
                                     <span className="unhovered-label" style={{"fontSize":"16px"}}>
                                       Medication Management
                                     </span>
@@ -678,7 +678,7 @@ export default function Header() {
                         </div>
                       </div>
                       <div className="mobile-image-footer">
-                        <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20292%20194'%3E%3C/svg%3E" alt="Menu CTA Image" width={292} height={194} className="mobile-geo-img" />
+                        <Image src="/images/1e49fa0fa53e2635e6a8ceee1774104c.webp" alt="Menu CTA Image" width={292} height={194} className="mobile-geo-img" />
                       </div>
                     </div>
                   </div>

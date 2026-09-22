@@ -104,7 +104,7 @@ export default function BipolarDisorder(props: Record<string, string>) {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-d32ee28 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="woman talks to therapist" className="attachment-thumbnail size-thumbnail wp-image-1274" />
+                        <link rel="preload" as="image" href="/images/181bfd6b92b405ffad52af8636c34764.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/181bfd6b92b405ffad52af8636c34764.webp" alt="woman talks to therapist" className="attachment-thumbnail size-thumbnail wp-image-1274" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-16a234f elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -707,7 +707,7 @@ export default function BipolarDisorder(props: Record<string, string>) {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-a60c631 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="an image of someone representing how to stop someone who self harms" className="attachment-thumbnail size-thumbnail wp-image-746" />
+                        <img loading="lazy" src="/images/94e54d0c0bcc308d9d0d6dfccd3e20cd.webp" alt="an image of someone representing how to stop someone who self harms" className="attachment-thumbnail size-thumbnail wp-image-746" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-a2883e0 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -795,7 +795,7 @@ export default function BipolarDisorder(props: Record<string, string>) {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-6e6d286 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" className="attachment-thumbnail size-thumbnail wp-image-1319" />
+                        <img loading="lazy" src="/images/bd2d5fd8cdcf9548bf1851cfb0167aa2.webp" alt="" className="attachment-thumbnail size-thumbnail wp-image-1319" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-b23fdc8 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">

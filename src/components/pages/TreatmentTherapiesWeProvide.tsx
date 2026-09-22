@@ -694,7 +694,7 @@ health conditions.
                       Last Page Visited
                     </h3>
                     <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
+                      <Image src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
                       Last Page Visited:
                     </h3>
                     <div className="jg-guided-visited-list">
@@ -703,10 +703,10 @@ health conditions.
                   </div>
                   <div className="jg-guided-col jg-guided-center">
                     <div className="jg-guided-img-wrap">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
+                      <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
                       <div className="jg-guided-img-label">
                         <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
+                          <Image src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
                           Current Guided Tour Page:
                         </h3>
                       </div>
@@ -728,7 +728,7 @@ health conditions.
                       <li className="jg-guided-divider" style={{"fontSize":"20px"}}></li>
                       <li style={{"fontSize":"20px"}}>
                         <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
+                          <Image src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
                           View Full Guided Site Tour
                         </span>
                       </li>
@@ -773,7 +773,7 @@ health conditions.
                       <Image src="/images/5122991f0d5f01987855eca7c0aca43c.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img entered exited" />
                       <div className="jg-guided-img-label">
                         <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon entered exited" />
+                          <Image src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon entered exited" />
                           Current Guided Tour Page:
                         </h3>
                         <strong className="jg-guided-current-label">
@@ -805,7 +805,7 @@ health conditions.
                       <li className="jg-guided-divider" style={{"fontSize":"20px"}}></li>
                       <li style={{"fontSize":"20px"}}>
                         <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full" href="/protect-your-job-while-in-treatment/">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" width={28} height={28} className="jg-guided-view-full-icon entered exited" />
+                          <Image src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon entered exited" />
                           View Full Guided Site Tour
                         </span>
                       </li>
@@ -822,10 +822,10 @@ health conditions.
                     </div>
                     <div className="jg-guided-col jg-guided-center">
                       <div className="jg-guided-img-wrap">
-                        <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" width={382} height={398} className="jg-guided-img" />
+                        <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" width={382} height={398} className="jg-guided-img" />
                         <div className="jg-guided-img-label jg-guided-img-label-cta">
                           <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
+                            <Image src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
                             View Full Guided Site Tour
                           </span>
                         </div>
@@ -1227,7 +1227,7 @@ health conditions.
           <div className="elementor-element elementor-element-dbd7b4b e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-element elementor-element-e6c0be1 elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20401%20220'%3E%3C/svg%3E" alt="" width={401} height={220} className="attachment-full size-full wp-image-59753" />
+                <Image src="/images/f038ca6b33d98c293ea8d701fa00d704.webp" alt="" width={401} height={220} className="attachment-full size-full wp-image-59753" />
               </div>
             </div>
             <div className="elementor-element elementor-element-d7272c5 elementor-absolute elementor-widget elementor-widget-heading" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="heading.default">
@@ -1324,7 +1324,7 @@ health conditions.
           <div className="elementor-element elementor-element-684eab2 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-element elementor-element-d2304f1 elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20401%20220'%3E%3C/svg%3E" alt="" width={401} height={220} className="attachment-full size-full wp-image-59753" />
+                <Image src="/images/f038ca6b33d98c293ea8d701fa00d704.webp" alt="" width={401} height={220} className="attachment-full size-full wp-image-59753" />
               </div>
             </div>
             <div className="elementor-element elementor-element-57f0b07 elementor-absolute elementor-widget elementor-widget-heading" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="heading.default">
@@ -1422,7 +1422,7 @@ residential and outpatient care.
           <div className="elementor-element elementor-element-d182cc6 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-element elementor-element-ce06eb7 elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20401%20220'%3E%3C/svg%3E" alt="" width={401} height={220} className="attachment-full size-full wp-image-59753" />
+                <Image src="/images/f038ca6b33d98c293ea8d701fa00d704.webp" alt="" width={401} height={220} className="attachment-full size-full wp-image-59753" />
               </div>
             </div>
             <div className="elementor-element elementor-element-a3dabaf elementor-absolute elementor-widget elementor-widget-heading" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="heading.default">
@@ -1661,17 +1661,17 @@ residential and outpatient care.
         <div className="elementor-element elementor-element-995f712 e-con-full e-grid e-con e-child">
           <div className="elementor-element elementor-element-d55e4f5 elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20269%20460'%3E%3C/svg%3E" alt="" width={269} height={460} className="attachment-full size-full wp-image-60120" />
+              <Image src="/images/201242a74e9f305b7a292df78bd795a6.webp" alt="" width={269} height={460} className="attachment-full size-full wp-image-60120" />
             </div>
           </div>
           <div className="elementor-element elementor-element-4443b2a elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20356%20238'%3E%3C/svg%3E" alt="" width={356} height={238} className="attachment-full size-full wp-image-60123" />
+              <Image src="/images/20b27373d1672176a95b555eeb6ab21a.webp" alt="" width={356} height={238} className="attachment-full size-full wp-image-60123" />
             </div>
           </div>
           <div className="elementor-element elementor-element-094c155 elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20396%20262'%3E%3C/svg%3E" alt="" width={396} height={262} className="attachment-full size-full wp-image-60122" />
+              <Image src="/images/e702c402e19497ac862d271075ba7065.webp" alt="" width={396} height={262} className="attachment-full size-full wp-image-60122" />
             </div>
           </div>
         </div>

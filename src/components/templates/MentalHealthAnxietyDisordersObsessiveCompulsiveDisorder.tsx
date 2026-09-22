@@ -125,7 +125,7 @@ export default function MentalHealthAnxietyDisordersObsessiveCompulsiveDisorder(
                   </p>
                   <p className="wp-block-paragraph">If someone you care about has OCD and is neurodivergent, be supportive and understanding. Encourage them to seek professional help, educate yourself about the condition, be patient, and offer assistance with their treatment plan while being sure to respect their autonomy.</p>
                   <figure className="wp-block-image aligncenter size-large">
-                    <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20683'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201024%20683'%3E%3C/svg%3E" alt="an image of people who learned about is ocd a neurodivergent" className="wp-image-1669" />
+                    <link rel="preload" as="image" href="/images/4a01dbf30a30b6cd49c3a0b1ad2b368a.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/4a01dbf30a30b6cd49c3a0b1ad2b368a.webp" alt="an image of people who learned about is ocd a neurodivergent" className="wp-image-1669" />
                   </figure>
                   <span id="elementor-toc__heading-anchor-3" className="elementor-menu-anchor "></span>
                   <h2 className="wp-block-heading">
@@ -429,7 +429,7 @@ export default function MentalHealthAnxietyDisordersObsessiveCompulsiveDisorder(
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-45c91d9 elementor-widget elementor-widget-image" data-widget_type="image.default">
                 <div className="elementor-widget-container">
-                  <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="an image of people who got help at Connections Mental Health" className="attachment-thumbnail size-thumbnail wp-image-46" />
+                  <img loading="lazy" src="/images/b60c1e95f533f0fc5f1fea50c7163552.webp" alt="an image of people who got help at Connections Mental Health" className="attachment-thumbnail size-thumbnail wp-image-46" />
                 </div>
               </div>
             </div>

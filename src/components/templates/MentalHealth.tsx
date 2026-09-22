@@ -11,55 +11,55 @@ const gridData0 = [
     "image": "/images/6f3b750517b36440e3b203bcfec3a49d.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202500%201667'%3E%3C/svg%3E"
+    "image": "/images/6f3b750517b36440e3b203bcfec3a49d.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202500%201667'%3E%3C/svg%3E"
+    "image": "/images/7af5e4605616ebe006c2e0ed0e8710a0.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202500%201667'%3E%3C/svg%3E"
+    "image": "/images/6058a84c69aae0f2d4daeb785137886d.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202500%201667'%3E%3C/svg%3E"
+    "image": "/images/aeea494f1fae3cae5cf888c7020314f8.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202500%201667'%3E%3C/svg%3E"
+    "image": "/images/002f54c7be89f77c7caaa1b06f93e2b1.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202500%201667'%3E%3C/svg%3E"
+    "image": "/images/a39dc71f286f9ce19bb01d2049cf700c.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202500%201667'%3E%3C/svg%3E"
+    "image": "/images/65ee0c1f9380c91185f2d86360ad5d61.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202500%201667'%3E%3C/svg%3E"
+    "image": "/images/867802fc8ab23d485cce3c1ab63c99b1.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202500%201667'%3E%3C/svg%3E"
+    "image": "/images/04172189ce839057528456106b3c283e.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20980%20627'%3E%3C/svg%3E"
+    "image": "/images/fdd15bf7c402e0f2ce78b9181f217060.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20993%20583'%3E%3C/svg%3E"
+    "image": "/images/e53af798514d2ecbf8362f73f9b17506.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20985%20640'%3E%3C/svg%3E"
+    "image": "/images/81f8fd8e6c3a55c2e7abceb35f6eef66.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20988%20586'%3E%3C/svg%3E"
+    "image": "/images/2fd66655268de70bf9c4f16b11e0205c.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201006%20529'%3E%3C/svg%3E"
+    "image": "/images/c75472e08a3ccee309ea7ee2afefa2ab.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20985%20616'%3E%3C/svg%3E"
+    "image": "/images/cc6deb6863efa64f0d80975b7f024ca9.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20967%20632'%3E%3C/svg%3E"
+    "image": "/images/4e140d279187f3c421180e82381df93f.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20993%20652'%3E%3C/svg%3E"
+    "image": "/images/8e6d0a158b0ecfe9ffd4cd70aff0f736.webp"
   }
 ] as const;
 
@@ -369,7 +369,7 @@ export default function Untitled(props: Record<string, string>) {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-88995a1 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="an image of people who got help at Connections Mental Health" className="attachment-thumbnail size-thumbnail wp-image-47" />
+                        <link rel="preload" as="image" href="/images/656ea55dd5aab95d372affb248b693b2.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/656ea55dd5aab95d372affb248b693b2.webp" alt="an image of people who got help at Connections Mental Health" className="attachment-thumbnail size-thumbnail wp-image-47" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-ce4d53d elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -742,7 +742,7 @@ export default function Untitled(props: Record<string, string>) {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-c06ef30 elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="an image of people who got help at Connections Mental Health" className="attachment-thumbnail size-thumbnail wp-image-46" />
+                        <img loading="lazy" src="/images/52b974ece3c12eb1c823d80fbeb1f1d9.webp" alt="an image of people who got help at Connections Mental Health" className="attachment-thumbnail size-thumbnail wp-image-46" />
                       </div>
                     </div>
                   </div>

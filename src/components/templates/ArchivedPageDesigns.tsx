@@ -929,28 +929,28 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                 <div className="swiper-slide swiper-slide-active" role="group" aria-roledescription="slide" aria-label="1 / 4" style={{"width":"403.333px","marginRight":"20px","visibility":"visible"}}>
                   <Link data-elementor-open-lightbox="no" href="/wp-content/uploads/2024/09/Frame-107-1.png" style={{"fontSize":"16px"}}>
                     <figure className="swiper-slide-inner">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20253'%3E%3C/svg%3E" alt="Frame-107.png" width={400} height={253} className="swiper-slide-image" />
+                      <Image src="/images/0fee8b9ffea62d1f477457082941dbf1.webp" alt="Frame-107.png" width={400} height={253} className="swiper-slide-image" />
                     </figure>
                   </Link>
                 </div>
                 <div className="swiper-slide swiper-slide-next" role="group" aria-roledescription="slide" aria-label="2 / 4" style={{"width":"403.333px","marginRight":"20px","visibility":"visible"}}>
                   <Link data-elementor-open-lightbox="no" href="/wp-content/uploads/2024/09/Frame-108-1-1.png" style={{"fontSize":"16px"}}>
                     <figure className="swiper-slide-inner">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20253'%3E%3C/svg%3E" alt="Frame-108-1.png" width={400} height={253} className="swiper-slide-image" />
+                      <Image src="/images/dc06e7352be6ae49649ecb6a8d1521fc.webp" alt="Frame-108-1.png" width={400} height={253} className="swiper-slide-image" />
                     </figure>
                   </Link>
                 </div>
                 <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 / 4" style={{"width":"403.333px","marginRight":"20px","visibility":"visible"}}>
                   <Link data-elementor-open-lightbox="no" href="/wp-content/uploads/2024/09/Frame-109-1.png" style={{"fontSize":"16px"}}>
                     <figure className="swiper-slide-inner">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20253'%3E%3C/svg%3E" alt="Frame-109.png" width={400} height={253} className="swiper-slide-image" />
+                      <Image src="/images/780baa65757ae112501f38efc081c858.webp" alt="Frame-109.png" width={400} height={253} className="swiper-slide-image" />
                     </figure>
                   </Link>
                 </div>
                 <div className="swiper-slide swiper-slide-duplicate-prev" role="group" aria-roledescription="slide" aria-label="4 / 4" style={{"width":"403.333px","marginRight":"20px","visibility":"visible"}}>
                   <Link data-elementor-open-lightbox="no" href="/wp-content/uploads/2024/09/Frame-110-1.png" style={{"fontSize":"16px"}}>
                     <figure className="swiper-slide-inner">
-                      <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20400%20253'%3E%3C/svg%3E" alt="Frame-110.png" width={400} height={253} className="swiper-slide-image" />
+                      <Image src="/images/03647c21b4b7775f600c092c4232573d.webp" alt="Frame-110.png" width={400} height={253} className="swiper-slide-image" />
                     </figure>
                   </Link>
                 </div>
@@ -1028,7 +1028,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-51e03af0 elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3927" />
+                          <Image src="/images/330a97886e6d30ad1d23769bf1b9b112.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3927" />
                         </div>
                       </div>
                     </div>
@@ -1039,7 +1039,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-215d33b5 elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3928" />
+                          <Image src="/images/9bc10eb4179eaea6e065e545f21b860a.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3928" />
                         </div>
                       </div>
                     </div>
@@ -1050,7 +1050,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-404a584c elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3929" />
+                          <Image src="/images/71c6d26db690e408b7acc47157268a6a.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3929" />
                         </div>
                       </div>
                     </div>
@@ -1061,7 +1061,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-4447bfe5 elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3930" />
+                          <Image src="/images/196972e3fe863bd07e0720b81a27dbd9.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3930" />
                         </div>
                       </div>
                     </div>
@@ -1072,7 +1072,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-446fe6b6 elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3931" />
+                          <Image src="/images/cb4748bd01aa68524c697f0c0f4c4b8e.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3931" />
                         </div>
                       </div>
                     </div>
@@ -1083,7 +1083,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-66e8c274 elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3932" />
+                          <Image src="/images/54ec663ce4410198a7e1a2e7707fe374.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3932" />
                         </div>
                       </div>
                     </div>
@@ -1094,7 +1094,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-11bad38d elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3933" />
+                          <Image src="/images/2a05b9c3cb12dd349cb75512562943dc.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-3933" />
                         </div>
                       </div>
                     </div>
@@ -1156,7 +1156,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
             </div>
             <div className="elementor-element elementor-element-5a67fa5a elementor-widget__width-inherit elementor-absolute elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-image" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%201'%3E%3C/svg%3E" alt="" width={150} height={1} className="attachment-thumbnail size-thumbnail wp-image-4814" />
+                <Image src="/images/1c31fa8780e6acdede49e4a4bd1203cb.svg" alt="" width={150} height={1} className="attachment-thumbnail size-thumbnail wp-image-4814" />
               </div>
             </div>
           </div>
@@ -1212,7 +1212,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
             </div>
             <div className="elementor-element elementor-element-7c95749 elementor-widget__width-inherit elementor-absolute elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-image" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%201'%3E%3C/svg%3E" alt="" width={150} height={1} className="attachment-thumbnail size-thumbnail wp-image-4814" />
+                <Image src="/images/1c31fa8780e6acdede49e4a4bd1203cb.svg" alt="" width={150} height={1} className="attachment-thumbnail size-thumbnail wp-image-4814" />
               </div>
             </div>
           </div>
@@ -1294,7 +1294,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
             </div>
             <div className="elementor-element elementor-element-697e7bd7 elementor-widget__width-inherit elementor-absolute elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-image" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%201'%3E%3C/svg%3E" alt="" width={150} height={1} className="attachment-thumbnail size-thumbnail wp-image-4814" />
+                <Image src="/images/1c31fa8780e6acdede49e4a4bd1203cb.svg" alt="" width={150} height={1} className="attachment-thumbnail size-thumbnail wp-image-4814" />
               </div>
             </div>
           </div>
@@ -1335,7 +1335,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
             </div>
             <div className="elementor-element elementor-element-42b84f1f elementor-widget__width-inherit elementor-absolute elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-image" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%201'%3E%3C/svg%3E" alt="" width={150} height={1} className="attachment-thumbnail size-thumbnail wp-image-4814" />
+                <Image src="/images/1c31fa8780e6acdede49e4a4bd1203cb.svg" alt="" width={150} height={1} className="attachment-thumbnail size-thumbnail wp-image-4814" />
               </div>
             </div>
           </div>
@@ -1593,7 +1593,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-6faf8fe7 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div className="elementor-element elementor-element-21305612 elementor-widget elementor-widget-image" data-widget_type="image.default">
                           <div className="elementor-widget-container">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
+                            <Image src="/images/e7818fea599ad0131ca3c2105df8bd3c.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
                           </div>
                         </div>
                         <div className="elementor-element elementor-element-293858c9 elementor-widget elementor-widget-rating" data-widget_type="rating.default">
@@ -1701,7 +1701,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-72251b93 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div className="elementor-element elementor-element-1ecce061 elementor-widget elementor-widget-image" data-widget_type="image.default">
                           <div className="elementor-widget-container">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
+                            <Image src="/images/e7818fea599ad0131ca3c2105df8bd3c.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
                           </div>
                         </div>
                         <div className="elementor-element elementor-element-65fbac3e elementor-widget elementor-widget-rating" data-widget_type="rating.default">
@@ -1809,7 +1809,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-657f561 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div className="elementor-element elementor-element-39a7d800 elementor-widget elementor-widget-image" data-widget_type="image.default">
                           <div className="elementor-widget-container">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
+                            <Image src="/images/e7818fea599ad0131ca3c2105df8bd3c.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
                           </div>
                         </div>
                         <div className="elementor-element elementor-element-71a3b68d elementor-widget elementor-widget-rating" data-widget_type="rating.default">
@@ -1917,7 +1917,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-74a30968 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div className="elementor-element elementor-element-140a6d0e elementor-widget elementor-widget-image" data-widget_type="image.default">
                           <div className="elementor-widget-container">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
+                            <Image src="/images/e7818fea599ad0131ca3c2105df8bd3c.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
                           </div>
                         </div>
                         <div className="elementor-element elementor-element-6e6c5ece elementor-widget elementor-widget-rating" data-widget_type="rating.default">
@@ -2025,7 +2025,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-20188052 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div className="elementor-element elementor-element-21904aa7 elementor-widget elementor-widget-image" data-widget_type="image.default">
                           <div className="elementor-widget-container">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
+                            <Image src="/images/e7818fea599ad0131ca3c2105df8bd3c.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
                           </div>
                         </div>
                         <div className="elementor-element elementor-element-3cb6511e elementor-widget elementor-widget-rating" data-widget_type="rating.default">
@@ -2133,7 +2133,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-670e6b6 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div className="elementor-element elementor-element-38d80f8f elementor-widget elementor-widget-image" data-widget_type="image.default">
                           <div className="elementor-widget-container">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
+                            <Image src="/images/e7818fea599ad0131ca3c2105df8bd3c.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
                           </div>
                         </div>
                         <div className="elementor-element elementor-element-205fbab1 elementor-widget elementor-widget-rating" data-widget_type="rating.default">
@@ -2241,7 +2241,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-3a7df07d e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div className="elementor-element elementor-element-3754b850 elementor-widget elementor-widget-image" data-widget_type="image.default">
                           <div className="elementor-widget-container">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
+                            <Image src="/images/e7818fea599ad0131ca3c2105df8bd3c.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4443" />
                           </div>
                         </div>
                         <div className="elementor-element elementor-element-2058fbf5 elementor-widget elementor-widget-rating" data-widget_type="rating.default">
@@ -2611,7 +2611,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-37deab50 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4591" />
+                          <Image src="/images/3b03f1d6e5773cceb6b5be1fcb1819ba.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4591" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-1fd9947a elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">
@@ -2649,7 +2649,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-28d2ea5 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4591" />
+                          <Image src="/images/3b03f1d6e5773cceb6b5be1fcb1819ba.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4591" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-a98459f elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">
@@ -2687,7 +2687,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-4f2b1b28 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4591" />
+                          <Image src="/images/3b03f1d6e5773cceb6b5be1fcb1819ba.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4591" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-7a83791c elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">
@@ -2725,7 +2725,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-7781bbd6 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4591" />
+                          <Image src="/images/3b03f1d6e5773cceb6b5be1fcb1819ba.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4591" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-6236cfe3 elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">
@@ -2763,7 +2763,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-56a511b7 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4591" />
+                          <Image src="/images/3b03f1d6e5773cceb6b5be1fcb1819ba.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4591" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-60002965 elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">
@@ -2847,7 +2847,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
         <div className="elementor-element elementor-element-66e295b e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-7b77d9ce elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4591" />
+              <Image src="/images/3b03f1d6e5773cceb6b5be1fcb1819ba.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4591" />
             </div>
           </div>
         </div>
@@ -3320,7 +3320,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                       </div>
                       <div className="elementor-element elementor-element-eede4e3 elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4644" />
+                          <Image src="/images/08f2347b67f103b3b4081dcd75b98f44.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4644" />
                         </div>
                       </div>
                     </div>
@@ -3359,7 +3359,7 @@ export default function ArchivedPageDesigns(props: Record<string, string>) {
                       </div>
                       <div className="elementor-element elementor-element-61f5160a elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4644" />
+                          <Image src="/images/08f2347b67f103b3b4081dcd75b98f44.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-4644" />
                         </div>
                       </div>
                     </div>

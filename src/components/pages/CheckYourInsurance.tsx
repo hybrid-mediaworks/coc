@@ -658,7 +658,7 @@ export default function CheckYourInsurance(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-f809d01 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div className="elementor-element elementor-element-f75263e elementor-widget elementor-widget-image" data-widget_type="image.default">
                           <div className="elementor-widget-container">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3C/svg%3E" alt="" width={64} height={64} className="attachment-full size-full wp-image-57491" />
+                            <Image src="/images/3a6036e5092e9d5e6deed031b72cad03.webp" alt="" width={64} height={64} className="attachment-full size-full wp-image-57491" />
                           </div>
                         </div>
                         <div className="elementor-element elementor-element-962d233 elementor-widget elementor-widget-rating" data-widget_type="rating.default">
@@ -767,7 +767,7 @@ export default function CheckYourInsurance(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-0aab789 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div className="elementor-element elementor-element-621ebc4 elementor-widget elementor-widget-image" data-widget_type="image.default">
                           <div className="elementor-widget-container">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3C/svg%3E" alt="" width={64} height={64} className="attachment-full size-full wp-image-57491" />
+                            <Image src="/images/3a6036e5092e9d5e6deed031b72cad03.webp" alt="" width={64} height={64} className="attachment-full size-full wp-image-57491" />
                           </div>
                         </div>
                         <div className="elementor-element elementor-element-48e68ea elementor-widget elementor-widget-rating" data-widget_type="rating.default">
@@ -873,7 +873,7 @@ export default function CheckYourInsurance(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-e9924d7 e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div className="elementor-element elementor-element-4c3e427 elementor-widget elementor-widget-image" data-widget_type="image.default">
                           <div className="elementor-widget-container">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3C/svg%3E" alt="" width={64} height={64} className="attachment-full size-full wp-image-57492" />
+                            <Image src="/images/5c9851b4bbaab809aa0333d7629b4a94.webp" alt="" width={64} height={64} className="attachment-full size-full wp-image-57492" />
                           </div>
                         </div>
                         <div className="elementor-element elementor-element-d51072e elementor-widget elementor-widget-rating" data-widget_type="rating.default">
@@ -979,7 +979,7 @@ export default function CheckYourInsurance(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-bfef85a e-con-full e-flex e-con e-child" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div className="elementor-element elementor-element-03e7805 elementor-widget elementor-widget-image" data-widget_type="image.default">
                           <div className="elementor-widget-container">
-                            <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3C/svg%3E" alt="" width={64} height={64} className="attachment-full size-full wp-image-57493" />
+                            <Image src="/images/e3ce4310adf145dab963df74daacf99b.webp" alt="" width={64} height={64} className="attachment-full size-full wp-image-57493" />
                           </div>
                         </div>
                         <div className="elementor-element elementor-element-2d216c2 elementor-widget elementor-widget-rating" data-widget_type="rating.default">

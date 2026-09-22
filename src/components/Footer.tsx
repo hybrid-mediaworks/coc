@@ -10,12 +10,12 @@ export default function Footer() {
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-b33cf1e elementor-widget elementor-widget-image" data-widget_type="image.default">
                 <div className="elementor-widget-container">
-                  <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201846%20432'%3E%3C/svg%3E" alt="an image of the Connections Mental Health logo" width={1846} height={432} className="attachment-full size-full wp-image-15" />
+                  <Image src="/images/dccaad5b02aec71fc21e85be90c81dcb.webp" alt="an image of the Connections Mental Health logo" width={1846} height={432} className="attachment-full size-full wp-image-15" />
                 </div>
               </div>
               <div className="elementor-element elementor-element-9b9d300 elementor-widget elementor-widget-image" data-widget_type="image.default">
                 <div className="elementor-widget-container">
-                  <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20303%20265'%3E%3C/svg%3E" alt="" width={303} height={265} className="attachment-full size-full wp-image-58037" />
+                  <Image src="/images/bcba56f8f41d06844ee9cabf91559e46.webp" alt="" width={303} height={265} className="attachment-full size-full wp-image-58037" />
                 </div>
               </div>
               <div className="elementor-element elementor-element-b1e67e6 e-flex e-con-boxed e-con e-parent">

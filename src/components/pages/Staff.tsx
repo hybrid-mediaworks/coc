@@ -67,7 +67,7 @@ export default function Untitled() {
                           </div>
                           <div className="jg-guided-col jg-guided-center">
                             <div className="jg-guided-img-wrap">
-                              <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" className="jg-guided-img jg-guided-current-img" />
+                              <link rel="preload" as="image" href="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img jg-guided-current-img" />
                               <div className="jg-guided-img-label">
                                 <h3 className="jg-guided-heading jg-icon-list">
                                   {" "}
@@ -161,7 +161,7 @@ export default function Untitled() {
                             </div>
                             <div className="jg-guided-col jg-guided-center">
                               <div className="jg-guided-img-wrap">
-                                <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" className="jg-guided-img" />
+                                <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img" />
                                 <div className="jg-guided-img-label jg-guided-img-label-cta">
                                   <span className="jg-guided-next-link jg-guided-view-full">
                                     <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Frame45te4t.svg" width={28} height={28} alt="" className="jg-guided-view-full-icon" />
@@ -340,7 +340,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                 <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
                                     <Link href="/staff/ryan-ruiz-therapist/">
-                                      <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20240%20240'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-60370" />
+                                      <img loading="lazy" src="/images/1cf85e05e9985e133f25794d63bb4b85.webp" alt="" className="attachment-full size-full wp-image-60370" />
                                     </Link>
                                   </div>
                                 </div>
@@ -393,7 +393,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                 <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
                                     <Link href="/staff/angelina-villalobos/">
-                                      <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20600'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-55396" />
+                                      <img loading="lazy" src="/images/90bc3ecbb7a4801285900cfb65e9fffb.webp" alt="" className="attachment-full size-full wp-image-55396" />
                                     </Link>
                                   </div>
                                 </div>
@@ -430,7 +430,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                 <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
                                     <Link href="/staff/kristof-vilgertshofer/">
-                                      <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20600'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-55396" />
+                                      <img loading="lazy" src="/images/90bc3ecbb7a4801285900cfb65e9fffb.webp" alt="" className="attachment-full size-full wp-image-55396" />
                                     </Link>
                                   </div>
                                 </div>
@@ -470,7 +470,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                 <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
                                     <Link href="/staff/jeff-robbins-case-manager/">
-                                      <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20240%20240'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-60371" />
+                                      <img loading="lazy" src="/images/804e4c64c330c6d28a0da99e71aece82.webp" alt="" className="attachment-full size-full wp-image-60371" />
                                     </Link>
                                   </div>
                                 </div>
@@ -523,7 +523,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                 <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
                                     <Link href="/staff/pablo-alcala-director-of-operations/">
-                                      <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20240%20240'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-60374" />
+                                      <img loading="lazy" src="/images/9b82b045fe822b81c6517ddc0d504046.webp" alt="" className="attachment-full size-full wp-image-60374" />
                                     </Link>
                                   </div>
                                 </div>
@@ -563,7 +563,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                 <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
                                     <Link href="/staff/dave-grasso-operations-manager/">
-                                      <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20600'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-55396" />
+                                      <img loading="lazy" src="/images/90bc3ecbb7a4801285900cfb65e9fffb.webp" alt="" className="attachment-full size-full wp-image-55396" />
                                     </Link>
                                   </div>
                                 </div>
@@ -603,7 +603,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                 <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
                                     <Link href="/staff/kolby-seger/">
-                                      <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20240%20240'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-60372" />
+                                      <img loading="lazy" src="/images/bc4252fbea8f7112f63594473a85f9c7.webp" alt="" className="attachment-full size-full wp-image-60372" />
                                     </Link>
                                   </div>
                                 </div>

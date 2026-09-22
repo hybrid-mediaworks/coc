@@ -177,7 +177,7 @@ export default function WhyTravelingorStayingClosetoHome() {
                             <h3 className="jg-guided-heading">Last Page Visited</h3>
                             <h3 className="jg-guided-heading jg-icon-list">
                               {" "}
-                              <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" className="jg-guided-heading-icon" />
+                              <link rel="preload" as="image" href="/images/31cfb037858751399a6f0b354f9d2c67.svg" fetchPriority="high" /><img fetchPriority="high" src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" className="jg-guided-heading-icon" />
                               {"Last Page Visited: "}
                             </h3>
                             <div className="jg-guided-visited-list">
@@ -186,11 +186,11 @@ export default function WhyTravelingorStayingClosetoHome() {
                           </div>
                           <div className="jg-guided-col jg-guided-center">
                             <div className="jg-guided-img-wrap">
-                              <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" className="jg-guided-img jg-guided-current-img" />
+                              <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img jg-guided-current-img" />
                               <div className="jg-guided-img-label">
                                 <h3 className="jg-guided-heading jg-icon-list">
                                   {" "}
-                                  <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" className="jg-guided-heading-icon" />
+                                  <img loading="lazy" src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" className="jg-guided-heading-icon" />
                                   {" Current Guided Tour Page: "}
                                 </h3>
                                 <strong className="jg-guided-current-label"></strong>
@@ -209,7 +209,7 @@ export default function WhyTravelingorStayingClosetoHome() {
                               <li className="jg-guided-divider"></li>
                               <li>
                                 <span className="jg-guided-next-link jg-guided-view-full">
-                                  <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" className="jg-guided-view-full-icon" />
+                                  <img loading="lazy" src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" className="jg-guided-view-full-icon" />
                                   {" View Full Guided Site Tour"}
                                 </span>
                               </li>
@@ -280,10 +280,10 @@ export default function WhyTravelingorStayingClosetoHome() {
                             </div>
                             <div className="jg-guided-col jg-guided-center">
                               <div className="jg-guided-img-wrap">
-                                <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" className="jg-guided-img" />
+                                <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img" />
                                 <div className="jg-guided-img-label jg-guided-img-label-cta">
                                   <span className="jg-guided-next-link jg-guided-view-full">
-                                    <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" className="jg-guided-view-full-icon" />
+                                    <img loading="lazy" src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" className="jg-guided-view-full-icon" />
                                     {" View Full Guided Site Tour"}
                                   </span>
                                 </div>
@@ -635,7 +635,7 @@ export default function WhyTravelingorStayingClosetoHome() {
                             <h3 className="jg-guided-heading">Last Page Visited</h3>
                             <h3 className="jg-guided-heading jg-icon-list">
                               {" "}
-                              <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" className="jg-guided-heading-icon" />
+                              <img loading="lazy" src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" className="jg-guided-heading-icon" />
                               {"Last Page Visited: "}
                             </h3>
                             <div className="jg-guided-visited-list">
@@ -644,11 +644,11 @@ export default function WhyTravelingorStayingClosetoHome() {
                           </div>
                           <div className="jg-guided-col jg-guided-center">
                             <div className="jg-guided-img-wrap">
-                              <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" className="jg-guided-img jg-guided-current-img" />
+                              <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img jg-guided-current-img" />
                               <div className="jg-guided-img-label">
                                 <h3 className="jg-guided-heading jg-icon-list">
                                   {" "}
-                                  <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" className="jg-guided-heading-icon" />
+                                  <img loading="lazy" src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" className="jg-guided-heading-icon" />
                                   {" Current Guided Tour Page: "}
                                 </h3>
                                 <strong className="jg-guided-current-label"></strong>
@@ -667,7 +667,7 @@ export default function WhyTravelingorStayingClosetoHome() {
                               <li className="jg-guided-divider"></li>
                               <li>
                                 <span className="jg-guided-next-link jg-guided-view-full">
-                                  <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" className="jg-guided-view-full-icon" />
+                                  <img loading="lazy" src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" className="jg-guided-view-full-icon" />
                                   {" View Full Guided Site Tour"}
                                 </span>
                               </li>
@@ -690,11 +690,11 @@ export default function WhyTravelingorStayingClosetoHome() {
                           </div>
                           <div className="jg-guided-col jg-guided-center">
                             <div className="jg-guided-img-wrap">
-                              <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" className="jg-guided-img jg-guided-current-img" />
+                              <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img jg-guided-current-img" />
                               <div className="jg-guided-img-label">
                                 <h3 className="jg-guided-heading jg-icon-list">
                                   {" "}
-                                  <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="check-icon" className="jg-guided-heading-icon" />
+                                  <img loading="lazy" src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" className="jg-guided-heading-icon" />
                                   {" Current Guided Tour Page: "}
                                 </h3>
                                 <strong className="jg-guided-current-label"></strong>
@@ -713,7 +713,7 @@ export default function WhyTravelingorStayingClosetoHome() {
                               <li className="jg-guided-divider"></li>
                               <li>
                                 <span className="jg-guided-next-link jg-guided-view-full">
-                                  <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" className="jg-guided-view-full-icon" />
+                                  <img loading="lazy" src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" className="jg-guided-view-full-icon" />
                                   {" View Full Guided Site Tour"}
                                 </span>
                               </li>
@@ -728,10 +728,10 @@ export default function WhyTravelingorStayingClosetoHome() {
                             </div>
                             <div className="jg-guided-col jg-guided-center">
                               <div className="jg-guided-img-wrap">
-                                <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20382%20398'%3E%3C/svg%3E" alt="" className="jg-guided-img" />
+                                <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img" />
                                 <div className="jg-guided-img-label jg-guided-img-label-cta">
                                   <span className="jg-guided-next-link jg-guided-view-full">
-                                    <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2028%2028'%3E%3C/svg%3E" alt="" className="jg-guided-view-full-icon" />
+                                    <img loading="lazy" src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" className="jg-guided-view-full-icon" />
                                     {" View Full Guided Site Tour"}
                                   </span>
                                 </div>
@@ -1056,19 +1056,19 @@ export default function WhyTravelingorStayingClosetoHome() {
                   <div className="elementor-element elementor-element-e1fee89 e-con-full e-flex e-con e-child" data-settings="&#123;&quot;background_background&quot;:&quot;classic&quot;&#125;">
                     <div className="elementor-element elementor-element-75298e0 elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20600'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-59637" />
+                        <img loading="lazy" src="/images/6bf184afe05bea8e9f1c12262439fcdb.webp" alt="" className="attachment-full size-full wp-image-59637" />
                       </div>
                     </div>
                   </div>
                   <div className="elementor-element elementor-element-7ae9622 e-con-full e-flex e-con e-child">
                     <div className="elementor-element elementor-element-3427f46 elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20285'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-59639" />
+                        <img loading="lazy" src="/images/e289b406e1bcb8e5d51eb758b1b3d8c5.webp" alt="" className="attachment-full size-full wp-image-59639" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-0b1a911 elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20285'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-59638" />
+                        <img loading="lazy" src="/images/6664720f3f5db1f721f0b8c1c8b04218.webp" alt="" className="attachment-full size-full wp-image-59638" />
                       </div>
                     </div>
                   </div>
@@ -1592,7 +1592,7 @@ export default function WhyTravelingorStayingClosetoHome() {
                                           <div className="elementor-element elementor-element-9544cc6 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                             <div className="elementor-widget-container">
                                               <Link href="/staff/joana-constante-freitas/">
-                                                <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201254%201254'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-60574" />
+                                                <img loading="lazy" src="/images/413dfb0c45802158652346807d711c32.webp" alt="" className="attachment-full size-full wp-image-60574" />
                                               </Link>
                                             </div>
                                           </div>
@@ -1634,7 +1634,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                           <div className="elementor-element elementor-element-9544cc6 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                             <div className="elementor-widget-container">
                                               <Link href="/staff/huy-nguyen/">
-                                                <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201254%201254'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-60573" />
+                                                <img loading="lazy" src="/images/3dca046b4a9f1de96169b534cd89ffaa.webp" alt="" className="attachment-full size-full wp-image-60573" />
                                               </Link>
                                             </div>
                                           </div>
@@ -1674,7 +1674,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                           <div className="elementor-element elementor-element-9544cc6 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                             <div className="elementor-widget-container">
                                               <Link href="/staff/ryan-ruiz-therapist/">
-                                                <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20240%20240'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-60370" />
+                                                <img loading="lazy" src="/images/1cf85e05e9985e133f25794d63bb4b85.webp" alt="" className="attachment-full size-full wp-image-60370" />
                                               </Link>
                                             </div>
                                           </div>

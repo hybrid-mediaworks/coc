@@ -243,7 +243,7 @@ const gridData9 = [
     "image": "/images/1c199dd655be427b2dc4f2b4bd998d00.webp"
   },
   {
-    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20540%20541'%3E%3C/svg%3E"
+    "image": "/images/89caa212679bf92c3573a6b48452b04c.webp"
   }
 ] as const;
 
@@ -704,7 +704,7 @@ export default function Untitled() {
                 <div className="elementor-element elementor-element-a76dd27 e-con-full e-flex e-con e-child">
                   <div className="elementor-element elementor-element-07e6f3a elementor-widget elementor-widget-image" data-widget_type="image.default">
                     <div className="elementor-widget-container">
-                      <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20448'%3E%3C/svg%3E" alt="" className="attachment-full size-full wp-image-55845 entered exited" />
+                      <img loading="lazy" src="/images/1bc18582d0d304a4437f70d962145882.webp" alt="" className="attachment-full size-full wp-image-55845 entered exited" />
                     </div>
                   </div>
                 </div>

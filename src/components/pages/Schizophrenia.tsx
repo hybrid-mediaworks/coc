@@ -108,7 +108,7 @@ export default function Schizophrenia(props: Record<string, string>) {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-d32ee28 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="woman looking off representing schizophrenia symptoms." className="attachment-thumbnail size-thumbnail wp-image-1832" />
+                        <link rel="preload" as="image" href="/images/359a9adcaf8859ec42df8bb76f7a8e71.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/359a9adcaf8859ec42df8bb76f7a8e71.webp" alt="woman looking off representing schizophrenia symptoms." className="attachment-thumbnail size-thumbnail wp-image-1832" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-16a234f elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -598,7 +598,7 @@ export default function Schizophrenia(props: Record<string, string>) {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-a60c631 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="woman looking out window representing chronic adjustment disorder" className="attachment-thumbnail size-thumbnail wp-image-1935" />
+                        <img loading="lazy" src="/images/34c9748eb811822ca0d3226d9087adc3.webp" alt="woman looking out window representing chronic adjustment disorder" className="attachment-thumbnail size-thumbnail wp-image-1935" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-a2883e0 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -658,7 +658,7 @@ export default function Schizophrenia(props: Record<string, string>) {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-6e6d286 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="group of friends laughing representing treatment for depression stages" className="attachment-thumbnail size-thumbnail wp-image-2023" />
+                        <img loading="lazy" src="/images/f944f5c4f39dcc794d2c23c5897139c6.webp" alt="group of friends laughing representing treatment for depression stages" className="attachment-thumbnail size-thumbnail wp-image-2023" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-b23fdc8 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">

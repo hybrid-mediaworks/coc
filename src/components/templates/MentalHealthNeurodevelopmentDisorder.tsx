@@ -135,7 +135,7 @@ export default function MentalHealthNeurodevelopmentDisorder(props: Record<strin
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-d32ee28 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="woman lying on couch representing adjustment disorder" className="attachment-thumbnail size-thumbnail wp-image-1346" />
+                        <link rel="preload" as="image" href="/images/028b0324fc892cea4a54acc793df5960.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/028b0324fc892cea4a54acc793df5960.webp" alt="woman lying on couch representing adjustment disorder" className="attachment-thumbnail size-thumbnail wp-image-1346" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-16a234f elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -203,7 +203,7 @@ export default function MentalHealthNeurodevelopmentDisorder(props: Record<strin
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-cdf4052 elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201707%202560'%3E%3C/svg%3E" alt="person is therapy session representing adjustment disorder symptoms" className="attachment-full size-full wp-image-341" />
+                        <img loading="lazy" src="/images/327fd89655d5577a7af48c621523331c.webp" alt="person is therapy session representing adjustment disorder symptoms" className="attachment-full size-full wp-image-341" />
                       </div>
                     </div>
                   </div>
@@ -581,7 +581,7 @@ export default function MentalHealthNeurodevelopmentDisorder(props: Record<strin
                           <div className="elementor-widget-wrap elementor-element-populated">
                             <div className="elementor-element elementor-element-34379bd elementor-widget elementor-widget-image" data-widget_type="image.default">
                               <div className="elementor-widget-container">
-                                <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201707%202560'%3E%3C/svg%3E" alt="an image of people learning about mental health disorders from a mental health blog" className="attachment-full size-full wp-image-698" />
+                                <img loading="lazy" src="/images/fd884d24a6278678649d32fafb1a5b9f.webp" alt="an image of people learning about mental health disorders from a mental health blog" className="attachment-full size-full wp-image-698" />
                               </div>
                             </div>
                           </div>
@@ -622,7 +622,7 @@ export default function MentalHealthNeurodevelopmentDisorder(props: Record<strin
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-a60c631 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="two people hug depicting what is dyspraxia" className="attachment-thumbnail size-thumbnail wp-image-1877" />
+                        <img loading="lazy" src="/images/6d4972e772f983ce81de852d0fc5661d.webp" alt="two people hug depicting what is dyspraxia" className="attachment-thumbnail size-thumbnail wp-image-1877" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-a2883e0 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -765,7 +765,7 @@ export default function MentalHealthNeurodevelopmentDisorder(props: Record<strin
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-6e6d286 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="a person in a therapy appointment representing Schizoaffective Disorder symptoms" className="attachment-thumbnail size-thumbnail wp-image-1349" />
+                        <img loading="lazy" src="/images/6d4972e772f983ce81de852d0fc5661d.webp" alt="a person in a therapy appointment representing Schizoaffective Disorder symptoms" className="attachment-thumbnail size-thumbnail wp-image-1349" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-b23fdc8 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">

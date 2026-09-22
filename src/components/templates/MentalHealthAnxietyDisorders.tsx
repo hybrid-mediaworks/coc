@@ -513,7 +513,7 @@ export default function Untitled() {
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-45c91d9 elementor-widget elementor-widget-image" data-widget_type="image.default">
                 <div className="elementor-widget-container">
-                  <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="an image of people who got help at Connections Mental Health" className="attachment-thumbnail size-thumbnail wp-image-46" />
+                  <link rel="preload" as="image" href="/images/04fa2429d3756641588d2c46b0a99e8f.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/04fa2429d3756641588d2c46b0a99e8f.webp" alt="an image of people who got help at Connections Mental Health" className="attachment-thumbnail size-thumbnail wp-image-46" />
                 </div>
               </div>
             </div>

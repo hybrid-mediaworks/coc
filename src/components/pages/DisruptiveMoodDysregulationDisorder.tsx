@@ -111,7 +111,7 @@ export default function Untitled() {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-d32ee28 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <link rel="preload" as="image" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" fetchPriority="high" /><img fetchPriority="high" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="woman has hands on head representing boderline personality disorder" className="attachment-thumbnail size-thumbnail wp-image-1804" />
+                        <link rel="preload" as="image" href="/images/bd9f422c733a091f0c8485cc2dda908d.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/bd9f422c733a091f0c8485cc2dda908d.webp" alt="woman has hands on head representing boderline personality disorder" className="attachment-thumbnail size-thumbnail wp-image-1804" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-16a234f elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -269,7 +269,7 @@ export default function Untitled() {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-a60c631 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="an image of someone who got OCD treatment in Orange County" className="attachment-thumbnail size-thumbnail wp-image-1348" />
+                        <img loading="lazy" src="/images/06fbff3c6a57b2a52042721ed333fc6d.webp" alt="an image of someone who got OCD treatment in Orange County" className="attachment-thumbnail size-thumbnail wp-image-1348" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-a2883e0 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
@@ -550,7 +550,7 @@ export default function Untitled() {
                   <div className="elementor-widget-wrap elementor-element-populated">
                     <div className="elementor-element elementor-element-6e6d286 elementor-hidden-desktop elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
-                        <img loading="lazy" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" alt="man's head is in his hands representing 5 stages of depression" className="attachment-thumbnail size-thumbnail wp-image-1803" />
+                        <img loading="lazy" src="/images/06fbff3c6a57b2a52042721ed333fc6d.webp" alt="man's head is in his hands representing 5 stages of depression" className="attachment-thumbnail size-thumbnail wp-image-1803" />
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-b23fdc8 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
