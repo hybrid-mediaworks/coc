@@ -1,4 +1,5 @@
 import React from 'react';
+import RichText from '@/components/RichText';
 import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -81,9 +82,7 @@ export default function Page55188(props: Record<string, string>) {
                 </div>
                 <div className="elementor-element elementor-element-b1cb3c7 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
                   <div className="elementor-widget-container">
-                    <p style={{"fontSize":"16px"}}>
-                      {hero___con}
-                    </p>
+                    <RichText style={{"fontSize":"16px"}} html={hero___con} />
                   </div>
                 </div>
               </div>
@@ -1301,9 +1300,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
         </div>
         <div className="elementor-element elementor-element-a814643 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-            <p style={{"fontSize":"16px"}}>
-              {cta_insurance___con}
-            </p>
+            <RichText style={{"fontSize":"16px"}} html={cta_insurance___con} />
           </div>
         </div>
         <div className="elementor-element elementor-element-18554d3 e-con-full e-flex e-con e-child">
@@ -1670,9 +1667,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
             </div>
             <div className="elementor-element elementor-element-e7d1e7a elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
               <div className="elementor-widget-container">
-                <p style={{"fontSize":"16px"}}>
-                  {why_travel___con}
-                </p>
+                <RichText style={{"fontSize":"16px"}} html={why_travel___con} />
               </div>
             </div>
           </div>
@@ -2855,9 +2850,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
           </div>
           <div className="elementor-element elementor-element-0b2f122 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
-              <p style={{"fontSize":"16px"}}>
-                {cta_conclusion___con}
-              </p>
+              <RichText style={{"fontSize":"16px"}} html={cta_conclusion___con} />
             </div>
           </div>
         </div>

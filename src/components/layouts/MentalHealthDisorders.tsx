@@ -1,4 +1,5 @@
 import React from 'react';
+import RichText from '@/components/RichText';
 import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -398,9 +399,7 @@ export default function MentalHealthDisorders(props: Record<string, string>) {
           </div>
           <div className="elementor-element elementor-element-e5152d5 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
-              <p style={{"fontSize":"16px"}}>
-                {h2___con}
-              </p>
+              <RichText style={{"fontSize":"16px"}} html={h2___con} />
             </div>
           </div>
         </div>
