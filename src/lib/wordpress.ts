@@ -20,6 +20,41 @@ type BuilderPageData = {
   meta: { slug: string; parent: string; updatedAt: string; createdAt: string };
 };
 
+// The Builder API plugin hands back the SEO title template unresolved on roughly half the
+// pages, so `seo.title` arrives as nothing but the separator (" | "). That string is truthy,
+// so every `data.seo.title || "fallback"` in the routes silently kept it. The real value is
+// still in the ACF `meta-title` field, so rebuild from there and let blanks fall through to
+// each route's own fallback.
+const TITLE_PLACEHOLDER = /^(see\s+rank\s?math|see\s+yoast|tbd|todo|n\/?a)\b/i;
+
+// WordPress stores entities encoded ("Signs, Causes, &amp; Treatment"); React escapes the
+// value again on render, which surfaces as a literal "&amp;". Decode once here, and drop a
+// dangling separator for pages whose own WP title is empty ("| Connections Mental Health").
+const tidyTitle = (raw: string) =>
+  decodeEntities(raw)
+    .replace(/^[\s|\-\u2013\u2014\u00b7\u00bb]+/, "")
+    .replace(/[\s|\-\u2013\u2014\u00b7\u00bb]+$/, "")
+    .trim();
+
+function normaliseSeo(data: BuilderPageData): BuilderPageData {
+  if (!data?.seo) return data;
+  if (data.seo.description) data.seo.description = decodeEntities(data.seo.description);
+  const current = tidyTitle(data.seo.title ?? "");
+  if (current) {
+    data.seo.title = current;
+    return data;
+  }
+
+  const metaTitle = tidyTitle(data.fields?.["meta-title"] ?? "");
+  if (!metaTitle || TITLE_PLACEHOLDER.test(metaTitle)) {
+    data.seo.title = "";
+    return data;
+  }
+  const brand = (data.fields?.brand ?? "").trim() || SITE_NAME;
+  data.seo.title = brand ? `${metaTitle} | ${brand}` : metaTitle;
+  return data;
+}
+
 export type PageIdentity = { id?: number; path?: string; slug?: string };
 
 // A slug is not unique across a page tree: /location-served/drug-rehab and
@@ -44,7 +79,7 @@ export async function fetchPageData(
       next: { revalidate: REVALIDATE },
     });
     if (!res.ok) return null;
-    return (await res.json()) as BuilderPageData;
+    return normaliseSeo((await res.json()) as BuilderPageData);
   } catch {
     return null;
   }

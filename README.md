@@ -36,7 +36,17 @@ Open `.env.local` and update the values before deploying:
 WORDPRESS_URL=https://your-wordpress-site.com   # URL of your WordPress site (no trailing slash)
 WORDPRESS_REVALIDATE_SECONDS=60                 # How often pages re-fetch from WordPress
 REVALIDATE_SECRET=change-me-before-deploying    # Change this to a random secret string
+WORDPRESS_SITE_NAME=Your Brand                  # Appended to page titles the plugin returns unresolved
+SITE_URL=https://your-nextjs-site.com           # This deployment's own URL; used for og:image and other absolute metadata URLs
 ```
+
+> **Note on page titles**
+>
+> On many pages the Builder API plugin returns `seo.title` as nothing but the separator
+> (`" | "`), because the Yoast/RankMath title template is handed back unresolved. The site
+> works around this by rebuilding the title from the ACF `meta-title` field and appending
+> `WORDPRESS_SITE_NAME`. Fixing the plugin removes the need for the workaround, which then
+> steps aside on its own — a real `seo.title` always wins.
 
 ## Step 3 — Deploy
 

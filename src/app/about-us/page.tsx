@@ -11,7 +11,7 @@ const IDENTITY = {"path":"/about-us","slug":"about-us"};
 export async function generateMetadata(): Promise<import("next").Metadata> {
   const data = await fetchPageData(IDENTITY);
   return {
-    title: data?.seo.title || "| Connections Mental Health",
+    title: data?.seo.title || "About Us | Connections Mental Health",
     description: data?.seo.description || "At Connections, our mission is to provide safe care for our clients to find healing and lasting recovery from mental health adversity.",
     ...(data?.seo.canonical ? { alternates: { canonical: data.seo.canonical } } : {}),
     ...(data?.seo.robots ? { robots: data.seo.robots } : {}),
