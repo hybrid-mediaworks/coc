@@ -129,50 +129,6 @@ export default function Untitled() {
                   <div className="elementor-widget-container">
                     <div className="elementor-shortcode">
                       <div id="jg-guided-tour" className="jg-sc-guided-wrap">
-                        <div id="jg-guided-multi" className="jg-sc-guided jg-guided-multi">
-                          <div className="jg-guided-col jg-guided-left">
-                            <h3 className="jg-guided-heading">Last Page Visited</h3>
-                            <h3 className="jg-guided-heading jg-icon-list">
-                              {" "}
-                              <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Fram54e.svg" width={24} height={24} alt="check-icon" className="jg-guided-heading-icon" />
-                              {"Last Page Visited: "}
-                            </h3>
-                            <div className="jg-guided-visited-list">
-                              <ul className="jg-guided-visited-items"></ul>
-                            </div>
-                          </div>
-                          <div className="jg-guided-col jg-guided-center">
-                            <div className="jg-guided-img-wrap">
-                              <link rel="preload" as="image" href="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img jg-guided-current-img" />
-                              <div className="jg-guided-img-label">
-                                <h3 className="jg-guided-heading jg-icon-list">
-                                  {" "}
-                                  <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Fram54e.svg" width={24} height={24} alt="check-icon" className="jg-guided-heading-icon" />
-                                  {" Current Guided Tour Page: "}
-                                </h3>
-                                <strong className="jg-guided-current-label"></strong>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="jg-guided-col jg-guided-right">
-                            <h3 className="jg-guided-heading jg-guided-next-heading">Next Page in tour</h3>
-                            <ul className="jg-guided-next-list">
-                              <li className="jg-guided-next-item">
-                                <Link href="/our-facilities/#" className="jg-guided-next-link jg-guided-next-primary" />
-                              </li>
-                              <li className="jg-guided-complete-item">
-                                <span className="jg-guided-next-link jg-guided-complete-msg">You have completed the guided site tour.</span>
-                              </li>
-                              <li className="jg-guided-divider"></li>
-                              <li>
-                                <span className="jg-guided-next-link jg-guided-view-full">
-                                  <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Frame45te4t.svg" width={28} height={28} alt="" className="jg-guided-view-full-icon" />
-                                  {" View Full Guided Site Tour"}
-                                </span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
                         <div id="jg-guided-single" className="jg-sc-guided jg-guided-single">
                           <div className="jg-guided-col jg-guided-left">
                             <h3 className="jg-guided-heading">Guided Website Tour</h3>
@@ -196,9 +152,9 @@ export default function Untitled() {
                           </div>
                           <div className="jg-guided-col jg-guided-center">
                             <div className="jg-guided-img-wrap">
-                              <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" width={382} height={398} alt="" className="jg-guided-img jg-guided-current-img entered error" />
+                              <Image src="/images/staff.webp" width={382} height={398} alt="" className="jg-guided-img jg-guided-current-img entered error" />
                               <div className="jg-guided-img-label">
-                                <h3 className="jg-guided-heading jg-icon-list">
+                                <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
                                   {" "}
                                   <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Fram54e.svg" width={24} height={24} alt="check-icon" className="jg-guided-heading-icon" />
                                   {" Current Guided Tour Page: "}
@@ -216,9 +172,6 @@ export default function Untitled() {
                                   <span>Protect your job while you come to treatment</span>
                                 </Link>
                               </li>
-                              <li className="jg-guided-complete-item">
-                                <span className="jg-guided-next-link jg-guided-complete-msg">You have completed the guided site tour.</span>
-                              </li>
                               <li className="jg-guided-divider"></li>
                               <li>
                                 <span href="/protect-your-job-while-in-treatment/" className="jg-guided-next-link jg-guided-view-full">
@@ -227,28 +180,6 @@ export default function Untitled() {
                                 </span>
                               </li>
                             </ul>
-                          </div>
-                        </div>
-                        <div id="jg-guided-none" className="jg-sc-guided jg-guided-none">
-                          <h3 className="jg-guided-heading jg-guided-none-heading">Start Full Guided Site Tour</h3>
-                          <div className="jg-guided-none-body">
-                            <div className="jg-guided-none-left">
-                              <Link href="/our-facilities/#" className="jg-guided-none-link jg-guided-none-p1" />
-                            </div>
-                            <div className="jg-guided-col jg-guided-center">
-                              <div className="jg-guided-img-wrap">
-                                <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img" />
-                                <div className="jg-guided-img-label jg-guided-img-label-cta">
-                                  <span className="jg-guided-next-link jg-guided-view-full">
-                                    <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Frame45te4t.svg" width={28} height={28} alt="" className="jg-guided-view-full-icon" />
-                                    {" View Full Guided Site Tour"}
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="jg-guided-none-right">
-                              <Link href="/our-facilities/#" className="jg-guided-none-link jg-guided-none-p2" />
-                            </div>
                           </div>
                         </div>
                       </div>

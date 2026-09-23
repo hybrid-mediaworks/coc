@@ -46,6 +46,64 @@ const closePopup = (modal: HTMLElement) => {
   window.setTimeout(finish, popupDuration(modal) * 1000 + 100);
 };
 
+// Matches the n_accordion_animation_duration Elementor exports for every accordion.
+const ACCORDION_DURATION = 400;
+const accordionAnimations = new WeakMap<HTMLElement, Animation>();
+
+// <details> accordions (Elementor nested accordion, rich-text FAQs, location
+// lists). The <details> element itself is animated between its summary-only
+// height and its full height, so it works whatever the panel markup is. The
+// data-state attribute tracks intent, since `open` stays set until a closing
+// slide finishes.
+const isDetailsOpen = (item: HTMLDetailsElement) =>
+  item.dataset.state ? item.dataset.state === "open" : item.open;
+
+// Accordions styled with a ::details-content transition (e.g. the .hmga
+// location lists) already slide natively and use `name` for exclusivity.
+const hasNativeDetailsAnimation = (item: HTMLDetailsElement) => {
+  const durations = getComputedStyle(item, "::details-content").transitionDuration;
+  return durations.split(",").some((d) => parseFloat(d) > 0);
+};
+
+const closedDetailsHeight =(item: HTMLDetailsElement) => {
+  const summary = item.querySelector(":scope > summary");
+  const cs = getComputedStyle(item);
+  let height =
+    parseFloat(cs.paddingTop) +
+    parseFloat(cs.paddingBottom) +
+    parseFloat(cs.borderTopWidth) +
+    parseFloat(cs.borderBottomWidth);
+  if (summary) {
+    const ss = getComputedStyle(summary);
+    height +=
+      summary.getBoundingClientRect().height + parseFloat(ss.marginTop) + parseFloat(ss.marginBottom);
+  }
+  return height + "px";
+};
+
+const setDetailsOpen = (item: HTMLDetailsElement, open: boolean) => {
+  item.dataset.state = open ? "open" : "closed";
+  item.querySelector(":scope > summary")?.setAttribute("aria-expanded", String(open));
+  const running = accordionAnimations.get(item);
+  const from = running || !open ? item.getBoundingClientRect().height + "px" : closedDetailsHeight(item);
+  if (open) item.open = true;
+  running?.cancel();
+  const to = open ? item.getBoundingClientRect().height + "px" : closedDetailsHeight(item);
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const animation = item.animate(
+    [
+      { height: from, boxSizing: "border-box", overflow: "hidden" },
+      { height: to, boxSizing: "border-box", overflow: "hidden" },
+    ],
+    { duration: reduceMotion ? 0 : ACCORDION_DURATION, easing: "ease-in-out" }
+  );
+  accordionAnimations.set(item, animation);
+  animation.onfinish = () => {
+    accordionAnimations.delete(item);
+    if (!open) item.open = false;
+  };
+};
+
 export default function WidgetInteractions() {
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
@@ -138,6 +196,24 @@ export default function WidgetInteractions() {
           if (sub instanceof HTMLElement) sub.style.display = open ? "block" : "none";
           return;
         }
+      }
+
+      const detailsSummary = target.closest("details > summary");
+      const detailsItem = detailsSummary?.parentElement;
+      if (detailsItem instanceof HTMLDetailsElement && !hasNativeDetailsAnimation(detailsItem)) {
+        e.preventDefault();
+        const open = !isDetailsOpen(detailsItem);
+        const siblings = Array.from(
+          detailsItem.parentElement?.querySelectorAll(":scope > details") ?? [detailsItem]
+        ).filter((d): d is HTMLDetailsElement => d instanceof HTMLDetailsElement);
+        for (const d of siblings) {
+          // A shared `name` makes the browser close siblings instantly, which
+          // would skip their closing slide; exclusivity is handled here instead.
+          d.removeAttribute("name");
+          if (open && d !== detailsItem && isDetailsOpen(d)) setDetailsOpen(d, false);
+        }
+        setDetailsOpen(detailsItem, open);
+        return;
       }
 
       const accTitle = target.closest(

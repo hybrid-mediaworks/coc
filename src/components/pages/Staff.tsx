@@ -53,53 +53,9 @@ export default function Untitled() {
                   <div className="elementor-widget-container">
                     <div className="elementor-shortcode">
                       <div id="jg-guided-tour" className="jg-sc-guided-wrap">
-                        <div id="jg-guided-multi" className="jg-sc-guided jg-guided-multi">
-                          <div className="jg-guided-col jg-guided-left">
-                            <h3 className="jg-guided-heading">Last Page Visited</h3>
-                            <h3 className="jg-guided-heading jg-icon-list">
-                              {" "}
-                              <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Fram54e.svg" width={24} height={24} alt="check-icon" className="jg-guided-heading-icon" />
-                              {"Last Page Visited: "}
-                            </h3>
-                            <div className="jg-guided-visited-list">
-                              <ul className="jg-guided-visited-items"></ul>
-                            </div>
-                          </div>
-                          <div className="jg-guided-col jg-guided-center">
-                            <div className="jg-guided-img-wrap">
-                              <link rel="preload" as="image" href="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" fetchPriority="high" /><img fetchPriority="high" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img jg-guided-current-img" />
-                              <div className="jg-guided-img-label">
-                                <h3 className="jg-guided-heading jg-icon-list">
-                                  {" "}
-                                  <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Fram54e.svg" width={24} height={24} alt="check-icon" className="jg-guided-heading-icon" />
-                                  {" Current Guided Tour Page: "}
-                                </h3>
-                                <strong className="jg-guided-current-label"></strong>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="jg-guided-col jg-guided-right">
-                            <h3 className="jg-guided-heading jg-guided-next-heading">Next Page in tour</h3>
-                            <ul className="jg-guided-next-list">
-                              <li className="jg-guided-next-item">
-                                <Link href="/staff/#" className="jg-guided-next-link jg-guided-next-primary" />
-                              </li>
-                              <li className="jg-guided-complete-item">
-                                <span className="jg-guided-next-link jg-guided-complete-msg">You have completed the guided site tour.</span>
-                              </li>
-                              <li className="jg-guided-divider"></li>
-                              <li>
-                                <span className="jg-guided-next-link jg-guided-view-full">
-                                  <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Frame45te4t.svg" width={28} height={28} alt="" className="jg-guided-view-full-icon" />
-                                  {" View Full Guided Site Tour"}
-                                </span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
                         <div id="jg-guided-single" className="jg-sc-guided jg-guided-single">
                           <div className="jg-guided-col jg-guided-left">
-                            <h3 className="jg-guided-heading">Guided Website Tour</h3>
+                            <h3 className="jg-guided-heading" style={{"fontSize":"24px"}}>Guided Website Tour</h3>
                             <div className="jg-guided-visited-progress">
                               <span className="jg-gv-check">✓</span>
                               <span className="jg-gv-label">Last Pages Visited</span>
@@ -120,9 +76,9 @@ export default function Untitled() {
                           </div>
                           <div className="jg-guided-col jg-guided-center">
                             <div className="jg-guided-img-wrap">
-                              <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" width={382} height={398} alt="" className="jg-guided-img jg-guided-current-img entered error" />
+                              <Image src="/images/Staff.webp" width={382} height={398} alt="" className="jg-guided-img jg-guided-current-img entered error" />
                               <div className="jg-guided-img-label">
-                                <h3 className="jg-guided-heading jg-icon-list">
+                                <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
                                   {" "}
                                   <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Fram54e.svg" width={24} height={24} alt="check-icon" className="jg-guided-heading-icon" />
                                   {" Current Guided Tour Page: "}
@@ -132,16 +88,13 @@ export default function Untitled() {
                             </div>
                           </div>
                           <div className="jg-guided-col jg-guided-right">
-                            <h3 className="jg-guided-heading jg-guided-next-heading">Next Page In Tour</h3>
+                            <h3 className="jg-guided-heading jg-guided-next-heading" style={{"fontSize":"24px"}}>Next Page In Tour</h3>
                             <ul className="jg-guided-next-list">
                               <li className="jg-guided-next-item">
                                 <Link href="/protect-your-job-while-in-treatment/" className="jg-guided-next-link jg-guided-next-primary">
                                   <span className="jg-gvi-num">1</span>
                                   <span>Protect your job while you come to treatment</span>
                                 </Link>
-                              </li>
-                              <li className="jg-guided-complete-item">
-                                <span className="jg-guided-next-link jg-guided-complete-msg">You have completed the guided site tour.</span>
                               </li>
                               <li className="jg-guided-divider"></li>
                               <li>
@@ -151,28 +104,6 @@ export default function Untitled() {
                                 </span>
                               </li>
                             </ul>
-                          </div>
-                        </div>
-                        <div id="jg-guided-none" className="jg-sc-guided jg-guided-none">
-                          <h3 className="jg-guided-heading jg-guided-none-heading">Start Full Guided Site Tour</h3>
-                          <div className="jg-guided-none-body">
-                            <div className="jg-guided-none-left">
-                              <Link href="/staff/#" className="jg-guided-none-link jg-guided-none-p1" />
-                            </div>
-                            <div className="jg-guided-col jg-guided-center">
-                              <div className="jg-guided-img-wrap">
-                                <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img" />
-                                <div className="jg-guided-img-label jg-guided-img-label-cta">
-                                  <span className="jg-guided-next-link jg-guided-view-full">
-                                    <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Frame45te4t.svg" width={28} height={28} alt="" className="jg-guided-view-full-icon" />
-                                    {" View Full Guided Site Tour"}
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="jg-guided-none-right">
-                              <Link href="/staff/#" className="jg-guided-none-link jg-guided-none-p2" />
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -227,8 +158,8 @@ export default function Untitled() {
                                       <h5 className="elementor-heading-title elementor-size-default">Clinical Director - LMFT</h5>
                                     </div>
                                   </div>
-                                  <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                                    <div className="elementor-widget-container">Is a Licensed Marriage and Family Therapist (LMFT) and an accomplished clinical director with over 15 years of dedicated experience in mental health and substance use treatment. Since 2009, he has made a significant impact in the field, working tirelessly to support individuals grappling with addiction and mental health issues in a variety of settings, including residential treatment centers and outpatient facilities. Having been sober since 2002, Sean brings personal insights to his practice, e</div>
+                                  <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default" style={{"display":"block"}}>
+                                    <div className="elementor-widget-container">Is a Licensed Marriage and Family Therapist (LMFT) and an accomplished clinical director with over 15 years of dedicated experience in mental health and substance use treatment. Since 2009, he has made a significant impact in the field, working tirelessly to support individuals grappling with addiction and mental health issues in a variety of settings, including residential treatment centers and outpatient facilities. Having been sober since 2002, Sean brings personal insights to his practice, empowering clients to navigate their unique challenges and break free from the cycle of addiction and the difficulties associated with mental health disorders. His compassionate and client-centered philosophy fosters a supportive environment that encourages growth, resilience, and long-lasting recovery.</div>
                                   </div>
                                 </div>
                               </div>
@@ -283,10 +214,8 @@ export default function Untitled() {
                                       <h5 className="elementor-heading-title elementor-size-default">Therapist - ACSW, MSW, EMDR Certified</h5>
                                     </div>
                                   </div>
-                                  <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                                    <div className="elementor-widget-container">My passion for becoming a therapist was shaped by my own experiences navigating cultural challenges, trauma, and substance-related struggles within my community. These experiences deepened my understanding of how important it is to feel seen, supported, and understood during life’s difficult moments.
-
-I hold a Bachelor’s degree in Psychology from the University of California, Irvine and a Master’s in Social Work from California Baptist University. I practice with both cultural and spiritual comp</div>
+                                  <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default" style={{"display":"block"}}>
+                                    <div className="elementor-widget-container">My passion for becoming a therapist was shaped by my own experiences navigating cultural challenges, trauma, and substance-related struggles within my community. These experiences deepened my understanding of how important it is to feel seen, supported, and understood during life’s difficult moments. I hold a Bachelor’s degree in Psychology from the University of California, Irvine and a Master’s in Social Work from California Baptist University. I practice with both cultural and spiritual competence, and I have experience working with individuals from diverse cultural backgrounds and spiritual traditions. My therapeutic style is direct, honest, and compassionate. I don’t believe you need to have everything figured out to begin therapy. I integrate evidence-based approaches such as Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), and trauma-focused work to support healing and growth. I strive to create a safe, supportive space where you can show up as you are, without judgment or pressure to perform. Whether you are working through trauma, grief, identity challenges, or substance use, my goal is to support you in building insight, resilience, practical coping tools, and a stronger connection with yourself. Outside of therapy, I enjoy spending time in nature, practicing my spirituality, playing music, and staying active through sports. I value real, meaningful connections, and I bring that same authenticity into my work with clients.</div>
                                   </div>
                                 </div>
                               </div>
@@ -325,8 +254,8 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                       <h5 className="elementor-heading-title elementor-size-default">Therapist - ASCW</h5>
                                     </div>
                                   </div>
-                                  <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                                    <div className="elementor-widget-container">My name is Huy Nguyen, and I am an Associate Clinical Social Worker. My therapeutic approach is grounded in empathy, collaboration, compassion, and individualized care. I use a warm and direct approach, creating a space where clients can feel supported while also being gently challenged when it can help them grow. I believe that clients are the experts of their own experiences, and my role is to work alongside them to identify the tools and strategies that can help them navigate life more effect</div>
+                                  <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default" style={{"display":"block"}}>
+                                    <div className="elementor-widget-container">My name is Huy Nguyen, and I am an Associate Clinical Social Worker. My therapeutic approach is grounded in empathy, collaboration, compassion, and individualized care. I use a warm and direct approach, creating a space where clients can feel supported while also being gently challenged when it can help them grow. I believe that clients are the experts of their own experiences, and my role is to work alongside them to identify the tools and strategies that can help them navigate life more effectively. I draw from a variety of therapeutic approaches, including Cognitive Behavioral Therapy (CBT), Cognitive Processing Therapy (CPT), Dialectical Behavior Therapy (DBT), Acceptance and Commitment Therapy (ACT), Internal Family Systems (IFS), and Brainspotting. I tailor these approaches to each client’s unique experiences, needs, and goals rather than believing that one approach works for everyone. My decision to become a therapist was deeply influenced by my own personal experiences with therapy and witnessing how transformative that process can be. Those experiences shaped my belief that therapy can provide not only a place to heal, but also a space to better understand ourselves, develop new ways of coping, and build a life that feels more meaningful. My hope is not to help clients avoid the waves that life inevitably brings, but to help them find calmer seas while developing the skills and confidence to navigate the big waves when they come. Healing may look different for everyone, and I want to help each client discover what healing means for them and find their own way forward.</div>
                                   </div>
                                 </div>
                               </div>
@@ -340,7 +269,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                 <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
                                     <Link href="/staff/ryan-ruiz-therapist/">
-                                      <img loading="lazy" src="/images/1cf85e05e9985e133f25794d63bb4b85.webp" alt="" className="attachment-full size-full wp-image-60370" />
+                                      <img loading="lazy" src="/images/804e4c64c330c6d28a0da99e71aece82.webp" alt="" className="attachment-full size-full wp-image-60370" />
                                     </Link>
                                   </div>
                                 </div>
@@ -365,8 +294,8 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                       <h5 className="elementor-heading-title elementor-size-default">Therapist - AMFT</h5>
                                     </div>
                                   </div>
-                                  <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                                    <div className="elementor-widget-container">Ryan Ruiz is a dedicated and compassionate therapist at Connections Mental Health, bringing over seven years of experience and more than 3,000 hours of clinical work in substance use and mental health treatment. With a strong foundation in addiction recovery, trauma, and co-occurring disorders, Ryan has provided individual and group therapy across reputable treatment centers, developing personalized treatment plans that foster long-term healing and growth. His expertise spans mindfulness, trauma</div>
+                                  <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default" style={{"display":"block"}}>
+                                    <div className="elementor-widget-container">Ryan Ruiz is a dedicated and compassionate therapist at Connections Mental Health, bringing over seven years of experience and more than 3,000 hours of clinical work in substance use and mental health treatment. With a strong foundation in addiction recovery, trauma, and co-occurring disorders, Ryan has provided individual and group therapy across reputable treatment centers, developing personalized treatment plans that foster long-term healing and growth. His expertise spans mindfulness, trauma recovery, and psychodrama, and he has been an active member of interdisciplinary teams focused on clients’ mental, emotional, and physical wellness. As a Marriage and Family Therapist Associate, Ryan is deeply committed to expanding his clinical knowledge and staying at the forefront of evidence-based approaches in addiction and mental health care. His therapeutic style blends empathy, structure, and innovation, helping clients navigate challenges with clarity and confidence. Ryan’s holistic approach emphasizes treating the whole person—addressing both the addiction and the underlying issues that contribute to distress and dysfunction. Beyond his clinical role, Ryan is passionate about mindfulness, personal growth, and mental health advocacy. His dedication to helping others extends into the broader community, where he supports initiatives that promote awareness and recovery. With his extensive experience, compassion, and unwavering commitment to client well-being, Ryan Ruiz is a valued member of the Connections Mental Health team, guiding individuals toward lasting change and self-discovery.</div>
                                   </div>
                                 </div>
                               </div>
@@ -455,8 +384,8 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                       <h5 className="elementor-heading-title elementor-size-default">Case Manager - RADT</h5>
                                     </div>
                                   </div>
-                                  <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                                    <div className="elementor-widget-container">I am a Case Manager at a substance use and mental health treatment facility with over five years of experience supporting individuals on their recovery journeys. I am deeply passionate about this work and committed to helping clients build stability, resilience, and hope as they work toward their personal goals. I approach my role with empathy, accountability, and a strong belief in the power of recovery. I am also in recovery myself and have been sober since 2019, which allows me to bring both </div>
+                                  <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default" style={{"display":"block"}}>
+                                    <div className="elementor-widget-container">I am a Case Manager at a substance use and mental health treatment facility with over five years of experience supporting individuals on their recovery journeys. I am deeply passionate about this work and committed to helping clients build stability, resilience, and hope as they work toward their personal goals. I approach my role with empathy, accountability, and a strong belief in the power of recovery. I am also in recovery myself and have been sober since 2019, which allows me to bring both professional experience and personal understanding to my work. Outside of the treatment setting, I enjoy surfing and playing video games, which help me stay balanced and grounded. I am grateful to be part of a field where I can support others while continuing to grow personally and professionally.</div>
                                   </div>
                                 </div>
                               </div>
@@ -470,7 +399,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                 <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
                                     <Link href="/staff/jeff-robbins-case-manager/">
-                                      <img loading="lazy" src="/images/804e4c64c330c6d28a0da99e71aece82.webp" alt="" className="attachment-full size-full wp-image-60371" />
+                                      <img loading="lazy" src="/images/9b82b045fe822b81c6517ddc0d504046.webp" alt="" className="attachment-full size-full wp-image-60371" />
                                     </Link>
                                   </div>
                                 </div>
@@ -495,8 +424,8 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                       <h5 className="elementor-heading-title elementor-size-default">Case Manager - RADT</h5>
                                     </div>
                                   </div>
-                                  <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                                    <div className="elementor-widget-container">I grew up as an only child in Redmond, Washington, and my early adulthood was marked by personal struggles with addiction. At age 31, I made the decision to seek detox treatment in Costa Mesa, California—a turning point that ultimately reshaped the direction of my life. Through my own recovery journey, I became deeply inspired to support others facing challenges related to addiction and mental health. Eight months after completing treatment, I began working in the field as a Behavioral Technicia</div>
+                                  <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default" style={{"display":"block"}}>
+                                    <div className="elementor-widget-container">I grew up as an only child in Redmond, Washington, and my early adulthood was marked by personal struggles with addiction. At age 31, I made the decision to seek detox treatment in Costa Mesa, California—a turning point that ultimately reshaped the direction of my life. Through my own recovery journey, I became deeply inspired to support others facing challenges related to addiction and mental health. Eight months after completing treatment, I began working in the field as a Behavioral Technician, where I discovered a strong sense of purpose in helping clients stabilize, grow, and move forward in their recovery. My dedication to this work led me to a Case Manager position at Alliance Recovery, and in July 2023, I joined Connections as a Case Manager in a mental health residential setting. In this role, I am passionate about advocating for clients, supporting long-term stability, and helping individuals build meaningful lives beyond treatment. Outside of work, I am engaged to my fiancé—who I met through recovery and who also shares a commitment to sobriety.</div>
                                   </div>
                                 </div>
                               </div>
@@ -523,7 +452,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                 <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
                                     <Link href="/staff/pablo-alcala-director-of-operations/">
-                                      <img loading="lazy" src="/images/9b82b045fe822b81c6517ddc0d504046.webp" alt="" className="attachment-full size-full wp-image-60374" />
+                                      <img loading="lazy" src="/images/bc4252fbea8f7112f63594473a85f9c7.webp" alt="" className="attachment-full size-full wp-image-60374" />
                                     </Link>
                                   </div>
                                 </div>
@@ -549,7 +478,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                     </div>
                                   </div>
                                   <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                                    <div className="elementor-widget-container">Pablo Alcala began his work in the treatment field in 2012 and has built his career across a wide variety of settings, including outpatient and inpatient programs. No matter the environment, he has always served in operations, where his steady leadership, problem solving, and commitment to excellence shine through.</div>
+                                    <div className="elementor-widget-container" style={{"display":"none"}}>Pablo Alcala began his work in the treatment field in 2012 and has built his career across a wide variety of settings, including outpatient and inpatient programs. No matter the environment, he has always served in operations, where his steady leadership, problem solving, and commitment to excellence shine through.</div>
                                   </div>
                                 </div>
                               </div>
@@ -589,7 +518,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                     </div>
                                   </div>
                                   <div className="elementor-element elementor-element-9f0a0e9 author-description elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                                    <div className="elementor-widget-container">With nearly a decade of experience in the treatment and recovery field, I am deeply passionate about supporting individuals navigating addiction and mental health challenges. My work is grounded in compassion, lived understanding, and a belief that healing is possible for everyone. I am dedicated to helping others build sustainable recovery, resilience, and a meaningful life.</div>
+                                    <div className="elementor-widget-container" style={{"display":"none"}}>With nearly a decade of experience in the treatment and recovery field, I am deeply passionate about supporting individuals navigating addiction and mental health challenges. My work is grounded in compassion, lived understanding, and a belief that healing is possible for everyone. I am dedicated to helping others build sustainable recovery, resilience, and a meaningful life.</div>
                                   </div>
                                 </div>
                               </div>
@@ -603,7 +532,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                 <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
                                     <Link href="/staff/kolby-seger/">
-                                      <img loading="lazy" src="/images/bc4252fbea8f7112f63594473a85f9c7.webp" alt="" className="attachment-full size-full wp-image-60372" />
+                                      <img loading="lazy" src="/images/9756371adce1fa015b3b4ffd7a636433.webp" alt="" className="attachment-full size-full wp-image-60372" />
                                     </Link>
                                   </div>
                                 </div>
@@ -908,6 +837,86 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                             </div>
                           </div>
                         </div>
+                        <div className="elementor elementor-55432 e-loop-item e-loop-item-54398 post-54398 authors type-authors status-publish has-post-thumbnail hentry author-category-admissions business-unit-alliance-recovery business-unit-california-detox business-unit-connections-mental-health business-unit-gratitude-lodge business-unit-renaissance-recovery">
+                          <div className="elementor-element elementor-element-5f7d3a0 standard-team-member e-transform e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="&#123;&quot;_transform_translateY_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;&#125;">
+                            <div className="e-con-inner">
+                              <div className="elementor-element elementor-element-c3b8a95 e-con-full e-flex e-con e-child">
+                                <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
+                                  <div className="elementor-widget-container">
+                                    <Link href="/staff/ryan-hoover-admissions-counselor/">
+                                      <Image src="/images/Ryan-Hoover-COC.png" width={240} height={240} alt="" className="attachment-full size-full wp-image-60392 entered error" />
+                                    </Link>
+                                  </div>
+                                </div>
+                                <div className="elementor-element elementor-element-c7ec5f7 e-con-full e-flex e-con e-child">
+                                  <div className="elementor-element elementor-element-4f91378 team-name-sty elementor-headline--style-highlight elementor-widget elementor-widget-animated-headline" data-settings="&#123;&quot;highlighted_text&quot;:&quot;Manning&quot;,&quot;headline_style&quot;:&quot;highlight&quot;,&quot;marker&quot;:&quot;circle&quot;,&quot;highlight_animation_duration&quot;:1200&#125;" data-widget_type="animated-headline.default">
+                                    <div className="elementor-widget-container">
+                                      <Link href="/staff/ryan-hoover-admissions-counselor/">
+                                        <h3 className="elementor-headline e-animated">
+                                          {" "}
+                                          <span className="elementor-headline-plain-text elementor-headline-text-wrapper">Ryan</span>
+                                          {" "}
+                                          <span className="elementor-headline-dynamic-wrapper elementor-headline-text-wrapper">
+                                            <span className="elementor-headline-dynamic-text elementor-headline-text-active">Hoover</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" aria-hidden="true" preserveAspectRatio="none">
+                                              <path d="M325,18C228.7-8.3,118.5,8.3,78,21C22.4,38.4,4.6,54.6,5.6,77.6c1.4,32.4,52.2,54,142.6,63.7 c66.2,7.1,212.2,7.5,273.5-8.3c64.4-16.6,104.3-57.6,33.8-98.2C386.7-4.9,179.4-1.4,126.3,20.7"></path>
+                                            </svg>
+                                          </span>
+                                          {" "}
+                                        </h3>
+                                      </Link>
+                                    </div>
+                                  </div>
+                                  <div className="elementor-element elementor-element-8949a4a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
+                                    <div className="elementor-widget-container">
+                                      <h5 className="elementor-heading-title elementor-size-default">Admissions Counselor</h5>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="elementor elementor-55432 e-loop-item e-loop-item-54381 post-54381 authors type-authors status-publish has-post-thumbnail hentry author-category-admissions business-unit-alliance-recovery business-unit-california-detox business-unit-connections-mental-health business-unit-gratitude-lodge business-unit-renaissance-recovery">
+                          <div className="elementor-element elementor-element-5f7d3a0 standard-team-member e-transform e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="&#123;&quot;_transform_translateY_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;&#125;">
+                            <div className="e-con-inner">
+                              <div className="elementor-element elementor-element-c3b8a95 e-con-full e-flex e-con e-child">
+                                <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
+                                  <div className="elementor-widget-container">
+                                    <Link href="/staff/dallas-jones-admissions-counselor/">
+                                      <Image src="/images/Dallas-Jones-COC.png" width={240} height={240} alt="" className="attachment-full size-full wp-image-60384 entered error" />
+                                    </Link>
+                                  </div>
+                                </div>
+                                <div className="elementor-element elementor-element-c7ec5f7 e-con-full e-flex e-con e-child">
+                                  <div className="elementor-element elementor-element-4f91378 team-name-sty elementor-headline--style-highlight elementor-widget elementor-widget-animated-headline" data-settings="&#123;&quot;highlighted_text&quot;:&quot;Ruff&quot;,&quot;headline_style&quot;:&quot;highlight&quot;,&quot;marker&quot;:&quot;circle&quot;,&quot;highlight_animation_duration&quot;:1200&#125;" data-widget_type="animated-headline.default">
+                                    <div className="elementor-widget-container">
+                                      <Link href="/staff/dallas-jones-admissions-counselor/">
+                                        <h3 className="elementor-headline e-animated">
+                                          {" "}
+                                          <span className="elementor-headline-plain-text elementor-headline-text-wrapper">Dallas</span>
+                                          {" "}
+                                          <span className="elementor-headline-dynamic-wrapper elementor-headline-text-wrapper">
+                                            <span className="elementor-headline-dynamic-text elementor-headline-text-active">Jones</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" aria-hidden="true" preserveAspectRatio="none">
+                                              <path d="M325,18C228.7-8.3,118.5,8.3,78,21C22.4,38.4,4.6,54.6,5.6,77.6c1.4,32.4,52.2,54,142.6,63.7 c66.2,7.1,212.2,7.5,273.5-8.3c64.4-16.6,104.3-57.6,33.8-98.2C386.7-4.9,179.4-1.4,126.3,20.7"></path>
+                                            </svg>
+                                          </span>
+                                          {" "}
+                                        </h3>
+                                      </Link>
+                                    </div>
+                                  </div>
+                                  <div className="elementor-element elementor-element-8949a4a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
+                                    <div className="elementor-widget-container">
+                                      <h5 className="elementor-heading-title elementor-size-default">Admissions Director</h5>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         <div className="elementor elementor-55432 e-loop-item e-loop-item-54392 post-54392 authors type-authors status-publish has-post-thumbnail hentry author-category-admissions business-unit-alliance-recovery business-unit-california-detox business-unit-connections-mental-health business-unit-gratitude-lodge business-unit-renaissance-recovery">
                           <div className="elementor-element elementor-element-5f7d3a0 standard-team-member e-transform e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="&#123;&quot;_transform_translateY_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;&#125;">
                             <div className="e-con-inner">
@@ -941,86 +950,6 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                                   <div className="elementor-element elementor-element-8949a4a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                                     <div className="elementor-widget-container">
                                       <h5 className="elementor-heading-title elementor-size-default">Admissions Counselor</h5>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="elementor elementor-55432 e-loop-item e-loop-item-54398 post-54398 authors type-authors status-publish has-post-thumbnail hentry author-category-admissions business-unit-alliance-recovery business-unit-california-detox business-unit-connections-mental-health business-unit-gratitude-lodge business-unit-renaissance-recovery">
-                          <div className="elementor-element elementor-element-5f7d3a0 standard-team-member e-transform e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="&#123;&quot;_transform_translateY_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;&#125;">
-                            <div className="e-con-inner">
-                              <div className="elementor-element elementor-element-c3b8a95 e-con-full e-flex e-con e-child">
-                                <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
-                                  <div className="elementor-widget-container">
-                                    <Link href="/staff/robert-manning-admissions-counselor/">
-                                      <Image src="/images/b0433cf9f03254b06f3977af5693c840.webp" width={240} height={240} alt="" className="attachment-full size-full wp-image-60392 entered error" />
-                                    </Link>
-                                  </div>
-                                </div>
-                                <div className="elementor-element elementor-element-c7ec5f7 e-con-full e-flex e-con e-child">
-                                  <div className="elementor-element elementor-element-4f91378 team-name-sty elementor-headline--style-highlight elementor-widget elementor-widget-animated-headline" data-settings="&#123;&quot;highlighted_text&quot;:&quot;Manning&quot;,&quot;headline_style&quot;:&quot;highlight&quot;,&quot;marker&quot;:&quot;circle&quot;,&quot;highlight_animation_duration&quot;:1200&#125;" data-widget_type="animated-headline.default">
-                                    <div className="elementor-widget-container">
-                                      <Link href="/staff/robert-manning-admissions-counselor/">
-                                        <h3 className="elementor-headline e-animated">
-                                          {" "}
-                                          <span className="elementor-headline-plain-text elementor-headline-text-wrapper">Robert</span>
-                                          {" "}
-                                          <span className="elementor-headline-dynamic-wrapper elementor-headline-text-wrapper">
-                                            <span className="elementor-headline-dynamic-text elementor-headline-text-active">Manning</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" aria-hidden="true" preserveAspectRatio="none">
-                                              <path d="M325,18C228.7-8.3,118.5,8.3,78,21C22.4,38.4,4.6,54.6,5.6,77.6c1.4,32.4,52.2,54,142.6,63.7 c66.2,7.1,212.2,7.5,273.5-8.3c64.4-16.6,104.3-57.6,33.8-98.2C386.7-4.9,179.4-1.4,126.3,20.7"></path>
-                                            </svg>
-                                          </span>
-                                          {" "}
-                                        </h3>
-                                      </Link>
-                                    </div>
-                                  </div>
-                                  <div className="elementor-element elementor-element-8949a4a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                                    <div className="elementor-widget-container">
-                                      <h5 className="elementor-heading-title elementor-size-default">Admissions Counselor</h5>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="elementor elementor-55432 e-loop-item e-loop-item-54381 post-54381 authors type-authors status-publish has-post-thumbnail hentry author-category-admissions business-unit-alliance-recovery business-unit-california-detox business-unit-connections-mental-health business-unit-gratitude-lodge business-unit-renaissance-recovery">
-                          <div className="elementor-element elementor-element-5f7d3a0 standard-team-member e-transform e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="&#123;&quot;_transform_translateY_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:-5,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateX_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_tablet&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;,&quot;_transform_translateY_effect_hover_mobile&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]&#125;&#125;">
-                            <div className="e-con-inner">
-                              <div className="elementor-element elementor-element-c3b8a95 e-con-full e-flex e-con e-child">
-                                <div className="elementor-element elementor-element-0f4d5e2 elementor-widget elementor-widget-image" data-widget_type="image.default">
-                                  <div className="elementor-widget-container">
-                                    <Link href="/staff/daniel-danny-ruff-clinical-outreach-specialist/">
-                                      <Image src="/images/e5923130ec55077e8ba5a60f26e0eda8.webp" width={240} height={240} alt="" className="attachment-full size-full wp-image-60384 entered error" />
-                                    </Link>
-                                  </div>
-                                </div>
-                                <div className="elementor-element elementor-element-c7ec5f7 e-con-full e-flex e-con e-child">
-                                  <div className="elementor-element elementor-element-4f91378 team-name-sty elementor-headline--style-highlight elementor-widget elementor-widget-animated-headline" data-settings="&#123;&quot;highlighted_text&quot;:&quot;Ruff&quot;,&quot;headline_style&quot;:&quot;highlight&quot;,&quot;marker&quot;:&quot;circle&quot;,&quot;highlight_animation_duration&quot;:1200&#125;" data-widget_type="animated-headline.default">
-                                    <div className="elementor-widget-container">
-                                      <Link href="/staff/daniel-danny-ruff-clinical-outreach-specialist/">
-                                        <h3 className="elementor-headline e-animated">
-                                          {" "}
-                                          <span className="elementor-headline-plain-text elementor-headline-text-wrapper">Daniel (Danny)</span>
-                                          {" "}
-                                          <span className="elementor-headline-dynamic-wrapper elementor-headline-text-wrapper">
-                                            <span className="elementor-headline-dynamic-text elementor-headline-text-active">Ruff</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" aria-hidden="true" preserveAspectRatio="none">
-                                              <path d="M325,18C228.7-8.3,118.5,8.3,78,21C22.4,38.4,4.6,54.6,5.6,77.6c1.4,32.4,52.2,54,142.6,63.7 c66.2,7.1,212.2,7.5,273.5-8.3c64.4-16.6,104.3-57.6,33.8-98.2C386.7-4.9,179.4-1.4,126.3,20.7"></path>
-                                            </svg>
-                                          </span>
-                                          {" "}
-                                        </h3>
-                                      </Link>
-                                    </div>
-                                  </div>
-                                  <div className="elementor-element elementor-element-8949a4a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                                    <div className="elementor-widget-container">
-                                      <h5 className="elementor-heading-title elementor-size-default">Clinical Outreach Specialist</h5>
                                     </div>
                                   </div>
                                 </div>

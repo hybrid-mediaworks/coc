@@ -423,4 +423,7 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
 .custom-accordion__item.active .accordion-item__header { border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; }
 .custom-accordion__item.active .accordion-item__content { max-height: fit-content; padding: 24px 20px; }
 .mh-video-frame iframe { width: 100%; height: 500px; }
-.mh-close { position: absolute; top: -30px; right: 0px; color: rgb(255, 255, 255); font-size: 30px; cursor: pointer; }
+.mh-close { position: absolute; top: -30px; right: 0px; color: rgb(255, 255, 255); font-size: 30px; cursor: pointer; }.elementor-55188 .elementor-element.elementor-element-11c8c69 { width: 373px; max-width: 100%; }
+.elementor-55188 .elementor-element.elementor-element-11c8c69 img { width: 373px; max-width: 100%; height: auto; }
+/* Once the jQuery FAQ script manages a panel (inline style set), let its slideUp/slideDown control visibility instead of the max-height clamp, so closing animates too. */
+.custom-accordion .custom-accordion__item .accordion-item__content[style] { max-height: none; padding: 24px 20px; }

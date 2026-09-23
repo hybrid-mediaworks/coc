@@ -113,7 +113,7 @@ export default function Footer() {
                     <div className="elementor-element elementor-element-552f36e elementor-widget elementor-widget-google_maps" data-widget_type="google_maps.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-custom-embed">
-                          <iframe loading="lazy" src="about:blank" title=" 17811 Bigelow Park, Tustin, CA 92780" aria-label=" 17811 Bigelow Park, Tustin, CA 92780" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"700px"}}></iframe>
+                          <iframe loading="lazy" src="https://maps.google.com/maps?q=%2017811%20Bigelow%20Park%2C%20Tustin%2C%20CA%2092780&t=m&z=10&output=embed&iwloc=near" title=" 17811 Bigelow Park, Tustin, CA 92780" aria-label=" 17811 Bigelow Park, Tustin, CA 92780" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"300px"}}></iframe>
                         </div>
                       </div>
                     </div>
@@ -138,7 +138,7 @@ export default function Footer() {
                     <div className="elementor-element elementor-element-f00ada3 elementor-widget elementor-widget-google_maps" data-widget_type="google_maps.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-custom-embed">
-                          <iframe loading="lazy" src="about:blank" title="17841 Lincoln St Villa Park, CA 92861" aria-label="17841 Lincoln St Villa Park, CA 92861" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"700px"}}></iframe>
+                          <iframe loading="lazy" src="https://maps.google.com/maps?q=17841%20Lincoln%20St%20Villa%20Park%2C%20CA%2092861&t=m&z=10&output=embed&iwloc=near" title="17841 Lincoln St Villa Park, CA 92861" aria-label="17841 Lincoln St Villa Park, CA 92861" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"300px"}}></iframe>
                         </div>
                       </div>
                     </div>
@@ -163,7 +163,7 @@ export default function Footer() {
                     <div className="elementor-element elementor-element-e9f530f elementor-widget elementor-widget-google_maps" data-widget_type="google_maps.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-custom-embed">
-                          <iframe loading="lazy" src="about:blank" title="2403 N Shady Forest Ln Orange, CA 92867" aria-label="2403 N Shady Forest Ln Orange, CA 92867" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"700px"}}></iframe>
+                          <iframe loading="lazy" src="https://maps.google.com/maps?q=2403%20N%20Shady%20Forest%20Ln%20Orange%2C%20CA%2092867&t=m&z=10&output=embed&iwloc=near" title="2403 N Shady Forest Ln Orange, CA 92867" aria-label="2403 N Shady Forest Ln Orange, CA 92867" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"300px"}}></iframe>
                         </div>
                       </div>
                     </div>

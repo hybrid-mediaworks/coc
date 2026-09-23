@@ -3,6 +3,37 @@ import RichText from '@/components/RichText';
 import { TrustIndexWidget } from '@/components/TrustIndexWidget';
 import Image from 'next/image';
 import Link from 'next/link';
+import DmgGallery, { type DmgGalleryImage } from '@/components/DmgGallery';
+import FaqAccordion, { parseFaqs } from '@/components/FaqAccordion';
+
+const FACILITY_GALLERY: DmgGalleryImage[] = [
+  { src: "/images/4675597e21eff4b4951bc5e1cb70e598.webp", width: 1920, height: 1280 },
+  { src: "/images/fdd7e3f589b858f19f3f78368025bba3.webp", width: 1024, height: 733 },
+  { src: "/images/78caac88ca7e6716039c9517f54206c5.webp", width: 1024, height: 681 },
+  { src: "/images/cf86dbdfec4de5bb1b2d09ebd0c2aef3.webp", width: 1023, height: 574 },
+  { src: "/images/88310acaf83c28a8a77188cd26f1b229.webp", width: 1024, height: 622 },
+  { src: "/images/25463cdaeda182ccaab17fec810a159c.webp", width: 1024, height: 655 },
+  { src: "/images/729270162eb4c8909f81e06a2a0c184d.webp", width: 1024, height: 613 },
+  { src: "/images/20d41b1cb887d3bf378bc12d0f55cc98.webp", width: 1024, height: 683 },
+  { src: "/images/b24ac20053d2e382099007535cfb6ffc.webp", width: 1024, height: 631 },
+  { src: "/images/b32c881683438a394c966c14427117b5.webp", width: 1024, height: 695 },
+  { src: "/images/2a796cb6375a22bcf398a47946d2aff9.webp", width: 1024, height: 651 },
+  { src: "/images/b65a5ff41ea3d86e41b7538b63282a9f.webp", width: 1024, height: 645 },
+  { src: "/images/39d7eaf2712f7f91e4d45301791605a1.webp", width: 1024, height: 685 },
+  { src: "/images/3e1570032ab8a73997c3fb11a552706b.webp", width: 1024, height: 636 },
+  { src: "/images/efe6499e969c73fd759a70d54ff8b7f9.webp", width: 1024, height: 681 },
+  { src: "/images/19dd7b2c4af20e8dbf30e16942a8258d.webp", width: 1024, height: 681 },
+  { src: "/images/c18cfeb336c4ca3792351609f7738f5d.webp", width: 1024, height: 655 },
+  { src: "/images/c9802382ee54dfd5eb53f729311004fb.webp", width: 996, height: 768 },
+  { src: "/images/4c957da14629bcecbd497d04e6004afa.webp", width: 1920, height: 1280 },
+  { src: "/images/d28b036e0fb869414ec6cc4e09abd9e9.webp", width: 1920, height: 2880 },
+  { src: "/images/0a382c94292b07d1a0eaf1b9180115b1.webp", width: 1920, height: 1280 },
+  { src: "/images/ff37084159913959ff9b5ff112d59dc3.webp", width: 1920, height: 1280 },
+  { src: "/images/f34413570845444688fbc477aa4d84b8.webp", width: 1920, height: 1280 },
+  { src: "/images/99f737f31bda2406931d702ecefdb0f4.webp", width: 1920, height: 1280 },
+  { src: "/images/b2b6d2b111c8ba0a33222e50dba5be75.webp", width: 1920, height: 1280 },
+  { src: "/images/ac294acde45aca2c5bda5aadf459c8e4.webp", width: 1920, height: 1280 },
+];
 
 
 export default function Page55188(props: Record<string, string>) {
@@ -12,28 +43,33 @@ export default function Page55188(props: Record<string, string>) {
   const blog_section_1___con = props.blog_section_1___con ?? "<h2>Recovery Treatment Solutions for Substance Use in Orange County</h2>\r\nFinding the right addiction treatment in Orange County marks an essential first step toward lasting recovery. Available programs range from short-term interventions to extensive outpatient care, providing flexibility based on personal needs and circumstances.\r\n<h3>Supervised Withdrawal Management</h3>\r\nProfessional detox services, also referred to as medically monitored withdrawal, help safely manage physical symptoms during substance cessation. Through this approach, medical staff stabilize body systems, reduce withdrawal risks, and create a foundation for successful long-term recovery efforts.\r\n<h3>Inpatient Treatment Facilities</h3>\r\nResidential programs offer a structured, supportive environment where people can focus entirely on their healing journey. During their stay, participants attend individual and group therapy sessions, plus complementary activities like meditation or fitness programs, while receiving 24/7 professional support to develop essential recovery tools.\r\n<h2>Local Outpatient Treatment Options</h2>\r\nOutpatient community programs provide thorough care while allowing people to maintain their daily responsibilities.\r\n\r\nPartial Hospitalization Programs (PHP): Intensive daytime treatment offering comprehensive care without overnight stays, ideal for those needing structured support while preserving work and family connections.\r\n\r\nIntensive Outpatient Programs (IOP): Structured therapy sessions providing targeted treatment while living at home, allowing people to continue recovery while managing personal obligations.\r\n<h3>Customized Outpatient Care</h3>\r\nPersonalized outpatient treatment offers flexible scheduling for addiction recovery while preserving work-life balance. Through this approach, people gradually transition back to routine activities at work, school, or home settings, supporting sustained sobriety goals.";
   const why_travel___con = props.why_travel___con ?? "For individuals seeking treatment in Orange County, changing surroundings can provide meaningful support for recovery. Through the District Behavioral Health network, clients can attend care at DBH-affiliated facilities in Florida, California, or Tennessee—allowing them to select the environment that best aligns with their healing goals. Even those living near a treatment center may choose to relocate to another town or state for a fresh start. A new environment can help reduce exposure to familiar triggers, break unhealthy patterns, and create space to fully focus on recovery. Research shows that traveling for rehab often increases engagement in treatment and lowers relapse risk by creating distance from high-risk environments. The most important takeaway is that recovery is strongest when individuals select a setting that truly supports lasting healing, regardless of proximity to home.";
   const hero___con = props.hero___con ?? "Compassionate, evidence-based care in a healing coastal environment. Start your journey to recovery today.";
-  const cta_conclusion___con = props.cta_conclusion___con ?? "Get evidence-based treatment in a peaceful location, with a team of dedicated, expert staff.";
+  const cta_conclusion___con = props.cta_conclusion___con || "Get evidence-based treatment in a peaceful location, with a team of dedicated, expert staff.";
   const cta_insurance___con = props.cta_insurance___con ?? "View our wide selection of accepted providers for our Orange County rehab. Don’t see yours?";
   const why_travel___head = props.why_travel___head ?? "Why Traveling a Short Distance for Rehab In Orange County Can Help";
   const unique_topic_geo_2___head = props.unique_topic_geo_2___head ?? "Residential and Highly Rated Treatment Options in Orange County";
+  const unique_topic_geo_2___con = props.unique_topic_geo_2___con ?? "";
   const facility_highlight_column_3___head = props.facility_highlight_column_3___head ?? "Programs built around personal goals and mental health needs";
   const h2___head = props.h2___head ?? "How Do Drug & Alcohol Detox Programs Work In Orange County?";
   const unique_topic_geo_1___head = props.unique_topic_geo_1___head ?? "Treatment Access and Facility Availability in Orange County";
+  const unique_topic_geo_1___con = props.unique_topic_geo_1___con ?? "";
   const h1 = props.h1 ?? "Orange County Drug Rehab & Addiction Treatment Center";
   const facility_highlight_column_1___head = props.facility_highlight_column_1___head ?? "Experienced addiction specialists in Orange County";
   const facility_highlight_column_4___head = props.facility_highlight_column_4___head ?? "Strong support network during and after treatment";
   const why_rehab_works___head = props.why_rehab_works___head ?? "Life-Changing Recovery Journeys in Orange County";
+  const why_rehab_works___con = props.why_rehab_works___con ?? "";
   const topic_specific_video___head = props.topic_specific_video___head ?? "Addiction Recovery That Goes Beyond the Standard";
   const facility_highlight___head = props.facility_highlight___head ?? "What Sets Our Orange County Rehab Program Apart";
   const facility_highlight_column_2___head = props.facility_highlight_column_2___head ?? "Flexible treatment options close to home";
   const why_choose_us___head = props.why_choose_us___head ?? "Why Choose Our Orange County Rehab?";
-  const cta_conclusion___head = props.cta_conclusion___head ?? "Begin your journey to recovery.";
+  const why_choose_us___con = props.why_choose_us___con ?? "";
+  const cta_conclusion___head = props.cta_conclusion___head || "Begin your journey to recovery.";
   const cta_insurance___head = props.cta_insurance___head ?? "We Accept Most Major Insurance";
   const facility_image_slider___head = props.facility_image_slider___head ?? "Tour Our Orange County Rehab";
   const highlight_video___head = props.highlight_video___head ?? "Why Trust Us With Your Care";
   const brand = props.brand ?? "Connections Mental Health";
   const faqs___head = props.faqs___head ?? "Orange County Rehab FAQs";
-  const socials___head = props.socials___head ?? "Connect On  Our Socials";
+  const faqItems = parseFaqs(props.faqs___con ?? "");
+  const socials___head = props.socials___head || "Connect On  Our Socials";
   const address_county = props.address_county ?? "Los Angeles County";
   const geo = props.geo ?? "Orange County";
   const near_in = props.near_in ?? "near";
@@ -360,7 +396,7 @@ export default function Page55188(props: Record<string, string>) {
           <div className="e-con-inner">
             <div className="elementor-element elementor-element-11c8c69 elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="/images/b283902100950b2e5e6bf397c6a811d4.webp" alt="" width={373} height={160} className="attachment-full size-full wp-image-57995 entered error" />
+                <Image src="/images/b283902100950b2e5e6bf397c6a811d4.webp" alt="" width={373} height={160} unoptimized className="attachment-full size-full wp-image-57995 entered error" />
               </div>
             </div>
           </div>
@@ -416,10 +452,10 @@ export default function Page55188(props: Record<string, string>) {
                   </div>
                   <div className="jg-guided-col jg-guided-center">
                     <div className="jg-guided-img-wrap">
-                      <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
+                      <Image src="/images/66b2e357729133a647af0a40aae359dd.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
                       <div className="jg-guided-img-label">
                         <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                          <Image src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
+                          <Image src="/images/Frame45te4t.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
                           Current Guided Tour Page:
                         </h3>
                       </div>
@@ -470,10 +506,10 @@ export default function Page55188(props: Record<string, string>) {
                   </div>
                   <div className="jg-guided-col jg-guided-center">
                     <div className="jg-guided-img-wrap">
-                      <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
+                      <Image src="/images/66b2e357729133a647af0a40aae359dd.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
                       <div className="jg-guided-img-label">
                         <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                          <Image src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
+                          <Image src="/images/Frame45te4t.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
                           Current Guided Tour Page:
                         </h3>
                       </div>
@@ -519,10 +555,10 @@ export default function Page55188(props: Record<string, string>) {
                     </div>
                     <div className="jg-guided-col jg-guided-center">
                       <div className="jg-guided-img-wrap">
-                        <Image src="/wp-content/uploads/2026/07/shutterstock_2651453695-1.webp" alt="" width={382} height={398} className="jg-guided-img entered error" />
+                        <Image src="/images/66b2e357729133a647af0a40aae359dd.webp" alt="" width={382} height={398} className="jg-guided-img entered error" />
                         <div className="jg-guided-img-label jg-guided-img-label-cta">
                           <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full" href="/protect-your-job-while-in-treatment/">
-                            <Image src="/wp-content/uploads/2026/06/Frame45te4t.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon entered error" />
+                            <Image src="/images/Frame45te4t.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon entered error" />
                             View Full Guided Site Tour
                           </span>
                         </div>
@@ -696,7 +732,7 @@ export default function Page55188(props: Record<string, string>) {
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-97f7c99 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
-                                    <Image src="/images/1cf85e05e9985e133f25794d63bb4b85.webp" alt="" width={240} height={240} className="attachment-full size-full wp-image-60374" />
+                                    <Image src="/images/bc4252fbea8f7112f63594473a85f9c7.webp" alt="" width={240} height={240} className="attachment-full size-full wp-image-60374" />
                                   </div>
                                 </div>
                                 <div className="elementor-element elementor-element-e44d52e e-con-full e-flex e-con e-child">
@@ -730,7 +766,7 @@ export default function Page55188(props: Record<string, string>) {
                               <div className="e-con-inner">
                                 <div className="elementor-element elementor-element-97f7c99 elementor-widget elementor-widget-image" data-widget_type="image.default">
                                   <div className="elementor-widget-container">
-                                    <Image src="/images/804e4c64c330c6d28a0da99e71aece82.webp" alt="" width={240} height={240} className="attachment-full size-full wp-image-60372" />
+                                    <Image src="/images/9756371adce1fa015b3b4ffd7a636433.webp" alt="" width={240} height={240} className="attachment-full size-full wp-image-60372" />
                                   </div>
                                 </div>
                                 <div className="elementor-element elementor-element-e44d52e e-con-full e-flex e-con e-child">
@@ -1173,7 +1209,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
             <div className="elementor-element elementor-element-b8cd7c7 elementor-widget elementor-widget-google_maps" data-widget_type="google_maps.default">
               <div className="elementor-widget-container">
                 <div className="elementor-custom-embed">
-                  <iframe loading="lazy" src="https://maps.google.com/maps?q=gratitude+lodge+long+beach&t=m&z=11&output=embed&iwloc=near" title="gratitude lodge long beach" aria-label="gratitude lodge long beach" className="entered exited lazyloaded" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"700px"}}></iframe>
+                  <iframe loading="lazy" src="https://maps.google.com/maps?q=gratitude+lodge+long+beach&t=m&z=11&output=embed&iwloc=near" title="gratitude lodge long beach" aria-label="gratitude lodge long beach" className="entered exited lazyloaded" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"366px"}}></iframe>
                 </div>
               </div>
             </div>
@@ -1186,13 +1222,8 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
             </div>
             <div className="elementor-element elementor-element-c85c5ee elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
               <div className="elementor-widget-container">
-                <p style={{"fontSize":"16px"}}>
-                  At Renaissance Recovery, a premier drug and alcohol rehab in {geo}, we are fully dedicated to offering the best treatment plans and support for alcohol addiction, drug addiction, and co-occurring mental health disorders. At our world-class {geo} drug rehab, you’ll get the best of both worlds: an outpatient program in a new environment where you’ll meet fellow supportive, sober peers and a setting that is close enough to home for you to feel comfortable.
-                </p>
-                <p style={{"fontSize":"16px"}}>
-                  Our rehab center in {geo} is the perfect place to get started or continue your recovery journey. Many of our founders and staff have been on recovery journeys themselves, so they know exactly what you’re going through and are ready to offer you compassion and support, on top of our evidence-based, science-backed programming.
-                </p>
-              </div>
+									<div dangerouslySetInnerHTML={{ __html: unique_topic_geo_1___con }} />
+								</div>
             </div>
             <div className="elementor-element elementor-element-bdc3275 elementor-align-left elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
               <div className="elementor-widget-container">
@@ -1220,63 +1251,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
           <div className="elementor-element elementor-element-6e87f0c elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="g-wrap" id="dmg-gallery-1">
-                  <div className="dmg-grid">
-                    <div className="g-item">
-                      <Image src="/images/eec9422566243cf8e268e72bcd99be6b.webp" alt="Gallery image" width={1920} height={1281} />
-                      <div className="g-overlay"></div>
-                      <div className="g-line"></div>
-                      <div className="g-corner"></div>
-                    </div>
-                    <div className="g-item">
-                      <Image src="/images/d3af4a15ecd0eb1058044c88671cdb0b.webp" alt="Gallery image" width={1024} height={684} />
-                      <div className="g-overlay"></div>
-                      <div className="g-line"></div>
-                      <div className="g-corner"></div>
-                    </div>
-                    <div className="g-item">
-                      <Image src="/images/cec0bcb8bc2d9a6e84492081335e5e59.webp" alt="Gallery image" width={1920} height={1282} className="entered error" />
-                      <div className="g-overlay"></div>
-                      <div className="g-line"></div>
-                      <div className="g-corner"></div>
-                    </div>
-                    <div className="g-item">
-                      <Image src="/images/65fe4f777be715f93dec12aba7b82b57.webp" alt="Gallery image" width={1024} height={684} className="entered exited" />
-                      <div className="g-overlay"></div>
-                      <div className="g-line"></div>
-                      <div className="g-corner"></div>
-                    </div>
-                  </div>
-                  <div className="dmg-fade"></div>
-                  <button className="g-toggle dmg-toggle" type="button">
-                    Show all photos ↓
-                  </button>
-                </div>
-                <div id="dmg-lb">
-                  <div id="dmg-lb-box">
-                    <button id="dmg-lb-close" type="button" aria-label="Close">
-                      <svg width={18} height={18} viewBox="0 0 18 18" fill="none">
-                        <line x1="1" y1="1" x2="17" y2="17" stroke="white" strokeWidth="1.5" strokeLinecap="round"></line>{" "}
-                        <line x1="17" y1="1" x2="1" y2="17" stroke="white" strokeWidth="1.5" strokeLinecap="round"></line>
-                      </svg>
-                    </button>
-                    <button id="dmg-lb-prev" type="button" aria-label="Previous">
-                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                        <polyline points="13,3 6,10 13,17" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></polyline>
-                      </svg>
-                    </button>
-                    <button id="dmg-lb-next" type="button" aria-label="Next">
-                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                        <polyline points="7,3 14,10 7,17" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></polyline>
-                      </svg>
-                    </button>
-                    <div id="dmg-lb-img-wrap"></div>
-                    <div id="dmg-lb-counter"></div>
-                    <div id="dmg-lb-bar">
-                      <div id="dmg-lb-bar-fill"></div>
-                    </div>
-                  </div>
-                </div>
+                <DmgGallery id="dmg-gallery-1" images={FACILITY_GALLERY} />
               </div>
             </div>
           </div>
@@ -1399,59 +1374,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
           </div>
           <div className="elementor-element elementor-element-1c8bd80 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
-              <p style={{"fontSize":"16px"}}>
-                Within a 25-mile radius of {geo}, individuals have access to a growing network of residential behavioral health and addiction treatment centers. These facilities provide structured, therapeutic environments where clients can focus fully on healing and long-term recovery.
-              </p>
-              <p style={{"fontSize":"16px"}}>
-                Currently, there are 110 residential treatment centers available, offering a variety of evidence-based programs and specialized care options to meet diverse recovery needs. With services extending up to 35 miles from {geo}, individuals can find high-quality, accredited programs designed to support sustainable mental wellness and sobriety.
-              </p>
-              <p style={{"fontSize":"16px"}}>
-                Choosing the right treatment environment can make all the difference in recovery success. Our addiction and mental health treatment programs offer journey guidance and comprehensive care to help you or your loved one take the next step toward lasting healing.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="elementor-element elementor-element-70cb102 elementor-widget-mobile__width-initial elementor-pagination-position-outside elementor-widget elementor-widget-image-carousel e-widget-swiper" data-settings="{&quot;slides_to_show&quot;:&quot;2&quot;,&quot;slides_to_show_mobile&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;dots&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]}}" data-widget_type="image-carousel.default">
-          <div className="elementor-widget-container">
-            <div className="elementor-image-carousel-wrapper swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="ltr">
-              <div className="elementor-image-carousel swiper-wrapper swiper-image-stretch" aria-live="off" style={{"transform":"none","transitionDuration":"0ms"}} id="swiper-wrapper-1bf29b0928c9a4fb">
-                <div className="swiper-slide swiper-slide-prev" role="group" aria-roledescription="slide" aria-label="1 / 5" style={{"width":"602px","marginRight":"20px","visibility":"visible"}}>
-                  <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/02/palm-beach-drug-rehab-backyard-1-68b95ea049deb-66.webp" style={{"fontSize":"16px"}}>
-                    <figure className="swiper-slide-inner">
-                      <Image src="/images/cec0bcb8bc2d9a6e84492081335e5e59.webp" alt="palm-beach-drug-rehab-backyard-1-68b95ea049deb-66.webp" width={1920} height={1282} className="swiper-slide-image entered exited" />
-                    </figure>
-                  </Link>
-                </div>
-                <div className="swiper-slide swiper-slide-active" role="group" aria-roledescription="slide" aria-label="2 / 5" style={{"width":"602px","marginRight":"20px","visibility":"visible"}}>
-                  <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/02/palm-beach-drug-rehab-backyard-grills-68b95e9d01f94-66.webp" style={{"fontSize":"16px"}}>
-                    <figure className="swiper-slide-inner">
-                      <Image src="/images/d3af4a15ecd0eb1058044c88671cdb0b.webp" alt="palm-beach-drug-rehab-backyard-grills-68b95e9d01f94-66.webp" width={1024} height={684} className="swiper-slide-image entered exited" />
-                    </figure>
-                  </Link>
-                </div>
-                <div className="swiper-slide swiper-slide-next" role="group" aria-roledescription="slide" aria-label="3 / 5" style={{"width":"602px","marginRight":"20px","visibility":"visible"}}>
-                  <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/02/palm-beach-drug-rehab-backyard-corn-hole-68b95d6fdd1fe-66.webp" style={{"fontSize":"16px"}}>
-                    <figure className="swiper-slide-inner">
-                      <Image src="/images/e180d862f5632f00b50d150b826561e0.webp" alt="palm-beach-drug-rehab-backyard-corn-hole-68b95d6fdd1fe-66.webp" width={1024} height={684} className="swiper-slide-image" />
-                    </figure>
-                  </Link>
-                </div>
-                <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 / 5" style={{"width":"602px","marginRight":"20px","visibility":"visible"}}>
-                  <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/02/palm-beach-drug-rehab-backyard-hammock-68b95d73673bf-66.webp" style={{"fontSize":"16px"}}>
-                    <figure className="swiper-slide-inner">
-                      <Image src="/images/706d6837fe519c1b632c8d4b2289a07e.webp" alt="palm-beach-drug-rehab-backyard-hammock-68b95d73673bf-66.webp" width={1024} height={684} className="swiper-slide-image" />
-                    </figure>
-                  </Link>
-                </div>
-                <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 / 5" style={{"width":"602px","marginRight":"20px","visibility":"visible"}}>
-                  <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/02/lake-worth-drug-rehab-living-roo-68b95d6e7bf09-66.webp" style={{"fontSize":"16px"}}>
-                    <figure className="swiper-slide-inner">
-                      <Image src="/images/8b7625086941cf3d910b4d7198c137fe.webp" alt="lake-worth-drug-rehab-living-roo-68b95d6e7bf09-66.webp" width={1920} height={1280} className="swiper-slide-image" />
-                    </figure>
-                  </Link>
-                </div>
-              </div>
-              <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"></div>
+              <div dangerouslySetInnerHTML={{ __html: unique_topic_geo_2___con }} />
             </div>
           </div>
         </div>
@@ -1490,25 +1413,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
             </div>
             <div className="elementor-element elementor-element-d3eda3a elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
               <div className="elementor-widget-container">
-                <p style={{"fontSize":"16px"}}>
-                  Across {geo}, District Behavioral Health provides comprehensive care structured to assist individuals in restoring balance to their everyday lives. Excellence originates from our dedication to offering:
-                </p>
-                <p style={{"fontSize":"16px"}}>
-                  Flexible treatment methods that prioritize personalized attention while delivering consistent support customized to each individual’s unique situation.
-                  <br />
-                  {" "}Pathways to self-discovery, skill-development activities, and practical learning experiences appear regularly to promote lasting stability.
-                  <br />
-                  {" "}Continuous evaluation of progress empowers our team to adjust treatment plans as positive changes unfold.
-                  <br />
-                  {" "}This all-encompassing care allows people to move forward at their own manageable pace. Over time, enhanced self-awareness and healthier lifestyle patterns develop, strengthening independence and mental balance.
-                </p>
-                <p style={{"fontSize":"16px"}}>
-                  Recognition of underlying behavioral patterns gradually develops within those receiving our services.
-                  <br />
-                  {" "}Alternative methods for managing stress, impulses, and established habits begin emerging through dedicated practice and professional guidance.
-                  <br />
-                  {" "}Beyond quick fixes, we concentrate on building lasting resilience capable of withstanding life’s challenges. Increasing trust in the healing process establishes a solid foundation that supports individuals throughout treatment and beyond.
-                </p>
+                <div dangerouslySetInnerHTML={{ __html: why_rehab_works___con }} />
               </div>
             </div>
           </div>
@@ -1672,125 +1577,6 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
             </div>
           </div>
         </div>
-        <div className="elementor-element elementor-element-e089ca3 e-con-full e-flex e-con e-child">
-          <div className="elementor-element elementor-element-4fe757b e-flex e-con-boxed e-con e-child">
-            <div className="e-con-inner">
-              <div className="elementor-element elementor-element-f1d1d27 elementor-widget-tablet__width-auto elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                <div className="elementor-widget-container">
-                  <h2 className="elementor-heading-title elementor-size-default" style={{"fontSize":"32px"}}>
-                    {facility_highlight___head}
-                  </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="elementor-element elementor-element-95e8683 e-con-full e-grid e-con e-child">
-            <div className="elementor-element elementor-element-a4e09b6 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-widget_type="icon-box.default">
-              <div className="elementor-widget-container">
-                <div className="elementor-icon-box-wrapper">
-                  <div className="elementor-icon-box-icon">
-                    <span className="elementor-icon" style={{"fontSize":"60px"}}>
-                      <svg width={60} height={60} viewBox="0 0 60 60" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M29.2842 1.44593C29.1743 1.56974 28.6331 2.57799 28.0816 3.68636L27.079 5.70169L24.819 5.99835C22.731 6.27248 22.532 6.32165 22.205 6.64379C21.5392 7.29978 21.6543 7.525 23.6148 9.40237L25.3784 11.0912L24.9515 13.4417L24.5246 15.7921L24.7776 16.132C25.2999 16.8336 25.4853 16.8014 27.7205 15.6213C28.8456 15.0273 29.8277 14.5247 29.9027 14.5043C29.9779 14.484 30.9783 14.9678 32.1259 15.5793C34.3548 16.767 34.5778 16.8175 35.1037 16.2529C35.4388 15.8932 35.4381 15.8767 34.9629 13.2939L34.5611 11.11L36.3173 9.41511C38.2323 7.56709 38.3472 7.3519 37.775 6.68664C37.4763 6.33941 37.0733 6.25537 33.4772 5.79011L32.8123 5.70401L31.827 3.68765C31.2851 2.5785 30.75 1.56974 30.6379 1.44593C30.5139 1.30899 30.2481 1.2207 29.9592 1.2207C29.669 1.2207 29.4066 1.30822 29.2842 1.44593ZM29.2525 5.99346C28.9102 6.70737 28.5093 7.36966 28.3615 7.46542C28.2139 7.56117 27.4644 7.72655 26.6959 7.83286C25.9274 7.93929 25.2745 8.05049 25.245 8.07996C25.2156 8.10944 25.6853 8.58203 26.2891 9.13017C26.8928 9.67818 27.4195 10.2568 27.4594 10.4159C27.4993 10.575 27.4121 11.3366 27.2658 12.1084C27.1193 12.8803 26.9994 13.5499 26.9994 13.5967C26.9992 13.6436 27.6121 13.3616 28.3614 12.9704C29.9828 12.1236 30.0432 12.1248 31.6967 13.0334C32.3338 13.3836 32.8694 13.6586 32.8871 13.6446C32.9047 13.6307 32.8007 12.9619 32.6559 12.1582C32.4501 11.0147 32.424 10.6222 32.5361 10.3515C32.615 10.1613 33.146 9.58229 33.7164 9.06479C34.9101 7.98164 34.9408 8.03994 33.0481 7.79219C32.3756 7.70416 31.7096 7.55808 31.568 7.46735C31.4264 7.37674 31.0233 6.71599 30.6723 5.99912C30.3212 5.28213 29.9981 4.69564 29.9545 4.69564C29.9107 4.69564 29.5949 5.27968 29.2525 5.99346ZM7.5162 10.6357C7.383 10.7131 6.82057 11.7217 6.26625 12.8773C5.3046 14.8821 5.23909 14.9816 4.83523 15.0509C4.60253 15.091 3.58618 15.237 2.57678 15.3757C1.56737 15.5141 0.623479 15.6907 0.479205 15.7679C0.158996 15.9394 -0.0672606 16.4915 0.0277208 16.8701C0.0663312 17.0239 0.860804 17.8847 1.79324 18.783L3.48863 20.4162L3.07858 22.6912C2.85297 23.9424 2.66983 25.0411 2.6715 25.1327C2.67691 25.4273 3.29364 25.9313 3.6486 25.9313C3.83689 25.9313 4.90846 25.4387 6.02983 24.8365L8.06872 23.7416L10.1081 24.8365C12.5215 26.1321 12.8888 26.1971 13.3005 25.4008C13.4758 25.062 13.4589 24.8504 13.1027 22.9249C12.8886 21.767 12.7133 20.7143 12.7133 20.5856C12.7133 20.4534 13.4374 19.6605 14.3778 18.7627C15.3306 17.8534 16.062 17.0512 16.0882 16.8871C16.158 16.4511 15.9511 15.9466 15.6351 15.7817C15.4792 15.7004 14.352 15.4984 13.1304 15.333C11.9086 15.1675 10.895 15.0087 10.8777 14.9798C10.8605 14.9509 10.3833 13.9812 9.81712 12.8245C9.25109 11.668 8.69034 10.6689 8.57117 10.6044C8.28275 10.4485 7.81466 10.4622 7.5162 10.6357ZM51.3025 10.62C51.1847 10.6887 50.6253 11.6969 50.0595 12.8603C49.0752 14.8843 49.0123 14.9789 48.6007 15.0516C48.364 15.0934 47.3438 15.2404 46.3336 15.3784C45.3233 15.5164 44.3883 15.6874 44.2558 15.7583C43.9316 15.9318 43.7103 16.5956 43.8523 16.969C43.9138 17.131 44.6935 17.9481 45.5847 18.7851C46.6083 19.7462 47.2052 20.401 47.2052 20.5631C47.2052 20.7041 47.0299 21.767 46.8158 22.9249C46.4596 24.8504 46.4427 25.062 46.6179 25.4008C47.0299 26.1976 47.4075 26.1312 49.8278 24.8369L51.8713 23.7439L53.8982 24.8376C55.013 25.4392 56.0797 25.9313 56.2686 25.9313C56.6608 25.9313 57.2439 25.4155 57.2439 25.0687C57.2439 24.9416 57.0662 23.8598 56.8488 22.6644L56.4537 20.491L58.2002 18.7286C59.9698 16.9426 60.1165 16.708 59.815 16.1445C59.6021 15.7467 59.3246 15.665 57.2349 15.3839C56.1426 15.237 55.1172 15.0872 54.9562 15.0511C54.7244 14.9989 54.4525 14.5457 53.6525 12.8777C53.0427 11.6065 52.5367 10.7141 52.3772 10.6286C52.0543 10.4559 51.5902 10.4522 51.3025 10.62ZM7.40539 15.217C7.08467 15.9072 6.7041 16.5784 6.55956 16.7086C6.37642 16.8736 5.84399 17.0102 4.80421 17.1591L3.31166 17.3727L4.40974 18.4647C5.01373 19.0654 5.53922 19.6556 5.57757 19.7765C5.61593 19.8973 5.52532 20.6429 5.37616 21.4332C5.22699 22.2237 5.12789 22.8933 5.15608 22.9215C5.18413 22.9497 5.73961 22.6834 6.39032 22.3299C7.04104 21.9763 7.71492 21.6515 7.88776 21.6081C8.12045 21.5497 8.55739 21.7189 9.56924 22.2592C10.3211 22.6608 10.9528 22.9707 10.973 22.948C10.9932 22.9254 10.9032 22.3277 10.7731 21.6198C10.6429 20.912 10.534 20.1947 10.5309 20.0259C10.527 19.8088 10.8649 19.3729 11.6866 18.5349L12.8479 17.3507L11.5258 17.1919C9.5574 16.9556 9.59009 16.9773 8.77824 15.3587C8.39304 14.5906 8.05778 13.9621 8.03319 13.9621C8.00848 13.9621 7.72598 14.5267 7.40539 15.217ZM51.1632 15.3195C50.684 16.2704 50.346 16.7871 50.1426 16.8799C49.9752 16.9561 49.2147 17.0924 48.4527 17.1827L47.067 17.347L48.2301 18.5329C48.8697 19.1853 49.3931 19.8283 49.3931 19.9618C49.3931 20.0954 49.2781 20.8085 49.1374 21.5467C48.9967 22.2848 48.9002 22.9072 48.9227 22.9298C48.9454 22.9524 49.5844 22.6468 50.3428 22.2507C51.3509 21.7242 51.8055 21.5516 52.0334 21.6088C52.2049 21.6519 52.8775 21.9763 53.5282 22.3299C54.1789 22.6834 54.7347 22.9492 54.7634 22.9205C54.7923 22.8918 54.6981 22.2238 54.5542 21.4363C54.3852 20.5108 54.3318 19.9032 54.4033 19.7182C54.4643 19.5608 54.9852 18.975 55.5609 18.4166C56.1366 17.8582 56.5915 17.3896 56.5718 17.3752C56.5521 17.3609 55.8765 17.2578 55.0703 17.1463C53.9753 16.9948 53.5407 16.8799 53.3527 16.692C53.2144 16.5535 52.8262 15.8683 52.4903 15.1691L51.8794 13.8978L51.1632 15.3195ZM27.1738 20.342C20.091 21.5318 14.5641 27.3108 13.6007 34.5342C13.4177 35.9068 13.517 38.652 13.7964 39.9389C14.1993 41.7938 15.2425 44.3466 16.0766 45.5179L16.3387 45.8859L13.8182 50.2533C12.0298 53.3518 11.2976 54.7361 11.2976 55.0181C11.2976 55.4303 11.7796 56.05 12.0962 56.0446C12.1878 56.043 13.3343 55.8698 14.6438 55.6596C15.9533 55.4495 17.141 55.2769 17.2829 55.2764C17.4573 55.2756 17.9131 55.7374 18.6885 56.701C20.3561 58.7729 20.4675 58.8792 20.9696 58.8769C21.2067 58.8758 21.4805 58.8243 21.5784 58.7624C21.676 58.7005 22.5567 57.2679 23.5353 55.5789C24.516 53.8863 25.3892 52.5173 25.4811 52.5285C25.5727 52.5397 26.1111 52.6549 26.6774 52.7843C27.4642 52.9643 28.238 53.0199 29.9592 53.0199C31.6805 53.0199 32.4543 52.9643 33.2411 52.7843C33.8074 52.6549 34.3458 52.5397 34.4374 52.5285C34.5293 52.5173 35.4025 53.8863 36.3832 55.5789C37.3618 57.2679 38.2425 58.7005 38.3401 58.7624C38.438 58.8243 38.7118 58.8758 38.9489 58.8769C39.451 58.8792 39.5624 58.7729 41.23 56.701C42.0054 55.7374 42.4612 55.2756 42.6355 55.2764C42.7775 55.2769 43.9774 55.4501 45.302 55.6611C47.8411 56.0656 48.2141 56.0523 48.4844 55.5473C48.5595 55.4069 48.6209 55.1412 48.6209 54.9568C48.6209 54.7554 47.6165 52.882 46.1078 50.2695L43.5948 45.9176L44.1344 45.0301C46.3228 41.4313 47.0034 36.6048 45.9106 32.4326C44.5079 27.0776 40.4552 22.7327 35.236 20.9887C34.4927 20.7403 33.3344 20.4479 32.662 20.339C31.1831 20.0992 28.6102 20.1008 27.1738 20.342ZM27.4246 22.3901C21.3937 23.4842 16.7488 28.2131 15.732 34.2942C15.1491 37.7802 15.9212 41.4418 17.8773 44.4687C21.3163 49.7901 27.8981 52.2174 34.0527 50.4339C40.1685 48.6616 44.3738 43.0306 44.3738 36.6135C44.3738 29.5679 39.3589 23.5972 32.4257 22.3881C31.1147 22.1595 28.6908 22.1605 27.4246 22.3901ZM28.4842 26.5809C27.3255 26.7624 26.4977 27.0331 25.3766 27.5974C23.3885 28.598 21.8804 30.1334 20.8822 32.1733C20.1171 33.7369 19.8787 34.7914 19.8787 36.6135C19.8787 38.4357 20.1171 39.4901 20.8822 41.0537C22.4033 44.1621 25.2157 46.1755 28.712 46.6592C30.6082 46.9213 32.5144 46.5944 34.3994 45.6835C36.4959 44.6704 38.0161 43.1501 39.0292 41.0537C39.8078 39.4425 40.0435 38.4107 40.0435 36.6135C40.0435 34.8164 39.8078 33.7846 39.0292 32.1733C38.0185 30.082 36.506 28.5673 34.3994 27.5368C33.7624 27.225 32.8647 26.8821 32.4046 26.7746C31.3192 26.5208 29.4556 26.4288 28.4842 26.5809ZM28.5601 28.6418C25.6081 29.1686 23.0506 31.505 22.1581 34.49C21.8431 35.5434 21.8431 37.6837 22.1581 38.7371C22.9696 41.4514 25.1214 43.6032 27.8357 44.4146C28.8891 44.7297 31.0294 44.7297 32.0828 44.4146C34.7971 43.6032 36.9489 41.4514 37.7603 38.7371C38.0754 37.6837 38.0754 35.5434 37.7603 34.49C36.9563 31.8009 34.785 29.6137 32.1472 28.8364C31.2636 28.5759 29.4731 28.4788 28.5601 28.6418ZM30.9143 36.112L28.3157 38.6994L27.5772 37.3951C27.1711 36.6778 26.7339 36.0348 26.6057 35.966C25.9707 35.6263 25.0686 36.1182 25.0686 36.8043C25.0686 37.2102 27.1707 40.9146 27.553 41.1824C28.1824 41.6234 28.3139 41.5281 31.599 38.2545C33.3216 36.538 34.764 35.0032 34.8043 34.8439C34.972 34.1826 34.4399 33.5247 33.7373 33.5247C33.6138 33.5247 32.3436 34.6889 30.9143 36.112ZM15.9742 50.6264C15.0451 52.2276 14.3375 53.5573 14.4015 53.5811C14.4656 53.6049 15.2729 53.498 16.1957 53.3434C17.1185 53.1888 18.0128 53.0975 18.1832 53.1402C18.373 53.1878 18.9317 53.7641 19.6251 54.6273C20.2477 55.4025 20.7868 56.0392 20.8231 56.042C20.909 56.049 23.2668 51.9751 23.2668 51.8198C23.2668 51.755 22.9387 51.5412 22.5377 51.3451C21.404 50.7904 19.6946 49.5936 18.631 48.61L17.6633 47.715L15.9742 50.6264ZM41.285 48.6003C40.1184 49.6756 38.7987 50.6072 37.5032 51.2698L36.5399 51.7623L37.7787 53.9049C38.4602 55.0833 39.0499 56.0443 39.0896 56.0405C39.1291 56.0366 39.6517 55.4216 40.251 54.6737C40.8502 53.9258 41.4649 53.2572 41.617 53.1879C41.8111 53.0995 42.4148 53.1424 43.644 53.3321C44.6069 53.4806 45.4509 53.6021 45.5197 53.6021C45.6096 53.6021 42.4403 47.8701 42.2724 47.729C42.2601 47.7187 41.8158 48.1108 41.285 48.6003Z" fill="url(#paint0_linear_4251_1290)"></path>
-                        <defs>
-                          <linearGradient id="paint0_linear_4251_1290" x1="59.9387" y1="30.0488" x2="0.00585938" y2="30.0488" gradientUnits="userSpaceOnUse">
-                            <stop stopColor="#7489A7"></stop>
-                            <stop offset="1" stopColor="#4A576A"></stop>
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                    </span>
-                  </div>
-                  <div className="elementor-icon-box-content">
-                    <h3 className="elementor-icon-box-title" style={{"fontSize":"20px"}}>
-                      <span style={{"fontSize":"20px"}}>
-                        {facility_highlight_column_1___head}
-                      </span>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="elementor-element elementor-element-9417d9e elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-widget_type="icon-box.default">
-              <div className="elementor-widget-container">
-                <div className="elementor-icon-box-wrapper">
-                  <div className="elementor-icon-box-icon">
-                    <span className="elementor-icon" style={{"fontSize":"60px"}}>
-                      <svg width={60} height={60} viewBox="0 0 60 60" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M29.2842 1.44593C29.1743 1.56974 28.6331 2.57799 28.0816 3.68636L27.079 5.70169L24.819 5.99835C22.731 6.27248 22.532 6.32165 22.205 6.64379C21.5392 7.29978 21.6543 7.525 23.6148 9.40237L25.3784 11.0912L24.9515 13.4417L24.5246 15.7921L24.7776 16.132C25.2999 16.8336 25.4853 16.8014 27.7205 15.6213C28.8456 15.0273 29.8277 14.5247 29.9027 14.5043C29.9779 14.484 30.9783 14.9678 32.1259 15.5793C34.3548 16.767 34.5778 16.8175 35.1037 16.2529C35.4388 15.8932 35.4381 15.8767 34.9629 13.2939L34.5611 11.11L36.3173 9.41511C38.2323 7.56709 38.3472 7.3519 37.775 6.68664C37.4763 6.33941 37.0733 6.25537 33.4772 5.79011L32.8123 5.70401L31.827 3.68765C31.2851 2.5785 30.75 1.56974 30.6379 1.44593C30.5139 1.30899 30.2481 1.2207 29.9592 1.2207C29.669 1.2207 29.4066 1.30822 29.2842 1.44593ZM29.2525 5.99346C28.9102 6.70737 28.5093 7.36966 28.3615 7.46542C28.2139 7.56117 27.4644 7.72655 26.6959 7.83286C25.9274 7.93929 25.2745 8.05049 25.245 8.07996C25.2156 8.10944 25.6853 8.58203 26.2891 9.13017C26.8928 9.67818 27.4195 10.2568 27.4594 10.4159C27.4993 10.575 27.4121 11.3366 27.2658 12.1084C27.1193 12.8803 26.9994 13.5499 26.9994 13.5967C26.9992 13.6436 27.6121 13.3616 28.3614 12.9704C29.9828 12.1236 30.0432 12.1248 31.6967 13.0334C32.3338 13.3836 32.8694 13.6586 32.8871 13.6446C32.9047 13.6307 32.8007 12.9619 32.6559 12.1582C32.4501 11.0147 32.424 10.6222 32.5361 10.3515C32.615 10.1613 33.146 9.58229 33.7164 9.06479C34.9101 7.98164 34.9408 8.03994 33.0481 7.79219C32.3756 7.70416 31.7096 7.55808 31.568 7.46735C31.4264 7.37674 31.0233 6.71599 30.6723 5.99912C30.3212 5.28213 29.9981 4.69564 29.9545 4.69564C29.9107 4.69564 29.5949 5.27968 29.2525 5.99346ZM7.5162 10.6357C7.383 10.7131 6.82057 11.7217 6.26625 12.8773C5.3046 14.8821 5.23909 14.9816 4.83523 15.0509C4.60253 15.091 3.58618 15.237 2.57678 15.3757C1.56737 15.5141 0.623479 15.6907 0.479205 15.7679C0.158996 15.9394 -0.0672606 16.4915 0.0277208 16.8701C0.0663312 17.0239 0.860804 17.8847 1.79324 18.783L3.48863 20.4162L3.07858 22.6912C2.85297 23.9424 2.66983 25.0411 2.6715 25.1327C2.67691 25.4273 3.29364 25.9313 3.6486 25.9313C3.83689 25.9313 4.90846 25.4387 6.02983 24.8365L8.06872 23.7416L10.1081 24.8365C12.5215 26.1321 12.8888 26.1971 13.3005 25.4008C13.4758 25.062 13.4589 24.8504 13.1027 22.9249C12.8886 21.767 12.7133 20.7143 12.7133 20.5856C12.7133 20.4534 13.4374 19.6605 14.3778 18.7627C15.3306 17.8534 16.062 17.0512 16.0882 16.8871C16.158 16.4511 15.9511 15.9466 15.6351 15.7817C15.4792 15.7004 14.352 15.4984 13.1304 15.333C11.9086 15.1675 10.895 15.0087 10.8777 14.9798C10.8605 14.9509 10.3833 13.9812 9.81712 12.8245C9.25109 11.668 8.69034 10.6689 8.57117 10.6044C8.28275 10.4485 7.81466 10.4622 7.5162 10.6357ZM51.3025 10.62C51.1847 10.6887 50.6253 11.6969 50.0595 12.8603C49.0752 14.8843 49.0123 14.9789 48.6007 15.0516C48.364 15.0934 47.3438 15.2404 46.3336 15.3784C45.3233 15.5164 44.3883 15.6874 44.2558 15.7583C43.9316 15.9318 43.7103 16.5956 43.8523 16.969C43.9138 17.131 44.6935 17.9481 45.5847 18.7851C46.6083 19.7462 47.2052 20.401 47.2052 20.5631C47.2052 20.7041 47.0299 21.767 46.8158 22.9249C46.4596 24.8504 46.4427 25.062 46.6179 25.4008C47.0299 26.1976 47.4075 26.1312 49.8278 24.8369L51.8713 23.7439L53.8982 24.8376C55.013 25.4392 56.0797 25.9313 56.2686 25.9313C56.6608 25.9313 57.2439 25.4155 57.2439 25.0687C57.2439 24.9416 57.0662 23.8598 56.8488 22.6644L56.4537 20.491L58.2002 18.7286C59.9698 16.9426 60.1165 16.708 59.815 16.1445C59.6021 15.7467 59.3246 15.665 57.2349 15.3839C56.1426 15.237 55.1172 15.0872 54.9562 15.0511C54.7244 14.9989 54.4525 14.5457 53.6525 12.8777C53.0427 11.6065 52.5367 10.7141 52.3772 10.6286C52.0543 10.4559 51.5902 10.4522 51.3025 10.62ZM7.40539 15.217C7.08467 15.9072 6.7041 16.5784 6.55956 16.7086C6.37642 16.8736 5.84399 17.0102 4.80421 17.1591L3.31166 17.3727L4.40974 18.4647C5.01373 19.0654 5.53922 19.6556 5.57757 19.7765C5.61593 19.8973 5.52532 20.6429 5.37616 21.4332C5.22699 22.2237 5.12789 22.8933 5.15608 22.9215C5.18413 22.9497 5.73961 22.6834 6.39032 22.3299C7.04104 21.9763 7.71492 21.6515 7.88776 21.6081C8.12045 21.5497 8.55739 21.7189 9.56924 22.2592C10.3211 22.6608 10.9528 22.9707 10.973 22.948C10.9932 22.9254 10.9032 22.3277 10.7731 21.6198C10.6429 20.912 10.534 20.1947 10.5309 20.0259C10.527 19.8088 10.8649 19.3729 11.6866 18.5349L12.8479 17.3507L11.5258 17.1919C9.5574 16.9556 9.59009 16.9773 8.77824 15.3587C8.39304 14.5906 8.05778 13.9621 8.03319 13.9621C8.00848 13.9621 7.72598 14.5267 7.40539 15.217ZM51.1632 15.3195C50.684 16.2704 50.346 16.7871 50.1426 16.8799C49.9752 16.9561 49.2147 17.0924 48.4527 17.1827L47.067 17.347L48.2301 18.5329C48.8697 19.1853 49.3931 19.8283 49.3931 19.9618C49.3931 20.0954 49.2781 20.8085 49.1374 21.5467C48.9967 22.2848 48.9002 22.9072 48.9227 22.9298C48.9454 22.9524 49.5844 22.6468 50.3428 22.2507C51.3509 21.7242 51.8055 21.5516 52.0334 21.6088C52.2049 21.6519 52.8775 21.9763 53.5282 22.3299C54.1789 22.6834 54.7347 22.9492 54.7634 22.9205C54.7923 22.8918 54.6981 22.2238 54.5542 21.4363C54.3852 20.5108 54.3318 19.9032 54.4033 19.7182C54.4643 19.5608 54.9852 18.975 55.5609 18.4166C56.1366 17.8582 56.5915 17.3896 56.5718 17.3752C56.5521 17.3609 55.8765 17.2578 55.0703 17.1463C53.9753 16.9948 53.5407 16.8799 53.3527 16.692C53.2144 16.5535 52.8262 15.8683 52.4903 15.1691L51.8794 13.8978L51.1632 15.3195ZM27.1738 20.342C20.091 21.5318 14.5641 27.3108 13.6007 34.5342C13.4177 35.9068 13.517 38.652 13.7964 39.9389C14.1993 41.7938 15.2425 44.3466 16.0766 45.5179L16.3387 45.8859L13.8182 50.2533C12.0298 53.3518 11.2976 54.7361 11.2976 55.0181C11.2976 55.4303 11.7796 56.05 12.0962 56.0446C12.1878 56.043 13.3343 55.8698 14.6438 55.6596C15.9533 55.4495 17.141 55.2769 17.2829 55.2764C17.4573 55.2756 17.9131 55.7374 18.6885 56.701C20.3561 58.7729 20.4675 58.8792 20.9696 58.8769C21.2067 58.8758 21.4805 58.8243 21.5784 58.7624C21.676 58.7005 22.5567 57.2679 23.5353 55.5789C24.516 53.8863 25.3892 52.5173 25.4811 52.5285C25.5727 52.5397 26.1111 52.6549 26.6774 52.7843C27.4642 52.9643 28.238 53.0199 29.9592 53.0199C31.6805 53.0199 32.4543 52.9643 33.2411 52.7843C33.8074 52.6549 34.3458 52.5397 34.4374 52.5285C34.5293 52.5173 35.4025 53.8863 36.3832 55.5789C37.3618 57.2679 38.2425 58.7005 38.3401 58.7624C38.438 58.8243 38.7118 58.8758 38.9489 58.8769C39.451 58.8792 39.5624 58.7729 41.23 56.701C42.0054 55.7374 42.4612 55.2756 42.6355 55.2764C42.7775 55.2769 43.9774 55.4501 45.302 55.6611C47.8411 56.0656 48.2141 56.0523 48.4844 55.5473C48.5595 55.4069 48.6209 55.1412 48.6209 54.9568C48.6209 54.7554 47.6165 52.882 46.1078 50.2695L43.5948 45.9176L44.1344 45.0301C46.3228 41.4313 47.0034 36.6048 45.9106 32.4326C44.5079 27.0776 40.4552 22.7327 35.236 20.9887C34.4927 20.7403 33.3344 20.4479 32.662 20.339C31.1831 20.0992 28.6102 20.1008 27.1738 20.342ZM27.4246 22.3901C21.3937 23.4842 16.7488 28.2131 15.732 34.2942C15.1491 37.7802 15.9212 41.4418 17.8773 44.4687C21.3163 49.7901 27.8981 52.2174 34.0527 50.4339C40.1685 48.6616 44.3738 43.0306 44.3738 36.6135C44.3738 29.5679 39.3589 23.5972 32.4257 22.3881C31.1147 22.1595 28.6908 22.1605 27.4246 22.3901ZM28.4842 26.5809C27.3255 26.7624 26.4977 27.0331 25.3766 27.5974C23.3885 28.598 21.8804 30.1334 20.8822 32.1733C20.1171 33.7369 19.8787 34.7914 19.8787 36.6135C19.8787 38.4357 20.1171 39.4901 20.8822 41.0537C22.4033 44.1621 25.2157 46.1755 28.712 46.6592C30.6082 46.9213 32.5144 46.5944 34.3994 45.6835C36.4959 44.6704 38.0161 43.1501 39.0292 41.0537C39.8078 39.4425 40.0435 38.4107 40.0435 36.6135C40.0435 34.8164 39.8078 33.7846 39.0292 32.1733C38.0185 30.082 36.506 28.5673 34.3994 27.5368C33.7624 27.225 32.8647 26.8821 32.4046 26.7746C31.3192 26.5208 29.4556 26.4288 28.4842 26.5809ZM28.5601 28.6418C25.6081 29.1686 23.0506 31.505 22.1581 34.49C21.8431 35.5434 21.8431 37.6837 22.1581 38.7371C22.9696 41.4514 25.1214 43.6032 27.8357 44.4146C28.8891 44.7297 31.0294 44.7297 32.0828 44.4146C34.7971 43.6032 36.9489 41.4514 37.7603 38.7371C38.0754 37.6837 38.0754 35.5434 37.7603 34.49C36.9563 31.8009 34.785 29.6137 32.1472 28.8364C31.2636 28.5759 29.4731 28.4788 28.5601 28.6418ZM30.9143 36.112L28.3157 38.6994L27.5772 37.3951C27.1711 36.6778 26.7339 36.0348 26.6057 35.966C25.9707 35.6263 25.0686 36.1182 25.0686 36.8043C25.0686 37.2102 27.1707 40.9146 27.553 41.1824C28.1824 41.6234 28.3139 41.5281 31.599 38.2545C33.3216 36.538 34.764 35.0032 34.8043 34.8439C34.972 34.1826 34.4399 33.5247 33.7373 33.5247C33.6138 33.5247 32.3436 34.6889 30.9143 36.112ZM15.9742 50.6264C15.0451 52.2276 14.3375 53.5573 14.4015 53.5811C14.4656 53.6049 15.2729 53.498 16.1957 53.3434C17.1185 53.1888 18.0128 53.0975 18.1832 53.1402C18.373 53.1878 18.9317 53.7641 19.6251 54.6273C20.2477 55.4025 20.7868 56.0392 20.8231 56.042C20.909 56.049 23.2668 51.9751 23.2668 51.8198C23.2668 51.755 22.9387 51.5412 22.5377 51.3451C21.404 50.7904 19.6946 49.5936 18.631 48.61L17.6633 47.715L15.9742 50.6264ZM41.285 48.6003C40.1184 49.6756 38.7987 50.6072 37.5032 51.2698L36.5399 51.7623L37.7787 53.9049C38.4602 55.0833 39.0499 56.0443 39.0896 56.0405C39.1291 56.0366 39.6517 55.4216 40.251 54.6737C40.8502 53.9258 41.4649 53.2572 41.617 53.1879C41.8111 53.0995 42.4148 53.1424 43.644 53.3321C44.6069 53.4806 45.4509 53.6021 45.5197 53.6021C45.6096 53.6021 42.4403 47.8701 42.2724 47.729C42.2601 47.7187 41.8158 48.1108 41.285 48.6003Z" fill="url(#paint0_linear_4251_1290)"></path>
-                        <defs>
-                          <linearGradient id="paint0_linear_4251_1290" x1="59.9387" y1="30.0488" x2="0.00585938" y2="30.0488" gradientUnits="userSpaceOnUse">
-                            <stop stopColor="#7489A7"></stop>
-                            <stop offset="1" stopColor="#4A576A"></stop>
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                    </span>
-                  </div>
-                  <div className="elementor-icon-box-content">
-                    <h3 className="elementor-icon-box-title" style={{"fontSize":"20px"}}>
-                      <span style={{"fontSize":"20px"}}>
-                        {facility_highlight_column_2___head}
-                      </span>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="elementor-element elementor-element-e8578d9 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-widget_type="icon-box.default">
-              <div className="elementor-widget-container">
-                <div className="elementor-icon-box-wrapper">
-                  <div className="elementor-icon-box-icon">
-                    <span className="elementor-icon" style={{"fontSize":"60px"}}>
-                      <svg width={60} height={60} viewBox="0 0 60 60" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M29.2842 1.44593C29.1743 1.56974 28.6331 2.57799 28.0816 3.68636L27.079 5.70169L24.819 5.99835C22.731 6.27248 22.532 6.32165 22.205 6.64379C21.5392 7.29978 21.6543 7.525 23.6148 9.40237L25.3784 11.0912L24.9515 13.4417L24.5246 15.7921L24.7776 16.132C25.2999 16.8336 25.4853 16.8014 27.7205 15.6213C28.8456 15.0273 29.8277 14.5247 29.9027 14.5043C29.9779 14.484 30.9783 14.9678 32.1259 15.5793C34.3548 16.767 34.5778 16.8175 35.1037 16.2529C35.4388 15.8932 35.4381 15.8767 34.9629 13.2939L34.5611 11.11L36.3173 9.41511C38.2323 7.56709 38.3472 7.3519 37.775 6.68664C37.4763 6.33941 37.0733 6.25537 33.4772 5.79011L32.8123 5.70401L31.827 3.68765C31.2851 2.5785 30.75 1.56974 30.6379 1.44593C30.5139 1.30899 30.2481 1.2207 29.9592 1.2207C29.669 1.2207 29.4066 1.30822 29.2842 1.44593ZM29.2525 5.99346C28.9102 6.70737 28.5093 7.36966 28.3615 7.46542C28.2139 7.56117 27.4644 7.72655 26.6959 7.83286C25.9274 7.93929 25.2745 8.05049 25.245 8.07996C25.2156 8.10944 25.6853 8.58203 26.2891 9.13017C26.8928 9.67818 27.4195 10.2568 27.4594 10.4159C27.4993 10.575 27.4121 11.3366 27.2658 12.1084C27.1193 12.8803 26.9994 13.5499 26.9994 13.5967C26.9992 13.6436 27.6121 13.3616 28.3614 12.9704C29.9828 12.1236 30.0432 12.1248 31.6967 13.0334C32.3338 13.3836 32.8694 13.6586 32.8871 13.6446C32.9047 13.6307 32.8007 12.9619 32.6559 12.1582C32.4501 11.0147 32.424 10.6222 32.5361 10.3515C32.615 10.1613 33.146 9.58229 33.7164 9.06479C34.9101 7.98164 34.9408 8.03994 33.0481 7.79219C32.3756 7.70416 31.7096 7.55808 31.568 7.46735C31.4264 7.37674 31.0233 6.71599 30.6723 5.99912C30.3212 5.28213 29.9981 4.69564 29.9545 4.69564C29.9107 4.69564 29.5949 5.27968 29.2525 5.99346ZM7.5162 10.6357C7.383 10.7131 6.82057 11.7217 6.26625 12.8773C5.3046 14.8821 5.23909 14.9816 4.83523 15.0509C4.60253 15.091 3.58618 15.237 2.57678 15.3757C1.56737 15.5141 0.623479 15.6907 0.479205 15.7679C0.158996 15.9394 -0.0672606 16.4915 0.0277208 16.8701C0.0663312 17.0239 0.860804 17.8847 1.79324 18.783L3.48863 20.4162L3.07858 22.6912C2.85297 23.9424 2.66983 25.0411 2.6715 25.1327C2.67691 25.4273 3.29364 25.9313 3.6486 25.9313C3.83689 25.9313 4.90846 25.4387 6.02983 24.8365L8.06872 23.7416L10.1081 24.8365C12.5215 26.1321 12.8888 26.1971 13.3005 25.4008C13.4758 25.062 13.4589 24.8504 13.1027 22.9249C12.8886 21.767 12.7133 20.7143 12.7133 20.5856C12.7133 20.4534 13.4374 19.6605 14.3778 18.7627C15.3306 17.8534 16.062 17.0512 16.0882 16.8871C16.158 16.4511 15.9511 15.9466 15.6351 15.7817C15.4792 15.7004 14.352 15.4984 13.1304 15.333C11.9086 15.1675 10.895 15.0087 10.8777 14.9798C10.8605 14.9509 10.3833 13.9812 9.81712 12.8245C9.25109 11.668 8.69034 10.6689 8.57117 10.6044C8.28275 10.4485 7.81466 10.4622 7.5162 10.6357ZM51.3025 10.62C51.1847 10.6887 50.6253 11.6969 50.0595 12.8603C49.0752 14.8843 49.0123 14.9789 48.6007 15.0516C48.364 15.0934 47.3438 15.2404 46.3336 15.3784C45.3233 15.5164 44.3883 15.6874 44.2558 15.7583C43.9316 15.9318 43.7103 16.5956 43.8523 16.969C43.9138 17.131 44.6935 17.9481 45.5847 18.7851C46.6083 19.7462 47.2052 20.401 47.2052 20.5631C47.2052 20.7041 47.0299 21.767 46.8158 22.9249C46.4596 24.8504 46.4427 25.062 46.6179 25.4008C47.0299 26.1976 47.4075 26.1312 49.8278 24.8369L51.8713 23.7439L53.8982 24.8376C55.013 25.4392 56.0797 25.9313 56.2686 25.9313C56.6608 25.9313 57.2439 25.4155 57.2439 25.0687C57.2439 24.9416 57.0662 23.8598 56.8488 22.6644L56.4537 20.491L58.2002 18.7286C59.9698 16.9426 60.1165 16.708 59.815 16.1445C59.6021 15.7467 59.3246 15.665 57.2349 15.3839C56.1426 15.237 55.1172 15.0872 54.9562 15.0511C54.7244 14.9989 54.4525 14.5457 53.6525 12.8777C53.0427 11.6065 52.5367 10.7141 52.3772 10.6286C52.0543 10.4559 51.5902 10.4522 51.3025 10.62ZM7.40539 15.217C7.08467 15.9072 6.7041 16.5784 6.55956 16.7086C6.37642 16.8736 5.84399 17.0102 4.80421 17.1591L3.31166 17.3727L4.40974 18.4647C5.01373 19.0654 5.53922 19.6556 5.57757 19.7765C5.61593 19.8973 5.52532 20.6429 5.37616 21.4332C5.22699 22.2237 5.12789 22.8933 5.15608 22.9215C5.18413 22.9497 5.73961 22.6834 6.39032 22.3299C7.04104 21.9763 7.71492 21.6515 7.88776 21.6081C8.12045 21.5497 8.55739 21.7189 9.56924 22.2592C10.3211 22.6608 10.9528 22.9707 10.973 22.948C10.9932 22.9254 10.9032 22.3277 10.7731 21.6198C10.6429 20.912 10.534 20.1947 10.5309 20.0259C10.527 19.8088 10.8649 19.3729 11.6866 18.5349L12.8479 17.3507L11.5258 17.1919C9.5574 16.9556 9.59009 16.9773 8.77824 15.3587C8.39304 14.5906 8.05778 13.9621 8.03319 13.9621C8.00848 13.9621 7.72598 14.5267 7.40539 15.217ZM51.1632 15.3195C50.684 16.2704 50.346 16.7871 50.1426 16.8799C49.9752 16.9561 49.2147 17.0924 48.4527 17.1827L47.067 17.347L48.2301 18.5329C48.8697 19.1853 49.3931 19.8283 49.3931 19.9618C49.3931 20.0954 49.2781 20.8085 49.1374 21.5467C48.9967 22.2848 48.9002 22.9072 48.9227 22.9298C48.9454 22.9524 49.5844 22.6468 50.3428 22.2507C51.3509 21.7242 51.8055 21.5516 52.0334 21.6088C52.2049 21.6519 52.8775 21.9763 53.5282 22.3299C54.1789 22.6834 54.7347 22.9492 54.7634 22.9205C54.7923 22.8918 54.6981 22.2238 54.5542 21.4363C54.3852 20.5108 54.3318 19.9032 54.4033 19.7182C54.4643 19.5608 54.9852 18.975 55.5609 18.4166C56.1366 17.8582 56.5915 17.3896 56.5718 17.3752C56.5521 17.3609 55.8765 17.2578 55.0703 17.1463C53.9753 16.9948 53.5407 16.8799 53.3527 16.692C53.2144 16.5535 52.8262 15.8683 52.4903 15.1691L51.8794 13.8978L51.1632 15.3195ZM27.1738 20.342C20.091 21.5318 14.5641 27.3108 13.6007 34.5342C13.4177 35.9068 13.517 38.652 13.7964 39.9389C14.1993 41.7938 15.2425 44.3466 16.0766 45.5179L16.3387 45.8859L13.8182 50.2533C12.0298 53.3518 11.2976 54.7361 11.2976 55.0181C11.2976 55.4303 11.7796 56.05 12.0962 56.0446C12.1878 56.043 13.3343 55.8698 14.6438 55.6596C15.9533 55.4495 17.141 55.2769 17.2829 55.2764C17.4573 55.2756 17.9131 55.7374 18.6885 56.701C20.3561 58.7729 20.4675 58.8792 20.9696 58.8769C21.2067 58.8758 21.4805 58.8243 21.5784 58.7624C21.676 58.7005 22.5567 57.2679 23.5353 55.5789C24.516 53.8863 25.3892 52.5173 25.4811 52.5285C25.5727 52.5397 26.1111 52.6549 26.6774 52.7843C27.4642 52.9643 28.238 53.0199 29.9592 53.0199C31.6805 53.0199 32.4543 52.9643 33.2411 52.7843C33.8074 52.6549 34.3458 52.5397 34.4374 52.5285C34.5293 52.5173 35.4025 53.8863 36.3832 55.5789C37.3618 57.2679 38.2425 58.7005 38.3401 58.7624C38.438 58.8243 38.7118 58.8758 38.9489 58.8769C39.451 58.8792 39.5624 58.7729 41.23 56.701C42.0054 55.7374 42.4612 55.2756 42.6355 55.2764C42.7775 55.2769 43.9774 55.4501 45.302 55.6611C47.8411 56.0656 48.2141 56.0523 48.4844 55.5473C48.5595 55.4069 48.6209 55.1412 48.6209 54.9568C48.6209 54.7554 47.6165 52.882 46.1078 50.2695L43.5948 45.9176L44.1344 45.0301C46.3228 41.4313 47.0034 36.6048 45.9106 32.4326C44.5079 27.0776 40.4552 22.7327 35.236 20.9887C34.4927 20.7403 33.3344 20.4479 32.662 20.339C31.1831 20.0992 28.6102 20.1008 27.1738 20.342ZM27.4246 22.3901C21.3937 23.4842 16.7488 28.2131 15.732 34.2942C15.1491 37.7802 15.9212 41.4418 17.8773 44.4687C21.3163 49.7901 27.8981 52.2174 34.0527 50.4339C40.1685 48.6616 44.3738 43.0306 44.3738 36.6135C44.3738 29.5679 39.3589 23.5972 32.4257 22.3881C31.1147 22.1595 28.6908 22.1605 27.4246 22.3901ZM28.4842 26.5809C27.3255 26.7624 26.4977 27.0331 25.3766 27.5974C23.3885 28.598 21.8804 30.1334 20.8822 32.1733C20.1171 33.7369 19.8787 34.7914 19.8787 36.6135C19.8787 38.4357 20.1171 39.4901 20.8822 41.0537C22.4033 44.1621 25.2157 46.1755 28.712 46.6592C30.6082 46.9213 32.5144 46.5944 34.3994 45.6835C36.4959 44.6704 38.0161 43.1501 39.0292 41.0537C39.8078 39.4425 40.0435 38.4107 40.0435 36.6135C40.0435 34.8164 39.8078 33.7846 39.0292 32.1733C38.0185 30.082 36.506 28.5673 34.3994 27.5368C33.7624 27.225 32.8647 26.8821 32.4046 26.7746C31.3192 26.5208 29.4556 26.4288 28.4842 26.5809ZM28.5601 28.6418C25.6081 29.1686 23.0506 31.505 22.1581 34.49C21.8431 35.5434 21.8431 37.6837 22.1581 38.7371C22.9696 41.4514 25.1214 43.6032 27.8357 44.4146C28.8891 44.7297 31.0294 44.7297 32.0828 44.4146C34.7971 43.6032 36.9489 41.4514 37.7603 38.7371C38.0754 37.6837 38.0754 35.5434 37.7603 34.49C36.9563 31.8009 34.785 29.6137 32.1472 28.8364C31.2636 28.5759 29.4731 28.4788 28.5601 28.6418ZM30.9143 36.112L28.3157 38.6994L27.5772 37.3951C27.1711 36.6778 26.7339 36.0348 26.6057 35.966C25.9707 35.6263 25.0686 36.1182 25.0686 36.8043C25.0686 37.2102 27.1707 40.9146 27.553 41.1824C28.1824 41.6234 28.3139 41.5281 31.599 38.2545C33.3216 36.538 34.764 35.0032 34.8043 34.8439C34.972 34.1826 34.4399 33.5247 33.7373 33.5247C33.6138 33.5247 32.3436 34.6889 30.9143 36.112ZM15.9742 50.6264C15.0451 52.2276 14.3375 53.5573 14.4015 53.5811C14.4656 53.6049 15.2729 53.498 16.1957 53.3434C17.1185 53.1888 18.0128 53.0975 18.1832 53.1402C18.373 53.1878 18.9317 53.7641 19.6251 54.6273C20.2477 55.4025 20.7868 56.0392 20.8231 56.042C20.909 56.049 23.2668 51.9751 23.2668 51.8198C23.2668 51.755 22.9387 51.5412 22.5377 51.3451C21.404 50.7904 19.6946 49.5936 18.631 48.61L17.6633 47.715L15.9742 50.6264ZM41.285 48.6003C40.1184 49.6756 38.7987 50.6072 37.5032 51.2698L36.5399 51.7623L37.7787 53.9049C38.4602 55.0833 39.0499 56.0443 39.0896 56.0405C39.1291 56.0366 39.6517 55.4216 40.251 54.6737C40.8502 53.9258 41.4649 53.2572 41.617 53.1879C41.8111 53.0995 42.4148 53.1424 43.644 53.3321C44.6069 53.4806 45.4509 53.6021 45.5197 53.6021C45.6096 53.6021 42.4403 47.8701 42.2724 47.729C42.2601 47.7187 41.8158 48.1108 41.285 48.6003Z" fill="url(#paint0_linear_4251_1290)"></path>
-                        <defs>
-                          <linearGradient id="paint0_linear_4251_1290" x1="59.9387" y1="30.0488" x2="0.00585938" y2="30.0488" gradientUnits="userSpaceOnUse">
-                            <stop stopColor="#7489A7"></stop>
-                            <stop offset="1" stopColor="#4A576A"></stop>
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                    </span>
-                  </div>
-                  <div className="elementor-icon-box-content">
-                    <h3 className="elementor-icon-box-title" style={{"fontSize":"20px"}}>
-                      <span style={{"fontSize":"20px"}}>
-                        {facility_highlight_column_3___head}
-                      </span>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="elementor-element elementor-element-a8b9254 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-widget_type="icon-box.default">
-              <div className="elementor-widget-container">
-                <div className="elementor-icon-box-wrapper">
-                  <div className="elementor-icon-box-icon">
-                    <span className="elementor-icon" style={{"fontSize":"60px"}}>
-                      <svg width={60} height={60} viewBox="0 0 60 60" fill="none">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M29.2842 1.44593C29.1743 1.56974 28.6331 2.57799 28.0816 3.68636L27.079 5.70169L24.819 5.99835C22.731 6.27248 22.532 6.32165 22.205 6.64379C21.5392 7.29978 21.6543 7.525 23.6148 9.40237L25.3784 11.0912L24.9515 13.4417L24.5246 15.7921L24.7776 16.132C25.2999 16.8336 25.4853 16.8014 27.7205 15.6213C28.8456 15.0273 29.8277 14.5247 29.9027 14.5043C29.9779 14.484 30.9783 14.9678 32.1259 15.5793C34.3548 16.767 34.5778 16.8175 35.1037 16.2529C35.4388 15.8932 35.4381 15.8767 34.9629 13.2939L34.5611 11.11L36.3173 9.41511C38.2323 7.56709 38.3472 7.3519 37.775 6.68664C37.4763 6.33941 37.0733 6.25537 33.4772 5.79011L32.8123 5.70401L31.827 3.68765C31.2851 2.5785 30.75 1.56974 30.6379 1.44593C30.5139 1.30899 30.2481 1.2207 29.9592 1.2207C29.669 1.2207 29.4066 1.30822 29.2842 1.44593ZM29.2525 5.99346C28.9102 6.70737 28.5093 7.36966 28.3615 7.46542C28.2139 7.56117 27.4644 7.72655 26.6959 7.83286C25.9274 7.93929 25.2745 8.05049 25.245 8.07996C25.2156 8.10944 25.6853 8.58203 26.2891 9.13017C26.8928 9.67818 27.4195 10.2568 27.4594 10.4159C27.4993 10.575 27.4121 11.3366 27.2658 12.1084C27.1193 12.8803 26.9994 13.5499 26.9994 13.5967C26.9992 13.6436 27.6121 13.3616 28.3614 12.9704C29.9828 12.1236 30.0432 12.1248 31.6967 13.0334C32.3338 13.3836 32.8694 13.6586 32.8871 13.6446C32.9047 13.6307 32.8007 12.9619 32.6559 12.1582C32.4501 11.0147 32.424 10.6222 32.5361 10.3515C32.615 10.1613 33.146 9.58229 33.7164 9.06479C34.9101 7.98164 34.9408 8.03994 33.0481 7.79219C32.3756 7.70416 31.7096 7.55808 31.568 7.46735C31.4264 7.37674 31.0233 6.71599 30.6723 5.99912C30.3212 5.28213 29.9981 4.69564 29.9545 4.69564C29.9107 4.69564 29.5949 5.27968 29.2525 5.99346ZM7.5162 10.6357C7.383 10.7131 6.82057 11.7217 6.26625 12.8773C5.3046 14.8821 5.23909 14.9816 4.83523 15.0509C4.60253 15.091 3.58618 15.237 2.57678 15.3757C1.56737 15.5141 0.623479 15.6907 0.479205 15.7679C0.158996 15.9394 -0.0672606 16.4915 0.0277208 16.8701C0.0663312 17.0239 0.860804 17.8847 1.79324 18.783L3.48863 20.4162L3.07858 22.6912C2.85297 23.9424 2.66983 25.0411 2.6715 25.1327C2.67691 25.4273 3.29364 25.9313 3.6486 25.9313C3.83689 25.9313 4.90846 25.4387 6.02983 24.8365L8.06872 23.7416L10.1081 24.8365C12.5215 26.1321 12.8888 26.1971 13.3005 25.4008C13.4758 25.062 13.4589 24.8504 13.1027 22.9249C12.8886 21.767 12.7133 20.7143 12.7133 20.5856C12.7133 20.4534 13.4374 19.6605 14.3778 18.7627C15.3306 17.8534 16.062 17.0512 16.0882 16.8871C16.158 16.4511 15.9511 15.9466 15.6351 15.7817C15.4792 15.7004 14.352 15.4984 13.1304 15.333C11.9086 15.1675 10.895 15.0087 10.8777 14.9798C10.8605 14.9509 10.3833 13.9812 9.81712 12.8245C9.25109 11.668 8.69034 10.6689 8.57117 10.6044C8.28275 10.4485 7.81466 10.4622 7.5162 10.6357ZM51.3025 10.62C51.1847 10.6887 50.6253 11.6969 50.0595 12.8603C49.0752 14.8843 49.0123 14.9789 48.6007 15.0516C48.364 15.0934 47.3438 15.2404 46.3336 15.3784C45.3233 15.5164 44.3883 15.6874 44.2558 15.7583C43.9316 15.9318 43.7103 16.5956 43.8523 16.969C43.9138 17.131 44.6935 17.9481 45.5847 18.7851C46.6083 19.7462 47.2052 20.401 47.2052 20.5631C47.2052 20.7041 47.0299 21.767 46.8158 22.9249C46.4596 24.8504 46.4427 25.062 46.6179 25.4008C47.0299 26.1976 47.4075 26.1312 49.8278 24.8369L51.8713 23.7439L53.8982 24.8376C55.013 25.4392 56.0797 25.9313 56.2686 25.9313C56.6608 25.9313 57.2439 25.4155 57.2439 25.0687C57.2439 24.9416 57.0662 23.8598 56.8488 22.6644L56.4537 20.491L58.2002 18.7286C59.9698 16.9426 60.1165 16.708 59.815 16.1445C59.6021 15.7467 59.3246 15.665 57.2349 15.3839C56.1426 15.237 55.1172 15.0872 54.9562 15.0511C54.7244 14.9989 54.4525 14.5457 53.6525 12.8777C53.0427 11.6065 52.5367 10.7141 52.3772 10.6286C52.0543 10.4559 51.5902 10.4522 51.3025 10.62ZM7.40539 15.217C7.08467 15.9072 6.7041 16.5784 6.55956 16.7086C6.37642 16.8736 5.84399 17.0102 4.80421 17.1591L3.31166 17.3727L4.40974 18.4647C5.01373 19.0654 5.53922 19.6556 5.57757 19.7765C5.61593 19.8973 5.52532 20.6429 5.37616 21.4332C5.22699 22.2237 5.12789 22.8933 5.15608 22.9215C5.18413 22.9497 5.73961 22.6834 6.39032 22.3299C7.04104 21.9763 7.71492 21.6515 7.88776 21.6081C8.12045 21.5497 8.55739 21.7189 9.56924 22.2592C10.3211 22.6608 10.9528 22.9707 10.973 22.948C10.9932 22.9254 10.9032 22.3277 10.7731 21.6198C10.6429 20.912 10.534 20.1947 10.5309 20.0259C10.527 19.8088 10.8649 19.3729 11.6866 18.5349L12.8479 17.3507L11.5258 17.1919C9.5574 16.9556 9.59009 16.9773 8.77824 15.3587C8.39304 14.5906 8.05778 13.9621 8.03319 13.9621C8.00848 13.9621 7.72598 14.5267 7.40539 15.217ZM51.1632 15.3195C50.684 16.2704 50.346 16.7871 50.1426 16.8799C49.9752 16.9561 49.2147 17.0924 48.4527 17.1827L47.067 17.347L48.2301 18.5329C48.8697 19.1853 49.3931 19.8283 49.3931 19.9618C49.3931 20.0954 49.2781 20.8085 49.1374 21.5467C48.9967 22.2848 48.9002 22.9072 48.9227 22.9298C48.9454 22.9524 49.5844 22.6468 50.3428 22.2507C51.3509 21.7242 51.8055 21.5516 52.0334 21.6088C52.2049 21.6519 52.8775 21.9763 53.5282 22.3299C54.1789 22.6834 54.7347 22.9492 54.7634 22.9205C54.7923 22.8918 54.6981 22.2238 54.5542 21.4363C54.3852 20.5108 54.3318 19.9032 54.4033 19.7182C54.4643 19.5608 54.9852 18.975 55.5609 18.4166C56.1366 17.8582 56.5915 17.3896 56.5718 17.3752C56.5521 17.3609 55.8765 17.2578 55.0703 17.1463C53.9753 16.9948 53.5407 16.8799 53.3527 16.692C53.2144 16.5535 52.8262 15.8683 52.4903 15.1691L51.8794 13.8978L51.1632 15.3195ZM27.1738 20.342C20.091 21.5318 14.5641 27.3108 13.6007 34.5342C13.4177 35.9068 13.517 38.652 13.7964 39.9389C14.1993 41.7938 15.2425 44.3466 16.0766 45.5179L16.3387 45.8859L13.8182 50.2533C12.0298 53.3518 11.2976 54.7361 11.2976 55.0181C11.2976 55.4303 11.7796 56.05 12.0962 56.0446C12.1878 56.043 13.3343 55.8698 14.6438 55.6596C15.9533 55.4495 17.141 55.2769 17.2829 55.2764C17.4573 55.2756 17.9131 55.7374 18.6885 56.701C20.3561 58.7729 20.4675 58.8792 20.9696 58.8769C21.2067 58.8758 21.4805 58.8243 21.5784 58.7624C21.676 58.7005 22.5567 57.2679 23.5353 55.5789C24.516 53.8863 25.3892 52.5173 25.4811 52.5285C25.5727 52.5397 26.1111 52.6549 26.6774 52.7843C27.4642 52.9643 28.238 53.0199 29.9592 53.0199C31.6805 53.0199 32.4543 52.9643 33.2411 52.7843C33.8074 52.6549 34.3458 52.5397 34.4374 52.5285C34.5293 52.5173 35.4025 53.8863 36.3832 55.5789C37.3618 57.2679 38.2425 58.7005 38.3401 58.7624C38.438 58.8243 38.7118 58.8758 38.9489 58.8769C39.451 58.8792 39.5624 58.7729 41.23 56.701C42.0054 55.7374 42.4612 55.2756 42.6355 55.2764C42.7775 55.2769 43.9774 55.4501 45.302 55.6611C47.8411 56.0656 48.2141 56.0523 48.4844 55.5473C48.5595 55.4069 48.6209 55.1412 48.6209 54.9568C48.6209 54.7554 47.6165 52.882 46.1078 50.2695L43.5948 45.9176L44.1344 45.0301C46.3228 41.4313 47.0034 36.6048 45.9106 32.4326C44.5079 27.0776 40.4552 22.7327 35.236 20.9887C34.4927 20.7403 33.3344 20.4479 32.662 20.339C31.1831 20.0992 28.6102 20.1008 27.1738 20.342ZM27.4246 22.3901C21.3937 23.4842 16.7488 28.2131 15.732 34.2942C15.1491 37.7802 15.9212 41.4418 17.8773 44.4687C21.3163 49.7901 27.8981 52.2174 34.0527 50.4339C40.1685 48.6616 44.3738 43.0306 44.3738 36.6135C44.3738 29.5679 39.3589 23.5972 32.4257 22.3881C31.1147 22.1595 28.6908 22.1605 27.4246 22.3901ZM28.4842 26.5809C27.3255 26.7624 26.4977 27.0331 25.3766 27.5974C23.3885 28.598 21.8804 30.1334 20.8822 32.1733C20.1171 33.7369 19.8787 34.7914 19.8787 36.6135C19.8787 38.4357 20.1171 39.4901 20.8822 41.0537C22.4033 44.1621 25.2157 46.1755 28.712 46.6592C30.6082 46.9213 32.5144 46.5944 34.3994 45.6835C36.4959 44.6704 38.0161 43.1501 39.0292 41.0537C39.8078 39.4425 40.0435 38.4107 40.0435 36.6135C40.0435 34.8164 39.8078 33.7846 39.0292 32.1733C38.0185 30.082 36.506 28.5673 34.3994 27.5368C33.7624 27.225 32.8647 26.8821 32.4046 26.7746C31.3192 26.5208 29.4556 26.4288 28.4842 26.5809ZM28.5601 28.6418C25.6081 29.1686 23.0506 31.505 22.1581 34.49C21.8431 35.5434 21.8431 37.6837 22.1581 38.7371C22.9696 41.4514 25.1214 43.6032 27.8357 44.4146C28.8891 44.7297 31.0294 44.7297 32.0828 44.4146C34.7971 43.6032 36.9489 41.4514 37.7603 38.7371C38.0754 37.6837 38.0754 35.5434 37.7603 34.49C36.9563 31.8009 34.785 29.6137 32.1472 28.8364C31.2636 28.5759 29.4731 28.4788 28.5601 28.6418ZM30.9143 36.112L28.3157 38.6994L27.5772 37.3951C27.1711 36.6778 26.7339 36.0348 26.6057 35.966C25.9707 35.6263 25.0686 36.1182 25.0686 36.8043C25.0686 37.2102 27.1707 40.9146 27.553 41.1824C28.1824 41.6234 28.3139 41.5281 31.599 38.2545C33.3216 36.538 34.764 35.0032 34.8043 34.8439C34.972 34.1826 34.4399 33.5247 33.7373 33.5247C33.6138 33.5247 32.3436 34.6889 30.9143 36.112ZM15.9742 50.6264C15.0451 52.2276 14.3375 53.5573 14.4015 53.5811C14.4656 53.6049 15.2729 53.498 16.1957 53.3434C17.1185 53.1888 18.0128 53.0975 18.1832 53.1402C18.373 53.1878 18.9317 53.7641 19.6251 54.6273C20.2477 55.4025 20.7868 56.0392 20.8231 56.042C20.909 56.049 23.2668 51.9751 23.2668 51.8198C23.2668 51.755 22.9387 51.5412 22.5377 51.3451C21.404 50.7904 19.6946 49.5936 18.631 48.61L17.6633 47.715L15.9742 50.6264ZM41.285 48.6003C40.1184 49.6756 38.7987 50.6072 37.5032 51.2698L36.5399 51.7623L37.7787 53.9049C38.4602 55.0833 39.0499 56.0443 39.0896 56.0405C39.1291 56.0366 39.6517 55.4216 40.251 54.6737C40.8502 53.9258 41.4649 53.2572 41.617 53.1879C41.8111 53.0995 42.4148 53.1424 43.644 53.3321C44.6069 53.4806 45.4509 53.6021 45.5197 53.6021C45.6096 53.6021 42.4403 47.8701 42.2724 47.729C42.2601 47.7187 41.8158 48.1108 41.285 48.6003Z" fill="url(#paint0_linear_4251_1290)"></path>
-                        <defs>
-                          <linearGradient id="paint0_linear_4251_1290" x1="59.9387" y1="30.0488" x2="0.00585938" y2="30.0488" gradientUnits="userSpaceOnUse">
-                            <stop stopColor="#7489A7"></stop>
-                            <stop offset="1" stopColor="#4A576A"></stop>
-                          </linearGradient>
-                        </defs>
-                      </svg>
-                    </span>
-                  </div>
-                  <div className="elementor-icon-box-content">
-                    <h3 className="elementor-icon-box-title" style={{"fontSize":"20px"}}>
-                      <span style={{"fontSize":"20px"}}>
-                        {facility_highlight_column_4___head}
-                      </span>
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 ) : null}
@@ -1831,32 +1617,14 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
             </div>
             <div className="elementor-element elementor-element-c0eaf0b elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
               <div className="elementor-widget-container">
-                <p style={{"fontSize":"16px"}}>
-                  At Renaissance Recovery in {geo}, clients enter a welcoming and comfortable environment designed to foster connection and healing.
-                </p>
-                <p style={{"fontSize":"16px"}}>
-                  We provide:
-                  <br />
-                  {" "}Evidence-based treatment options such as CBT, DBT, dual diagnosis support, and medication-assisted treatment
-                  <br />
-                  {" "}Customized programs
-                  <br />
-                  {" "}A blended approach that fuses clinical excellence with holistic modalities
-                  <br />
-                  {" "}Compassionate care where underlying issues are taken into consideration
-                  <br />
-                  {" "}Supportive mental health and addiction treatment
-                </p>
-                <p style={{"fontSize":"16px"}}>
-                  After treatment, alumni and aftercare programs offer ongoing support through weekly calls, events, and peer connections, creating a strong sober network that helps sustain long-term recovery.
-                </p>
+                <RichText style={{"fontSize":"16px"}} html={why_choose_us___con} />
               </div>
             </div>
           </div>
           <div className="elementor-element elementor-element-eee5169 e-con-full e-flex e-con e-child">
             <div className="elementor-element elementor-element-10e063c elementor-widget elementor-widget-image" data-widget_type="image.default">
               <div className="elementor-widget-container">
-                <Image src="/images/3153829171ddb4727a24c54124a0b7a2.webp" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-55311" />
+                <Image src="/images/ff58bebc42643d2b7b469ecbbc44b7fd.webp" alt="" width={1920} height={1280} className="attachment-full size-full wp-image-55311" />
               </div>
             </div>
           </div>
@@ -2268,7 +2036,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-acb6ffb elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="/images/8b6692baf8f1fb21416d166c324eb35d.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5170" />
+                          <Image src="/images/0d34a157a76881eb761ad69d0d1524cf.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5170" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-7a8170b elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">
@@ -2306,7 +2074,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-a79145d elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="/images/3ac51f8e6f87d0755721591a1aab6be6.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5171" />
+                          <Image src="/images/d5a6797f2e94fc0c939bfc04346a472b.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5171" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-6dea68a elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">
@@ -2344,7 +2112,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-b4492c5 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="/images/26871c8e32172bf2351bd2d2707380b3.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5172" />
+                          <Image src="/images/f1872c6d7c67ce58a7d317ca75c801c3.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5172" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-0aff00a elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">
@@ -2382,7 +2150,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                     <div className="e-con-inner">
                       <div className="elementor-element elementor-element-e7a3261 elementor-widget__width-inherit elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <Image src="/images/0d34a157a76881eb761ad69d0d1524cf.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5173" />
+                          <Image src="/images/58c51c808060458573611dbedb695983.webp" alt="" width={150} height={150} className="attachment-thumbnail size-thumbnail wp-image-5173" />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-cdb8155 elementor-widget elementor-widget-image-box" data-widget_type="image-box.default">
@@ -2574,104 +2342,108 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
           <div className="elementor-element elementor-element-64ea521 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
             <div className="elementor-widget-container">
               <div className="elementor-shortcode">
-                <div className="custom-accordion">
-                  <div className="custom-accordion__item active">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        How does  provide effective craving control strategies within {geo}?
+                {faqItems.length > 0 ? (
+                  <FaqAccordion items={faqItems} />
+                ) : (
+                  <div className="custom-accordion">
+                    <div className="custom-accordion__item active">
+                      <div className="accordion-item__header">
+                        <div className="accordion-item__title">
+                          How does  provide effective craving control strategies within {geo}?
+                        </div>
+                        <div className="accordion-item__icon">
+                          <div className="closed-icon hidden"></div>
+                          <div className="opened-icon"></div>
+                        </div>
                       </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon hidden"></div>
-                        <div className="opened-icon"></div>
+                      <div className="accordion-item__content">
+                        <p style={{"fontSize":"16px"}}>
+                          Evidence-based treatment approaches and dedicated clinical guidance within  programs across {geo} help individuals build robust craving control strategies while reducing the likelihood of setbacks.
+                        </p>
                       </div>
                     </div>
-                    <div className="accordion-item__content">
-                      <p style={{"fontSize":"16px"}}>
-                        Evidence-based treatment approaches and dedicated clinical guidance within  programs across {geo} help individuals build robust craving control strategies while reducing the likelihood of setbacks.
-                      </p>
+                    <div className="custom-accordion__item">
+                      <div className="accordion-item__header">
+                        <div className="accordion-item__title">
+                          What experiences await participants during their first week in ?
+                        </div>
+                        <div className="accordion-item__icon">
+                          <div className="closed-icon"></div>
+                          <div className="opened-icon hidden"></div>
+                        </div>
+                      </div>
+                      <div className="accordion-item__content" style={{"display":"none"}}>
+                        <p style={{"fontSize":"16px"}}>
+                          Thorough assessments, individual and group therapy sessions, along with relapse prevention education form the foundation of the initial week in , establishing strong groundwork for lasting recovery success.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="custom-accordion__item">
+                      <div className="accordion-item__header">
+                        <div className="accordion-item__title">
+                          Can individuals continue working while enrolled in  programs in {geo}?
+                        </div>
+                        <div className="accordion-item__icon">
+                          <div className="closed-icon"></div>
+                          <div className="opened-icon hidden"></div>
+                        </div>
+                      </div>
+                      <div className="accordion-item__content" style={{"display":"none"}}>
+                        <p style={{"fontSize":"16px"}}>
+                          Adaptable treatment schedules offered throughout {geo} within  programs allow numerous participants to maintain their work responsibilities or academic pursuits while receiving comprehensive care.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="custom-accordion__item">
+                      <div className="accordion-item__header">
+                        <div className="accordion-item__title">
+                          What personal items are recommended for  participation?
+                        </div>
+                        <div className="accordion-item__icon">
+                          <div className="closed-icon"></div>
+                          <div className="opened-icon hidden"></div>
+                        </div>
+                      </div>
+                      <div className="accordion-item__content" style={{"display":"none"}}>
+                        <p style={{"fontSize":"16px"}}>
+                          Necessary belongings for  encompass casual clothing, toiletries, and any physician-approved medications. Supplementary items such as journals, recovery books, or other healing materials can further enrich the therapeutic journey.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="custom-accordion__item">
+                      <div className="accordion-item__header">
+                        <div className="accordion-item__title">
+                          How long does  treatment typically last?
+                        </div>
+                        <div className="accordion-item__icon">
+                          <div className="closed-icon"></div>
+                          <div className="opened-icon hidden"></div>
+                        </div>
+                      </div>
+                      <div className="accordion-item__content" style={{"display":"none"}}>
+                        <p style={{"fontSize":"16px"}}>
+                          Personal treatment needs influence  program length, generally ranging from several weeks to many months. Clinical specialists work closely with each participant to determine the most effective treatment duration.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="custom-accordion__item">
+                      <div className="accordion-item__header">
+                        <div className="accordion-item__title">
+                          What continuing care options are available after completing  in {geo}?
+                        </div>
+                        <div className="accordion-item__icon">
+                          <div className="closed-icon"></div>
+                          <div className="opened-icon hidden"></div>
+                        </div>
+                      </div>
+                      <div className="accordion-item__content" style={{"display":"none"}}>
+                        <p style={{"fontSize":"16px"}}>
+                          Ongoing therapeutic services, thorough discharge planning, and community support groups continue supporting  graduates across {geo}, reinforcing recovery foundations and promoting long-term wellness maintenance.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What experiences await participants during their first week in ?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p style={{"fontSize":"16px"}}>
-                        Thorough assessments, individual and group therapy sessions, along with relapse prevention education form the foundation of the initial week in , establishing strong groundwork for lasting recovery success.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        Can individuals continue working while enrolled in  programs in {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p style={{"fontSize":"16px"}}>
-                        Adaptable treatment schedules offered throughout {geo} within  programs allow numerous participants to maintain their work responsibilities or academic pursuits while receiving comprehensive care.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What personal items are recommended for  participation?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p style={{"fontSize":"16px"}}>
-                        Necessary belongings for  encompass casual clothing, toiletries, and any physician-approved medications. Supplementary items such as journals, recovery books, or other healing materials can further enrich the therapeutic journey.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        How long does  treatment typically last?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p style={{"fontSize":"16px"}}>
-                        Personal treatment needs influence  program length, generally ranging from several weeks to many months. Clinical specialists work closely with each participant to determine the most effective treatment duration.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="custom-accordion__item">
-                    <div className="accordion-item__header">
-                      <div className="accordion-item__title">
-                        What continuing care options are available after completing  in {geo}?
-                      </div>
-                      <div className="accordion-item__icon">
-                        <div className="closed-icon"></div>
-                        <div className="opened-icon hidden"></div>
-                      </div>
-                    </div>
-                    <div className="accordion-item__content" style={{"display":"none"}}>
-                      <p style={{"fontSize":"16px"}}>
-                        Ongoing therapeutic services, thorough discharge planning, and community support groups continue supporting  graduates across {geo}, reinforcing recovery foundations and promoting long-term wellness maintenance.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                )}
               </div>
             </div>
           </div>

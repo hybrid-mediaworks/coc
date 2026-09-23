@@ -10,6 +10,12 @@ function toCount(value: unknown, fallback: number): number {
   return Number.isFinite(n) && n > 0 ? n : fallback;
 }
 
+function toSpacing(value: unknown, fallback: number): number {
+  const size = (value as { size?: unknown } | undefined)?.size;
+  const n = size === "" || size == null ? NaN : Number(size);
+  return Number.isFinite(n) && n >= 0 ? n : fallback;
+}
+
 export default function Carousels() {
   const pathname = usePathname();
   useEffect(() => {
@@ -39,15 +45,21 @@ export default function Carousels() {
         } catch {
           settings = {};
         }
-        const desktop = toCount(settings.slides_to_show, 1);
-        const tablet = toCount(settings.slides_to_show_tablet, desktop);
+        // Elementor omits settings left at their defaults; these mirror its
+        // carousel handler (desktop 3, tablet 2 unless desktop shows 1, mobile 1).
+        const desktop = toCount(settings.slides_to_show, 3);
+        const tablet = toCount(settings.slides_to_show_tablet, desktop === 1 ? 1 : 2);
         const mobile = toCount(settings.slides_to_show_mobile, 1);
+        const gapDesktop = toSpacing(settings.image_spacing_custom, 0);
+        const gapTablet = toSpacing(settings.image_spacing_custom_tablet, gapDesktop);
+        const gapMobile = toSpacing(settings.image_spacing_custom_mobile, gapTablet);
         const options: SwiperOptions = {
           modules: [Navigation, Pagination, Autoplay],
           slidesPerView: mobile,
+          spaceBetween: gapMobile,
           breakpoints: {
-            768: { slidesPerView: tablet },
-            1025: { slidesPerView: desktop },
+            768: { slidesPerView: tablet, spaceBetween: gapTablet },
+            1025: { slidesPerView: desktop, spaceBetween: gapDesktop },
           },
           loop: settings.infinite === "yes" || settings.loop === "yes",
           speed: toCount(settings.speed, 500),

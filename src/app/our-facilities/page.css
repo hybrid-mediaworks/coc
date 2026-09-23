@@ -27,7 +27,7 @@ code, kbd { font-family: monospace, monospace; font-size: 1em; }
 }
 [type="button"]:focus:not(:focus-visible), [type="submit"]:focus:not(:focus-visible), button:focus:not(:focus-visible) { outline: 0px; }
 dl, dt, li, ol, ul { background: 0px 0px; border: 0px; font-size: 100%; margin-block: 0px; outline: 0px; vertical-align: baseline; }
-.page-content a { text-decoration: underline; }
+.page-content a { text-decoration: none; }
 .pagination { display: flex; justify-content: space-between; margin: 20px auto; }
 .screen-reader-text:focus { background-color: rgb(238, 238, 238); clip-path: none; color: rgb(51, 51, 51); display: block; font-size: 1rem; height: auto; left: 5px; line-height: normal; padding: 12px 24px; text-decoration: none; top: 5px; width: auto; z-index: 100000; clip: auto !important; }
 .site-header:not(.dynamic-header), body:not([class*="elementor-page-"]) .site-main { margin-inline: auto; width: 100%; }
@@ -126,6 +126,7 @@ dl, dt, li, ol, ul { background: 0px 0px; border: 0px; font-size: 100%; margin-b
 #elementor-popup-modal-56579 .dialog-widget-content { animation-duration: 1.2s; box-shadow: rgba(0, 0, 0, 0.2) 2px 8px 23px 3px; }
 #elementor-popup-modal-56579 { background-color: rgba(0, 0, 0, 0.8); justify-content: flex-start; align-items: center; pointer-events: all; }
 #elementor-popup-modal-56579 .dialog-message { width: 85vw; height: auto; }
+.elementor-56829 .elementor-element.elementor-element-62585f1{ width : 40% }
 @media (max-width: 1024px) {
   .elementor-56579 .elementor-element.elementor-element-ab1ec77 { --min-height: 100vh; }
   .elementor-56579 .elementor-element.elementor-element-dcfadcb { width: 100%; max-width: 100%; }

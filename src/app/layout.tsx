@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./base.css";
+import BodyClassSync from "@/components/BodyClassSync";
 import Carousels from "@/components/Carousels";
 import WidgetInteractions from "@/components/WidgetInteractions";
 import TableOfContents from "@/components/TableOfContents";
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <GlobalPopups />
         <JotformResizer />
+        <BodyClassSync />
         <WidgetInteractions />
         <Carousels />
         <TableOfContents />
