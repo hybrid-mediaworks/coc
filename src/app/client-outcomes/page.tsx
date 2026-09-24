@@ -1,4 +1,4 @@
-import "./page.css";
+import "@/app/shared/pages/4ec5cf14791f.css";
 import type { Metadata } from "next";
 import Script from "next/script";
 import ClientOutcomes from "@/components/pages/ClientOutcomes";

@@ -1,7 +1,7 @@
 import "@/app/shared/pool-a8ca03f5.css";
 // Header/footer chrome and utility classes ship in the route stylesheets; this is the
 // one that styled this URL when [slug] served it.
-import "../[slug]/page.css";
+import "@/app/shared/pages/72abeb68b062.css";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";

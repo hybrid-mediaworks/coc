@@ -1,4 +1,4 @@
-import "./page.css";
+import "@/app/shared/pages/d5e0d7a1a1a1.css";
 import type { Metadata } from "next";
 import Script from "next/script";
 import MentalHealthPersonalityDisordersBorderlinePersonalityDisorderPetulantBpd2 from "@/components/pages/MentalHealthPersonalityDisordersBorderlinePersonalityDisorderPetulantBpd2";

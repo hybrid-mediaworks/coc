@@ -1,5 +1,5 @@
 import "@/app/shared/pool-a8ca03f5.css";
-import "./page.css";
+import "@/app/shared/pages/bf4e2b7c7d9f.css";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import type { ComponentType } from "react";

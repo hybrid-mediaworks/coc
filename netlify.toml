@@ -1,0 +1,11 @@
+# Build settings used by the Netlify CLI in .github/workflows/deploy.yml.
+# Production builds run on GitHub Actions: the site is too large for Netlify's own build
+# machines. `ignore = "exit 0"` makes Netlify skip the builds it would otherwise start on
+# every push (they show as "Canceled"); CLI deploys from the workflow are not affected.
+[build]
+  command = "pnpm run build"
+  publish = ".next"
+  ignore = "exit 0"
+
+[build.environment]
+  NODE_VERSION = "22"

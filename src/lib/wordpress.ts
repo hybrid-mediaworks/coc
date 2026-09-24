@@ -5,6 +5,8 @@ const REVALIDATE = Number(process.env.WORDPRESS_REVALIDATE_SECONDS ?? "60");
 
 const SECTION_TIMEOUT_MS = Number(process.env.WORDPRESS_SECTION_TIMEOUT_MS ?? "5000");
 
+const PAGE_TIMEOUT_MS = Number(process.env.WORDPRESS_PAGE_TIMEOUT_MS ?? "20000");
+
 const SITE_NAME = process.env.WORDPRESS_SITE_NAME ?? "";
 
 type BuilderPageData = {
@@ -76,15 +78,23 @@ export async function fetchPageData(
   if (options?.present) parts.push("present=1");
   const query = parts.join("&");
   if (!query) return null;
-  try {
-    const res = await fetch(`${WORDPRESS_URL}/wp-json/builder/v1/page-data?${query}`, {
-      next: { revalidate: REVALIDATE },
-    });
-    if (!res.ok) return null;
-    return normaliseSeo((await res.json()) as BuilderPageData);
-  } catch {
-    return null;
+  // A full build fires thousands of these at WordPress and the odd one stalls. Without a
+  // timeout a stalled request holds the page past Next's 180s prerender limit and fails the
+  // whole build, so give up after PAGE_TIMEOUT_MS and try once more; on failure the route
+  // falls back to its static fields and picks up live data on the next revalidation.
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const res = await fetch(`${WORDPRESS_URL}/wp-json/builder/v1/page-data?${query}`, {
+        next: { revalidate: REVALIDATE },
+        signal: AbortSignal.timeout(PAGE_TIMEOUT_MS),
+      });
+      if (!res.ok) return null;
+      return normaliseSeo((await res.json()) as BuilderPageData);
+    } catch {
+      // timed out or network error: retry once
+    }
   }
+  return null;
 }
 
 export type SectionItem = { href: string; title: string };

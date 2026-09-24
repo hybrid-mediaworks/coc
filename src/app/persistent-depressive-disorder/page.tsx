@@ -1,4 +1,4 @@
-import "./page.css";
+import "@/app/shared/pages/4db7a5b93c01.css";
 import type { Metadata } from "next";
 import Script from "next/script";
 import PersistentDepressiveDisorder from "@/components/pages/PersistentDepressiveDisorder";

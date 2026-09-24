@@ -1,4 +1,4 @@
-import "./page.css";
+import "@/app/shared/pages/f57e4d02c42c.css";
 import type { Metadata } from "next";
 import Script from "next/script";
 import Agoraphobia from "@/components/pages/Agoraphobia";

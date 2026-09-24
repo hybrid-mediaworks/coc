@@ -1,4 +1,4 @@
-import "./page.css";
+import "@/app/shared/pages/1e014a2666b3.css";
 import type { Metadata } from "next";
 import Script from "next/script";
 import Page55188 from "@/components/documents/Page55188";
