@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./base.css";
 import BodyClassSync from "@/components/BodyClassSync";
+import JourneyGuidePanel from "@/components/JourneyGuidePanel";
 import Carousels from "@/components/Carousels";
 import WidgetInteractions from "@/components/WidgetInteractions";
 import TableOfContents from "@/components/TableOfContents";
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <GlobalPopups />
         <JotformResizer />
         <BodyClassSync />
+        <JourneyGuidePanel />
         <WidgetInteractions />
         <Carousels />
         <TableOfContents />

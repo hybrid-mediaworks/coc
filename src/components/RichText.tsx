@@ -9,19 +9,23 @@ export default function RichText({
   html,
   className,
   style,
+  tocSource,
 }: {
   html: string;
   className?: string;
   style?: CSSProperties;
+  // Marks the content as a source of table-of-contents headings (see BlogTocList).
+  tocSource?: boolean;
 }) {
+  const marker = tocSource ? { "data-toc-source": "" } : {};
   // plain text keeps the <p> the scraped markup used, so spacing is unchanged
   if (!HAS_MARKUP.test(html)) {
     return (
-      <p className={className} style={style}>
+      <p className={className} style={style} {...marker}>
         {html}
       </p>
     );
   }
   // HTML may carry several block elements, which a <p> cannot legally contain
-  return <div className={className} style={style} dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div className={className} style={style} {...marker} dangerouslySetInnerHTML={{ __html: html }} />;
 }

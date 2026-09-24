@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Layout4 from '../layouts/Layout-4';
 import WidgetScript from '@/components/WidgetScript';
+import GuidedTour from '@/components/GuidedTour';
+import ContinueJourney from '@/components/ContinueJourney';
 
 const gridData0 = [
   {
@@ -171,130 +173,7 @@ export default function WhyTravelingorStayingClosetoHome() {
                 <div className="elementor-element elementor-element-4eaffbf elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
                   <div className="elementor-widget-container">
                     <div className="elementor-shortcode">
-                      <div id="jg-guided-tour" className="jg-sc-guided-wrap">
-                        <div id="jg-guided-multi" className="jg-sc-guided jg-guided-multi">
-                          <div className="jg-guided-col jg-guided-left">
-                            <h3 className="jg-guided-heading">Last Page Visited</h3>
-                            <h3 className="jg-guided-heading jg-icon-list">
-                              {" "}
-                              <link rel="preload" as="image" href="/images/31cfb037858751399a6f0b354f9d2c67.svg" fetchPriority="high" /><img fetchPriority="high" src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" className="jg-guided-heading-icon" />
-                              {"Last Page Visited: "}
-                            </h3>
-                            <div className="jg-guided-visited-list">
-                              <ul className="jg-guided-visited-items"></ul>
-                            </div>
-                          </div>
-                          <div className="jg-guided-col jg-guided-center">
-                            <div className="jg-guided-img-wrap">
-                              <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img jg-guided-current-img" />
-                              <div className="jg-guided-img-label">
-                                <h3 className="jg-guided-heading jg-icon-list">
-                                  {" "}
-                                  <img loading="lazy" src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" className="jg-guided-heading-icon" />
-                                  {" Current Guided Tour Page: "}
-                                </h3>
-                                <strong className="jg-guided-current-label"></strong>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="jg-guided-col jg-guided-right">
-                            <h3 className="jg-guided-heading jg-guided-next-heading">Next Page in tour</h3>
-                            <ul className="jg-guided-next-list">
-                              <li className="jg-guided-next-item">
-                                <Link href="/why-traveling-or-staying-close-to-home/#" className="jg-guided-next-link jg-guided-next-primary" />
-                              </li>
-                              <li className="jg-guided-complete-item">
-                                <span className="jg-guided-next-link jg-guided-complete-msg">You have completed the guided site tour.</span>
-                              </li>
-                              <li className="jg-guided-divider"></li>
-                              <li>
-                                <span className="jg-guided-next-link jg-guided-view-full">
-                                  <img loading="lazy" src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" className="jg-guided-view-full-icon" />
-                                  {" View Full Guided Site Tour"}
-                                </span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div id="jg-guided-single" className="jg-sc-guided jg-guided-single">
-                          <div className="jg-guided-col jg-guided-left">
-                            <h3 className="jg-guided-heading">Guided Website Tour</h3>
-                            <div className="jg-guided-visited-progress">
-                              <span className="jg-gv-check">✓</span>
-                              <span className="jg-gv-label">Last Pages Visited</span>
-                              <div className="jg-gv-bar">
-                                <div className="jg-gv-bar-fill"></div>
-                              </div>
-                            </div>
-                            <ul className="jg-guided-visited-items">
-                              <li>
-                                <Link href="/why-traveling-or-staying-close-to-home/" className="jg-gvi-link" title="Go back to Why Traveling or Staying Close to home can both be great options.">
-                                  <span className="jg-gvi-num">3</span>
-                                  <span className="jg-gvi-label">Why Traveling or Staying Close to home can both be great options.</span>
-                                </Link>
-                              </li>
-                            </ul>
-                            <hr className="jg-guided-hr" />
-                            <p className="jg-guided-count-label">11 Page Guided Tour</p>
-                          </div>
-                          <div className="jg-guided-col jg-guided-center">
-                            <div className="jg-guided-img-wrap">
-                              <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" width={382} height={398} alt="" className="jg-guided-img jg-guided-current-img entered error" />
-                              <div className="jg-guided-img-label">
-                                <h3 className="jg-guided-heading jg-icon-list">
-                                  {" "}
-                                  <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Fram54e.svg" width={24} height={24} alt="check-icon" className="jg-guided-heading-icon entered error" />
-                                  {" Current Guided Tour Page: "}
-                                </h3>
-                                <strong className="jg-guided-current-label">Why Traveling or Staying Close to home can both be great options.</strong>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="jg-guided-col jg-guided-right">
-                            <h3 className="jg-guided-heading jg-guided-next-heading">Next Page In Tour</h3>
-                            <ul className="jg-guided-next-list">
-                              <li className="jg-guided-next-item">
-                                <Link href="/protect-your-job-while-in-treatment/" className="jg-guided-next-link jg-guided-next-primary">
-                                  <span className="jg-gvi-num">1</span>
-                                  <span>Protect your job while you come to treatment</span>
-                                </Link>
-                              </li>
-                              <li className="jg-guided-complete-item">
-                                <span className="jg-guided-next-link jg-guided-complete-msg">You have completed the guided site tour.</span>
-                              </li>
-                              <li className="jg-guided-divider"></li>
-                              <li>
-                                <span href="/protect-your-job-while-in-treatment/" className="jg-guided-next-link jg-guided-view-full">
-                                  <Image src="https://connectionsoc.com/wp-content/uploads/2026/06/Frame45te4t.svg" width={28} height={28} alt="" className="jg-guided-view-full-icon entered error" />
-                                  {" View Full Guided Site Tour"}
-                                </span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div id="jg-guided-none" className="jg-sc-guided jg-guided-none">
-                          <h3 className="jg-guided-heading jg-guided-none-heading">Start Full Guided Site Tour</h3>
-                          <div className="jg-guided-none-body">
-                            <div className="jg-guided-none-left">
-                              <Link href="/why-traveling-or-staying-close-to-home/#" className="jg-guided-none-link jg-guided-none-p1" />
-                            </div>
-                            <div className="jg-guided-col jg-guided-center">
-                              <div className="jg-guided-img-wrap">
-                                <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img" />
-                                <div className="jg-guided-img-label jg-guided-img-label-cta">
-                                  <span className="jg-guided-next-link jg-guided-view-full">
-                                    <img loading="lazy" src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" className="jg-guided-view-full-icon" />
-                                    {" View Full Guided Site Tour"}
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="jg-guided-none-right">
-                              <Link href="/why-traveling-or-staying-close-to-home/#" className="jg-guided-none-link jg-guided-none-p2" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <GuidedTour />
                     </div>
                   </div>
                 </div>
@@ -629,120 +508,7 @@ export default function WhyTravelingorStayingClosetoHome() {
                 <div className="elementor-element elementor-element-3216e3e elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
                   <div className="elementor-widget-container">
                     <div className="elementor-shortcode">
-                      <div id="jg-guided-tour" className="jg-sc-guided-wrap">
-                        <div id="jg-guided-multi" className="jg-sc-guided jg-guided-multi">
-                          <div className="jg-guided-col jg-guided-left">
-                            <h3 className="jg-guided-heading">Last Page Visited</h3>
-                            <h3 className="jg-guided-heading jg-icon-list">
-                              {" "}
-                              <img loading="lazy" src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" className="jg-guided-heading-icon" />
-                              {"Last Page Visited: "}
-                            </h3>
-                            <div className="jg-guided-visited-list">
-                              <ul className="jg-guided-visited-items"></ul>
-                            </div>
-                          </div>
-                          <div className="jg-guided-col jg-guided-center">
-                            <div className="jg-guided-img-wrap">
-                              <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img jg-guided-current-img" />
-                              <div className="jg-guided-img-label">
-                                <h3 className="jg-guided-heading jg-icon-list">
-                                  {" "}
-                                  <img loading="lazy" src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" className="jg-guided-heading-icon" />
-                                  {" Current Guided Tour Page: "}
-                                </h3>
-                                <strong className="jg-guided-current-label"></strong>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="jg-guided-col jg-guided-right">
-                            <h3 className="jg-guided-heading jg-guided-next-heading">Next Page in tour</h3>
-                            <ul className="jg-guided-next-list">
-                              <li className="jg-guided-next-item">
-                                <Link href="/why-traveling-or-staying-close-to-home/#" className="jg-guided-next-link jg-guided-next-primary" />
-                              </li>
-                              <li className="jg-guided-complete-item">
-                                <span className="jg-guided-next-link jg-guided-complete-msg">You have completed the guided site tour.</span>
-                              </li>
-                              <li className="jg-guided-divider"></li>
-                              <li>
-                                <span className="jg-guided-next-link jg-guided-view-full">
-                                  <img loading="lazy" src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" className="jg-guided-view-full-icon" />
-                                  {" View Full Guided Site Tour"}
-                                </span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div id="jg-guided-single" className="jg-sc-guided jg-guided-single">
-                          <div className="jg-guided-col jg-guided-left">
-                            <h3 className="jg-guided-heading">Guided Website Tour</h3>
-                            <div className="jg-guided-visited-progress">
-                              <span className="jg-gv-check">✓</span>
-                              <span className="jg-gv-label">Last Pages Visited</span>
-                              <div className="jg-gv-bar">
-                                <div className="jg-gv-bar-fill"></div>
-                              </div>
-                            </div>
-                            <ul className="jg-guided-visited-items"></ul>
-                            <hr className="jg-guided-hr" />
-                            <p className="jg-guided-count-label"></p>
-                          </div>
-                          <div className="jg-guided-col jg-guided-center">
-                            <div className="jg-guided-img-wrap">
-                              <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img jg-guided-current-img" />
-                              <div className="jg-guided-img-label">
-                                <h3 className="jg-guided-heading jg-icon-list">
-                                  {" "}
-                                  <img loading="lazy" src="/images/31cfb037858751399a6f0b354f9d2c67.svg" alt="check-icon" className="jg-guided-heading-icon" />
-                                  {" Current Guided Tour Page: "}
-                                </h3>
-                                <strong className="jg-guided-current-label"></strong>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="jg-guided-col jg-guided-right">
-                            <h3 className="jg-guided-heading jg-guided-next-heading">Next Page In Tour</h3>
-                            <ul className="jg-guided-next-list">
-                              <li className="jg-guided-next-item">
-                                <Link href="/why-traveling-or-staying-close-to-home/#" className="jg-guided-next-link jg-guided-next-primary" />
-                              </li>
-                              <li className="jg-guided-complete-item">
-                                <span className="jg-guided-next-link jg-guided-complete-msg">You have completed the guided site tour.</span>
-                              </li>
-                              <li className="jg-guided-divider"></li>
-                              <li>
-                                <span className="jg-guided-next-link jg-guided-view-full">
-                                  <img loading="lazy" src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" className="jg-guided-view-full-icon" />
-                                  {" View Full Guided Site Tour"}
-                                </span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div id="jg-guided-none" className="jg-sc-guided jg-guided-none">
-                          <h3 className="jg-guided-heading jg-guided-none-heading">Start Full Guided Site Tour</h3>
-                          <div className="jg-guided-none-body">
-                            <div className="jg-guided-none-left">
-                              <Link href="/why-traveling-or-staying-close-to-home/#" className="jg-guided-none-link jg-guided-none-p1" />
-                            </div>
-                            <div className="jg-guided-col jg-guided-center">
-                              <div className="jg-guided-img-wrap">
-                                <img loading="lazy" src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" className="jg-guided-img" />
-                                <div className="jg-guided-img-label jg-guided-img-label-cta">
-                                  <span className="jg-guided-next-link jg-guided-view-full">
-                                    <img loading="lazy" src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" className="jg-guided-view-full-icon" />
-                                    {" View Full Guided Site Tour"}
-                                  </span>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="jg-guided-none-right">
-                              <Link href="/why-traveling-or-staying-close-to-home/#" className="jg-guided-none-link jg-guided-none-p2" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <GuidedTour />
                     </div>
                   </div>
                 </div>
@@ -1377,7 +1143,6 @@ export default function WhyTravelingorStayingClosetoHome() {
                           <div className="elementor-element elementor-element-62a7c0d4 e-con-full e-flex e-con e-parent e-lazyloaded">
                             <div className="elementor-element elementor-element-dbef85a elementor-widget elementor-widget-html" data-widget_type="html.default">
                               <div className="elementor-widget-container">
-                                <WidgetScript src="https://form.jotform.com/jsform/252953883636471" />
                                 <iframe loading="lazy" id="252953883636471" src="https://form.jotform.com/252953883636471?parentURL=https%3A%2F%2Fconnectionsoc.com%2Fwhy-traveling-or-staying-close-to-home%2F&amp;jsForm=true" name="252953883636471" allow="geolocation; microphone; camera; fullscreen; payment" title="COC New Design Insurance Form" style={{minWidth: "100%", maxWidth: "100%", border: "none", height: "700px"}}></iframe>
                               </div>
                             </div>
@@ -1739,98 +1504,7 @@ I hold a Bachelor’s degree in Psychology from the University of California, Ir
                 <div className="elementor-element elementor-element-11c0464 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
                   <div className="elementor-widget-container">
                     <div className="elementor-shortcode">
-                      <div id="jg-continue-grid" className="jg-sc-continue">
-                        <Link href="/protect-your-job-while-in-treatment/" className="jg-sc-card jg-sc-recommended" data-pid="59777">
-                          <span className="jg-sc-bubble jg-sc-unvisited">1</span>
-                          <span className="jg-sc-card-text">
-                            <span className="jg-sc-card-label">Protect your job while you come to treatment</span>
-                            <span className="jg-sc-card-meta">+ Recommended next step</span>
-                          </span>
-                          <span className="jg-sc-next-badge">NEXT</span>
-                        </Link>
-                        <Link href="/mental-health/therapy/does-insurance-cover-residential-mental-health-treatment/" className="jg-sc-card" data-pid="54868">
-                          <span className="jg-sc-bubble jg-sc-unvisited">2</span>
-                          <span className="jg-sc-card-text">
-                            <span className="jg-sc-card-label">Can Insurance cover rehab treatment?</span>
-                            <span className="jg-sc-card-meta"></span>
-                          </span>
-                          <span className="jg-sc-next-badge">NEXT</span>
-                        </Link>
-                        <Link href="/why-traveling-or-staying-close-to-home/" className="jg-sc-card jg-sc-visited" data-pid="59467">
-                          <span className="jg-sc-bubble jg-sc-visited-bubble">
-                            <img loading="lazy" src="https://connectionsoc.com/wp-content/uploads/2026/06/Frame-2147227796.svg" alt="Visited" className="jg-sc-bubble-icon" />
-                          </span>
-                          <span className="jg-sc-card-text">
-                            <span className="jg-sc-card-label">Why Traveling or Staying Close to home can both be great options.</span>
-                            <span className="jg-sc-card-meta">✓ Visited</span>
-                          </span>
-                          <span className="jg-sc-next-badge">NEXT</span>
-                        </Link>
-                        <Link href="/our-facilities/" className="jg-sc-card" data-pid="55098">
-                          <span className="jg-sc-bubble jg-sc-unvisited">4</span>
-                          <span className="jg-sc-card-text">
-                            <span className="jg-sc-card-label">Locations &amp; Galleries</span>
-                            <span className="jg-sc-card-meta"></span>
-                          </span>
-                          <span className="jg-sc-next-badge">NEXT</span>
-                        </Link>
-                        <Link href="/staff/" className="jg-sc-card" data-pid="6354">
-                          <span className="jg-sc-bubble jg-sc-unvisited">5</span>
-                          <span className="jg-sc-card-text">
-                            <span className="jg-sc-card-label">Staff page</span>
-                            <span className="jg-sc-card-meta"></span>
-                          </span>
-                          <span className="jg-sc-next-badge">NEXT</span>
-                        </Link>
-                        <Link href="/reviews/" className="jg-sc-card" data-pid="5841">
-                          <span className="jg-sc-bubble jg-sc-unvisited">6</span>
-                          <span className="jg-sc-card-text">
-                            <span className="jg-sc-card-label">Reviews</span>
-                            <span className="jg-sc-card-meta"></span>
-                          </span>
-                          <span className="jg-sc-next-badge">NEXT</span>
-                        </Link>
-                        <Link href="/what-to-bring-to-rehab/" className="jg-sc-card" data-pid="59360">
-                          <span className="jg-sc-bubble jg-sc-unvisited">7</span>
-                          <span className="jg-sc-card-text">
-                            <span className="jg-sc-card-label">What to bring to treatment</span>
-                            <span className="jg-sc-card-meta"></span>
-                          </span>
-                          <span className="jg-sc-next-badge">NEXT</span>
-                        </Link>
-                        <Link href="/treatment-therapies-we-provide/" className="jg-sc-card" data-pid="59580">
-                          <span className="jg-sc-bubble jg-sc-unvisited">8</span>
-                          <span className="jg-sc-card-text">
-                            <span className="jg-sc-card-label">Treatment &amp; Therapies we provide</span>
-                            <span className="jg-sc-card-meta"></span>
-                          </span>
-                          <span className="jg-sc-next-badge">NEXT</span>
-                        </Link>
-                        <Link href="/rehab-admissions/" className="jg-sc-card" data-pid="56277">
-                          <span className="jg-sc-bubble jg-sc-unvisited">9</span>
-                          <span className="jg-sc-card-text">
-                            <span className="jg-sc-card-label">Admissions Process</span>
-                            <span className="jg-sc-card-meta"></span>
-                          </span>
-                          <span className="jg-sc-next-badge">NEXT</span>
-                        </Link>
-                        <Link href="/contact/" className="jg-sc-card" data-pid="31">
-                          <span className="jg-sc-bubble jg-sc-unvisited">10</span>
-                          <span className="jg-sc-card-text">
-                            <span className="jg-sc-card-label">Contact Us</span>
-                            <span className="jg-sc-card-meta"></span>
-                          </span>
-                          <span className="jg-sc-next-badge">NEXT</span>
-                        </Link>
-                        <Link href="/mental-health/residential-vs-inpatient-mental-health-treatment/" className="jg-sc-card" data-pid="9665">
-                          <span className="jg-sc-bubble jg-sc-unvisited">11</span>
-                          <span className="jg-sc-card-text">
-                            <span className="jg-sc-card-label">Residential Inpatient vs Hospital Inpatient</span>
-                            <span className="jg-sc-card-meta"></span>
-                          </span>
-                          <span className="jg-sc-next-badge">NEXT</span>
-                        </Link>
-                      </div>
+                      <ContinueJourney />
                     </div>
                   </div>
                 </div>

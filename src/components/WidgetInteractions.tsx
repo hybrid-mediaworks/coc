@@ -104,6 +104,52 @@ const setDetailsOpen = (item: HTMLDetailsElement, open: boolean) => {
   };
 };
 
+// Essential Addons advanced accordion (.eael-adv-accordion): each item is a
+// header + a content panel shown via the `active` class (display:block). The
+// first item ships as `active-default`, which base.css styles as open; the
+// plugin's JS normally swaps it for `active`, so it is folded in on first use.
+const isEaelOpen = (header: Element) =>
+  header.classList.contains("active") || header.classList.contains("active-default");
+
+const setEaelOpen = (header: Element, open: boolean) => {
+  const content = header.parentElement?.querySelector(":scope > .eael-accordion-content");
+  const apply = (on: boolean) => {
+    for (const el of [header, content]) {
+      if (!el) continue;
+      el.classList.remove("active-default");
+      el.classList.toggle("active", on);
+    }
+  };
+  header.setAttribute("aria-expanded", String(open));
+  if (!(content instanceof HTMLElement)) {
+    apply(open);
+    return;
+  }
+  const running = accordionAnimations.get(content);
+  const measure = () => {
+    const cs = getComputedStyle(content);
+    return { height: content.getBoundingClientRect().height + "px", paddingTop: cs.paddingTop, paddingBottom: cs.paddingBottom };
+  };
+  const collapsed = { height: "0px", paddingTop: "0px", paddingBottom: "0px" };
+  const from = running || !open ? measure() : collapsed;
+  apply(true); // keep the panel displayed while it slides
+  running?.cancel();
+  const to = open ? measure() : collapsed;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const animation = content.animate(
+    [
+      { ...from, overflow: "hidden" },
+      { ...to, overflow: "hidden" },
+    ],
+    { duration: reduceMotion ? 0 : ACCORDION_DURATION, easing: "ease-in-out" }
+  );
+  accordionAnimations.set(content, animation);
+  animation.onfinish = () => {
+    accordionAnimations.delete(content);
+    if (!open) apply(false);
+  };
+};
+
 export default function WidgetInteractions() {
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
@@ -196,6 +242,23 @@ export default function WidgetInteractions() {
           if (sub instanceof HTMLElement) sub.style.display = open ? "block" : "none";
           return;
         }
+      }
+
+      const eaelHeader = target.closest(".eael-adv-accordion .eael-accordion-header");
+      if (eaelHeader) {
+        e.preventDefault();
+        const open = !isEaelOpen(eaelHeader);
+        const accordion = eaelHeader.closest(".eael-adv-accordion");
+        // One item open at a time unless the widget is explicitly a toggle group.
+        if (open && accordion?.getAttribute("data-accordion-type") !== "toggle") {
+          for (const other of accordion?.querySelectorAll(".eael-accordion-header") ?? []) {
+            if (other !== eaelHeader && other.closest(".eael-adv-accordion") === accordion && isEaelOpen(other)) {
+              setEaelOpen(other, false);
+            }
+          }
+        }
+        setEaelOpen(eaelHeader, open);
+        return;
       }
 
       const detailsSummary = target.closest("details > summary");

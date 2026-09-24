@@ -16,6 +16,8 @@ type BuilderPageData = {
   slug: string;
   fields: Record<string, string>;
   seo: { title: string; description: string; canonical: string; robots: string };
+  // Featured image URL, or false when the page has none.
+  featured_image?: string | false;
   present: string[];
   meta: { slug: string; parent: string; updatedAt: string; createdAt: string };
 };
@@ -153,6 +155,66 @@ export async function fetchSectionItems(
       items.push({ href, title });
     }
     return items.length ? items : null;
+  } catch {
+    return null;
+  }
+}
+
+export type BlogPost = {
+  id: number;
+  href: string;
+  title: string;
+  image: { src: string; width: number; height: number } | null;
+};
+
+type WpBlogPage = {
+  id: number;
+  link: string;
+  title?: { rendered?: string };
+  acf?: { h1?: string };
+  _embedded?: {
+    "wp:featuredmedia"?: Array<{
+      source_url?: string;
+      media_details?: { width?: number; height?: number };
+    }>;
+  };
+};
+
+const BLOG_QUERY =
+  "/wp-json/wp/v2/pages?page_template_type=83,84&order_by=date&order=desc" +
+  "&_fields=id,link,title,acf.h1,featured_media,_links,_embedded&_embed=wp:featuredmedia";
+
+// Blog listing: WordPress pages using the blog templates (83, 84), newest first.
+// `total` is X-WP-Total, the number of blog pages overall. Returns null on failure.
+export async function fetchBlogPosts(
+  offset: number,
+  perPage: number
+): Promise<{ posts: BlogPost[]; total: number } | null> {
+  try {
+    const res = await fetch(`${WORDPRESS_URL}${BLOG_QUERY}&per_page=${perPage}&offset=${offset}`, {
+      next: { revalidate: REVALIDATE },
+      signal: AbortSignal.timeout(SECTION_TIMEOUT_MS),
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (!Array.isArray(data)) return null;
+    const posts = (data as WpBlogPage[]).map((page) => {
+      const media = page._embedded?.["wp:featuredmedia"]?.[0];
+      const title = decodeEntities(stripTags(page.acf?.h1?.trim() || page.title?.rendered || "")).trim();
+      return {
+        id: page.id,
+        href: toRelative(page.link),
+        title,
+        image: media?.source_url
+          ? {
+              src: media.source_url,
+              width: media.media_details?.width ?? 1200,
+              height: media.media_details?.height ?? 800,
+            }
+          : null,
+      };
+    });
+    return { posts, total: Number(res.headers.get("X-WP-Total")) || posts.length };
   } catch {
     return null;
   }
