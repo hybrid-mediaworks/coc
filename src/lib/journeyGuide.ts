@@ -23,7 +23,7 @@ const COOKIE_DAYS = 10;
 
 export type Visited = Record<string, boolean>;
 
-export function readVisited(): Visited {
+function readVisited(): Visited {
   const match = document.cookie.match(new RegExp(`(?:^|; )${COOKIE_KEY}=([^;]*)`));
   if (!match) return {};
   try {

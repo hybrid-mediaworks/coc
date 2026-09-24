@@ -61,6 +61,57 @@ function normaliseSeo(data: BuilderPageData): BuilderPageData {
 
 export type PageIdentity = { id?: number; path?: string; slug?: string };
 
+// The builder falls back to a slug lookup when the path matches nothing, so a request for a
+// path WordPress does not have can come back with a *different* page that shares the last
+// slug (e.g. /mental-health/therapy/trauma-disorder/ptsd returns /mental-health/trauma-disorder/ptsd).
+// Rendering that would publish a duplicate of another page at a URL that does not exist.
+// meta.slug is the page's own slug and meta.parent its parent's slug ("" at the top level),
+// so they must match the requested path's last two segments.
+const segmentOf = (s: string) => {
+  try {
+    return decodeURIComponent(s).toLowerCase();
+  } catch {
+    return s.toLowerCase();
+  }
+};
+
+// "https://connectionsoc.com/a/b/" -> "a/b" (decoded, lowercase); null if there is no URL.
+const pathOfUrl = (url: string | undefined): string | null => {
+  if (!url) return null;
+  try {
+    return new URL(url).pathname.split("/").filter(Boolean).map(segmentOf).join("/");
+  } catch {
+    return null;
+  }
+};
+
+// URL prefixes shared with a custom post type: /staff/<name> is either an "authors" post,
+// whose meta.parent is "" because /staff/ is its rewrite base, or a child page of Staff.
+const POST_TYPE_BASES = new Set(["staff"]);
+
+function matchesPath(data: BuilderPageData, path: string): boolean {
+  let segments = path.split("/").filter(Boolean).map(segmentOf);
+  // Paginated archives (/staff/<name>/page/2) are the same post as their first page.
+  if (segments.length >= 3 && segments[segments.length - 2] === "page" && /^\d+$/.test(segments[segments.length - 1])) {
+    segments = segments.slice(0, -2);
+  }
+  if (segments.length === 0) return true; // home page
+  // The canonical URL carries the page's full path, which is the only thing that tells
+  // /mental-health/therapy/trauma-disorder/ptsd apart from /mental-health/trauma-disorder/ptsd
+  // (same slug, same parent). Author posts (POST_TYPE_BASES) are checked by slug/parent below.
+  const canonicalPath = pathOfUrl(data.seo?.canonical);
+  if (canonicalPath !== null && !POST_TYPE_BASES.has(segments[0])) {
+    return canonicalPath === segments.join("/");
+  }
+  if (!data.meta) return true; // nothing to compare
+  const slug = segments[segments.length - 1];
+  const parent = segments.length > 1 ? segments[segments.length - 2] : "";
+  const actualParent = segmentOf(data.meta.parent ?? "");
+  const parentOk =
+    actualParent === parent || (segments.length === 2 && POST_TYPE_BASES.has(segments[0]) && actualParent === "");
+  return segmentOf(data.meta.slug ?? "") === slug && parentOk;
+}
+
 // A slug is not unique across a page tree: /location-served/drug-rehab and
 // /location-served/usa/drug-rehab share one, and WordPress answers with whichever it orders first.
 // Always send the most specific identifier available.
@@ -89,7 +140,9 @@ export async function fetchPageData(
         signal: AbortSignal.timeout(PAGE_TIMEOUT_MS),
       });
       if (!res.ok) return null;
-      return normaliseSeo((await res.json()) as BuilderPageData);
+      const data = (await res.json()) as BuilderPageData;
+      if (id.path && !id.id && !matchesPath(data, id.path)) return null;
+      return normaliseSeo(data);
     } catch {
       // timed out or network error: retry once
     }

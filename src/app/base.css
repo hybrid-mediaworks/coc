@@ -427,12 +427,9 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
 .elementor-55188 .elementor-element.elementor-element-11c8c69 img { width: 373px; max-width: 100%; height: auto; }
 /* Once the jQuery FAQ script manages a panel (inline style set), let its slideUp/slideDown control visibility instead of the max-height clamp, so closing animates too. */
 .custom-accordion .custom-accordion__item .accordion-item__content[style] { max-height: none; padding: 24px 20px; }
-/* Related pages (RelatedCards): collapse extra cards and show "Load More" on desktop only; below 1024px the whole list shows, as on the WordPress site. */
+/* Related pages (RelatedCards): collapse extra cards on desktop only; below 1024px the whole list shows in its scroll box. "Load More" stays visible at every width, as on the WordPress site. */
 @media (min-width: 1024px) {
   .cards-wrapper .card.card--collapsed { display: none; }
-}
-@media (max-width: 1023px) {
-  .cards-wrapper #button-wrapper { display: none; }
 }
 /* Spin for the table-of-contents loader (BlogTocList); only some page stylesheets define it. */
 @keyframes eicon-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(359deg); } }
@@ -474,6 +471,7 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
 #jgp-page-list li:hover { background: rgb(245, 250, 249); }
 #jgp-page-list li.jg-current { background: rgb(240, 250, 248); border-left-color: rgb(61, 158, 143); }
 #jgp-page-list li.jg-recommended { background: rgb(248, 249, 255); border-left-color: rgb(61, 158, 143); }
+.elementor-element-803db60.elementor-section-boxed .elementor-column-gap-default{ align-items:center; }
 @media (max-width: 767px) {
   #jgp-sidebar { padding: 24px 12px; }
   #jgp-sidebar-label, #jgp-wrapper .jg-arrow-desktop { display: none; }
