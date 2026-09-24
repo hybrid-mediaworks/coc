@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import DmgGallery, { type DmgGalleryImage } from '@/components/DmgGallery';
 import FaqAccordion, { parseFaqs } from '@/components/FaqAccordion';
+import RelatedPages from '@/components/RelatedPages';
 
 const FACILITY_GALLERY: DmgGalleryImage[] = [
   { src: "/images/4675597e21eff4b4951bc5e1cb70e598.webp", width: 1920, height: 1280 },
@@ -70,9 +71,10 @@ export default function Page55188(props: Record<string, string>) {
   const faqs___head = props.faqs___head ?? "Orange County Rehab FAQs";
   const faqItems = parseFaqs(props.faqs___con ?? "");
   const socials___head = props.socials___head || "Connect On  Our Socials";
-  const address_county = props.address_county ?? "Los Angeles County";
   const geo = props.geo ?? "Orange County";
+  const address_county = props.address_county ?? "Orange County";
   const near_in = props.near_in ?? "near";
+  const google_map = props.google_map || "17811 Bigelow Park, Tustin, CA 92780";
   const __hasData = (ff: string[]) => ff.some((k) => ((props[k] ?? "") + "").trim() !== "");
   return (
     <>
@@ -452,7 +454,7 @@ export default function Page55188(props: Record<string, string>) {
                   </div>
                   <div className="jg-guided-col jg-guided-center">
                     <div className="jg-guided-img-wrap">
-                      <Image src="/images/66b2e357729133a647af0a40aae359dd.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
+                      <Image src="/images/Staff.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
                       <div className="jg-guided-img-label">
                         <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
                           <Image src="/images/Frame45te4t.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
@@ -506,7 +508,7 @@ export default function Page55188(props: Record<string, string>) {
                   </div>
                   <div className="jg-guided-col jg-guided-center">
                     <div className="jg-guided-img-wrap">
-                      <Image src="/images/66b2e357729133a647af0a40aae359dd.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
+                      <Image src="/images/Staff.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img" />
                       <div className="jg-guided-img-label">
                         <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
                           <Image src="/images/Frame45te4t.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon" />
@@ -555,7 +557,7 @@ export default function Page55188(props: Record<string, string>) {
                     </div>
                     <div className="jg-guided-col jg-guided-center">
                       <div className="jg-guided-img-wrap">
-                        <Image src="/images/66b2e357729133a647af0a40aae359dd.webp" alt="" width={382} height={398} className="jg-guided-img entered error" />
+                        <Image src="/images/Staff.webp" alt="" width={382} height={398} className="jg-guided-img entered error" />
                         <div className="jg-guided-img-label jg-guided-img-label-cta">
                           <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full" href="/protect-your-job-while-in-treatment/">
                             <Image src="/images/Frame45te4t.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon entered error" />
@@ -1209,7 +1211,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
             <div className="elementor-element elementor-element-b8cd7c7 elementor-widget elementor-widget-google_maps" data-widget_type="google_maps.default">
               <div className="elementor-widget-container">
                 <div className="elementor-custom-embed">
-                  <iframe loading="lazy" src="https://maps.google.com/maps?q=gratitude+lodge+long+beach&t=m&z=11&output=embed&iwloc=near" title="gratitude lodge long beach" aria-label="gratitude lodge long beach" className="entered exited lazyloaded" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"366px"}}></iframe>
+                  <iframe loading="lazy" src={`https://maps.google.com/maps?q=${encodeURIComponent(google_map)}&t=m&z=11&output=embed&iwloc=near`} title={google_map} aria-label={google_map} className="entered exited lazyloaded" style={{"minWidth":"100%","maxWidth":"100%","border":"none","height":"366px"}}></iframe>
                 </div>
               </div>
             </div>
@@ -1893,21 +1895,21 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
             <div className="elementor-element elementor-element-9f4d57c elementor-widget__width-initial elementor-hidden-mobile elementor-widget elementor-widget-heading" data-widget_type="heading.default">
               <div className="elementor-widget-container">
                 <h2 className="elementor-heading-title elementor-size-default" style={{"fontSize":"32px"}}>
-                  Evidence-Based {geo} Mental Health Treatment
+                  Evidence-Based {address_county} Mental Health Treatment
                 </h2>
               </div>
             </div>
             <div className="elementor-element elementor-element-9dfdf3d elementor-widget__width-initial elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-heading" data-widget_type="heading.default">
               <div className="elementor-widget-container">
                 <h2 className="elementor-heading-title elementor-size-default" style={{"fontSize":"32px"}}>
-                  Evidence-Based {geo} Mental Health Treatment
+                  Evidence-Based {address_county} Mental Health Treatment
                 </h2>
               </div>
             </div>
             <div className="elementor-element elementor-element-d4f6902 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
               <div className="elementor-widget-container">
                 <p style={{"fontSize":"16px"}}>
-                  At our behavioral health treatment center in {geo}, we utilize evidence-based treatments and therapy to bring you or your loved one the highest quality of care, rooted in the most recent psychiatric science.
+                  At our behavioral health treatment center in {address_county}, we utilize evidence-based treatments and therapy to bring you or your loved one the highest quality of care, rooted in the most recent psychiatric science.
                 </p>
               </div>
             </div>
@@ -2463,148 +2465,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
         <div className="elementor-element elementor-element-ff87d55 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
           <div className="elementor-widget-container">
             <div className="elementor-shortcode">
-              <div className="cards-wrapper">
-                <div className="cards" role="list">
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/mood-disorders/depression/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Depression Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/mood-disorders/bipolar/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Bipolar Disorder Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/neurodevelopment-disorder/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Neurodevelopment Disorder Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/eating-disorders/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Eating Disorders Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/psychotic-disorders/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Psychotic Disorders Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Depression Treatment near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/bipolar/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Bipolar Disorder Treatment near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/neurodevelopment-disorder/california/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Neurodevelopment Disorder Treatment near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/eating-disorders/california/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Eating Disorders Treatment near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/personality-disorders/california/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Personality Disorders Treatment near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/psychotic-disorders/california/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Psychotic Disorders Treatment near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/trauma-disorder/ptsd/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        PTSD Treatment near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/trauma-disorder/inpatient-ptsd/california/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Inpatient PTSD Treatment near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/trauma-disorder/inpatient/california/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Inpatient Trauma Disorder Treatment near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/trauma-disorder/california/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Trauma Disorder Treatment near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/does-insurance-cover-residential-mental-health-treatment/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Does Insurance Cover Residential Mental Health Treatment?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/personality-disorders/paranoid-personality-disorder/why-do-i-feel-like-everyone-hates-me/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Why Do I Feel Like Everyone Hates Me? Tips & What to Do
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/overstimulated-meaning/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What Are Common Signs of Overstimulation in Adults?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/what-to-expect-during-inpatient-mental-health-stay/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What to Expect at an Inpatient Behavioral Health Hospital
-                      </h3>
-                    </Link>
-                  </article>
-                </div>
-                <div id="button-wrapper">
-                  <button id="relatedloadMoreBtn">
-                    Load More
-                  </button>
-                </div>
-              </div>
+              <RelatedPages path={props.__path} />
             </div>
           </div>
         </div>

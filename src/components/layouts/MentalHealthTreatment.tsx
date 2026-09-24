@@ -1,7 +1,9 @@
 import React from 'react';
 import { TrustIndexWidget } from '@/components/TrustIndexWidget';
+import RelatedPages from '@/components/RelatedPages';
 import Image from 'next/image';
 import Link from 'next/link';
+import BlogTocList from '@/components/BlogTocList';
 
 
 export default function MentalHealthTreatment(props: Record<string, string>) {
@@ -275,45 +277,14 @@ export default function MentalHealthTreatment(props: Record<string, string>) {
     <div className="elementor-element elementor-element-c1e2776 table-of-content-headings e-flex e-con-boxed e-con e-parent e-lazyloaded">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-cc3a9e4 e-con-full e-flex e-con e-child">
-          <div className="elementor-element elementor-element-ab97e6c table-of-content-sty elementor-widget elementor-widget-table-of-contents" data-settings="{&quot;headings_by_tags&quot;:[&quot;h2&quot;],&quot;exclude_headings_by_selector&quot;:[],&quot;no_headings_message&quot;:&quot;No headings were found on this page.&quot;,&quot;container&quot;:&quot;.table-of-content-headings&quot;,&quot;marker_view&quot;:&quot;numbers&quot;,&quot;hierarchical_view&quot;:&quot;yes&quot;,&quot;min_height&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;min_height_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;min_height_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="table-of-contents.default">
+          <div className="elementor-element elementor-element-ab97e6c table-of-content-sty elementor-widget elementor-widget-table-of-contents" data-settings="{&quot;headings_by_tags&quot;:[&quot;h2&quot;],&quot;exclude_headings_by_selector&quot;:[],&quot;no_headings_message&quot;:&quot;No headings were found on this page.&quot;,&quot;container&quot;:&quot;.table-of-content-headings&quot;,&quot;marker_view&quot;:&quot;numbers&quot;,&quot;hierarchical_view&quot;:&quot;yes&quot;,&quot;min_height&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;min_height_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;min_height_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
             <div className="elementor-widget-container">
               <div className="elementor-toc__header">
                 <h4 className="elementor-toc__header-title" style={{"fontSize":"20px"}}>
                   Table of Contents
                 </h4>
               </div>
-              <div id="elementor-toc__ab97e6c" className="elementor-toc__body">
-                <ol className="elementor-toc__list-wrapper">
-                  <li className="elementor-toc__list-item">
-                    <div className="elementor-toc__list-item-text-wrapper">
-                      <a href="#elementor-toc__heading-anchor-0" className="elementor-toc__list-item-text elementor-toc__top-level">
-                        What is {h1}?
-                      </a>
-                    </div>
-                  </li>
-                  <li className="elementor-toc__list-item">
-                    <div className="elementor-toc__list-item-text-wrapper">
-                      <a href="#elementor-toc__heading-anchor-1" className="elementor-toc__list-item-text elementor-toc__top-level">
-                        The Benefits of {h1}
-                      </a>
-                    </div>
-                  </li>
-                  <li className="elementor-toc__list-item">
-                    <div className="elementor-toc__list-item-text-wrapper">
-                      <a href="#elementor-toc__heading-anchor-2" className="elementor-toc__list-item-text elementor-toc__top-level elementor-item-active">
-                        {h1} FAQs
-                      </a>
-                    </div>
-                  </li>
-                  <li className="elementor-toc__list-item">
-                    <div className="elementor-toc__list-item-text-wrapper">
-                      <a href="#elementor-toc__heading-anchor-3" className="elementor-toc__list-item-text elementor-toc__top-level">
-                        Get {h1} for Mental Health Treatment at Connections
-                      </a>
-                    </div>
-                  </li>
-                </ol>
-              </div>
+              <BlogTocList column=".elementor-element-cc3a9e4" />
             </div>
           </div>
         </div>
@@ -402,7 +373,7 @@ export default function MentalHealthTreatment(props: Record<string, string>) {
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-e44e46f cro-bog-content-sty elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
           <div className="elementor-widget-container">
-              <div dangerouslySetInnerHTML={{ __html: blog_section_1___con }} />
+              <div data-toc-source dangerouslySetInnerHTML={{ __html: blog_section_1___con }} />
             </div>
         </div>
       </div>
@@ -718,7 +689,7 @@ export default function MentalHealthTreatment(props: Record<string, string>) {
                           <div className="swiper-slide swiper-slide-next" role="group" aria-roledescription="slide" aria-label="4 / 4" style={{"width":"369.333px","marginRight":"48px","visibility":"visible"}}>
                             <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-251-2-68b941bad8a4b.webp" style={{"fontSize":"16px"}}>
                               <figure className="swiper-slide-inner">
-                                <Image src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201200%20669'%3E%3C/svg%3E" alt="rectangle-251-2-68b941bad8a4b.webp" width={1200} height={669} className="swiper-slide-image entered exited" />
+                                <Image src="/images/d170e5150e665f38cabc754c85b76d78.webp" alt="rectangle-251-2-68b941bad8a4b.webp" width={1200} height={669} className="swiper-slide-image entered exited" />
                               </figure>
                             </Link>
                           </div>
@@ -975,281 +946,7 @@ export default function MentalHealthTreatment(props: Record<string, string>) {
         <div className="elementor-element elementor-element-5b3948e elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
           <div className="elementor-widget-container">
             <div className="elementor-shortcode">
-              <div className="cards-wrapper">
-                <div className="cards" role="list">
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/therapy/outpatient/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential Outpatient Rehab Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/therapy/iop/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential IOP Rehab Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/therapy/inpatient/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential Inpatient Rehab Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/therapy/addiction-therapists-counselors/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential Addiction Therapists Counselors Rehab Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Depression Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/bipolar/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Bipolar Disorder Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/neurodevelopment-disorder/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Neurodevelopment Disorder Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/eating-disorders/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Eating Disorders Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/psychotic-disorders/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Psychotic Disorders Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/personality-disorders/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Personality Disorders Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/trauma-disorder/ptsd/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California PTSD Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/trauma-disorder/inpatient/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Inpatient Trauma Disorder Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/trauma-disorder/inpatient-ptsd/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Inpatient PTSD Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/trauma-disorder/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Trauma Disorder Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/iop/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California IOP Rehab (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/emdr/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California EMDR Therapy (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/anxiety-disorders/inpatient-obsessive-compulsive-disorde/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Inpatient Obsessive Compulsive Disorde Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/anxiety-disorders/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Anxiety Disorders Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Outpatient Rehab (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/inpatient/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Inpatient Rehab (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/dbt/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California DBT Therapy (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/cognitive-behavioral-therapy-cbt/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Cognitive Behavioral Therapy Therapy (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/talk/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Talk Therapy (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/addiction-therapists-counselors/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Addiction Therapists Counselors Rehab (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Outpatient Rehab near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/westminster-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Outpatient Rehab near Westminster (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/villa-park-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Villa Park Outpatient Rehab (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/tustin-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Tustin Outpatient Rehab (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/stanton-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Outpatient Rehab near Stanton (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/seal-beach-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Outpatient Rehab near Seal Beach (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/santa-ana-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Outpatient Rehab near Santa Ana (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/san-juan-capistrano-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Outpatient Rehab near San Juan Capistrano (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/does-insurance-cover-residential-mental-health-treatment/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Does Insurance Cover Residential Mental Health Treatment?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/personality-disorders/paranoid-personality-disorder/why-do-i-feel-like-everyone-hates-me/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Why Do I Feel Like Everyone Hates Me? Tips & What to Do
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/overstimulated-meaning/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What Are Common Signs of Overstimulation in Adults?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/what-to-expect-during-inpatient-mental-health-stay/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What to Expect at an Inpatient Behavioral Health Hospital
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/residential-vs-inpatient-mental-health-treatment/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Residential vs. Inpatient Mental Health Treatment
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/can-i-check-myself-into-a-mental-hospital/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        How to Admit Yourself to a Mental Hospital?
-                      </h3>
-                    </Link>
-                  </article>
-                </div>
-                <div id="button-wrapper">
-                  <button id="relatedloadMoreBtn">
-                    Load More
-                  </button>
-                </div>
-              </div>
+              <RelatedPages path={props.__path} />
             </div>
           </div>
         </div>

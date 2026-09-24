@@ -1,5 +1,6 @@
 import React from 'react';
 import { TrustIndexWidget } from '@/components/TrustIndexWidget';
+import RelatedPages from '@/components/RelatedPages';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -9,6 +10,7 @@ export default function Page54439(props: Record<string, string>) {
   const __present = (id: string) => __presentIds.length === 0 || __presentIds.includes(id);
   const blog_section_1___con = props.blog_section_1___con ?? "<h2>How to Detox from Alcohol: The Safe Way</h2>\r\nAlcohol is one of the most-abused addictive substances, leaving many people wondering how to detox from alcohol as safely and comfortably as possible. Alcohol detox refers to the process of eliminating alcohol from the body and managing the withdrawal symptoms that present when someone who is dependent on alcohol stops drinking or radically moderates their intake. In most cases, medical guidance will enable you to detox your body from alcohol without severe withdrawal symptoms manifesting.\r\n\r\nDetoxing from alcohol is the initial step essential for the comprehensive treatment of alcohol addiction and aims to help individuals safely and effectively withdraw from alcohol while minimizing the discomfort and risks associated with withdrawal, a process that can be life-threatening.\r\n\r\nAlcohol detox poses significant challenges and attempting it independently can feel overwhelming. For those who want to know how to start detoxing from alcohol safely, read on to learn:\r\n<ul>\r\n \t<li>How do you detox from alcohol safely?</li>\r\n \t<li>What is the best way to detox from alcohol?</li>\r\n \t<li>How to detox alcohol at home: is this possible?</li>\r\n \t<li>Where can you connect with ongoing alcohol addiction treatment after detoxing from alcohol?</li>\r\n</ul>\r\n<h2>Alcohol Detox at Home</h2>\r\nIn most cases, a supervised medical detox for alcohol is recommended. That said, many people contemplate undertaking this process in the comfort of their own homes. The allure of familiar surroundings and a sense of control can make the idea of at-home detox appealing.\r\n\r\nFor those with mild alcohol use disorders and no co-occurring mental health disorders, home detox may provide a sense of comfort, freedom from financial obligations, and the preservation of anonymity and confidentiality while detoxing from alcohol.\r\n\r\nDetoxing at home is generally inadvisable, though, since there is a higher risk of undesirable mental health effects and potentially dangerous physical health complications. Without access to medications, symptom relief may be limited, and setbacks are more likely. Additionally, the discomfort of withdrawal can strain relationships, potentially causing harm during this challenging period of early recovery from alcoholism.\r\n\r\nBefore deciding to quit drinking, consult with a healthcare provider and honestly communicate the extent of your alcohol intake. The physician can determine whether a supervised medical center is necessary for detoxification. Adhering to prescribed medications is crucial, and if any concerns arise, contact your doctor or nurse advice line.\r\n\r\nHaving a trusted individual present throughout the detox process will be highly beneficial. Friends and family members can take turns providing support until detox is complete. Keep emergency contact numbers readily available, including the numbers of your doctor, the nearest hospital and emergency room, and helpful neighbors.\r\n\r\nBefore beginning detox, ensure that all alcohol, including beverages, medicines, rubbing alcohol, and flavorings such as vanilla extract, are removed from the premises. Minimizing contact with those who drink alcohol during detox will minimize temptation. Creating a calm environment with soft lighting, gentle music, and a comfortable space to rest can contribute to a more streamlined process as you detox.\r\n\r\nStay hydrated by consuming lots of fluids and snacking on foods like fruit, cheese and crackers, and pretzels. Carbohydrate-rich foods may help reduce alcohol cravings.\r\n\r\nConsider joining a support group like AA (Alcoholics Anonymous) or SMART Recovery, where you can share your experiences with others facing similar challenges. Connecting with individuals who understand your journey can help alleviate feelings of overwhelm.\r\n\r\nRemember, the decision to undergo detox is significant, and seeking professional guidance and support is likely to make the process safer and more successful.\r\n<h2>When To Call for Help</h2>\r\nIf you or someone you know expresses thoughts of suicide, self-harm, or is experiencing a mental health crisis, substance use crisis, or any form of emotional distress, seek help immediately.\r\n\r\n<img class=\"alignnone wp-image-54635 size-full\" src=\"https://connectionsoc.com/wp-content/uploads/2026/01/when-to-call-for-help.webp\" alt=\"\" width=\"948\" height=\"434\" />\r\n<h2>The Safer Detox Option: Medical Detox</h2>\r\nDue to the significant risks involved, it is typically inadvisable to detox from alcohol at home. Instead, a much safer alternative is to seek help through an inpatient or outpatient treatment program, where a team of experienced medical professionals can provide the necessary care and support you require.\r\n\r\nA medical drug and alcohol detox is a specialized form of detoxification that is conducted under the supervision of medical professionals. It is designed to safely and effectively manage the withdrawal symptoms and potential complications that may arise when someone stops using drugs or alcohol.\r\n\r\nDuring a medical drug and alcohol detox, a comprehensive assessment is conducted to evaluate the individual’s physical and mental health, substance use history, and any co-occurring physical or mental health conditions. This assessment helps in developing a fully personalized detox plan.\r\n\r\nThe primary goal of a medical drug and alcohol detox is to provide a supportive and controlled environment where the individual can undergo withdrawal with medical oversight. Medical professionals closely monitor vital signs, manage symptoms, and administer medications when necessary to alleviate discomfort and reduce the risks associated with withdrawal.\r\n\r\nThe duration of a medical drug and alcohol detox can vary depending on factors like the substance used, the severity of dependence, and overall health. Detox may last from a few days to a few weeks or more. Detox alone is not a comprehensive treatment for addiction but rather serves as the initial step in the recovery process and addresses the issue of physical dependence. Following a successful detoxification, individuals are typically encouraged to transition into a comprehensive addiction treatment program that addresses the underlying causes of addiction and provides the necessary tools and support for long-term recovery.\r\n\r\n[accordion_block]\r\n<h3>Medical Detoxification</h3>\r\nA supervised medical detoxification allows you to purge benzos drug from your system while managing withdrawal symptoms. Access to medications and continuous clinical and emotional care will minimize the chance of complications or relapse disrupting your early recovery from benzo addiction. A tapered reduction in dosage will mitigate most withdrawal symptoms.\r\n<h3>Inpatient or Outpatient Treatment</h3>\r\nWhile detox addresses the issue of benzodiazepine dependence, you will require ongoing treatment to tackle the psychological component of benzo addiction. This can be done at an inpatient rehab or outpatient addiction treatment program.\r\n<h3>Counseling</h3>\r\nIndividual counseling and <a href=\"/drug-rehab/addiction-therapy/\">addiction therapy</a> allows you to work closely with a therapist to probe the underlying causes of your addiction. In group therapy sessions, you can benefit from the support of peers with lived experience of benzo addiction.\r\n<h3>Psychotherapies</h3>\r\nPsychotherapy or talk therapy like CBT (<a href=\"/drug-rehab/cognitive-behavioral-therapy/\">cognitive behavioral therapy</a>) can help you to identify your personal triggers and show you how to use healthy coping mechanisms rather than benzodiazepines when confronted by stressors in your recovery.\r\n<h3>Peer Support Groups</h3>\r\nPeer support groups like NA (Narcotics Anonymous) can provide a sense of community and support during your benzo recovery process. Along with this, <a href=\"/drug-rehab/group-therapy/\">group therapy</a> options are also available during your time in treatment to help learn from other people’s situations.\r\n\r\n[/accordion_block]\r\n<h2>Benefits of Medical Detox</h2>\r\nThere are many significant benefits to undergoing a supervised medical detox when overcoming alcohol dependence. These include:\r\n<ul>\r\n \t<li><strong>Safety:</strong> Medical detox offers a safe environment with around-the-clock supervision from healthcare professionals who are experienced in managing withdrawal symptoms.</li>\r\n \t<li><strong>Medical monitoring:</strong> Vital signs such as blood pressure, heart rate, and temperature are closely monitored throughout the detox process.</li>\r\n \t<li><strong>Symptom management:</strong> Medications and interventions are used to reduce withdrawal discomfort and cravings.</li>\r\n \t<li><strong>Emotional support:</strong> Access to therapists, counselors, and mental health professionals throughout detox.</li>\r\n \t<li><strong>Reduced risk of relapse:</strong> Structured medical support helps prevent early relapse during withdrawal.</li>\r\n \t<li><strong>Smooth transition to treatment:</strong> Medical detox prepares individuals for ongoing addiction treatment programs.</li>\r\n \t<li><strong>Individualized care:</strong> Detox plans are customized based on medical history and individual needs.</li>\r\n</ul>\r\nBy opting for a medical detox, it is possible to access a comprehensive range of benefits that enhance safety, comfort, and overall success in achieving lasting recovery from alcohol dependence and addiction. Shortcut the process by reaching out to Gratitude Lodge.\r\n\r\n<img class=\"alignnone wp-image-54636 size-full\" src=\"https://connectionsoc.com/wp-content/uploads/2026/01/Medical-Detox.webp\" alt=\"\" width=\"948\" height=\"434\" />\r\n<h2>Get a Safe Medical Detox from Alcohol at Gratitude Lodge</h2>\r\nGratitude Lodge in Southern California is dedicated to providing exceptional alcohol detox and addiction treatment services. Our pet-friendly rehab centers in Newport Beach and Long Beach, CA offer comprehensive programs for whole-body recovery from alcohol addiction.\r\n\r\nWith our supervised medical detox program, we ensure a secure and seamless journey toward sustained recovery. Once alcohol is eliminated from your system, you can move directly into a 30-day inpatient treatment program along with your furry friend.\r\n\r\nTreatment programs encompass various effective interventions, including MAT (medication-assisted treatment), psychotherapy, group therapy, individual counseling, family therapy, holistic therapies, and aftercare.\r\n\r\nAt Gratitude Lodge, we understand the importance of transitioning from alcohol addiction to ongoing recovery, and we are committed to supporting you every step of the way. Place your trust in our expertise and compassionate care by reaching out to our admissions team at <a href=\"tel:844-917-4100\">844-917-4100</a>.\r\n<h2>Sources</h2>\r\n<ol>\r\n \t<li>https://www.jwatch.org/fw113538/2017/11/15/fda-warns-against-use-kratom</li>\r\n \t<li>https://www.fda.gov/news-events/public-health-focus/fda-and-kratom</li>\r\n \t<li>https://pubmed.ncbi.nlm.nih.gov/32722734/</li>\r\n \t<li>https://www.dea.gov/sites/default/files/2025-01/Kratom-Drug-Fact-Sheet.pdf</li>\r\n \t<li>https://www.sciencedirect.com/journal/psychiatric-clinics-of-north-america/vol/45/issue/3</li>\r\n</ol>";
   const h2___head = props.h2___head ?? "Outpatient addiction treatment at The Connections Mental Health can help you gain independence in recovery, build trust and develop new skills for sobriety.";
+  const h2___con = props.h2___con ?? "Outpatient addiction treatment at The Connections Mental Health can help you gain independence in recovery, build trust and develop new skills for sobriety.";
   const h1 = props.h1 ?? "ALCOHOL ADDICTION REHAB TREATMENT AT Connections Mental Health-1";
   const brand = props.brand ?? "Connections Mental Health";
   const __hasData = (ff: string[]) => ff.some((k) => ((props[k] ?? "") + "").trim() !== "");
@@ -335,15 +337,7 @@ export default function Page54439(props: Record<string, string>) {
           </div>
           <div className="elementor-element elementor-element-7aded1e2 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
-              <p style={{"fontSize":"16px"}}>
-                Outpatient treatment at {brand} is an excellent addiction treatment option if you do not need intensive care and can maintain relative stability during drug and alcohol rehabilitation. With scalable options ranging from regularly scheduled therapy to intensive outpatient services and partial hospitalization programs, outpatient drug treatment programs offer a variety of choices for individuals seeking recovery.
-              </p>
-              <p style={{"fontSize":"16px"}}>
-                Through outpatient treatment at {brand}, you can benefit from psychotherapy, psychiatric services, and medical care, typically provided on a scheduled basis. Along the spectrum of treatment settings—ranging from highly structured to more flexible—outpatient alcohol and drug treatment emphasizes independence and autonomy.
-              </p>
-              <p style={{"fontSize":"16px"}}>
-                Outpatient addiction treatment requires a significant level of personal responsibility in managing both your substance use disorder and daily life. For this reason, it’s important to carefully consider whether outpatient care is the right choice. As always, we recommend seeking an evaluation from a medical, mental health, or substance abuse professional to determine the level of care best suited to your needs.
-              </p>
+              <div dangerouslySetInnerHTML={{__html: h2___con}} />
             </div>
           </div>
         </div>
@@ -750,7 +744,7 @@ export default function Page54439(props: Record<string, string>) {
                           <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 / 4" style={{"width":"369.333px","marginRight":"48px","visibility":"visible"}}>
                             <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-251-2-68b941bad8a4b.webp" style={{"fontSize":"16px"}}>
                               <figure className="swiper-slide-inner">
-                                <Image src="/images/23e32effef01be710b967e625e1cf775.webp" alt="rectangle-251-2-68b941bad8a4b.webp" width={1200} height={669} className="swiper-slide-image" />
+                                <Image src="/images/d170e5150e665f38cabc754c85b76d78.webp" alt="rectangle-251-2-68b941bad8a4b.webp" width={1200} height={669} className="swiper-slide-image" />
                               </figure>
                             </Link>
                           </div>
@@ -948,14 +942,14 @@ export default function Page54439(props: Record<string, string>) {
                     <div className="elementor-element elementor-element-50cb78bf elementor-widget__width-inherit elementor-hidden-mobile elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
                         <Link href="/check-your-insurance/" style={{"fontSize":"16px"}}>
-                          <Image src="/images/6df40e54101dfc4afcc57febe9d833ea.webp" alt="" width={242} height={116} className="attachment-full size-full wp-image-54436 entered error" />
+                          <Image src="/images/e9c3dac8b493ffbe58eae0def0ffd908.webp" alt="" width={964} height={462} className="attachment-full size-full wp-image-54436 entered error" />
                         </Link>
                       </div>
                     </div>
                     <div className="elementor-element elementor-element-6ddc9189 elementor-widget__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-widget_type="image.default">
                       <div className="elementor-widget-container">
                         <Link href="/check-your-insurance/" style={{"fontSize":"16px"}}>
-                          <Image src="/images/e9c3dac8b493ffbe58eae0def0ffd908.webp" alt="" width={580} height={319} className="attachment-full size-full wp-image-54437" />
+                          <Image src="/images/e9c3dac8b493ffbe58eae0def0ffd908.webp" alt="" width={964} height={462} className="attachment-full size-full wp-image-54437" />
                         </Link>
                       </div>
                     </div>
@@ -1007,281 +1001,7 @@ export default function Page54439(props: Record<string, string>) {
         <div className="elementor-element elementor-element-d5d138d elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
           <div className="elementor-widget-container">
             <div className="elementor-shortcode">
-              <div className="cards-wrapper">
-                <div className="cards" role="list">
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/therapy/outpatient/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential Outpatient Rehab Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/therapy/iop/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential IOP Rehab Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/therapy/inpatient/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential Inpatient Rehab Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/therapy/addiction-therapists-counselors/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential Addiction Therapists Counselors Rehab Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Depression Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/bipolar/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Bipolar Disorder Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/neurodevelopment-disorder/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Neurodevelopment Disorder Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/eating-disorders/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Eating Disorders Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/psychotic-disorders/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Psychotic Disorders Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/personality-disorders/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Personality Disorders Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/trauma-disorder/ptsd/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California PTSD Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/trauma-disorder/inpatient/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Inpatient Trauma Disorder Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/trauma-disorder/inpatient-ptsd/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Inpatient PTSD Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/trauma-disorder/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Trauma Disorder Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/iop/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California IOP Rehab (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/emdr/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California EMDR Therapy (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/anxiety-disorders/inpatient-obsessive-compulsive-disorde/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Inpatient Obsessive Compulsive Disorde Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/anxiety-disorders/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Anxiety Disorders Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Outpatient Rehab (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/inpatient/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Inpatient Rehab (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/dbt/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California DBT Therapy (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/cognitive-behavioral-therapy-cbt/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Cognitive Behavioral Therapy Therapy (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/talk/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Talk Therapy (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/addiction-therapists-counselors/california/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        California Addiction Therapists Counselors Rehab (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Outpatient Rehab near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/westminster-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Outpatient Rehab near Westminster (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/villa-park-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Villa Park Outpatient Rehab (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/tustin-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Tustin Outpatient Rehab (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/stanton-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Outpatient Rehab near Stanton (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/seal-beach-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Outpatient Rehab near Seal Beach (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/santa-ana-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Outpatient Rehab near Santa Ana (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/san-juan-capistrano-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Outpatient Rehab near San Juan Capistrano (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/does-insurance-cover-residential-mental-health-treatment/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Does Insurance Cover Residential Mental Health Treatment?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/personality-disorders/paranoid-personality-disorder/why-do-i-feel-like-everyone-hates-me/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Why Do I Feel Like Everyone Hates Me? Tips & What to Do
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/overstimulated-meaning/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What Are Common Signs of Overstimulation in Adults?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/what-to-expect-during-inpatient-mental-health-stay/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What to Expect at an Inpatient Behavioral Health Hospital
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/residential-vs-inpatient-mental-health-treatment/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Residential vs. Inpatient Mental Health Treatment
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/can-i-check-myself-into-a-mental-hospital/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        How to Admit Yourself to a Mental Hospital?
-                      </h3>
-                    </Link>
-                  </article>
-                </div>
-                <div id="button-wrapper">
-                  <button id="relatedloadMoreBtn">
-                    Load More
-                  </button>
-                </div>
-              </div>
+              <RelatedPages path={props.__path} />
             </div>
           </div>
         </div>

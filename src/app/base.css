@@ -427,3 +427,16 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
 .elementor-55188 .elementor-element.elementor-element-11c8c69 img { width: 373px; max-width: 100%; height: auto; }
 /* Once the jQuery FAQ script manages a panel (inline style set), let its slideUp/slideDown control visibility instead of the max-height clamp, so closing animates too. */
 .custom-accordion .custom-accordion__item .accordion-item__content[style] { max-height: none; padding: 24px 20px; }
+/* Related pages (RelatedCards): collapse extra cards and show "Load More" on desktop only; below 1024px the whole list shows, as on the WordPress site. */
+@media (min-width: 1024px) {
+  .cards-wrapper .card.card--collapsed { display: none; }
+}
+@media (max-width: 1023px) {
+  .cards-wrapper #button-wrapper { display: none; }
+}
+/* Spin for the table-of-contents loader (BlogTocList); only some page stylesheets define it. */
+@keyframes eicon-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(359deg); } }
+/* Sidebar column (Page55021): Elementor sticky {sticky: top, sticky_on: desktop, sticky_offset: 90, sticky_parent: yes}. Native sticky keeps it within its row; flex-start stops the row stretching it to the article's height. */
+@media (min-width: 1025px) {
+  .elementor-55021 .elementor-element.elementor-element-6385bf8 { position: sticky; top: 90px; align-self: flex-start; z-index: 99; }
+}

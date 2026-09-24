@@ -1,15 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import RelatedPages from '@/components/RelatedPages';
+import { formatLongDate } from '@/lib/date';
 
 
 export default function Page55021(props: Record<string, string>) {
   const __presentIds = (props.__present ?? "").split(",").filter(Boolean);
   const __present = (id: string) => __presentIds.length === 0 || __presentIds.includes(id);
-  const blog_content = props.blog_content ?? "<p data-pm-slice=\"1 1 []\"><span data-color=\"transparent\">There are some key distinctions between being treated at a residential inpatient facility and an inpatient hospital. The choice between these treatment methods can impact recovery outcomes, treatment duration, and overall therapeutic success. Each approach offers unique advantages tailored to specific clinical needs and circumstances.</span></p>\r\n<span data-color=\"transparent\">This page examines the fundamental differences between residential inpatient facilities and inpatient hospitals for mental health conditions to help you make more informed decisions about the most appropriate level of care [1].</span>\r\n\r\n[acf field=cta1]\r\n<h2 data-pm-slice=\"1 1 []\"><span data-color=\"transparent\">What is Residential Inpatient Treatment?</span></h2>\r\n<strong><span data-color=\"transparent\">Residential inpatient treatment provides comprehensive mental healthcare within a structured, homelike environment</span></strong><span data-color=\"transparent\">, where individuals stay at a treatment facility and receive intensive therapeutic services. This form of therapy is ideal for those who require intensive support without acute medical supervision.</span>\r\n\r\n<span data-color=\"transparent\">Unlike traditional medical settings at an inpatient mental hospital, residential inpatient programs focus on creating normalcy within the treatment environment. Participants engage in daily activities that mirror real-world experiences while receiving specialized mental health services [2]. This approach allows individuals to practice coping strategies [3] and life skills in a supportive yet realistic setting.</span>\r\n<h4><span data-color=\"transparent\">Characteristics of residential inpatient treatment</span></h4>\r\n<span data-color=\"transparent\">Residential inpatient treatment typically ranges from </span><strong><span data-color=\"transparent\">30 days to several months,</span></strong><span data-color=\"transparent\"> depending on individual progress and treatment goals. This extended timeframe allows for rigorous assessment, skill development, and gradual transition planning. </span>\r\n\r\n<span data-color=\"transparent\">Environmental design </span><strong><span data-color=\"transparent\">prioritizes comfort and therapeutic engagement over clinical sterility</span></strong><span data-color=\"transparent\">. Common areas resemble living rooms rather than hospital waiting areas, and private or shared bedrooms provide personal space for rest and reflection. Meal preparation, recreational activities, and household responsibilities are integrated into daily routines to maintain connection with everyday activities.</span>\r\n\r\n<span data-color=\"transparent\">Treatment intensity varies but generally includes individual therapy sessions multiple times per week, participation in group therapy, family therapy components, and specialized interventions tailored to specific conditions. Educational components often address topics such as medication management, relapse prevention, and community resource utilization.</span>\r\n\r\n<span data-color=\"transparent\">Community integration is a cornerstone of residential inpatient programming. Participants live alongside others facing similar challenges, creating opportunities for peer support, shared learning experiences, and social skill development. This communal aspect can reduce isolation and stigma while building lasting support networks.</span>\r\n<h2><span data-color=\"transparent\">What Is Inpatient Hospital Treatment?</span></h2>\r\n<strong><span data-color=\"transparent\">Inpatient hospital treatment occurs within hospital or medical facility settings</span></strong><span data-color=\"transparent\">, providing the highest levels of mental health intervention available. This form of mental health treatment offers acute psychiatric care for individuals experiencing severe mental health crises that require immediate stabilization and intensive medical supervision. </span>\r\n\r\n<span data-color=\"transparent\">This treatment modality operates under the principles of the medical model, with 24-hour monitoring and care provided by psychiatrists, nurses, and other mental health professionals. Hospital-based inpatient treatment addresses severe symptoms that pose immediate risks to patient safety or the safety of others, including suicidal ideation, psychotic episodes, severe depression, or acute complications triggered by withdrawal from addictive substances.</span>\r\n\r\n<span data-color=\"transparent\">Inpatient facilities</span><strong><span data-color=\"transparent\"> prioritize safety and rapid symptom stabilization over long-term therapeutic engagement.</span></strong><span data-color=\"transparent\"> While therapy sessions occur daily, the primary focus is on crisis intervention [4] and medication management to achieve clinical stability.</span>\r\n<h4><span data-color=\"transparent\">Characteristics of inpatient treatment</span></h4>\r\n<h3>Inpatient Care: Focused on Acute Intervention and Stabilization</h3>\r\nInpatient care is designed for individuals requiring intensive, short-term treatment to manage acute mental health crises. The goal is to stabilize the patient quickly and prepare them for a transition to less restrictive care. This care typically lasts between 3 and 10 days, depending on the severity of symptoms, treatment response, and availability of step-down options.\r\n\r\n<strong>Key Aspects of Inpatient Care:</strong>\r\n<ul>\r\n \t<li><strong>Duration of Stay: </strong>Typically lasts 3 to 10 days, based on symptom severity and treatment response. Focused on achieving stabilization before transitioning to less intensive care.</li>\r\n \t<li><strong>Medical Supervision: </strong>Round-the-clock monitoring by registered nurses and regular assessments by psychiatrists to adjust treatment plans. Immediate access to emergency medical interventions if needed.</li>\r\n \t<li><strong>Treatment Approach: </strong>Rapid assessment and medication adjustments. Crisis de-escalation techniques to manage acute psychiatric episodes. Individual therapy sessions are crisis-focused and brief. Group therapy emphasizes immediate coping strategies and psychoeducation.</li>\r\n \t<li><strong>Structured Environment: </strong>High levels of security and supervision to ensure safety. Restricted patient movement and limited personal belongings. Strict daily schedules designed to enhance therapeutic benefits while maintaining safety.</li>\r\n</ul>\r\nThis structured environment helps manage patients effectively during periods of crisis while providing the necessary support for stabilization and recovery.\r\n<h2><span data-color=\"transparent\">Hospital vs. Residential Inpatient Care: Key Differences</span></h2>\r\n<span data-color=\"transparent\">The core differences between hospital and residential inpatient treatment lie in the level of supervision required and the treatment goals being pursued. Becoming aware of the differences between residential and inpatient hospital treatment helps individuals and families choose the right level of care.</span>\r\n\r\n<span data-color=\"transparent\">Residential inpatient care addresses acute psychiatric emergencies that warrant immediate intervention, while residential treatment serves those who need intensive support but are medically stable. This distinction influences all aspects of treatment planning and implementation.</span>\r\n\r\n<span data-color=\"transparent\">The characteristics of these approaches vary dramatically. Hospital-based inpatient facilities operate as medical environments with hospital-style accommodations, medical equipment, and clinical staff ratios designed for acute care. Residential inpatient settings offer more comfortable accommodations and staff trained in long-term therapeutic engagement.</span>\r\n\r\n<span data-color=\"transparent\">Differences in duration of residential treatment vs. hospital inpatient care reflect the different goals of each modality.  Residential treatment involves longer stays focused on skill building and gradual reintegration, while inpatient care aims for swift stabilization and transition planning.</span>\r\n\r\n<span data-color=\"transparent\">Therapeutic approach differs in intensity and focus. Hospital inpatient treatment concentrates on symptom management and crisis resolution, while residential programming focuses on life skill development, trauma processing, and preparation for community reintegration.</span>\r\n<h2><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px;\">[acf field=cta2]</span></h2>\r\n<h2 data-pm-slice=\"1 1 []\"><span data-color=\"transparent\">Benefits of Residential Inpatient Treatment</span></h2>\r\n<span data-color=\"transparent\">Treatment at a residential inpatient facility offers many advantages for individuals who need intensive support without requiring acute medical supervision. Benefits include: </span>\r\n<ol>\r\n \t<li><strong><span data-color=\"transparent\">Extended timeline</span></strong><span data-color=\"transparent\"> – Residential inpatient treatment lasts 30 days or more, enabling comprehensive therapeutic engagement that addresses underlying issues that contribute to mental health challenges rather than simply managing acute symptoms.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">Peer support</span></strong><span data-color=\"transparent\"> ­– Residents often form lasting connections that continue supporting recovery long after the program ends. This social aspect can be especially beneficial for those who have experienced isolation due to mental health challenges.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">Skill development opportunities</span></strong><span data-color=\"transparent\"> – Participants practice daily living skills, financial management, meal preparation, and social interaction in realistic environments. These practical experiences build the confidence and competence central to successful community reintegration.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">Gradual transition to independent living</span></strong><span data-color=\"transparent\"> – Rather than moving directly from intensive care to independent living, residential inpatient programs can facilitate step-down approaches, helping people build independence gradually while maintaining therapeutic support.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">Family involvement</span></strong><span data-color=\"transparent\"> – When comparing residential inpatient vs. hospital inpatient mental health treatment, residential inpatient programs offer more extensive family therapy sessions, helping heal damaged relationships and build stronger support systems for ongoing recovery.</span></li>\r\n</ol>\r\n<h2><span data-color=\"transparent\">Benefits of Residential Inpatient Treatment</span></h2>\r\n<span data-color=\"transparent\">Residential inpatient care provides essential services for individuals confronting acute mental health crises that cannot be safely managed in less intensive settings. Benefits of residential inpatient care include: </span>\r\n<ol>\r\n \t<li><strong><span data-color=\"transparent\">Rapid stabilization and crisis management</span></strong><span data-color=\"transparent\"> – Individuals can be promptly assessed, and severe symptoms treated on the spot at an inpatient facility. Medication adjustments can be closely monitored, side effects managed immediately, and treatment plans tweaked based on patient response. This intensive approach often shortens the duration of acute episodes.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">Safety measures</span></strong><span data-color=\"transparent\"> – Residential inpatient facilities provide secure environments for individuals who may pose risks to themselves or others. Professional staff trained in crisis intervention, de-escalation techniques, and emergency procedures ensure appropriate responses to dangerous situations.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">Assessment opportunities</span></strong><span data-color=\"transparent\"> – Multiple specialists can quickly evaluate complex cases. This multidisciplinary approach often reveals previously undiagnosed conditions or identifies treatment-resistant factors that require specialized intervention.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">24-hour medical supervision</span></strong><span data-color=\"transparent\"> – Those experiencing mental health crises who engage in residential inpatient care benefit from continuous medical supervision throughout treatment, even during long-term residential inpatient mental health treatment.</span></li>\r\n</ol>\r\n<h2><span data-color=\"transparent\">Residential Inpatient Facility Vs. Inpatient Hospital | FAQs</span></h2>\r\n<h3><span data-color=\"transparent\">What is the difference between hospital-based inpatient and residential inpatient facilities?</span></h3>\r\n<span data-color=\"transparent\">When comparing residential inpatient treatment vs. hospital inpatient facilities,</span><strong><span data-color=\"transparent\"> inpatient mental health treatment occurs in medical facilities with 24-hour medical supervision for acute psychiatric crises. </span></strong><span data-color=\"transparent\">Residential inpatient treatment, by contrast, provides intensive therapy at a treatment center for individuals who are medically stable but need comprehensive mental health support.</span>\r\n<h3><span data-color=\"transparent\">Is a residential inpatient facility considered an inpatient facility?</span></h3>\r\n<span data-color=\"transparent\">No, residential treatment centers are different from inpatient facilities. </span><strong><span data-color=\"transparent\">Residential inpatient programs offer intensive services in standalone, live-in facilities, whereas hospital inpatient care is provided in medical facilities, such as hospitals, under constant medical supervision.</span></strong><span data-color=\"transparent\"> Both forms of treatment involve remaining at the facility for a specified period.</span>\r\n<h3><span data-color=\"transparent\"> What is a residential inpatient program best for?</span></h3>\r\n<span data-color=\"transparent\">Residential mental health programs are often indicated for individuals who are stable and at no risk of harming themselves or others but require immersive treatment to address severe mental health issues without acute crises.</span>\r\n<h3><span data-color=\"transparent\">What is one reason for hospital inpatient treatment for individuals with mental illness?</span></h3>\r\n<span data-color=\"transparent\">Hospital inpatient treatment is necessary when an individual poses an immediate risk to themselves or others due to severe psychiatric symptoms that cannot be safely managed in less intensive settings.</span>\r\n<h3><span data-color=\"transparent\">How long is inpatient treatment for mental health?</span></h3>\r\n<span data-color=\"transparent\">Residential and hospital inpatient mental health stays range from 3 to 10 days, depending on symptom severity and treatment response, to achieve stability for transition to less intensive levels of care.</span>\r\n\r\n[acf field=cta3]\r\n<h3 data-pm-slice=\"1 1 []\"><span data-color=\"transparent\">When should someone consider residential treatment vs. hospital treatment?</span></h3>\r\n<span data-color=\"transparent\">The choice between residential vs. hospital inpatient mental health treatment depends on symptom severity, safety risks, and long-term recovery goals, with care addressing acute crises and residential treatment focusing on comprehensive rehabilitation over a more extended period. </span>\r\n<h2><span data-color=\"transparent\">Get Compassionate Residential Inpatient Mental Health Treatment at Connections</span></h2>\r\n<span data-color=\"transparent\">If you feel that residential inpatient mental health treatment would help you get back on track, reach out to Connections in Southern California.</span>\r\n\r\n<span data-color=\"transparent\">We treat all mental health issues with immersive residential inpatient programs at our</span><strong><span data-color=\"transparent\"> luxury coastal facility. </span></strong><span data-color=\"transparent\">Small group sizes of </span><strong><span data-color=\"transparent\">no more than 6 people </span></strong><span data-color=\"transparent\">ensure you get the ideal blend of personalized attention and support from peers tackling similar issues.</span>\r\n\r\n<span data-color=\"transparent\">All treatment plans at Connections are tailored to individual needs and symptom severity, combining evidence-based interventions like medication management, behavioral therapy, and counseling with holistic therapies to promote whole-body healing.</span>\r\n\r\n<strong><span data-color=\"transparent\">For effective mental health treatment covered by health insurance, call admissions at </span></strong><a href=\"tel:844-759-0999\"><strong><span data-color=\"transparent\"><u>844-759-0999</u></span></strong></a><strong><span data-color=\"transparent\">.</span></strong>\r\n\r\n<span data-color=\"transparent\"> </span>\r\n\r\n<span data-color=\"transparent\">Sources</span>\r\n\r\n<span data-color=\"transparent\">[1] </span>https://www.asam.org/asam-criteria/about-the-asam-criteria\r\n\r\n[2] https://pmc.ncbi.nlm.nih.gov/articles/PMC4395546/\r\n\r\n[3] https://positivepsychology.com/coping/\r\n\r\n[4] https://www.ncbi.nlm.nih.gov/books/NBK559081/\r\n\r\n[5] https://www.sciencedirect.com/science/article/pii/S2590250423000066";
+  const blog_content = props["blog-content"] ?? "<p data-pm-slice=\"1 1 []\"><span data-color=\"transparent\">There are some key distinctions between being treated at a residential inpatient facility and an inpatient hospital. The choice between these treatment methods can impact recovery outcomes, treatment duration, and overall therapeutic success. Each approach offers unique advantages tailored to specific clinical needs and circumstances.</span></p>\r\n<span data-color=\"transparent\">This page examines the fundamental differences between residential inpatient facilities and inpatient hospitals for mental health conditions to help you make more informed decisions about the most appropriate level of care [1].</span>\r\n\r\n[acf field=cta1]\r\n<h2 data-pm-slice=\"1 1 []\"><span data-color=\"transparent\">What is Residential Inpatient Treatment?</span></h2>\r\n<strong><span data-color=\"transparent\">Residential inpatient treatment provides comprehensive mental healthcare within a structured, homelike environment</span></strong><span data-color=\"transparent\">, where individuals stay at a treatment facility and receive intensive therapeutic services. This form of therapy is ideal for those who require intensive support without acute medical supervision.</span>\r\n\r\n<span data-color=\"transparent\">Unlike traditional medical settings at an inpatient mental hospital, residential inpatient programs focus on creating normalcy within the treatment environment. Participants engage in daily activities that mirror real-world experiences while receiving specialized mental health services [2]. This approach allows individuals to practice coping strategies [3] and life skills in a supportive yet realistic setting.</span>\r\n<h4><span data-color=\"transparent\">Characteristics of residential inpatient treatment</span></h4>\r\n<span data-color=\"transparent\">Residential inpatient treatment typically ranges from </span><strong><span data-color=\"transparent\">30 days to several months,</span></strong><span data-color=\"transparent\"> depending on individual progress and treatment goals. This extended timeframe allows for rigorous assessment, skill development, and gradual transition planning. </span>\r\n\r\n<span data-color=\"transparent\">Environmental design </span><strong><span data-color=\"transparent\">prioritizes comfort and therapeutic engagement over clinical sterility</span></strong><span data-color=\"transparent\">. Common areas resemble living rooms rather than hospital waiting areas, and private or shared bedrooms provide personal space for rest and reflection. Meal preparation, recreational activities, and household responsibilities are integrated into daily routines to maintain connection with everyday activities.</span>\r\n\r\n<span data-color=\"transparent\">Treatment intensity varies but generally includes individual therapy sessions multiple times per week, participation in group therapy, family therapy components, and specialized interventions tailored to specific conditions. Educational components often address topics such as medication management, relapse prevention, and community resource utilization.</span>\r\n\r\n<span data-color=\"transparent\">Community integration is a cornerstone of residential inpatient programming. Participants live alongside others facing similar challenges, creating opportunities for peer support, shared learning experiences, and social skill development. This communal aspect can reduce isolation and stigma while building lasting support networks.</span>\r\n<h2><span data-color=\"transparent\">What Is Inpatient Hospital Treatment?</span></h2>\r\n<strong><span data-color=\"transparent\">Inpatient hospital treatment occurs within hospital or medical facility settings</span></strong><span data-color=\"transparent\">, providing the highest levels of mental health intervention available. This form of mental health treatment offers acute psychiatric care for individuals experiencing severe mental health crises that require immediate stabilization and intensive medical supervision. </span>\r\n\r\n<span data-color=\"transparent\">This treatment modality operates under the principles of the medical model, with 24-hour monitoring and care provided by psychiatrists, nurses, and other mental health professionals. Hospital-based inpatient treatment addresses severe symptoms that pose immediate risks to patient safety or the safety of others, including suicidal ideation, psychotic episodes, severe depression, or acute complications triggered by withdrawal from addictive substances.</span>\r\n\r\n<span data-color=\"transparent\">Inpatient facilities</span><strong><span data-color=\"transparent\"> prioritize safety and rapid symptom stabilization over long-term therapeutic engagement.</span></strong><span data-color=\"transparent\"> While therapy sessions occur daily, the primary focus is on crisis intervention [4] and medication management to achieve clinical stability.</span>\r\n<h4><span data-color=\"transparent\">Characteristics of inpatient treatment</span></h4>\r\n<h3>Inpatient Care: Focused on Acute Intervention and Stabilization</h3>\r\nInpatient care is designed for individuals requiring intensive, short-term treatment to manage acute mental health crises. The goal is to stabilize the patient quickly and prepare them for a transition to less restrictive care. This care typically lasts between 3 and 10 days, depending on the severity of symptoms, treatment response, and availability of step-down options.\r\n\r\n<strong>Key Aspects of Inpatient Care:</strong>\r\n<ul>\r\n \t<li><strong>Duration of Stay: </strong>Typically lasts 3 to 10 days, based on symptom severity and treatment response. Focused on achieving stabilization before transitioning to less intensive care.</li>\r\n \t<li><strong>Medical Supervision: </strong>Round-the-clock monitoring by registered nurses and regular assessments by psychiatrists to adjust treatment plans. Immediate access to emergency medical interventions if needed.</li>\r\n \t<li><strong>Treatment Approach: </strong>Rapid assessment and medication adjustments. Crisis de-escalation techniques to manage acute psychiatric episodes. Individual therapy sessions are crisis-focused and brief. Group therapy emphasizes immediate coping strategies and psychoeducation.</li>\r\n \t<li><strong>Structured Environment: </strong>High levels of security and supervision to ensure safety. Restricted patient movement and limited personal belongings. Strict daily schedules designed to enhance therapeutic benefits while maintaining safety.</li>\r\n</ul>\r\nThis structured environment helps manage patients effectively during periods of crisis while providing the necessary support for stabilization and recovery.\r\n<h2><span data-color=\"transparent\">Hospital vs. Residential Inpatient Care: Key Differences</span></h2>\r\n<span data-color=\"transparent\">The core differences between hospital and residential inpatient treatment lie in the level of supervision required and the treatment goals being pursued. Becoming aware of the differences between residential and inpatient hospital treatment helps individuals and families choose the right level of care.</span>\r\n\r\n<span data-color=\"transparent\">Residential inpatient care addresses acute psychiatric emergencies that warrant immediate intervention, while residential treatment serves those who need intensive support but are medically stable. This distinction influences all aspects of treatment planning and implementation.</span>\r\n\r\n<span data-color=\"transparent\">The characteristics of these approaches vary dramatically. Hospital-based inpatient facilities operate as medical environments with hospital-style accommodations, medical equipment, and clinical staff ratios designed for acute care. Residential inpatient settings offer more comfortable accommodations and staff trained in long-term therapeutic engagement.</span>\r\n\r\n<span data-color=\"transparent\">Differences in duration of residential treatment vs. hospital inpatient care reflect the different goals of each modality.  Residential treatment involves longer stays focused on skill building and gradual reintegration, while inpatient care aims for swift stabilization and transition planning.</span>\r\n\r\n<span data-color=\"transparent\">Therapeutic approach differs in intensity and focus. Hospital inpatient treatment concentrates on symptom management and crisis resolution, while residential programming focuses on life skill development, trauma processing, and preparation for community reintegration.</span>\r\n<h2><span style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px;\">[acf field=cta2]</span></h2>\r\n<h2 data-pm-slice=\"1 1 []\"><span data-color=\"transparent\">Benefits of Residential Inpatient Treatment</span></h2>\r\n<span data-color=\"transparent\">Treatment at a residential inpatient facility offers many advantages for individuals who need intensive support without requiring acute medical supervision. Benefits include: </span>\r\n<ol>\r\n \t<li><strong><span data-color=\"transparent\">Extended timeline</span></strong><span data-color=\"transparent\"> – Residential inpatient treatment lasts 30 days or more, enabling comprehensive therapeutic engagement that addresses underlying issues that contribute to mental health challenges rather than simply managing acute symptoms.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">Peer support</span></strong><span data-color=\"transparent\"> ­– Residents often form lasting connections that continue supporting recovery long after the program ends. This social aspect can be especially beneficial for those who have experienced isolation due to mental health challenges.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">Skill development opportunities</span></strong><span data-color=\"transparent\"> – Participants practice daily living skills, financial management, meal preparation, and social interaction in realistic environments. These practical experiences build the confidence and competence central to successful community reintegration.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">Gradual transition to independent living</span></strong><span data-color=\"transparent\"> – Rather than moving directly from intensive care to independent living, residential inpatient programs can facilitate step-down approaches, helping people build independence gradually while maintaining therapeutic support.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">Family involvement</span></strong><span data-color=\"transparent\"> – When comparing residential inpatient vs. hospital inpatient mental health treatment, residential inpatient programs offer more extensive family therapy sessions, helping heal damaged relationships and build stronger support systems for ongoing recovery.</span></li>\r\n</ol>\r\n<h2><span data-color=\"transparent\">Benefits of Residential Inpatient Treatment</span></h2>\r\n<span data-color=\"transparent\">Residential inpatient care provides essential services for individuals confronting acute mental health crises that cannot be safely managed in less intensive settings. Benefits of residential inpatient care include: </span>\r\n<ol>\r\n \t<li><strong><span data-color=\"transparent\">Rapid stabilization and crisis management</span></strong><span data-color=\"transparent\"> – Individuals can be promptly assessed, and severe symptoms treated on the spot at an inpatient facility. Medication adjustments can be closely monitored, side effects managed immediately, and treatment plans tweaked based on patient response. This intensive approach often shortens the duration of acute episodes.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">Safety measures</span></strong><span data-color=\"transparent\"> – Residential inpatient facilities provide secure environments for individuals who may pose risks to themselves or others. Professional staff trained in crisis intervention, de-escalation techniques, and emergency procedures ensure appropriate responses to dangerous situations.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">Assessment opportunities</span></strong><span data-color=\"transparent\"> – Multiple specialists can quickly evaluate complex cases. This multidisciplinary approach often reveals previously undiagnosed conditions or identifies treatment-resistant factors that require specialized intervention.</span></li>\r\n \t<li><strong><span data-color=\"transparent\">24-hour medical supervision</span></strong><span data-color=\"transparent\"> – Those experiencing mental health crises who engage in residential inpatient care benefit from continuous medical supervision throughout treatment, even during long-term residential inpatient mental health treatment.</span></li>\r\n</ol>\r\n<h2><span data-color=\"transparent\">Residential Inpatient Facility Vs. Inpatient Hospital | FAQs</span></h2>\r\n<h3><span data-color=\"transparent\">What is the difference between hospital-based inpatient and residential inpatient facilities?</span></h3>\r\n<span data-color=\"transparent\">When comparing residential inpatient treatment vs. hospital inpatient facilities,</span><strong><span data-color=\"transparent\"> inpatient mental health treatment occurs in medical facilities with 24-hour medical supervision for acute psychiatric crises. </span></strong><span data-color=\"transparent\">Residential inpatient treatment, by contrast, provides intensive therapy at a treatment center for individuals who are medically stable but need comprehensive mental health support.</span>\r\n<h3><span data-color=\"transparent\">Is a residential inpatient facility considered an inpatient facility?</span></h3>\r\n<span data-color=\"transparent\">No, residential treatment centers are different from inpatient facilities. </span><strong><span data-color=\"transparent\">Residential inpatient programs offer intensive services in standalone, live-in facilities, whereas hospital inpatient care is provided in medical facilities, such as hospitals, under constant medical supervision.</span></strong><span data-color=\"transparent\"> Both forms of treatment involve remaining at the facility for a specified period.</span>\r\n<h3><span data-color=\"transparent\"> What is a residential inpatient program best for?</span></h3>\r\n<span data-color=\"transparent\">Residential mental health programs are often indicated for individuals who are stable and at no risk of harming themselves or others but require immersive treatment to address severe mental health issues without acute crises.</span>\r\n<h3><span data-color=\"transparent\">What is one reason for hospital inpatient treatment for individuals with mental illness?</span></h3>\r\n<span data-color=\"transparent\">Hospital inpatient treatment is necessary when an individual poses an immediate risk to themselves or others due to severe psychiatric symptoms that cannot be safely managed in less intensive settings.</span>\r\n<h3><span data-color=\"transparent\">How long is inpatient treatment for mental health?</span></h3>\r\n<span data-color=\"transparent\">Residential and hospital inpatient mental health stays range from 3 to 10 days, depending on symptom severity and treatment response, to achieve stability for transition to less intensive levels of care.</span>\r\n\r\n[acf field=cta3]\r\n<h3 data-pm-slice=\"1 1 []\"><span data-color=\"transparent\">When should someone consider residential treatment vs. hospital treatment?</span></h3>\r\n<span data-color=\"transparent\">The choice between residential vs. hospital inpatient mental health treatment depends on symptom severity, safety risks, and long-term recovery goals, with care addressing acute crises and residential treatment focusing on comprehensive rehabilitation over a more extended period. </span>\r\n<h2><span data-color=\"transparent\">Get Compassionate Residential Inpatient Mental Health Treatment at Connections</span></h2>\r\n<span data-color=\"transparent\">If you feel that residential inpatient mental health treatment would help you get back on track, reach out to Connections in Southern California.</span>\r\n\r\n<span data-color=\"transparent\">We treat all mental health issues with immersive residential inpatient programs at our</span><strong><span data-color=\"transparent\"> luxury coastal facility. </span></strong><span data-color=\"transparent\">Small group sizes of </span><strong><span data-color=\"transparent\">no more than 6 people </span></strong><span data-color=\"transparent\">ensure you get the ideal blend of personalized attention and support from peers tackling similar issues.</span>\r\n\r\n<span data-color=\"transparent\">All treatment plans at Connections are tailored to individual needs and symptom severity, combining evidence-based interventions like medication management, behavioral therapy, and counseling with holistic therapies to promote whole-body healing.</span>\r\n\r\n<strong><span data-color=\"transparent\">For effective mental health treatment covered by health insurance, call admissions at </span></strong><a href=\"tel:844-759-0999\"><strong><span data-color=\"transparent\"><u>844-759-0999</u></span></strong></a><strong><span data-color=\"transparent\">.</span></strong>\r\n\r\n<span data-color=\"transparent\"> </span>\r\n\r\n<span data-color=\"transparent\">Sources</span>\r\n\r\n<span data-color=\"transparent\">[1] </span>https://www.asam.org/asam-criteria/about-the-asam-criteria\r\n\r\n[2] https://pmc.ncbi.nlm.nih.gov/articles/PMC4395546/\r\n\r\n[3] https://positivepsychology.com/coping/\r\n\r\n[4] https://www.ncbi.nlm.nih.gov/books/NBK559081/\r\n\r\n[5] https://www.sciencedirect.com/science/article/pii/S2590250423000066";
   const h1 = props.h1 ?? "Residential vs. Inpatient Mental Health Treatment";
   const address_county = props.address_county ?? "Orange County";
   const year = props.year ?? "2025";
+  const created_date = formatLongDate(props.__createdAt);
   const near_in = props.near_in ?? "near";
   return (
     <>
@@ -140,7 +143,7 @@ export default function Page55021(props: Record<string, string>) {
             </div>
             <div className="elementor-element elementor-element-7932493 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
               <div className="elementor-widget-container">
-                September 18, {year}
+                {created_date}
               </div>
             </div>
           </div>
@@ -247,10 +250,10 @@ export default function Page55021(props: Record<string, string>) {
                   </div>
                   <div className="jg-guided-col jg-guided-center">
                     <div className="jg-guided-img-wrap">
-                      <Image src="/wp-content/uploads/2026/07/shutterstock_2651453695-1.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img entered error" />
+                      <Image src="/images/Staff.webp" alt="" width={382} height={398} className="jg-guided-img jg-guided-current-img entered error" />
                       <div className="jg-guided-img-label">
                         <h3 className="jg-guided-heading jg-icon-list" style={{"fontSize":"16px"}}>
-                          <Image src="/wp-content/uploads/2026/06/Fram54e.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon entered error" />
+                          <Image src="/images/Fram54e.svg" alt="check-icon" width={24} height={24} className="jg-guided-heading-icon entered error" />
                           Current Guided Tour Page:
                         </h3>
                         <strong className="jg-guided-current-label">
@@ -282,35 +285,11 @@ export default function Page55021(props: Record<string, string>) {
                       <li className="jg-guided-divider" style={{"fontSize":"20px"}}></li>
                       <li style={{"fontSize":"20px"}}>
                         <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full" href="/protect-your-job-while-in-treatment/">
-                          <Image src="/wp-content/uploads/2026/06/Frame45te4t.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon entered error" />
+                          <Image src="/images/Frame45te4t.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon entered error" />
                           View Full Guided Site Tour
                         </span>
                       </li>
                     </ul>
-                  </div>
-                </div>
-                <div className="jg-sc-guided jg-guided-none" id="jg-guided-none" style={{"display":"none"}}>
-                  <h3 className="jg-guided-heading jg-guided-none-heading" style={{"fontSize":"32px"}}>
-                    Start Full Guided Site Tour
-                  </h3>
-                  <div className="jg-guided-none-body">
-                    <div className="jg-guided-none-left">
-                      <a href="#" className="jg-guided-none-link jg-guided-none-p1" style={{"fontSize":"20px"}}></a>
-                    </div>
-                    <div className="jg-guided-col jg-guided-center">
-                      <div className="jg-guided-img-wrap">
-                        <Image src="/images/a0a6c9cd21c84889b34601bb3c2fbc3b.webp" alt="" width={382} height={398} className="jg-guided-img" />
-                        <div className="jg-guided-img-label jg-guided-img-label-cta">
-                          <span style={{"cursor":"pointer","fontSize":"20px"}} className="jg-guided-next-link jg-guided-view-full">
-                            <Image src="/images/d9d39b93d1be9517fe04969b782997a6.svg" alt="" width={28} height={28} className="jg-guided-view-full-icon" />
-                            View Full Guided Site Tour
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="jg-guided-none-right">
-                      <a href="#" className="jg-guided-none-link jg-guided-none-p2" style={{"fontSize":"20px"}}></a>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -372,7 +351,7 @@ export default function Page55021(props: Record<string, string>) {
             </div>
           </div>
         </div>
-        <div className="elementor-element elementor-element-6385bf8 e-con-full e-flex e-con e-child elementor-sticky elementor-sticky--active elementor-section--handles-inside elementor-sticky--effects" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;],&quot;sticky_offset&quot;:90,&quot;sticky_parent&quot;:&quot;yes&quot;,&quot;sticky_effects_offset&quot;:0,&quot;sticky_anchor_link_offset&quot;:0}">
+        <div className="elementor-element elementor-element-6385bf8 e-con-full e-flex e-con e-child elementor-sticky" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;],&quot;sticky_offset&quot;:90,&quot;sticky_parent&quot;:&quot;yes&quot;,&quot;sticky_effects_offset&quot;:0,&quot;sticky_anchor_link_offset&quot;:0}">
           <div className="elementor-element elementor-element-fe89770 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
             <div className="elementor-widget-container">
               <h3 className="elementor-heading-title elementor-size-default" style={{"fontSize":"20px"}}>
@@ -516,260 +495,7 @@ export default function Page55021(props: Record<string, string>) {
         <div className="elementor-element elementor-element-caa25fe elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
           <div className="elementor-widget-container">
             <div className="elementor-shortcode">
-              <div className="cards-wrapper">
-                <div className="cards" role="list">
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/therapy/does-insurance-cover-residential-mental-health-treatment/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Does Insurance Cover Residential Mental Health Treatment?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/personality-disorders/paranoid-personality-disorder/why-do-i-feel-like-everyone-hates-me/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Why Do I Feel Like Everyone Hates Me? Tips & What to Do
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/overstimulated-meaning/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What Are Common Signs of Overstimulation in Adults?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"block"}}>
-                    <Link href="/mental-health/what-to-expect-during-inpatient-mental-health-stay/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What to Expect at an Inpatient Behavioral Health Hospital
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/can-i-check-myself-into-a-mental-hospital/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        How to Admit Yourself to a Mental Hospital?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/signs-you-need-to-go-to-a-mental-hospital/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        When To Seek Inpatient Mental Health Treatment At A Hospital
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/emergency-psychiatric-services/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Inpatient Mental Health Crisis Treatment
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/how-long-is-inpatient-mental-health-treatment/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        How Long is Residential Mental Health Treatment?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/anxiety-disorders/obsessive-compulsive-disorder/real-event-ocd/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What is Real Event OCD? Signs, Symptoms, and Treatment
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/anxiety-disorders/obsessive-compulsive-disorder/harm-ocd/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What Is Harm OCD? Signs, Symptoms, and Treatment
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/why-do-i-zone-out-so-much/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Why Do I Zone Out So Much? Causes & What To Do
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/drug/zoloft/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Sertraline (Zoloft) - Uses, Side Effects, and More
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/anxiety-disorders/obsessive-compulsive-disorder/existential-ocd/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What is existential OCD: Signs, Symptoms, Triggers, & Treatment
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/vs/hyperfixation-vs-obsession/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Hyperfixation vs. Obsession: What’s the difference?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/psychotic-disorders/schizophrenia/am-i-crazy/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Am I Going Crazy? Understanding Your Mental Health Concerns
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/nightmare-disorders/common-nightmares-that-are-actually-warnings/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Are Your Nightmares Actually Trying to Warn You About Something?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/anxiety-disorders/obsessive-compulsive-disorder/obsessive-love-disorder/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What Is Obsessive Love Disorder? Symptoms, Causes, & Treatment
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/neurodevelopment-disorder/adhd/hyperfixate/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        What Is Hyperfixations? How to Manage It
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/anxiety-disorders/obsessive-compulsive-disorder/how-common-is-ocd/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Obsessive-Compulsive Disorder: How Common Is OCD?
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/anxiety-disorders/obsessive-compulsive-disorder/celebrities-with-ocd/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        10 Celebrities With OCD
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/outpatient/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential Outpatient Rehab Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/iop/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential IOP Rehab Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/dbt/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential DBT Therapy Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/therapy/emdr/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential EMDR Therapy Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Best Residential Depression Treatment Mental Health Centers in the Country
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/yorba-linda-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Depression Treatment near Yorba Linda (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/westminster-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Depression Treatment near Westminster (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/villa-park-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Villa Park Depression Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/tustin-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Tustin Depression Treatment (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/stanton-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Depression Treatment near Stanton (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/seal-beach-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Depression Treatment near Seal Beach (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/santa-ana-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Depression Treatment near Santa Ana (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/san-juan-capistrano-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Depression Treatment near San Juan Capistrano (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/san-clemente-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Depression Treatment near San Clemente (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                  <article className="card" role="listitem" style={{"display":"none"}}>
-                    <Link href="/mental-health/mood-disorders/depression/rancho-santa-margarita-ca/" style={{"fontSize":"16px"}}>
-                      <h3 style={{"fontSize":"16px"}}>
-                        Depression Treatment near Rancho Santa Margarita (Residential Mental Health Treatment Centers)
-                      </h3>
-                    </Link>
-                  </article>
-                </div>
-                <div id="button-wrapper">
-                  <button id="relatedloadMoreBtn">
-                    Load More
-                  </button>
-                </div>
-              </div>
+              <RelatedPages path={props.__path} />
             </div>
           </div>
         </div>
