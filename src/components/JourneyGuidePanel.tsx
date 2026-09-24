@@ -87,9 +87,9 @@ export default function JourneyGuidePanel() {
                 className={cls || undefined}
                 role="link"
                 tabIndex={open ? 0 : -1}
-                onClick={() => router.push(page.path)}
+                onClick={() => router.push(`${page.path}/`)}
                 onKeyDown={(e) => {
-                  if (e.key === "Enter") router.push(page.path);
+                  if (e.key === "Enter") router.push(`${page.path}/`);
                 }}
               >
                 <span className={`jg-step-bubble ${isVisited ? "jg-visited" : "jg-unvisited"}`}>{isVisited ? null : i + 1}</span>

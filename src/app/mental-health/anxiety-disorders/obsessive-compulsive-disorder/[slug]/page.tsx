@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import type { ComponentType } from "react";
 import MentalHealthAnxietyDisordersObsessiveCompulsiveDisorder from "@/components/templates/MentalHealthAnxietyDisordersObsessiveCompulsiveDisorder";
 import { fetchPageData } from "@/lib/wordpress";
+import { resolveTemplate, templateProps } from "@/components/templates/registry";
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -50,12 +51,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     fetchPageData(identityFor(slug), { present: true }),
   ]);
   if (!data) notFound();
-  const Template: ComponentType<Record<string, string>> = MentalHealthAnxietyDisordersObsessiveCompulsiveDisorder;
+  // The builder's template wins when the page has one; otherwise this route's own design.
+  const Template: ComponentType<Record<string, string>> = (await resolveTemplate(data)) ?? MentalHealthAnxietyDisordersObsessiveCompulsiveDisorder;
   const bodyClasses = " page-id-" + data.id + " elementor-page-" + data.id + (data.templates?.ids ?? []).map((n) => " elementor-page-" + n).join("");
   return (
     <>
       <script dangerouslySetInnerHTML={{ __html: "document.body.className=document.body.className.replace(/(?:^|\\s)(?:page-id|postid|elementor-page)-\\d+/g,\"\")+" + JSON.stringify(bodyClasses) + ";" }} />
-      <Template {...data.fields} __present={(data.present ?? []).join(",")} />
+      <Template {...templateProps(data, identityFor(slug).path)} />
     </>
   );
 }

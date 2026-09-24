@@ -1,85 +1,80 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Layout14 from '../layouts/Layout-14';
+import RelatedPages from '@/components/RelatedPages';
 
+// Facility photo slider, in the live site's order (image-carousel 8d14275).
 const gridData0 = [
-  {
-    "image": "/images/60bc95f8efac45d8aa5da28669841e60.webp"
-  },
-  {
-    "image": "/images/6f3b750517b36440e3b203bcfec3a49d.webp"
-  },
-  {
-    "image": "/images/6f3b750517b36440e3b203bcfec3a49d.webp"
-  },
-  {
-    "image": "/images/7af5e4605616ebe006c2e0ed0e8710a0.webp"
-  },
-  {
-    "image": "/images/6058a84c69aae0f2d4daeb785137886d.webp"
-  },
-  {
-    "image": "/images/aeea494f1fae3cae5cf888c7020314f8.webp"
-  },
-  {
-    "image": "/images/002f54c7be89f77c7caaa1b06f93e2b1.webp"
-  },
-  {
-    "image": "/images/a39dc71f286f9ce19bb01d2049cf700c.webp"
-  },
-  {
-    "image": "/images/65ee0c1f9380c91185f2d86360ad5d61.webp"
-  },
-  {
-    "image": "/images/04172189ce839057528456106b3c283e.webp"
-  },
-  {
-    "image": "/images/fdd15bf7c402e0f2ce78b9181f217060.webp"
-  },
-  {
-    "image": "/images/e53af798514d2ecbf8362f73f9b17506.webp"
-  },
-  {
-    "image": "/images/81f8fd8e6c3a55c2e7abceb35f6eef66.webp"
-  },
-  {
-    "image": "/images/2fd66655268de70bf9c4f16b11e0205c.webp"
-  },
-  {
-    "image": "/images/c75472e08a3ccee309ea7ee2afefa2ab.webp"
-  },
-  {
-    "image": "/images/cc6deb6863efa64f0d80975b7f024ca9.webp"
-  },
-  {
-    "image": "/images/4e140d279187f3c421180e82381df93f.webp"
-  },
-  {
-    "image": "/images/8e6d0a158b0ecfe9ffd4cd70aff0f736.webp"
-  }
+  { image: "/images/60bc95f8efac45d8aa5da28669841e60.webp", width: 7016, height: 4342 },
+  { image: "/images/6f3b750517b36440e3b203bcfec3a49d.webp", width: 2500, height: 1667 },
+  { image: "/images/7af5e4605616ebe006c2e0ed0e8710a0.webp", width: 2500, height: 1667 },
+  { image: "/images/6058a84c69aae0f2d4daeb785137886d.webp", width: 2500, height: 1667 },
+  { image: "/images/aeea494f1fae3cae5cf888c7020314f8.webp", width: 2500, height: 1667 },
+  { image: "/images/002f54c7be89f77c7caaa1b06f93e2b1.webp", width: 2500, height: 1667 },
+  { image: "/images/a39dc71f286f9ce19bb01d2049cf700c.webp", width: 2500, height: 1667 },
+  { image: "/images/65ee0c1f9380c91185f2d86360ad5d61.webp", width: 2500, height: 1667 },
+  { image: "/images/04172189ce839057528456106b3c283e.webp", width: 2500, height: 1667 },
+  { image: "/images/c0a55bb1312b126ec8f8527ce3452bf4.webp", width: 2500, height: 1667 },
+  { image: "/images/fdd15bf7c402e0f2ce78b9181f217060.webp", width: 980, height: 627 },
+  { image: "/images/e53af798514d2ecbf8362f73f9b17506.webp", width: 993, height: 583 },
+  { image: "/images/81f8fd8e6c3a55c2e7abceb35f6eef66.webp", width: 985, height: 640 },
+  { image: "/images/2fd66655268de70bf9c4f16b11e0205c.webp", width: 988, height: 586 },
+  { image: "/images/c75472e08a3ccee309ea7ee2afefa2ab.webp", width: 1006, height: 529 },
+  { image: "/images/cc6deb6863efa64f0d80975b7f024ca9.webp", width: 985, height: 616 },
+  { image: "/images/4e140d279187f3c421180e82381df93f.webp", width: 967, height: 632 },
+  { image: "/images/8e6d0a158b0ecfe9ffd4cd70aff0f736.webp", width: 993, height: 652 },
 ] as const;
 
+
+// Builder API field values used when WordPress is unreachable: the template's standard copy.
+// Gaps where the API stripped the town name are filled in by withGeo, like live data.
+const DEFAULTS: Record<string, string> = {
+  "h1": "Inpatient Mental Health Treatment Center Near [acf field=geo]",
+  "hero___content": "<p>We provide stabilization and mental health treatment near  in a home-like, structured setting.</p>",
+  "intro___heading": "Safe, Evidence-Based Behavioral Health Center Serving [acf field=geo]",
+  "intro___content": "<p>Our inpatient mental health treatment center near  provides a quiet, secure environment where individuals facing anxiety, PTSD, or depression can begin their recovery journey.&nbsp;<br />Our six-client facility offers round-the-clock support and personalized therapeutic care shaped by the recovery experiences of our founders.&nbsp;<br />With a strong focus on behavioral health, we create a structured, empathetic space that empowers clients to build coping skills and emotional strength for sustainable, long-term healing and mental health progress.</p>",
+  "facility-image-slider___heading": "Secure, Home-Like Mental Health Facilities Near [acf field=geo]",
+  "facility-image-slider___content": "<p>Our mental health treatment center near  provides an upscale living space with round-the-clock care from experienced clinicians.</p>",
+  "modalities___heading": "Evidence-Based Therapy and Behavioral Health Near [acf field=geo]",
+  "modalities___content": "<p>At Connections behavioral health center near , we implement evidence-based approaches to mental health care, drawing from the latest advancements in psychiatric treatment and therapeutic practices.</p>",
+  "what-is-treatment-like___heading": "What Is Mental Health Treatment Like Near [acf field=geo]?",
+  "what-is-treatment-like___content": "<p>Mental health programs in the  area offer support for those facing challenges like anxiety, depression, PTSD, bipolar disorder, and more. Care may include inpatient or outpatient options with treatment plans tailored to the individual. Therapies often include CBT, DBT, trauma-informed care, and may be supplemented with medication management and holistic services such as mindfulness or yoga. Facilities prioritize warmth, structure, and personalized healing environments. Community resources and peer-support groups help strengthen long-term outcomes.</p>",
+  "geo-stats___heading": "Mental Health Statistics in The U.S.",
+  "geo-stats___content": "<p>Mental health disorders affect nearly one in five adults in the U.S. annually. Common challenges include depression, anxiety, and substance use. Youth are especially vulnerable, with rising rates of suicide and school-related stress. Hospitalizations for serious mental illnesses like bipolar disorder and schizophrenia have increased nationwide. Barriers to care remain in some communities due to insurance coverage, income disparities, and access to services. Expanding early intervention, integrated care models, and education are key to improving mental health outcomes.</p>",
+  "geo-about-and-attractions___heading": "Activities That Support Mental Health & Wellbeing",
+  "geo-about-and-attractions___content": "<p>After completing treatment, many clients benefit from engaging in meaningful activities that support their mental wellness. Consider incorporating experiences like:</p>\n<ul>\n<li><strong>Nature walks or hiking:</strong> Access to peaceful, natural spaces can reduce stress, anxiety, and depressive symptoms.</li>\n<li><strong>Mindfulness or yoga sessions:</strong> Practicing meditation or movement-based therapy enhances emotional regulation and promotes calm.</li>\n<li><strong>Art therapy workshops:</strong> Creative expression fosters emotional processing, insight, and healing.</li>\n<li><strong>Community volunteering:</strong> Giving back boosts mood, promotes connection, and supports long-term recovery through purpose-driven engagement.</li>\n</ul>",
+  "faqs___heading": "Inpatient Mental Health Treatment FAQs",
+  "faqs___content": "<details>\n<summary><strong style=\"cursor: pointer;\"> OP Rehab FAQs</strong></summary>\n<h3><strong>What is inpatient mental health treatment like?</strong></h3>\n<p>Inpatient mental health treatment provides 24/7 care in a structured residential setting for those with severe or persistent mental health conditions.</p>\n<h3><strong>Who can benefit from behavioral health treatment?</strong></h3>\n<p>Behavioral health treatment is ideal for individuals with anxiety, PTSD, depression, or mood disorders needing focused, intensive care.</p>\n<h3><strong>What types of therapy are offered in inpatient programs?</strong></h3>\n<p>Inpatient programs offer CBT, DBT, group therapy, trauma-informed care, and more are typically offered.</p>\n<h3><strong>Does behavioral health care help with anxiety and depression?</strong></h3>\n<p>Yes—evidence-based therapies and psychiatric care are effective in treating both anxiety and depression.</p>\n<h3><strong>Are PTSD therapies available?</strong></h3>\n<p>Many programs include EMDR, trauma-focused CBT, and other modalities tailored for PTSD recovery.</p>\n<h3><strong>How long does inpatient treatment last?</strong></h3>\n<p>Inpatient treatment usually ranges from 2 to 6 weeks, depending on clinical needs.</p>\n<h3><strong>What can I expect during treatment?</strong></h3>\n<p>Expect daily therapy, psychiatric assessments, medication management, and wellness activities like yoga or art.</p>\n<h3><strong>Is treatment covered by insurance?</strong></h3>\n<p>Many mental health treatment centers accept a wide range of plans. It’s best to confirm coverage directly.</p>\n<h3><strong>Can family be involved in the process?</strong></h3>\n<p>Yes—family therapy and support services are often included to strengthen healing and relationships.</p>\n<h3><strong>What conditions are treated?</strong></h3>\n<p>Programs typically address depression, anxiety, PTSD, bipolar disorder, and other serious mental health diagnoses.</p>\n</details>",
+  "cta---conculsion___heading": "Healing starts here. Connect with our team to begin your journey toward stabilization and wellness.",
+};
+
+// The Builder API strips [acf field=geo] from HTML fields before sending them, leaving a gap
+// ("treatment near  in a home-like…", "in the  area", "<summary> OP Rehab FAQs"); live renders
+// the town there. Headings still carry the shortcode itself. Once the plugin expands shortcodes
+// these rules stop matching.
+function withGeo(value: string, props: Record<string, string>): string {
+  const geo = props.geo ?? "";
+  return value
+    .replace(/\[acf field=([\w-]+)\]/g, (_, key: string) => props[key] ?? props[key.replace(/-/g, "_")] ?? "")
+    .replace(/\bnear (?=[ ,])/g, `near ${geo}`)
+    .replace(/\bthe (?= area\b)/g, `the ${geo}`)
+    .replace(/(<summary>(?:<strong[^>]*>)?) (?=OP Rehab FAQs)/, `$1${geo} `);
+}
+
+const escapeHtml = (s: string) => s.replace(/&(?![#\w]+;)/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 export default function Page7552(props: Record<string, string>) {
   const __presentIds = (props.__present ?? "").split(",").filter(Boolean);
   const __present = (id: string) => __presentIds.length === 0 || __presentIds.includes(id);
-  const intro___content = props.intro___content ?? "Connections offers therapy near South Gate in a compassionate, six-person environment that emphasizes safety and support. Our team draws from personal recovery and clinical expertise to deliver high-quality care. Services include individualized therapy, medication assistance, and 24/7 monitoring for anxiety, PTSD, depression, and related conditions.";
-  const modalities___content = props.modalities___content ?? "Our mental health program near South Gate emphasizes evidence-based therapy and clinical excellence, grounded in recent psychiatric research.";
-  const facility_image_slider___content = props.facility_image_slider___content ?? "Our facilities near South Gate provide a safe, high-end environment for mental health treatment with round-the-clock clinical care.";
-  const hero___content = props.hero___content ?? "Access science-backed mental health treatment near South Gate in a welcoming, structured care environment.";
-  const cta___conculsion___heading = props.cta___conculsion___heading ?? "Rediscover balance and stability. Call today for compassionate mental health treatment.";
-  const what_is_treatment_like___heading = props.what_is_treatment_like___heading ?? "What Is the Mental Health Treatment Experience Like Near South Gate?";
-  const modalities___heading = props.modalities___heading ?? "Outcome-Focused Behavioral Health Treatment Near South Gate";
-  const faqs___heading = props.faqs___heading ?? "Inpatient Mental Health Treatment near South Gate FAQs";
-  const geo_stats___heading = props.geo_stats___heading ?? "Mental Health Statistics in South Gate";
-  const geo_about_and_attractions___heading = props.geo_about_and_attractions___heading ?? "Mental Health Activities in South Gate";
-  const brand = props.brand ?? "Connections Mental Health";
-  const geo = props.geo ?? "South Gate";
-  const near_in = props.near_in ?? "near";
-  const state = props.state ?? "CA";
+  // A field's value with the town filled in; missing fields fall back to DEFAULTS.
+  const text = (key: string) => withGeo(props[key] ?? DEFAULTS[key] ?? "", props);
+  // Fields are HTML (wysiwyg) or plain strings; render both as markup, plain ones in a <p>.
+  const html = (key: string) => {
+    const value = text(key).trim();
+    return { __html: /<[a-z][\s\S]*>/i.test(value) ? value : `<p>${escapeHtml(value)}</p>` };
+  };
   return (
-    <Layout14>
+    <div data-elementor-type="single-page" data-elementor-id="7552" className="elementor elementor-7552 elementor-location-single">
       <section className="elementor-section elementor-top-section elementor-element elementor-element-f49a320 elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-settings="&#123;&quot;background_background&quot;:&quot;classic&quot;&#125;">
         <div className="elementor-background-overlay"></div>
         <div className="elementor-container elementor-column-gap-default">
@@ -87,14 +82,12 @@ export default function Page7552(props: Record<string, string>) {
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-2d6ba2f elementor-widget__width-initial elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                 <div className="elementor-widget-container">
-                  <h1 className="elementor-heading-title elementor-size-default">Inpatient Mental Health Treatment Center Near {geo}</h1>
+                  <h1 className="elementor-heading-title elementor-size-default" dangerouslySetInnerHTML={{ __html: text("h1") }} />
                 </div>
               </div>
               {__present("16825d3") ? (
 <div className="elementor-element elementor-element-16825d3 elementor-widget__width-inherit elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                <div className="elementor-widget-container">
-                  <p>{hero___content}</p>
-                </div>
+                <div className="elementor-widget-container" dangerouslySetInnerHTML={html("hero___content")} />
               </div>
 ) : null}
               <div className="elementor-element elementor-element-aa95672 elementor-align-center elementor-mobile-align-center elementor-widget__width-auto elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
@@ -130,7 +123,7 @@ export default function Page7552(props: Record<string, string>) {
               {__present("9c5cda1") ? (
 <div className="elementor-element elementor-element-9c5cda1 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                 <div className="elementor-widget-container">
-                  <h2 className="elementor-heading-title elementor-size-default">Behavioral Health Center Near {geo}</h2>
+                  <h2 className="elementor-heading-title elementor-size-default" dangerouslySetInnerHTML={{ __html: text("intro___heading") }} />
                 </div>
               </div>
 ) : null}
@@ -143,9 +136,7 @@ export default function Page7552(props: Record<string, string>) {
               </div>
               {__present("34f160e") ? (
 <div className="elementor-element elementor-element-34f160e elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                <div className="elementor-widget-container">
-                  <p>{intro___content}</p>
-                </div>
+                <div className="elementor-widget-container" dangerouslySetInnerHTML={html("intro___content")} />
               </div>
 ) : null}
             </div>
@@ -310,7 +301,7 @@ export default function Page7552(props: Record<string, string>) {
               {__present("ec3c7c3") ? (
 <div className="elementor-element elementor-element-ec3c7c3 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                 <div className="elementor-widget-container">
-                  <h2 className="elementor-heading-title elementor-size-default">Comfortable &amp; Evidence-Based Mental Health Treatment Near {geo}</h2>
+                  <h2 className="elementor-heading-title elementor-size-default" dangerouslySetInnerHTML={{ __html: text("facility-image-slider___heading") }} />
                 </div>
               </div>
 ) : null}
@@ -323,9 +314,7 @@ export default function Page7552(props: Record<string, string>) {
               </div>
               {__present("31aa599") ? (
 <div className="elementor-element elementor-element-31aa599 elementor-widget__width-initial elementor-hidden-mobile elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                <div className="elementor-widget-container">
-                  <p>{facility_image_slider___content}</p>
-                </div>
+                <div className="elementor-widget-container" dangerouslySetInnerHTML={html("facility-image-slider___content")} />
               </div>
 ) : null}
               <div className="elementor-element elementor-element-8d14275 elementor-arrows-position-outside elementor-widget elementor-widget-image-carousel e-widget-swiper" data-settings="&#123;&quot;slides_to_show&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;arrows&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;effect&quot;:&quot;slide&quot;,&quot;speed&quot;:500&#125;" data-widget_type="image-carousel.default">
@@ -333,9 +322,9 @@ export default function Page7552(props: Record<string, string>) {
                   <div dir="ltr" role="region" className="elementor-image-carousel-wrapper swiper swiper-initialized swiper-horizontal swiper-pointer-events" aria-label="Image Carousel" aria-roledescription="carousel">
                     <div id="swiper-wrapper-41698e0bc86e54e8" className="elementor-image-carousel swiper-wrapper" aria-live="off">
                       {gridData0.map((item, i) => (
-                        <div key={i} role="group" className="swiper-slide swiper-slide-active" aria-label="1 / 18" aria-roledescription="slide">
+                        <div key={i} role="group" className="swiper-slide" aria-label={`${i + 1} / ${gridData0.length}`} aria-roledescription="slide">
                           <figure className="swiper-slide-inner">
-                            <Image src={item.image} width={7016} height={4342} alt="An image of a living room at the connections mental health house in villa park, california" className="swiper-slide-image entered error" />
+                            <Image src={item.image} width={item.width} height={item.height} alt="An image of a living room at the connections mental health house in villa park, california" className="swiper-slide-image entered error" />
                           </figure>
                         </div>
                       ))}
@@ -384,7 +373,7 @@ export default function Page7552(props: Record<string, string>) {
               {__present("5e86daf") ? (
 <div className="elementor-element elementor-element-5e86daf elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                 <div className="elementor-widget-container">
-                  <h2 className="elementor-heading-title elementor-size-default">{modalities___heading}</h2>
+                  <h2 className="elementor-heading-title elementor-size-default" dangerouslySetInnerHTML={{ __html: text("modalities___heading") }} />
                 </div>
               </div>
 ) : null}
@@ -480,9 +469,7 @@ export default function Page7552(props: Record<string, string>) {
               </section>
               {__present("5239957") ? (
 <div className="elementor-element elementor-element-5239957 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                <div className="elementor-widget-container">
-                  <p>{modalities___content}</p>
-                </div>
+                <div className="elementor-widget-container" dangerouslySetInnerHTML={html("modalities___content")} />
               </div>
 ) : null}
               <div className="elementor-element elementor-element-bab471a elementor-align-left elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
@@ -507,15 +494,13 @@ export default function Page7552(props: Record<string, string>) {
               {__present("33d8edb") ? (
 <div className="elementor-element elementor-element-33d8edb elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                 <div className="elementor-widget-container">
-                  <h2 className="elementor-heading-title elementor-size-default">{what_is_treatment_like___heading}</h2>
+                  <h2 className="elementor-heading-title elementor-size-default" dangerouslySetInnerHTML={{ __html: text("what-is-treatment-like___heading") }} />
                 </div>
               </div>
 ) : null}
               {__present("a642b27") ? (
 <div className="elementor-element elementor-element-a642b27 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                <div className="elementor-widget-container">
-                  <p>Inpatient mental health treatment centers {near_in} {geo} deliver well-rounded mental health treatment for individuals living with conditions such as PTSD, depression, anxiety, and bipolar disorder. Both inpatient and outpatient programs are available, offering customized care plans based on each person’s unique journey. Facilities use a blend of evidence-based techniques—including CBT, DBT, and trauma-informed therapy—paired with medication management and complementary practices like mindfulnes</p>
-                </div>
+                <div className="elementor-widget-container" dangerouslySetInnerHTML={html("what-is-treatment-like___content")} />
               </div>
 ) : null}
               <div className="elementor-element elementor-element-6f2883f elementor-align-left elementor-mobile-align-center elementor-tablet-align-center elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
@@ -751,7 +736,7 @@ export default function Page7552(props: Record<string, string>) {
               {__present("4cf43f8") ? (
 <div className="elementor-element elementor-element-4cf43f8 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                 <div className="elementor-widget-container">
-                  <h2 className="elementor-heading-title elementor-size-default">{geo_stats___heading}</h2>
+                  <h2 className="elementor-heading-title elementor-size-default" dangerouslySetInnerHTML={{ __html: text("geo-stats___heading") }} />
                 </div>
               </div>
 ) : null}
@@ -764,11 +749,7 @@ export default function Page7552(props: Record<string, string>) {
               </div>
               {__present("c6cb157") ? (
 <div className="elementor-element elementor-element-c6cb157 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                <div className="elementor-widget-container">
-                  <p>Mental health is a pressing concern in {geo}, California, where residents experience higher rates of psychological distress compared to county and state averages. According to recent data, 33% of adults in {geo} report feeling down, depressed, or hopeless, surpassing the county average of 27.2% and the state average of 27.1%. Additionally, 43.9% of residents have trouble sleeping or sleep too much, indicating widespread sleep disturbances that can exacerbate mental health issues.</p>
-                  <p>Socioeconomic factors contribute to these challenges. As of 2023, approximately 13.2% of {geo} residents live below the poverty line, and the city has a significant proportion of households facing housing cost burdens. Exposure to community violence and crime further compounds stress levels, increasing the risk of anxiety and depression among residents.</p>
-                  <p>{brand} Center plays a vital role in addressing these challenges by offering comprehensive mental health services tailored to {geo}’s diverse population. Their efforts contribute significantly to improving mental health outcomes in the community.</p>
-                </div>
+                <div className="elementor-widget-container" dangerouslySetInnerHTML={html("geo-stats___content")} />
               </div>
 ) : null}
             </div>
@@ -782,7 +763,7 @@ export default function Page7552(props: Record<string, string>) {
               {__present("844055e") ? (
 <div className="elementor-element elementor-element-844055e elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                 <div className="elementor-widget-container">
-                  <h2 className="elementor-heading-title elementor-size-default">{geo_about_and_attractions___heading}</h2>
+                  <h2 className="elementor-heading-title elementor-size-default" dangerouslySetInnerHTML={{ __html: text("geo-about-and-attractions___heading") }} />
                 </div>
               </div>
 ) : null}
@@ -795,51 +776,18 @@ export default function Page7552(props: Record<string, string>) {
               </div>
               {__present("9e5d7fb") ? (
 <div className="elementor-element elementor-element-9e5d7fb elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                <div className="elementor-widget-container">
-                  <p>Following your stay at our {geo} mental health treatment center, many clients find renewed balance and well-being by engaging in local activities that encourage mindfulness, creativity, and a connection to the natural world. Establishing healthy daily habits and exploring new interests is an important part of sustaining long-term mental wellness. Explore some mental health-friendly activities in and around {geo} such as:</p>
-                  <ul>
-                    <li>
-                      <a href="https://maps.app.goo.gl/jMfv5M6N9k65rGiH7">
-                        <strong>South Gate Park</strong>
-                      </a>
-                      {" "}
-                      <strong>(4900 Southern Ave, {geo}, {state} 90280)</strong>
-                      <br />
-                      {" This expansive park offers tree-lined walking paths, picnic areas, and a tranquil atmosphere—perfect for peaceful reflection, mindful movement, and community connection."}
-                    </li>
-                    <li>
-                      <a href="https://maps.app.goo.gl/on8aQvybtRuqM3126">
-                        <strong>Hollydale Regional Park</strong>
-                      </a>
-                      {" "}
-                      <strong>(12221 Industrial Ave, {geo}, {state} 90280)</strong>
-                      <br />
-                      {" A quiet space with grassy fields, shaded benches, and open air—ideal for journaling, reading, or meditation in a restorative outdoor setting."}
-                    </li>
-                    <li>
-                      <strong>Azalea Regional Shopping Center Art Installations</strong>
-                      {" "}
-                      <strong>(4765 Firestone Blvd, {geo}, {state} 90280)</strong>
-                      <br />
-                      {" Enjoy local public art displays and light shopping—creative exposure in everyday spaces can stimulate reflection, expression, and mood elevation."}
-                    </li>
-                    <li>
-                      <a href="https://maps.app.goo.gl/AZKCtUpPa12UiJpF7">
-                        <strong>South Gate Library</strong>
-                      </a>
-                      {" "}
-                      <strong>(8680 California Ave, {geo}, {state} 90280)</strong>
-                      <br />
-                      {" Reading, journaling, or attending a quiet workshop in this peaceful library can foster emotional regulation and mental stimulation in a supportive indoor setting."}
-                    </li>
-                  </ul>
-                </div>
+                <div className="elementor-widget-container" dangerouslySetInnerHTML={html("geo-about-and-attractions___content")} />
               </div>
 ) : null}
             </div>
           </div>
         </div>
       </section>
+      {/* Live's schema HTML widget (3ff4f1d) sits here; its script references globals the site never
+          defines, so it throws and outputs nothing. Only the empty container is kept, for its spacing. */}
+      <div className="elementor-element elementor-element-c9182d2 e-flex e-con-boxed e-con e-parent">
+        <div className="e-con-inner"></div>
+      </div>
       <section className="elementor-section elementor-top-section elementor-element elementor-element-4ecc35e elementor-section-boxed elementor-section-height-default elementor-section-height-default">
         <div className="elementor-container elementor-column-gap-default">
           <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-48dcf44">
@@ -847,7 +795,7 @@ export default function Page7552(props: Record<string, string>) {
               {__present("24b1d24") ? (
 <div className="elementor-element elementor-element-24b1d24 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                 <div className="elementor-widget-container">
-                  <h2 className="elementor-heading-title elementor-size-default">{faqs___heading}</h2>
+                  <h2 className="elementor-heading-title elementor-size-default" dangerouslySetInnerHTML={{ __html: text("faqs___heading") }} />
                 </div>
               </div>
 ) : null}
@@ -860,33 +808,7 @@ export default function Page7552(props: Record<string, string>) {
               </div>
               {__present("0614418") ? (
 <div className="elementor-element elementor-element-0614418 elementor-widget__width-initial elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
-                <div className="elementor-widget-container">
-                  <details>
-                    <summary>
-                      <strong>{geo} OP Rehab FAQs</strong>
-                    </summary>
-                    <h3>What is inpatient mental health treatment like {near_in} {geo}?</h3>
-                    <p>Near {geo}, inpatient mental health treatment provides 24-hour clinical support in a structured residential setting. Programs focus on stabilizing acute symptoms through therapy, medication, and recovery-based routines designed for long-term healing.</p>
-                    <h3>Who can benefit from behavioral health treatment {near_in} {geo}?</h3>
-                    <p>Behavioral health treatment {near_in} {geo} supports individuals managing conditions like PTSD, anxiety, depression, or mood disorders. It is especially helpful for those who need consistent therapeutic care beyond what outpatient treatment can provide.</p>
-                    <h3>What kinds of therapy are available in inpatient programs {near_in} {geo}?</h3>
-                    <p>Inpatient programs {near_in} {geo} often include CBT, DBT, EMDR, trauma-informed therapy, and group counseling. These services are customized to support clients’ unique emotional and behavioral health needs.</p>
-                    <h3>Is anxiety and depression treated in inpatient care in {geo}?</h3>
-                    <p>Yes, inpatient care {near_in} {geo} is designed to address anxiety and depression through individualized therapy, psychiatric care, and a healing-focused environment that encourages symptom reduction and personal growth.</p>
-                    <h3>Are there PTSD-focused treatment options {near_in} {geo}?</h3>
-                    <p>Yes, PTSD treatment options {near_in} {geo} include EMDR and other trauma-informed methods. These approaches allow individuals to process trauma safely and build stronger emotional coping skills.</p>
-                    <h3>How long does inpatient behavioral health treatment {near_in} {geo} usually last?</h3>
-                    <p>Treatment usually spans two to six weeks. The length depends on the client’s condition, progress in therapy, and clinical goals established with their care team.</p>
-                    <h3>What should I expect from an inpatient mental health program {near_in} {geo}?</h3>
-                    <p>Expect a safe, structured environment with a daily schedule of therapy, medication management, and therapeutic activities like mindfulness or expressive arts—all aimed at supporting behavioral health recovery.</p>
-                    <h3>Is insurance accepted for inpatient care {near_in} {geo}?</h3>
-                    <p>Yes, treatment facilities {near_in} Southgate accept insurance. Clients should confirm benefit details with their insurer and the provider to ensure clarity on coverage and costs.</p>
-                    <h3>Can family be involved in behavioral health treatment {near_in} {geo}?</h3>
-                    <p>Family participation is often part of the recovery plan. Many programs {near_in} {geo} include family counseling, education, and communication strategies to support long-term healing.</p>
-                    <h3>What conditions are treated in inpatient mental health programs in {geo}?</h3>
-                    <p>Inpatient programs {near_in} {geo} treat anxiety, depression, PTSD, mood disorders, and co-occurring substance use issues. Programs are customized to meet the specific needs of each client.</p>
-                  </details>
-                </div>
+                <div className="elementor-widget-container" dangerouslySetInnerHTML={html("faqs___content")} />
               </div>
 ) : null}
             </div>
@@ -906,6 +828,24 @@ export default function Page7552(props: Record<string, string>) {
           </div>
         </div>
       </section>
+      <div className="elementor-element elementor-element-3ae895c e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+      <div className="e-con-inner">
+        <div className="elementor-element elementor-element-c211fdf elementor-widget elementor-widget-heading" data-widget_type="heading.default">
+          <div className="elementor-widget-container">
+            <h2 className="elementor-heading-title elementor-size-default">
+              Related Pages
+            </h2>
+          </div>
+        </div>
+        <div className="elementor-element elementor-element-6a49119 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
+          <div className="elementor-widget-container">
+            <div className="elementor-shortcode">
+              <RelatedPages path={props.__path} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
       <section className="elementor-section elementor-top-section elementor-element elementor-element-adc18a1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-settings="&#123;&quot;background_background&quot;:&quot;classic&quot;&#125;">
         <div className="elementor-container elementor-column-gap-default">
           <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-498eade">
@@ -913,7 +853,7 @@ export default function Page7552(props: Record<string, string>) {
               {__present("bbf730b") ? (
 <div className="elementor-element elementor-element-bbf730b elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                 <div className="elementor-widget-container">
-                  <h2 className="elementor-heading-title elementor-size-default">{cta___conculsion___heading}</h2>
+                  <h2 className="elementor-heading-title elementor-size-default" dangerouslySetInnerHTML={{ __html: text("cta---conculsion___heading") }} />
                 </div>
               </div>
 ) : null}
@@ -935,6 +875,6 @@ export default function Page7552(props: Record<string, string>) {
           </div>
         </div>
       </section>
-    </Layout14>
+    </div>
   );
 }
