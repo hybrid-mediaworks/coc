@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./base.css";
+import "./shared/wpr-backgrounds.css";
 import BodyClassSync from "@/components/BodyClassSync";
 import JourneyGuidePanel from "@/components/JourneyGuidePanel";
 import Carousels from "@/components/Carousels";
