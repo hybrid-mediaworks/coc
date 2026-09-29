@@ -240,7 +240,7 @@ export default function Page54508(props: Record<string, string>) {
                         </svg>
                       </span>
                       <span className="elementor-icon-list-text" style={{"fontSize":"16px"}}>
-                        In network with most major insurances
+                        Most major insurance accepted
                       </span>
                     </li>
                   </ul>
