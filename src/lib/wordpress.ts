@@ -282,3 +282,40 @@ export async function fetchBlogPosts(
     return null;
   }
 }
+
+// The WordPress "authors" post behind /staff/<slug>/. Some staff URLs also have a Staff child
+// page with the same slug, and the builder API answers with that page (its id, its landscape
+// featured image); the live site renders the authors post, whose id Elementor's scripts and
+// body classes carry and whose featured image is the square headshot in the bio.
+// Returns null when there is no such post or the request fails.
+export type StaffPost = {
+  id: number;
+  image: { id: number; src: string; width: number; height: number } | null;
+};
+
+export async function fetchStaffPost(slug: string): Promise<StaffPost | null> {
+  try {
+    const res = await fetch(
+      `${WORDPRESS_URL}/wp-json/wp/v2/authors?slug=${encodeURIComponent(slug)}&_fields=id,featured_media,_links,_embedded&_embed=wp:featuredmedia`,
+      { next: { revalidate: REVALIDATE }, signal: AbortSignal.timeout(SECTION_TIMEOUT_MS) }
+    );
+    if (!res.ok) return null;
+    const data = await res.json();
+    const post = Array.isArray(data) ? data[0] : null;
+    if (typeof post?.id !== "number") return null;
+    const media = post._embedded?.["wp:featuredmedia"]?.[0];
+    return {
+      id: post.id,
+      image: media?.source_url
+        ? {
+            id: media.id,
+            src: media.source_url,
+            width: media.media_details?.width ?? 240,
+            height: media.media_details?.height ?? 240,
+          }
+        : null,
+    };
+  } catch {
+    return null;
+  }
+}

@@ -383,6 +383,7 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+.team-name-sty a{ text-decoration:none !important; }
 .map-prompt-container { position: absolute; inset: 0px; background: rgba(255, 255, 255, 0.9); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 1000; padding: 20px; text-align: center; }
 .map-prompt-container h3 { margin-top: 0px; color: rgb(51, 51, 51); }
 .map-prompt-container select { padding: 10px; font-size: 16px; border: 1px solid rgb(221, 221, 221); border-radius: 4px; margin: 10px 0px; width: 100%; max-width: 300px; }
@@ -480,4 +481,16 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
 }
 @media (max-width: 480px) {
   #jgp-panel { width: calc(100vw - 50px); }
+  h2.elementor-heading-title, h3.elementor-heading-title {
+    font-family:"Poppins", Sans-serif !important;
+    font-size: 24px !important;
+  }
+  .elementor-widget-n-accordion .e-n-accordion-item-title-text{
+    font-family:"Poppins", Sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 500;
+  }
+  .elementor-widget-icon-box.elementor-mobile-position-block-start .elementor-icon-box-wrapper{
+    align-items: center !important;
+  }
 }

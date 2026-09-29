@@ -1,12 +1,25 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { BlogPagination, FeaturedCard, GridCard, loadBlogArchive, parseBlogPage } from '@/components/BlogArchive';
 
 
-export default function Page55388(props: Record<string, string>) {
+export default async function Page55388(props: Record<string, string>) {
   const __presentIds = (props.__present ?? "").split(",").filter(Boolean);
   const __present = (id: string) => __presentIds.length === 0 || __presentIds.includes(id);
-  const near_in = props.near_in ?? "Near";
+  const first_name = props.first_name ?? "";
+  const last_name = props.last_name ?? "";
+  const bio = props.bio ?? "";
+  const near_in = props.near_in ?? "";
+  const linkedin_url = props.linkedin_url ?? "";
+  const titlelicense = props.titlelicense ?? "";
+  const featured_image = props.featured_image || "";
+  // Same feed and ?page=N pagination as /mental-health/blog; __path/__page come from the route.
+  const blogPath = (props.__path ?? "").replace(/\/+$/, "");
+  const blogPage = parseBlogPage(props.__page || undefined);
+  const blog = blogPage === null ? null : await loadBlogArchive(blogPage);
+  if (!blog) notFound();
   return (
     <>
     <div className="wp-singular authors-template-default single single-authors postid-54343 wp-embed-responsive wp-theme-hello-elementor facilit-gallery--empty hello-elementor-default elementor-default elementor-kit-6 elementor-page-55388">
@@ -34,34 +47,35 @@ export default function Page55388(props: Record<string, string>) {
             <div className="elementor-element elementor-element-3c8c184 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
               <div className="elementor-widget-container">
                 <h2 className="elementor-heading-title elementor-size-default" style={{"fontSize":"38px"}}>
-                  Amy
+                  {first_name}
                 </h2>
               </div>
             </div>
             <div className="elementor-element elementor-element-86c21cf elementor-widget elementor-widget-heading" data-widget_type="heading.default">
               <div className="elementor-widget-container">
                 <h2 className="elementor-heading-title elementor-size-default" style={{"fontSize":"38px"}}>
-                  Leifeste
+                  {last_name}
                 </h2>
               </div>
             </div>
           </div>
           <div className="elementor-element elementor-element-af7560e elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
-              <Image src="/images/041644d05bb1884e01e4d67ff21f7af4.webp" alt="" width={240} height={240} className="attachment-full size-full wp-image-60377 entered error" />
+              {/* Plain <img>, as WordPress renders it: next/image adds an inline style and drops `sizes` when unoptimized. */}
+              {featured_image ? <img src={featured_image} alt={`${first_name} ${last_name}`.trim()} width={Number(props.__imageWidth) || 240} height={Number(props.__imageHeight) || 240} sizes="(max-width: 240px) 100vw, 240px" fetchPriority="high" className={`attachment-full size-full${props.__imageId ? ` wp-image-${props.__imageId}` : ""}`} /> : null}
             </div>
           </div>
           <div className="elementor-element elementor-element-f1b1ae8 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
             <div className="elementor-widget-container">
               <p className="elementor-heading-title elementor-size-default" style={{"fontSize":"28px"}}>
-                Writer
+                {titlelicense}
               </p>
             </div>
           </div>
           <div className="elementor-element elementor-element-15bd13a elementor-view-default elementor-widget elementor-widget-icon" data-widget_type="icon.default">
             <div className="elementor-widget-container">
               <div className="elementor-icon-wrapper">
-                <a className="elementor-icon" href="https://www.linkedin.com/in/amy-leifeste/" style={{"fontSize":"35px"}}>
+                <a className="elementor-icon" href={linkedin_url || undefined} style={{"fontSize":"35px"}}>
                   <svg aria-hidden="true" className="e-font-icon-svg e-fab-linkedin-in" viewBox="0 0 448 512">
                     <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
                   </svg>
@@ -75,13 +89,13 @@ export default function Page55388(props: Record<string, string>) {
           <div className="elementor-element elementor-element-2eb38d2 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
             <div className="elementor-widget-container">
               <h1 className="elementor-heading-title elementor-size-default" style={{"fontSize":"32px"}}>
-                About Amy
+                About {first_name} {last_name}
               </h1>
             </div>
           </div>
           <div className="elementor-element elementor-element-4715019 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
-              Amy Leifeste is a trauma-informed content writer and editor specializing in behavioral health and wellness. With 5+ years working in content and behavioral health, Amy has spent much of her career helping brands communicate in a compassionate and accessible way for the user. She is deeply passionate about creating meaningful and informative content that empowers those struggling with substance and mental health issues to achieve lasting recovery.
+              {bio}
             </div>
           </div>
         </div>
@@ -114,53 +128,7 @@ export default function Page55388(props: Record<string, string>) {
           <div className="elementor-element elementor-element-747d843 elementor-grid-1 elementor-grid-tablet-1 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-settings="{&quot;template_id&quot;:&quot;54548&quot;,&quot;auto_scroll&quot;:&quot;yes&quot;,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:48,&quot;sizes&quot;:[]},&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:32,&quot;sizes&quot;:[]},&quot;columns&quot;:1,&quot;columns_tablet&quot;:1,&quot;_skin&quot;:&quot;post&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\\&quot;loop-item\\&quot;]&quot;,&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="loop-grid.post">
             <div className="elementor-widget-container">
               <div className="elementor-loop-container elementor-grid" role="list">
-                <div className="elementor elementor-54548 e-loop-item e-loop-item-54868 post-54868 page type-page status-publish has-post-thumbnail hentry category-pgtemplate-acf-blog page_template_type-blog page_template_type-cro1-blog">
-                  <div className="elementor-element elementor-element-d27f5d5 blog-card-v1 e-flex e-con-boxed e-con e-parent e-lazyloaded">
-                    <div className="e-con-inner">
-                      <div className="elementor-element elementor-element-33787913 elementor-widget__width-initial elementor-widget elementor-widget-image" data-widget_type="image.default">
-                        <div className="elementor-widget-container">
-                          <Link href="/mental-health/therapy/does-insurance-cover-residential-mental-health-treatment/" style={{"fontSize":"16px"}}>
-                            <Image src="/images/00ce44d668da2f26957081222f71256c.webp" alt="" width={1920} height={436} className="attachment-full size-full wp-image-54438 entered error" />
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="elementor-element elementor-element-5f85ab4b e-con-full e-flex e-con e-child">
-                        <div className="elementor-element elementor-element-757665c7 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                          <div className="elementor-widget-container">
-                            <h5 className="elementor-heading-title elementor-size-default" style={{"fontSize":"26px"}}>
-                              <Link href="/mental-health/therapy/does-insurance-cover-residential-mental-health-treatment/" style={{"fontSize":"26px"}}>
-                                Does Insurance Cover Residential Mental Health Treatment?
-                              </Link>
-                            </h5>
-                          </div>
-                        </div>
-                        <div className="elementor-element elementor-element-63aa943d elementor-widget elementor-widget-button" data-widget_type="button.default">
-                          <div className="elementor-widget-container">
-                            <div className="elementor-button-wrapper">
-                              <Link className="elementor-button elementor-button-link elementor-size-sm" href="/mental-health/therapy/does-insurance-cover-residential-mental-health-treatment/" style={{"fontSize":"16px"}}>
-                                <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
-                                  <span className="elementor-button-icon" style={{"fontSize":"16px"}}>
-                                    <svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-                                      <mask id="mask0_2272_2170" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width={24} height={24}>
-                                        <rect width={24} height={24} fill="#D9D9D9"></rect>
-                                      </mask>
-                                      <g mask="url(#mask0_2272_2170)">
-                                        <path d="M15 19L13.575 17.6L18.175 13H2V11H18.175L13.6 6.4L15 5L22 12L15 19Z" fill="#74AFB2"></path>
-                                      </g>
-                                    </svg>
-                                  </span>
-                                  <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                                    Learn More
-                                  </span>
-                                </span>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {blog.featuredPost ? <FeaturedCard post={blog.featuredPost} /> : null}
               </div>
             </div>
           </div>
@@ -176,319 +144,12 @@ export default function Page55388(props: Record<string, string>) {
           <div className="elementor-element elementor-element-55e444e archive-blog-posts-loop-grid elementor-grid-2 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-settings="{&quot;template_id&quot;:&quot;54536&quot;,&quot;pagination_type&quot;:&quot;numbers&quot;,&quot;pagination_load_type&quot;:&quot;ajax&quot;,&quot;auto_scroll&quot;:&quot;yes&quot;,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:48,&quot;sizes&quot;:[]},&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:32,&quot;sizes&quot;:[]},&quot;columns&quot;:2,&quot;_skin&quot;:&quot;post&quot;,&quot;columns_tablet&quot;:&quot;2&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\\&quot;loop-item\\&quot;]&quot;,&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="loop-grid.post">
             <div className="elementor-widget-container">
               <div className="elementor-loop-container elementor-grid" role="list">
-                <div className="elementor elementor-54536 e-loop-item e-loop-item-6666 post-6666 page type-page status-publish hentry category-pgtemplate-acf-blog page_template_type-blog page_template_type-cro1-blog">
-                  <div className="elementor-element elementor-element-d27f5d5 blog-card-v1 e-flex e-con-boxed e-con e-parent e-lazyloaded">
-                    <div className="e-con-inner">
-                      <div className="elementor-element elementor-element-5f85ab4b e-con-full e-flex e-con e-child">
-                        <div className="elementor-element elementor-element-33787913 elementor-widget elementor-widget-image" data-widget_type="image.default">
-                          <div className="elementor-widget-container">
-                            <Link href="/mental-health/personality-disorders/paranoid-personality-disorder/why-do-i-feel-like-everyone-hates-me/" style={{"fontSize":"16px"}}>
-                              <Image src="/images/5a1cfc37c5f812440fa391ca2c68b620.webp" alt="" width={676} height={476} className="attachment-full size-full wp-image-57115 entered error" />
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="elementor-element elementor-element-757665c7 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                          <div className="elementor-widget-container">
-                            <h5 className="elementor-heading-title elementor-size-default" style={{"fontSize":"26px"}}>
-                              <Link href="/mental-health/personality-disorders/paranoid-personality-disorder/why-do-i-feel-like-everyone-hates-me/" style={{"fontSize":"26px"}}>
-                                Why Do I Feel Like Everyone Hates Me? Tips & What to Do
-                              </Link>
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="elementor-element elementor-element-63aa943d elementor-widget elementor-widget-button" data-widget_type="button.default">
-                        <div className="elementor-widget-container">
-                          <div className="elementor-button-wrapper">
-                            <Link className="elementor-button elementor-button-link elementor-size-sm" href="/mental-health/personality-disorders/paranoid-personality-disorder/why-do-i-feel-like-everyone-hates-me/" style={{"fontSize":"16px"}}>
-                              <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
-                                <span className="elementor-button-icon" style={{"fontSize":"16px"}}>
-                                  <svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-                                    <mask id="mask0_2272_2170" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width={24} height={24}>
-                                      <rect width={24} height={24} fill="#D9D9D9"></rect>
-                                    </mask>
-                                    <g mask="url(#mask0_2272_2170)">
-                                      <path d="M15 19L13.575 17.6L18.175 13H2V11H18.175L13.6 6.4L15 5L22 12L15 19Z" fill="#74AFB2"></path>
-                                    </g>
-                                  </svg>
-                                </span>
-                                <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                                  Learn More
-                                </span>
-                              </span>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="elementor elementor-54536 e-loop-item e-loop-item-9669 post-9669 page type-page status-publish hentry category-pgtemplate-acf-blog page_template_type-blog page_template_type-cro1-blog">
-                  <div className="elementor-element elementor-element-d27f5d5 blog-card-v1 e-flex e-con-boxed e-con e-parent e-lazyloaded">
-                    <div className="e-con-inner">
-                      <div className="elementor-element elementor-element-5f85ab4b e-con-full e-flex e-con e-child">
-                        <div className="elementor-element elementor-element-33787913 elementor-widget elementor-widget-image" data-widget_type="image.default">
-                          <div className="elementor-widget-container">
-                            <Link href="/mental-health/overstimulated-meaning/" style={{"fontSize":"16px"}}>
-                              <Image src="/images/5a1cfc37c5f812440fa391ca2c68b620.webp" alt="" width={676} height={476} className="attachment-full size-full wp-image-57115 entered error" />
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="elementor-element elementor-element-757665c7 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                          <div className="elementor-widget-container">
-                            <h5 className="elementor-heading-title elementor-size-default" style={{"fontSize":"26px"}}>
-                              <Link href="/mental-health/overstimulated-meaning/" style={{"fontSize":"26px"}}>
-                                What Are Common Signs of Overstimulation in Adults?
-                              </Link>
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="elementor-element elementor-element-63aa943d elementor-widget elementor-widget-button" data-widget_type="button.default">
-                        <div className="elementor-widget-container">
-                          <div className="elementor-button-wrapper">
-                            <Link className="elementor-button elementor-button-link elementor-size-sm" href="/mental-health/overstimulated-meaning/" style={{"fontSize":"16px"}}>
-                              <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
-                                <span className="elementor-button-icon" style={{"fontSize":"16px"}}>
-                                  <svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-                                    <mask id="mask0_2272_2170" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width={24} height={24}>
-                                      <rect width={24} height={24} fill="#D9D9D9"></rect>
-                                    </mask>
-                                    <g mask="url(#mask0_2272_2170)">
-                                      <path d="M15 19L13.575 17.6L18.175 13H2V11H18.175L13.6 6.4L15 5L22 12L15 19Z" fill="#74AFB2"></path>
-                                    </g>
-                                  </svg>
-                                </span>
-                                <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                                  Learn More
-                                </span>
-                              </span>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="elementor elementor-54536 e-loop-item e-loop-item-9667 post-9667 page type-page status-publish hentry category-pgtemplate-acf-blog page_template_type-blog page_template_type-cro1-blog">
-                  <div className="elementor-element elementor-element-d27f5d5 blog-card-v1 e-flex e-con-boxed e-con e-parent e-lazyloaded">
-                    <div className="e-con-inner">
-                      <div className="elementor-element elementor-element-5f85ab4b e-con-full e-flex e-con e-child">
-                        <div className="elementor-element elementor-element-33787913 elementor-widget elementor-widget-image" data-widget_type="image.default">
-                          <div className="elementor-widget-container">
-                            <Link href="/mental-health/what-to-expect-during-inpatient-mental-health-stay/" style={{"fontSize":"16px"}}>
-                              <Image src="/images/5a1cfc37c5f812440fa391ca2c68b620.webp" alt="" width={676} height={476} className="attachment-full size-full wp-image-57115 entered error" />
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="elementor-element elementor-element-757665c7 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                          <div className="elementor-widget-container">
-                            <h5 className="elementor-heading-title elementor-size-default" style={{"fontSize":"26px"}}>
-                              <Link href="/mental-health/what-to-expect-during-inpatient-mental-health-stay/" style={{"fontSize":"26px"}}>
-                                What to Expect at an Inpatient Behavioral Health Hospital
-                              </Link>
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="elementor-element elementor-element-63aa943d elementor-widget elementor-widget-button" data-widget_type="button.default">
-                        <div className="elementor-widget-container">
-                          <div className="elementor-button-wrapper">
-                            <Link className="elementor-button elementor-button-link elementor-size-sm" href="/mental-health/what-to-expect-during-inpatient-mental-health-stay/" style={{"fontSize":"16px"}}>
-                              <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
-                                <span className="elementor-button-icon" style={{"fontSize":"16px"}}>
-                                  <svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-                                    <mask id="mask0_2272_2170" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width={24} height={24}>
-                                      <rect width={24} height={24} fill="#D9D9D9"></rect>
-                                    </mask>
-                                    <g mask="url(#mask0_2272_2170)">
-                                      <path d="M15 19L13.575 17.6L18.175 13H2V11H18.175L13.6 6.4L15 5L22 12L15 19Z" fill="#74AFB2"></path>
-                                    </g>
-                                  </svg>
-                                </span>
-                                <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                                  Learn More
-                                </span>
-                              </span>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="elementor elementor-54536 e-loop-item e-loop-item-9665 post-9665 page type-page status-publish hentry category-pgtemplate-acf-blog page_template_type-blog page_template_type-cro1-blog">
-                  <div className="elementor-element elementor-element-d27f5d5 blog-card-v1 e-flex e-con-boxed e-con e-parent e-lazyloaded">
-                    <div className="e-con-inner">
-                      <div className="elementor-element elementor-element-5f85ab4b e-con-full e-flex e-con e-child">
-                        <div className="elementor-element elementor-element-33787913 elementor-widget elementor-widget-image" data-widget_type="image.default">
-                          <div className="elementor-widget-container">
-                            <Link href="/mental-health/residential-vs-inpatient-mental-health-treatment/" style={{"fontSize":"16px"}}>
-                              <Image src="/images/5a1cfc37c5f812440fa391ca2c68b620.webp" alt="" width={676} height={476} className="attachment-full size-full wp-image-57115 entered error" />
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="elementor-element elementor-element-757665c7 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                          <div className="elementor-widget-container">
-                            <h5 className="elementor-heading-title elementor-size-default" style={{"fontSize":"26px"}}>
-                              <Link href="/mental-health/residential-vs-inpatient-mental-health-treatment/" style={{"fontSize":"26px"}}>
-                                Residential vs. Inpatient Mental Health Treatment
-                              </Link>
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="elementor-element elementor-element-63aa943d elementor-widget elementor-widget-button" data-widget_type="button.default">
-                        <div className="elementor-widget-container">
-                          <div className="elementor-button-wrapper">
-                            <Link className="elementor-button elementor-button-link elementor-size-sm" href="/mental-health/residential-vs-inpatient-mental-health-treatment/" style={{"fontSize":"16px"}}>
-                              <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
-                                <span className="elementor-button-icon" style={{"fontSize":"16px"}}>
-                                  <svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-                                    <mask id="mask0_2272_2170" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width={24} height={24}>
-                                      <rect width={24} height={24} fill="#D9D9D9"></rect>
-                                    </mask>
-                                    <g mask="url(#mask0_2272_2170)">
-                                      <path d="M15 19L13.575 17.6L18.175 13H2V11H18.175L13.6 6.4L15 5L22 12L15 19Z" fill="#74AFB2"></path>
-                                    </g>
-                                  </svg>
-                                </span>
-                                <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                                  Learn More
-                                </span>
-                              </span>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="elementor elementor-54536 e-loop-item e-loop-item-9663 post-9663 page type-page status-publish hentry category-pgtemplate-acf-blog page_template_type-blog page_template_type-cro1-blog">
-                  <div className="elementor-element elementor-element-d27f5d5 blog-card-v1 e-flex e-con-boxed e-con e-parent e-lazyloaded">
-                    <div className="e-con-inner">
-                      <div className="elementor-element elementor-element-5f85ab4b e-con-full e-flex e-con e-child">
-                        <div className="elementor-element elementor-element-33787913 elementor-widget elementor-widget-image" data-widget_type="image.default">
-                          <div className="elementor-widget-container">
-                            <Link href="/mental-health/can-i-check-myself-into-a-mental-hospital/" style={{"fontSize":"16px"}}>
-                              <Image src="/images/5a1cfc37c5f812440fa391ca2c68b620.webp" alt="" width={676} height={476} className="attachment-full size-full wp-image-57115 entered error" />
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="elementor-element elementor-element-757665c7 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                          <div className="elementor-widget-container">
-                            <h5 className="elementor-heading-title elementor-size-default" style={{"fontSize":"26px"}}>
-                              <Link href="/mental-health/can-i-check-myself-into-a-mental-hospital/" style={{"fontSize":"26px"}}>
-                                How to Admit Yourself to a Mental Hospital?
-                              </Link>
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="elementor-element elementor-element-63aa943d elementor-widget elementor-widget-button" data-widget_type="button.default">
-                        <div className="elementor-widget-container">
-                          <div className="elementor-button-wrapper">
-                            <Link className="elementor-button elementor-button-link elementor-size-sm" href="/mental-health/can-i-check-myself-into-a-mental-hospital/" style={{"fontSize":"16px"}}>
-                              <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
-                                <span className="elementor-button-icon" style={{"fontSize":"16px"}}>
-                                  <svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-                                    <mask id="mask0_2272_2170" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width={24} height={24}>
-                                      <rect width={24} height={24} fill="#D9D9D9"></rect>
-                                    </mask>
-                                    <g mask="url(#mask0_2272_2170)">
-                                      <path d="M15 19L13.575 17.6L18.175 13H2V11H18.175L13.6 6.4L15 5L22 12L15 19Z" fill="#74AFB2"></path>
-                                    </g>
-                                  </svg>
-                                </span>
-                                <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                                  Learn More
-                                </span>
-                              </span>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="elementor elementor-54536 e-loop-item e-loop-item-9661 post-9661 page type-page status-publish hentry category-pgtemplate-acf-blog page_template_type-blog page_template_type-cro1-blog">
-                  <div className="elementor-element elementor-element-d27f5d5 blog-card-v1 e-flex e-con-boxed e-con e-parent e-lazyloaded">
-                    <div className="e-con-inner">
-                      <div className="elementor-element elementor-element-5f85ab4b e-con-full e-flex e-con e-child">
-                        <div className="elementor-element elementor-element-33787913 elementor-widget elementor-widget-image" data-widget_type="image.default">
-                          <div className="elementor-widget-container">
-                            <Link href="/mental-health/signs-you-need-to-go-to-a-mental-hospital/" style={{"fontSize":"16px"}}>
-                              <Image src="/images/5a1cfc37c5f812440fa391ca2c68b620.webp" alt="" width={676} height={476} className="attachment-full size-full wp-image-57115 entered error" />
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="elementor-element elementor-element-757665c7 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                          <div className="elementor-widget-container">
-                            <h5 className="elementor-heading-title elementor-size-default" style={{"fontSize":"26px"}}>
-                              <Link href="/mental-health/signs-you-need-to-go-to-a-mental-hospital/" style={{"fontSize":"26px"}}>
-                                When To Seek Inpatient Mental Health Treatment At A Hospital
-                              </Link>
-                            </h5>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="elementor-element elementor-element-63aa943d elementor-widget elementor-widget-button" data-widget_type="button.default">
-                        <div className="elementor-widget-container">
-                          <div className="elementor-button-wrapper">
-                            <Link className="elementor-button elementor-button-link elementor-size-sm" href="/mental-health/signs-you-need-to-go-to-a-mental-hospital/" style={{"fontSize":"16px"}}>
-                              <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
-                                <span className="elementor-button-icon" style={{"fontSize":"16px"}}>
-                                  <svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-                                    <mask id="mask0_2272_2170" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width={24} height={24}>
-                                      <rect width={24} height={24} fill="#D9D9D9"></rect>
-                                    </mask>
-                                    <g mask="url(#mask0_2272_2170)">
-                                      <path d="M15 19L13.575 17.6L18.175 13H2V11H18.175L13.6 6.4L15 5L22 12L15 19Z" fill="#74AFB2"></path>
-                                    </g>
-                                  </svg>
-                                </span>
-                                <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                                  Learn More
-                                </span>
-                              </span>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {blog.posts.map((post) => (
+                  <GridCard key={post.id} post={post} />
+                ))}
               </div>
               <div className="e-load-more-anchor"></div>
-              <nav className="elementor-pagination" aria-label="Pagination">
-                <span aria-current="page" className="page-numbers current" style={{"fontSize":"24px"}}>
-                  <span className="elementor-screen-only" style={{"fontSize":"24px"}}>
-                    Page
-                  </span>
-                  1
-                </span>{" "}
-                <Link className="page-numbers" href="/staff/amy-leifeste-editor-bio-marketing-team/page/2" style={{"fontSize":"24px"}}>
-                  <span className="elementor-screen-only" style={{"fontSize":"24px"}}>
-                    Page
-                  </span>
-                  2
-                </Link>{" "}
-                <Link className="page-numbers" href="/staff/amy-leifeste-editor-bio-marketing-team/page/3" style={{"fontSize":"24px"}}>
-                  <span className="elementor-screen-only" style={{"fontSize":"24px"}}>
-                    Page
-                  </span>
-                  3
-                </Link>{" "}
-                <span className="page-numbers dots" style={{"fontSize":"0px"}}>
-                  …
-                </span>{" "}
-                <Link className="page-numbers" href="/staff/amy-leifeste-editor-bio-marketing-team/page/19" style={{"fontSize":"24px"}}>
-                  <span className="elementor-screen-only" style={{"fontSize":"24px"}}>
-                    Page
-                  </span>
-                  19
-                </Link>
-              </nav>
+              <BlogPagination basePath={blogPath} current={blog.current} lastPage={blog.lastPage} />
             </div>
           </div>
         </div>
