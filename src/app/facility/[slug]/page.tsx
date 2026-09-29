@@ -52,8 +52,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   ]);
   if (!data) notFound();
   // The builder's template wins when the page has one; otherwise this route's own design.
-  const Template: ComponentType<Record<string, string>> = (await resolveTemplate(data)) ?? Facility;
-  const bodyClasses = " page-id-" + data.id + " elementor-page-" + data.id + (data.templates?.ids ?? []).map((n) => " elementor-page-" + n).join("");
+  const Resolved = await resolveTemplate(data);
+  const Template: ComponentType<Record<string, string>> = Resolved ?? Facility;
+  // Facility posts render with Elementor single-post template 56813, as on the live site.
+  const bodyClasses = Resolved
+    ? " page-id-" + data.id + " elementor-page-" + data.id + (data.templates?.ids ?? []).map((n) => " elementor-page-" + n).join("")
+    : " single-facility postid-" + data.id + " elementor-page-56813";
   return (
     <>
       <script dangerouslySetInnerHTML={{ __html: "document.body.className=document.body.className.replace(/(?:^|\\s)(?:page-id|postid|elementor-page)-\\d+/g,\"\")+" + JSON.stringify(bodyClasses) + ";" }} />

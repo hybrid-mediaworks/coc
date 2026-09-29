@@ -150,6 +150,109 @@ const setEaelOpen = (header: Element, open: boolean) => {
   };
 };
 
+const IMAGE_HREF = /\.(png|jpe?g|gif|webp|avif|svg)(\?.*)?$/i;
+
+// Links in the same Elementor lightbox slideshow as `link`, in gallery order. Carousel
+// clones (swiper-slide-duplicate) are skipped so each image appears once.
+const slideshowLinks = (link: Element): Element[] => {
+  const id = link.getAttribute("data-elementor-lightbox-slideshow");
+  if (!id) return [link];
+  const links = Array.from(
+    document.querySelectorAll(`a[data-elementor-open-lightbox][data-elementor-lightbox-slideshow="${CSS.escape(id)}"]`)
+  ).filter((a) => IMAGE_HREF.test(a.getAttribute("href") ?? "") && !a.closest(".swiper-slide-duplicate"));
+  const order = (a: Element) => Number(a.getAttribute("data-lightbox-index") ?? NaN);
+  if (links.every((a) => Number.isFinite(order(a)))) links.sort((a, b) => order(a) - order(b));
+  return links.length ? links : [link];
+};
+
+const ARROW_PATH = {
+  prev: "M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z",
+  next: "M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z",
+};
+
+// Image lightbox for Elementor's data-elementor-open-lightbox links. A gallery (links sharing
+// data-elementor-lightbox-slideshow) gets prev/next arrows, arrow-key and swipe navigation and
+// an "n / total" counter; a single image opens on its own.
+const openLightbox = (link: Element) => {
+  const links = slideshowLinks(link);
+  const hrefs = links.map((a) => a.getAttribute("href") ?? "");
+  let index = Math.max(0, links.indexOf(link));
+  const multiple = hrefs.length > 1;
+
+  const overlay = document.createElement("div");
+  overlay.setAttribute("role", "dialog");
+  overlay.setAttribute("aria-modal", "true");
+  overlay.setAttribute("aria-label", "Image viewer");
+  overlay.style.cssText =
+    "position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;cursor:zoom-out;user-select:none";
+
+  const img = document.createElement("img");
+  img.alt = "";
+  img.style.cssText = "max-width:90vw;max-height:90vh;object-fit:contain;cursor:default";
+  overlay.appendChild(img);
+
+  const button = (label: string, css: string, path: string) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", label);
+    b.style.cssText =
+      "position:absolute;display:flex;align-items:center;justify-content:center;width:48px;height:48px;padding:0;border:0;border-radius:50%;background:rgba(0,0,0,0.45);color:#fff;cursor:pointer;" +
+      css;
+    b.innerHTML = `<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="${path}"/></svg>`;
+    overlay.appendChild(b);
+    return b;
+  };
+
+  const closeButton = button("Close", "top:16px;right:16px;", "M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z");
+  const prevButton = multiple ? button("Previous image", "left:16px;top:50%;transform:translateY(-50%);", ARROW_PATH.prev) : null;
+  const nextButton = multiple ? button("Next image", "right:16px;top:50%;transform:translateY(-50%);", ARROW_PATH.next) : null;
+
+  const counter = document.createElement("div");
+  counter.setAttribute("aria-live", "polite");
+  counter.style.cssText = "position:absolute;bottom:16px;left:50%;transform:translateX(-50%);color:#fff;font-size:14px;letter-spacing:1px";
+  if (multiple) overlay.appendChild(counter);
+
+  const show = (i: number) => {
+    index = (i + hrefs.length) % hrefs.length;
+    img.src = hrefs[index];
+    img.alt = links[index].getAttribute("data-elementor-lightbox-title") ?? "";
+    counter.textContent = `${index + 1} / ${hrefs.length}`;
+    // Warm the neighbours so stepping through the gallery does not flash.
+    if (multiple) for (const n of [index - 1, index + 1]) new Image().src = hrefs[(n + hrefs.length) % hrefs.length];
+  };
+
+  const close = () => {
+    overlay.remove();
+    document.removeEventListener("keydown", onKey);
+    if (link instanceof HTMLElement) link.focus({ preventScroll: true });
+  };
+  const onKey = (ev: KeyboardEvent) => {
+    if (ev.key === "Escape") close();
+    else if (multiple && ev.key === "ArrowLeft") show(index - 1);
+    else if (multiple && ev.key === "ArrowRight") show(index + 1);
+  };
+
+  overlay.addEventListener("click", (ev) => {
+    const hit = ev.target instanceof Element ? ev.target : null;
+    if (prevButton && hit && prevButton.contains(hit)) show(index - 1);
+    else if (nextButton && hit && nextButton.contains(hit)) show(index + 1);
+    else if (hit !== img) close();
+  });
+
+  let touchX: number | null = null;
+  overlay.addEventListener("touchstart", (ev) => { touchX = ev.touches[0]?.clientX ?? null; }, { passive: true });
+  overlay.addEventListener("touchend", (ev) => {
+    const endX = ev.changedTouches[0]?.clientX;
+    if (multiple && touchX !== null && endX !== undefined && Math.abs(endX - touchX) > 40) show(endX < touchX ? index + 1 : index - 1);
+    touchX = null;
+  });
+
+  show(index);
+  document.addEventListener("keydown", onKey);
+  document.body.appendChild(overlay);
+  closeButton.focus({ preventScroll: true });
+};
+
 export default function WidgetInteractions() {
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
@@ -349,27 +452,10 @@ export default function WidgetInteractions() {
       if (lightboxLink) {
         const mode = lightboxLink.getAttribute("data-elementor-open-lightbox");
         const href = lightboxLink.getAttribute("href") ?? "";
-        const isImage = /\.(png|jpe?g|gif|webp|avif|svg)(\?.*)?$/i.test(href);
+        const isImage = IMAGE_HREF.test(href);
         if (mode !== "no" && isImage) {
           e.preventDefault();
-          const overlay = document.createElement("div");
-          overlay.style.cssText =
-            "position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;cursor:zoom-out";
-          const img = document.createElement("img");
-          img.src = href;
-          img.alt = "";
-          img.style.cssText = "max-width:90vw;max-height:90vh;object-fit:contain";
-          overlay.appendChild(img);
-          const onKey = (ev: KeyboardEvent) => {
-            if (ev.key === "Escape") close();
-          };
-          const close = () => {
-            overlay.remove();
-            document.removeEventListener("keydown", onKey);
-          };
-          overlay.addEventListener("click", close);
-          document.addEventListener("keydown", onKey);
-          document.body.appendChild(overlay);
+          openLightbox(lightboxLink);
         }
       }
     };

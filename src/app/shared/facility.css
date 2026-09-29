@@ -1,0 +1,8 @@
+/* Facility template (Elementor 56813) fixes on top of the shared pool. */
+
+/* The pool carries `h3.elementor-icon-box-title { margin-top: 0.3rem }` from another page's
+   custom CSS; the live facility page does not load it, so its address title keeps the theme's
+   0.5rem heading margin. */
+.elementor-56813 h3.elementor-icon-box-title {
+  margin-top: 0.5rem;
+}
