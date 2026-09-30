@@ -319,3 +319,66 @@ export async function fetchStaffPost(slug: string): Promise<StaffPost | null> {
     return null;
   }
 }
+
+export type MenuGeoLink = { label: string; alt_label: string; link: string; image: string | null };
+
+export type MenuItem = {
+  ID: number;
+  title: string;
+  url: string;
+  classes: string;
+  is_cta: boolean;
+  alt_title: string;
+  children: MenuItem[];
+  geo_links: MenuGeoLink[];
+  icon: string | null;
+  is_heading: boolean;
+};
+
+// The endpoint already returns site-relative URLs for internal links; toRelative is a guard in
+// case an absolute one slips through (a custom link typed with the full domain).
+const internalHref = (url: string) => {
+  try {
+    const u = new URL(url);
+    return u.hostname.replace(/^www\./, "") === new URL(WORDPRESS_URL!).hostname.replace(/^www\./, "")
+      ? toRelative(url)
+      : url;
+  } catch {
+    return url;
+  }
+};
+
+const normaliseMenu = (items: MenuItem[]): MenuItem[] =>
+  items.map((item) => ({
+    ...item,
+    title: decodeEntities(item.title ?? ""),
+    alt_title: decodeEntities(item.alt_title ?? ""),
+    url: internalHref(item.url ?? "#"),
+    children: normaliseMenu(Array.isArray(item.children) ? item.children : []),
+    geo_links: (Array.isArray(item.geo_links) ? item.geo_links : []).map((g) => ({
+      ...g,
+      label: decodeEntities(g.label ?? ""),
+      alt_label: decodeEntities(g.alt_label ?? ""),
+      link: internalHref(g.link ?? "#"),
+    })),
+  }));
+
+// The primary nav, as edited under Appearance > Menus. Header and the mobile menu popup both
+// render it, and fetch() dedupes the two calls within a render. If WordPress is unreachable the
+// header must still have a menu, so fall back to the snapshot bundled with the build.
+export async function fetchMenu(): Promise<MenuItem[]> {
+  try {
+    const res = await fetch(`${WORDPRESS_URL}/wp-json/builder/v1/menu`, {
+      next: { revalidate: REVALIDATE },
+      signal: AbortSignal.timeout(SECTION_TIMEOUT_MS),
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data) && data.length) return normaliseMenu(data as MenuItem[]);
+    }
+  } catch {
+    // fall through to the snapshot
+  }
+  const fallback = (await import("./menu-fallback.json")).default as MenuItem[];
+  return normaliseMenu(fallback);
+}
