@@ -494,3 +494,11 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
     align-items: center !important;
   }
 }
+
+/* Set by WidgetInteractions when a desktop dropdown link is clicked: the page changes
+   client-side under a still-hovering pointer, so hide the dropdown until the pointer leaves. */
+.navbar .dropdown.is-dismissed .dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

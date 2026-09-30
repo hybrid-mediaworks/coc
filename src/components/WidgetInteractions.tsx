@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const THEME_OWNS_MEGA_MENU = false;
 const POPUP_ANIMATION_NAMES: string[] = ["fadeInLeft"];
@@ -26,11 +27,32 @@ const openPopup = (modal: HTMLElement) => {
   animatePopup(modal, modal.getAttribute("data-entrance-animation"), false);
 };
 
+type JQueryStop = (el: Element) => { stop: (clearQueue: boolean, jumpToEnd: boolean) => void };
+
+// The mobile menu accordion (preserved-scripts.js) leaves classes and jQuery slide styles
+// behind; put the menu back to its rendered state so it opens collapsed next time.
+const resetPopupMenu = (modal: HTMLElement) => {
+  const $ = (window as unknown as { jQuery?: JQueryStop }).jQuery;
+  for (const el of modal.querySelectorAll(".navbar .dropdown-content, .navbar .geo-holder")) {
+    $?.(el).stop(true, true);
+    // geo-holders render collapsed with an inline display:none; dropdowns are collapsed by CSS.
+    if (el.classList.contains("geo-holder")) el.setAttribute("style", "display:none");
+    else el.removeAttribute("style");
+  }
+  for (const el of modal.querySelectorAll(".navbar.dropdown-open")) el.classList.remove("dropdown-open");
+  for (const el of modal.querySelectorAll(".navbar .dropdown.active")) el.classList.remove("active");
+  for (const el of modal.querySelectorAll(".navbar .parent-active")) el.classList.remove("parent-active");
+  for (const el of modal.querySelectorAll(".navbar .content-active, .navbar .accordion-active")) {
+    el.classList.remove("content-active", "accordion-active");
+  }
+};
+
 const closePopup = (modal: HTMLElement) => {
   modal.setAttribute("aria-hidden", "true");
   const content = animatePopup(modal, modal.getAttribute("data-exit-animation"), true);
   if (!content) {
     modal.style.display = "none";
+    resetPopupMenu(modal);
     return;
   }
   let finished = false;
@@ -39,6 +61,7 @@ const closePopup = (modal: HTMLElement) => {
     finished = true;
     content.removeEventListener("animationend", finish);
     modal.style.display = "none";
+    resetPopupMenu(modal);
     content.classList.remove("animated", "reverse");
     for (const n of POPUP_ANIMATION_NAMES) content.classList.remove(n);
   };
@@ -254,6 +277,7 @@ const openLightbox = (link: Element) => {
 };
 
 export default function WidgetInteractions() {
+  const router = useRouter();
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       const target = e.target instanceof Element ? e.target : null;
@@ -285,6 +309,44 @@ export default function WidgetInteractions() {
           if (isClose) closePopup(modal);
           else openPopup(modal);
         }
+        return;
+      }
+
+      // Desktop dropdowns open on :hover, and a client-side navigation leaves the pointer where
+      // it was, so the menu would stay open over the new page. Hide it until the pointer leaves.
+      const dropdownLink = target.closest(".navbar .dropdown-content a[href]");
+      const dropdown = dropdownLink?.closest(".dropdown");
+      if (
+        dropdownLink &&
+        dropdown instanceof HTMLElement &&
+        !dropdownLink.closest(".elementor-popup-modal") &&
+        dropdownLink.getAttribute("href") !== "#"
+      ) {
+        dropdown.classList.add("is-dismissed");
+        dropdown.classList.remove("active");
+        dropdown.querySelector(".dropbtn")?.classList.remove("parent-active");
+        dropdown.addEventListener("mouseleave", () => dropdown.classList.remove("is-dismissed"), { once: true });
+      }
+
+      // Popup markup (the mobile menu, 56579) and the menu's geo links (which preserved-scripts.js
+      // clones on hover) are plain <a>, so their internal links would reload the whole document.
+      // Route them client-side instead and close the popup. Caret clicks are left alone:
+      // preserved-scripts.js uses them to toggle the menu accordion.
+      const popupLink = target.closest(
+        '.elementor-popup-modal a[href^="/"]:not([href^="//"]), .navbar .geo_links a[href^="/"]:not([href^="//"])'
+      );
+      if (
+        popupLink instanceof HTMLAnchorElement &&
+        !e.defaultPrevented &&
+        !target.closest(".menu-caret") &&
+        e.button === 0 &&
+        !(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) &&
+        !popupLink.target
+      ) {
+        e.preventDefault();
+        const modal = popupLink.closest(".elementor-popup-modal");
+        if (modal instanceof HTMLElement) closePopup(modal);
+        router.push(popupLink.getAttribute("href") ?? "/");
         return;
       }
 
@@ -497,6 +559,6 @@ export default function WidgetInteractions() {
       document.removeEventListener("mouseover", onMouseOver);
       document.removeEventListener("keydown", onKey);
     };
-  }, []);
+  }, [router]);
   return null;
 }
