@@ -4,9 +4,9 @@ import { useState } from "react";
 import type { SectionItem } from "@/lib/wordpress";
 
 // Mirrors the WordPress related-pages script: on desktop show 4 cards, then
-// reveal 8 more per "Load More" click. Below 1024px every card is shown (the
-// list scrolls), so the collapsing is desktop-only via CSS; the button shows at
-// every width, as it does on the WordPress site.
+// reveal 8 more per "Load More" click. Below 1024px every card is shown (on
+// phones the list scrolls vertically), so the collapsing and the button are
+// desktop-only via CSS (base.css).
 const INITIAL = 4;
 const STEP = 8;
 

@@ -47,7 +47,7 @@ export default function Page55188(props: Record<string, string>) {
   const why_travel___con = props.why_travel___con ?? "For individuals seeking treatment in Orange County, changing surroundings can provide meaningful support for recovery. Through the District Behavioral Health network, clients can attend care at DBH-affiliated facilities in Florida, California, or Tennessee—allowing them to select the environment that best aligns with their healing goals. Even those living near a treatment center may choose to relocate to another town or state for a fresh start. A new environment can help reduce exposure to familiar triggers, break unhealthy patterns, and create space to fully focus on recovery. Research shows that traveling for rehab often increases engagement in treatment and lowers relapse risk by creating distance from high-risk environments. The most important takeaway is that recovery is strongest when individuals select a setting that truly supports lasting healing, regardless of proximity to home.";
   const hero___con = props.hero___con ?? "Compassionate, evidence-based care in a healing coastal environment. Start your journey to recovery today.";
   const cta_conclusion___con = props.cta_conclusion___con || "Get evidence-based treatment in a peaceful location, with a team of dedicated, expert staff.";
-  const cta_insurance___con = props.cta_insurance___con ?? "View our wide selection of accepted providers for our Orange County rehab. Don’t see yours?";
+  const cta_insurance___con = props.cta_insurance___con || "View our wide selection of accepted providers for our Orange County rehab. Don’t see yours?";
   const why_travel___head = props.why_travel___head ?? "Why Traveling a Short Distance for Rehab In Orange County Can Help";
   const unique_topic_geo_2___head = props.unique_topic_geo_2___head ?? "Residential and Highly Rated Treatment Options in Orange County";
   const unique_topic_geo_2___con = props.unique_topic_geo_2___con ?? "";
@@ -66,7 +66,7 @@ export default function Page55188(props: Record<string, string>) {
   const why_choose_us___head = props.why_choose_us___head ?? "Why Choose Our Orange County Rehab?";
   const why_choose_us___con = props.why_choose_us___con ?? "";
   const cta_conclusion___head = props.cta_conclusion___head || "Begin your journey to recovery.";
-  const cta_insurance___head = props.cta_insurance___head ?? "We Accept Most Major Insurance";
+  const cta_insurance___head = props.cta_insurance___head || "We Accept Most Major Insurance";
   const facility_image_slider___head = props.facility_image_slider___head ?? "Tour Our Orange County Rehab";
   const highlight_video___head = props.highlight_video___head ?? "Why Trust Us With Your Care";
   const brand = props.brand ?? "Connections Mental Health";
@@ -674,6 +674,21 @@ export default function Page55188(props: Record<string, string>) {
                       <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"></div>
                     </div>
                   </div>
+                  {/* Reuses the ef62408 button class for the site's teal pill button styles; the
+                      container's 48px gap already spaces it, so drop that widget's top margin. */}
+                  <div className="elementor-element elementor-element-ef62408 elementor-align-center elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
+                    <div className="elementor-widget-container" style={{ margin: 0 }}>
+                      <div className="elementor-button-wrapper">
+                        <Link className="elementor-button elementor-button-link elementor-size-sm" href="/staff/" style={{"fontSize":"16px"}}>
+                          <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
+                            <span className="elementor-button-text" style={{"fontSize":"16px"}}>
+                              View All Staff
+                            </span>
+                          </span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1185,7 +1200,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
               </div>
             </div>
           </div>
-          <div className="make-column-clickable-elementor elementor-element elementor-element-9c7ff57 e-con-full e-flex e-con e-child" style={{"cursor":"pointer"}} data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+          <Link href="/check-your-insurance/" aria-label="& More insurance providers: check your insurance" className="make-column-clickable-elementor elementor-element elementor-element-9c7ff57 e-con-full e-flex e-con e-child" style={{"cursor":"pointer","textDecoration":"none"}} data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             <div className="elementor-element elementor-element-720c0bc elementor-widget elementor-widget-heading" data-widget_type="heading.default">
               <div className="elementor-widget-container">
                 <h2 className="elementor-heading-title elementor-size-default" style={{"fontSize":"36px"}}>
@@ -1193,7 +1208,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                 </h2>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
         <div className="elementor-element elementor-element-f4bb816 e-con-full e-flex e-con e-child">
           <div className="elementor-element elementor-element-18c428e elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
@@ -2405,7 +2420,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                   <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-576-0144" style={{"fontSize":"16px"}}>
                     <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                       <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                        Apply Now
+                        Call Now
                       </span>
                     </span>
                   </Link>

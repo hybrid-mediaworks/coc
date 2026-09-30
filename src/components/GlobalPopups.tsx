@@ -77,7 +77,7 @@ export default async function GlobalPopups() {
           </div>
         </div>
       </div>
-      <div id="elementor-popup-modal-60459" className="elementor-popup-modal" style={{ display: "none", position: "fixed", inset: 0, zIndex: 9999 }}>
+      <div id="elementor-popup-modal-60459" className="elementor-popup-modal" role="dialog" aria-modal="true" aria-hidden="true" data-prevent-scroll="" style={{ display: "none", position: "fixed", inset: 0, zIndex: 9999 }}>
         <div className="dialog-widget-content">
           <div className="dialog-close-button dialog-lightbox-close-button" role="button" tabIndex={0} aria-label="Close">
             <svg aria-hidden="true" className="e-font-icon-svg e-eicon-close" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M742 167L500 408 258 167 167 258l241 242-241 242 91 91 242-241 242 241 91-91-241-242 241-242-91-91z" /></svg>
