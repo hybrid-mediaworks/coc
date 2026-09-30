@@ -1,6 +1,6 @@
 "use client";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { markVisited, TOUR_PAGES, type Visited } from "@/lib/journeyGuide";
 
 // Side "User Journey Guide" tab + slide-out panel — port of the plugin's frontend.js.
@@ -10,7 +10,30 @@ import { markVisited, TOUR_PAGES, type Visited } from "@/lib/journeyGuide";
 // Uses its own ids (#jgp-*, styled in base.css) so the preserved jQuery plugin script,
 // which binds #jg-toggle-btn and rewrites #jg-page-list, cannot interfere.
 
-export const OPEN_JOURNEY_GUIDE_EVENT = "jg:open";
+// First visit on a phone: once the visitor scrolls past the section under the hero, slide the
+// panel open for AUTO_OPEN_MS, then close it unless they have toggled it themselves. It only
+// ever happens once per browser (AUTO_OPEN_COOKIE); pages without two top-level sections
+// never trigger it, so the next page gets the chance instead.
+const MOBILE_QUERY = "(max-width: 767px)";
+const AUTO_OPEN_MS = 4500;
+const AUTO_OPEN_COOKIE = "jg_autoopened";
+const AUTO_OPEN_COOKIE_DAYS = 365;
+// Top-level Elementor sections: flexbox containers (.e-parent) and legacy sections.
+const SECTION_SELECTOR = "main .e-con.e-parent, main .elementor-section.elementor-top-section";
+
+const hasAutoOpened = () => document.cookie.split("; ").some((c) => c.startsWith(`${AUTO_OPEN_COOKIE}=`));
+const rememberAutoOpened = () => {
+  const expires = new Date(Date.now() + AUTO_OPEN_COOKIE_DAYS * 864e5).toUTCString();
+  document.cookie = `${AUTO_OPEN_COOKIE}=1; expires=${expires}; path=/; SameSite=Lax`;
+};
+
+// The section directly under the hero: the second top-level section in the page content.
+const sectionUnderHero = () => {
+  const sections = Array.from(document.querySelectorAll<HTMLElement>(SECTION_SELECTOR)).filter(
+    (el) => !el.parentElement?.closest(SECTION_SELECTOR) && el.offsetHeight > 0
+  );
+  return sections[1] ?? null;
+};
 
 const LABEL = ["U", "S", "E", "R", null, "J", "O", "U", "R", "N", "E", "Y", null, "G", "U", "I", "D", "E"];
 const normalise = (path: string) => path.replace(/\/+$/, "") || "/";
@@ -25,11 +48,47 @@ export default function JourneyGuidePanel() {
     setVisited(markVisited(pathname));
   }, [pathname]);
 
+  // Pending auto-close. Any manual toggle cancels it, so the timer never closes a panel the
+  // visitor opened themselves. Kept across navigations: the panel lives in the layout.
+  const autoCloseTimer = useRef<number | null>(null);
+  const cancelAutoClose = () => {
+    if (autoCloseTimer.current !== null) window.clearTimeout(autoCloseTimer.current);
+    autoCloseTimer.current = null;
+  };
+  const toggle = (next: boolean) => {
+    cancelAutoClose();
+    setOpen(next);
+  };
+
+  useEffect(() => () => cancelAutoClose(), []);
+
   useEffect(() => {
-    const onOpen = () => setOpen(true);
-    window.addEventListener(OPEN_JOURNEY_GUIDE_EVENT, onOpen);
-    return () => window.removeEventListener(OPEN_JOURNEY_GUIDE_EVENT, onOpen);
-  }, []);
+    if (!window.matchMedia(MOBILE_QUERY).matches || hasAutoOpened()) return;
+    const target = sectionUnderHero();
+    if (!target) return;
+    let frame = 0;
+    const check = () => {
+      frame = 0;
+      if (target.getBoundingClientRect().bottom > 0 || hasAutoOpened()) return;
+      window.removeEventListener("scroll", onScroll);
+      if (!window.matchMedia(MOBILE_QUERY).matches) return;
+      rememberAutoOpened();
+      setOpen(true);
+      autoCloseTimer.current = window.setTimeout(() => {
+        autoCloseTimer.current = null;
+        setOpen(false);
+      }, AUTO_OPEN_MS);
+    };
+    const onScroll = () => {
+      if (!frame) frame = window.requestAnimationFrame(check);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    check(); // a restored scroll position may already be past it
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, [pathname]);
 
   const current = normalise(pathname);
   const count = TOUR_PAGES.filter((p) => visited[p.id]).length;
@@ -39,7 +98,7 @@ export default function JourneyGuidePanel() {
   return (
     <div id="jgp-wrapper" className={open ? "jg-open" : undefined}>
       <div id="jgp-sidebar">
-        <button id="jgp-toggle-btn" type="button" aria-label="Open Journey Guide" aria-expanded={open} aria-controls="jgp-panel" onClick={() => setOpen((o) => !o)}>
+        <button id="jgp-toggle-btn" type="button" aria-label="Open Journey Guide" aria-expanded={open} aria-controls="jgp-panel" onClick={() => toggle(!open)}>
           <span className="jg-arrow jg-arrow-desktop">
             <svg width={24} height={24} viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <rect width={24} height={24} rx="12" fill="white" fillOpacity="0.25"></rect>
@@ -65,7 +124,7 @@ export default function JourneyGuidePanel() {
       <div id="jgp-panel" aria-hidden={!open}>
         <div id="jgp-panel-header">
           <span id="jgp-panel-title">Your Journey Guide</span>
-          <button id="jgp-panel-close" type="button" aria-label="Close panel" onClick={() => setOpen(false)}>
+          <button id="jgp-panel-close" type="button" aria-label="Close panel" onClick={() => toggle(false)}>
             &times;
           </button>
         </div>

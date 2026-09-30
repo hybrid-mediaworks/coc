@@ -21,10 +21,86 @@ const animatePopup = (modal: HTMLElement, name: string | null, reverse: boolean)
   return content;
 };
 
+// Elementor's "prevent page scroll" popup setting (data-prevent-scroll). Locked on <html>:
+// the layout's body-style-guard clears overflow set on <body> before the visitor has clicked.
+const lockScroll = (modal: HTMLElement, lock: boolean) => {
+  if (modal.hasAttribute("data-prevent-scroll")) document.documentElement.style.overflow = lock ? "hidden" : "";
+};
+
 const openPopup = (modal: HTMLElement) => {
   modal.style.display = "flex";
   modal.setAttribute("aria-hidden", "false");
+  lockScroll(modal, true);
   animatePopup(modal, modal.getAttribute("data-entrance-animation"), false);
+};
+
+// Elementor video widgets with an image overlay render only the overlay and an empty
+// .elementor-video; Elementor's frontend JS (not loaded here) builds the player on click.
+// Do the same for YouTube from the widget's data-settings, autoplaying since it was a click.
+const YOUTUBE_ID = /(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([\w-]{11})/;
+
+const playVideoWidget = (overlay: Element) => {
+  const widget = overlay.closest(".elementor-widget-video");
+  const slot = widget?.querySelector(".elementor-video");
+  if (!widget || !slot) return;
+  let settings: Record<string, unknown> = {};
+  try {
+    settings = JSON.parse(widget.getAttribute("data-settings") ?? "{}");
+  } catch {}
+  if ((settings.video_type ?? "youtube") !== "youtube") return;
+  // The scraped JSX keeps WordPress's escaped slashes ("https:\/\/…"), which survive JSON.parse.
+  const id = String(settings.youtube_url ?? "").replace(/\\/g, "").match(YOUTUBE_ID)?.[1];
+  if (!id) return;
+  const params = new URLSearchParams({
+    autoplay: "1",
+    controls: settings.controls === "yes" ? "1" : "0",
+    mute: settings.mute === "yes" ? "1" : "0",
+    rel: settings.rel === "yes" ? "1" : "0",
+    playsinline: "1",
+  });
+  if (settings.loop === "yes") {
+    params.set("loop", "1");
+    params.set("playlist", id); // YouTube only loops a single video as a playlist
+  }
+  if (settings.start) params.set("start", String(settings.start));
+  if (settings.end) params.set("end", String(settings.end));
+  const host = settings.yt_privacy === "yes" ? "www.youtube-nocookie.com" : "www.youtube.com";
+  // Replaces the .elementor-video div itself, as Elementor's YouTube player does: the wrapper
+  // is sized by aspect-ratio, but the placeholder div has no height, so an iframe inside it
+  // would collapse to the browser's default 150px.
+  const iframe = document.createElement("iframe");
+  iframe.className = "elementor-video";
+  iframe.src = `https://${host}/embed/${id}?${params}`;
+  iframe.title = "YouTube video player";
+  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  iframe.allowFullscreen = true;
+  slot.replaceWith(iframe);
+  overlay.remove();
+};
+
+const isAnyPopupOpen = () =>
+  Array.from(document.querySelectorAll<HTMLElement>(".elementor-popup-modal")).some((m) => m.style.display !== "none");
+
+// Exit-intent popup (Elementor popup 60459, trigger "exit_intent"): opens when the pointer
+// leaves the page through the top edge, at most once per browser session, and not over
+// another open popup. Like Elementor's trigger it needs a mouse, so touch devices never see it.
+const EXIT_POPUP_ID = "elementor-popup-modal-60459";
+const EXIT_POPUP_SESSION_KEY = "coc_exit_popup_shown";
+
+const exitPopupShown = () => {
+  try {
+    return sessionStorage.getItem(EXIT_POPUP_SESSION_KEY) === "1";
+  } catch {
+    return false;
+  }
+};
+
+const markExitPopupShown = () => {
+  try {
+    sessionStorage.setItem(EXIT_POPUP_SESSION_KEY, "1");
+  } catch {
+    // storage blocked: it can show again after a reload, which is acceptable
+  }
 };
 
 type JQueryStop = (el: Element) => { stop: (clearQueue: boolean, jumpToEnd: boolean) => void };
@@ -49,6 +125,7 @@ const resetPopupMenu = (modal: HTMLElement) => {
 
 const closePopup = (modal: HTMLElement) => {
   modal.setAttribute("aria-hidden", "true");
+  lockScroll(modal, false);
   const content = animatePopup(modal, modal.getAttribute("data-exit-animation"), true);
   if (!content) {
     modal.style.display = "none";
@@ -199,7 +276,14 @@ const ARROW_PATH = {
 const openLightbox = (link: Element) => {
   const links = slideshowLinks(link);
   const hrefs = links.map((a) => a.getAttribute("href") ?? "");
-  let index = Math.max(0, links.indexOf(link));
+  // A carousel loop clone is left out of `links`, so start from the original it copies:
+  // same data-lightbox-index, else same image.
+  const cloneIndex = () => {
+    const order = link.getAttribute("data-lightbox-index");
+    const byOrder = order === null ? -1 : links.findIndex((a) => a.getAttribute("data-lightbox-index") === order);
+    return byOrder !== -1 ? byOrder : hrefs.indexOf(link.getAttribute("href") ?? "");
+  };
+  let index = Math.max(0, links.includes(link) ? links.indexOf(link) : cloneIndex());
   const multiple = hrefs.length > 1;
 
   const overlay = document.createElement("div");
@@ -347,6 +431,13 @@ export default function WidgetInteractions() {
         const modal = popupLink.closest(".elementor-popup-modal");
         if (modal instanceof HTMLElement) closePopup(modal);
         router.push(popupLink.getAttribute("href") ?? "/");
+        return;
+      }
+
+      const videoOverlay = target.closest(".elementor-widget-video .elementor-custom-embed-image-overlay");
+      if (videoOverlay) {
+        e.preventDefault();
+        playVideoWidget(videoOverlay);
         return;
       }
 
@@ -545,18 +636,40 @@ export default function WidgetInteractions() {
     };
 
     const onKey = (e: KeyboardEvent) => {
+      // The overlay's play button is a role="button" div, so give it button keys.
+      const playButton = e.target instanceof Element ? e.target.closest(".elementor-widget-video .elementor-custom-embed-play") : null;
+      if (playButton && (e.key === "Enter" || e.key === " ")) {
+        e.preventDefault();
+        const overlay = playButton.closest(".elementor-custom-embed-image-overlay");
+        if (overlay) playVideoWidget(overlay);
+        return;
+      }
       if (e.key !== "Escape") return;
       for (const m of document.querySelectorAll(".elementor-popup-modal")) {
         if (m instanceof HTMLElement && m.style.display !== "none") closePopup(m);
       }
     };
 
+    // relatedTarget is null when the pointer leaves the window; clientY <= 0 means it went out
+    // through the top (towards the tabs, address bar or close button).
+    const onMouseOut = (e: MouseEvent) => {
+      if (e.relatedTarget !== null || e.clientY > 0) return;
+      if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+      if (exitPopupShown() || isAnyPopupOpen()) return;
+      const modal = document.getElementById(EXIT_POPUP_ID);
+      if (!(modal instanceof HTMLElement)) return;
+      markExitPopupShown();
+      openPopup(modal);
+    };
+
     document.addEventListener("click", onClick);
     document.addEventListener("mouseover", onMouseOver);
+    document.addEventListener("mouseout", onMouseOut);
     document.addEventListener("keydown", onKey);
     return () => {
       document.removeEventListener("click", onClick);
       document.removeEventListener("mouseover", onMouseOver);
+      document.removeEventListener("mouseout", onMouseOut);
       document.removeEventListener("keydown", onKey);
     };
   }, [router]);

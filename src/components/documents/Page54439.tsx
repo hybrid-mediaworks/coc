@@ -182,6 +182,11 @@ export default function Page54439(props: Record<string, string>) {
                             Written By:
                           </h6>
                         </div>
+                        <div className="elementor-author-box__bio">
+                          <p style={{"fontSize":"16px"}}>
+                            Matthew D'Ursov
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -721,32 +726,32 @@ export default function Page54439(props: Record<string, string>) {
                       <div className="elementor-image-carousel-wrapper swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden" role="region" aria-roledescription="carousel" aria-label="Image Carousel" dir="ltr">
                         <div className="elementor-image-carousel swiper-wrapper swiper-image-stretch" aria-live="off" style={{"transform":"none","transitionDuration":"0ms"}} id="swiper-wrapper-52e6752b13610591f">
                           <div className="swiper-slide swiper-slide-prev" role="group" aria-roledescription="slide" aria-label="1 / 4" style={{"width":"369.333px","marginRight":"48px","visibility":"visible"}}>
-                            <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-250-1-68b941b299489.webp" style={{"fontSize":"16px"}}>
+                            <a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="db5b86e" data-lightbox-index="0" href="/images/23e32effef01be710b967e625e1cf775.webp" style={{"fontSize":"16px"}}>
                               <figure className="swiper-slide-inner">
                                 <Image src="/images/23e32effef01be710b967e625e1cf775.webp" alt="rectangle-250-1-68b941b299489.webp" width={1200} height={669} className="swiper-slide-image entered error" />
                               </figure>
-                            </Link>
+                            </a>
                           </div>
                           <div className="swiper-slide swiper-slide-active" role="group" aria-roledescription="slide" aria-label="2 / 4" style={{"width":"369.333px","marginRight":"48px","visibility":"visible"}}>
-                            <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-251-1-1-68b941b47d396.webp" style={{"fontSize":"16px"}}>
+                            <a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="db5b86e" data-lightbox-index="1" href="/images/53730dd809d76bf3c4ee8d4c6192136f.webp" style={{"fontSize":"16px"}}>
                               <figure className="swiper-slide-inner">
                                 <Image src="/images/53730dd809d76bf3c4ee8d4c6192136f.webp" alt="rectangle-251-1-1-68b941b47d396.webp" width={1200} height={669} className="swiper-slide-image entered error" />
                               </figure>
-                            </Link>
+                            </a>
                           </div>
                           <div className="swiper-slide swiper-slide-next" role="group" aria-roledescription="slide" aria-label="3 / 4" style={{"width":"369.333px","marginRight":"48px","visibility":"visible"}}>
-                            <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-250-2-68b941b9428a8.webp" style={{"fontSize":"16px"}}>
+                            <a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="db5b86e" data-lightbox-index="2" href="/images/8c6bc9fc5ffdc0e4b55f4fd4cd84435e.webp" style={{"fontSize":"16px"}}>
                               <figure className="swiper-slide-inner">
                                 <Image src="/images/8c6bc9fc5ffdc0e4b55f4fd4cd84435e.webp" alt="rectangle-250-2-68b941b9428a8.webp" width={1200} height={669} className="swiper-slide-image entered error" />
                               </figure>
-                            </Link>
+                            </a>
                           </div>
                           <div className="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 / 4" style={{"width":"369.333px","marginRight":"48px","visibility":"visible"}}>
-                            <Link data-elementor-open-lightbox="yes" href="/wp-content/uploads/2026/01/rectangle-251-2-68b941bad8a4b.webp" style={{"fontSize":"16px"}}>
+                            <a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="db5b86e" data-lightbox-index="3" href="/images/d170e5150e665f38cabc754c85b76d78.webp" style={{"fontSize":"16px"}}>
                               <figure className="swiper-slide-inner">
                                 <Image src="/images/d170e5150e665f38cabc754c85b76d78.webp" alt="rectangle-251-2-68b941bad8a4b.webp" width={1200} height={669} className="swiper-slide-image" />
                               </figure>
-                            </Link>
+                            </a>
                           </div>
                         </div>
                         <div className="elementor-swiper-button elementor-swiper-button-prev" role="button" tabIndex={0} aria-label="Previous slide" aria-controls="swiper-wrapper-52e6752b13610591f">

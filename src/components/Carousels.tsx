@@ -1,9 +1,23 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import type SwiperInstance from "swiper";
 import type { SwiperOptions } from "swiper/types";
 
 const initialized = new WeakSet<Element>();
+
+// A client-side navigation removes the old page's carousels from the DOM, but Swiper's
+// autoplay timer and window resize listeners keep each instance (and its detached DOM)
+// alive, still sliding. Destroy the ones whose element is gone; carousels in a shared
+// layout stay connected and keep running.
+const instances = new Set<SwiperInstance>();
+const destroyDetached = () => {
+  for (const swiper of instances) {
+    if (swiper.el?.isConnected) continue;
+    swiper.destroy(true, false);
+    instances.delete(swiper);
+  }
+};
 
 function toCount(value: unknown, fallback: number): number {
   const n = Number(value);
@@ -44,10 +58,11 @@ export default function Carousels() {
   const pathname = usePathname();
   useEffect(() => {
     let cancelled = false;
+    destroyDetached();
     const containers = Array.from(
       document.querySelectorAll(".swiper, .swiper-container")
     ).filter((el) => !initialized.has(el));
-    if (containers.length === 0) return;
+    if (containers.length === 0) return destroyDetached;
     (async () => {
       const [{ default: Swiper }, { Navigation, Pagination, Autoplay }] = await Promise.all([
         import("swiper"),
@@ -120,6 +135,7 @@ export default function Carousels() {
             : { el: paginationEl, clickable: true };
         }
         const swiper = new Swiper(el, options);
+        instances.add(swiper);
         if (realCount && paginationEl instanceof HTMLElement) {
           paginationEl.addEventListener("click", (e) => {
             const bullet = (e.target as Element).closest("[data-slide]");
@@ -130,6 +146,7 @@ export default function Carousels() {
     })();
     return () => {
       cancelled = true;
+      destroyDetached();
     };
   }, [pathname]);
   return null;

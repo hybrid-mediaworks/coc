@@ -428,9 +428,18 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
 .elementor-55188 .elementor-element.elementor-element-11c8c69 img { width: 373px; max-width: 100%; height: auto; }
 /* Once the jQuery FAQ script manages a panel (inline style set), let its slideUp/slideDown control visibility instead of the max-height clamp, so closing animates too. */
 .custom-accordion .custom-accordion__item .accordion-item__content[style] { max-height: none; padding: 24px 20px; }
-/* Related pages (RelatedCards): collapse extra cards on desktop only; below 1024px the whole list shows in its scroll box. "Load More" stays visible at every width, as on the WordPress site. */
+/* Related pages (RelatedCards): collapse extra cards on desktop only. Below 1024px every card
+   is already shown, so "Load More" has nothing to do and is hidden; on phones the full list
+   scrolls vertically in a fixed-height box (repeated here because only some page stylesheets
+   carry that rule). */
 @media (min-width: 1024px) {
   .cards-wrapper .card.card--collapsed { display: none; }
+}
+@media (max-width: 1023px) {
+  .cards-wrapper #button-wrapper { display: none; }
+}
+@media (max-width: 767px) {
+  .cards-wrapper .cards { grid-template-columns: 1fr; height: 217px; overflow-y: auto; }
 }
 /* Spin for the table-of-contents loader (BlogTocList); only some page stylesheets define it. */
 @keyframes eicon-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(359deg); } }
@@ -485,13 +494,19 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
     font-family:"Poppins", Sans-serif !important;
     font-size: 24px !important;
   }
+  .elementor-element.elementor-element-ef0957c h2.elementor-heading-title{
+    font-size: 32px !important;
+  }
   .elementor-widget-n-accordion .e-n-accordion-item-title-text{
     font-family:"Poppins", Sans-serif !important;
     font-size: 18px !important;
     font-weight: 500;
   }
-  .elementor-widget-icon-box.elementor-mobile-position-block-start .elementor-icon-box-wrapper{
+  .elementor-widget-icon-box.elementor-mobile-position-block-start.location-icon-box .elementor-icon-box-wrapper{
     align-items: center !important;
+  }
+  .elementor-element.elementor-element-d752ce7,.elementor-element.elementor-element-e62861f{
+    width:100% !important;
   }
 }
 
@@ -501,4 +516,21 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+/* Guided tour widget (GuidedTour): a single "Next Page In Tour" card. The page stylesheets
+   still carry the old three-column .jg-sc-guided-wrap rules and load after this file, so the
+   wrapper overrides use the extra .jg-next-only class to win on specificity. */
+.jg-sc-guided-wrap.jg-next-only { max-width: 695px; width: calc(100% - 20px); margin: 0 auto; box-shadow: none; font-family: var(--font-poppins), sans-serif; }
+.jg-next-only .jg-next-card { background: rgb(222, 233, 233); border-radius: 14px; padding: 36px 24px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
+.jg-next-only .jg-next-title { margin: 0; color: rgb(74, 74, 74); font-family: var(--font-poppins), sans-serif; font-size: 22px; font-weight: 400; line-height: 30px; }
+.jg-sc-guided-wrap.jg-next-only a.jg-next-link { display: inline-flex; align-items: center; gap: 12px; color: rgb(116, 175, 178); font-family: var(--font-poppins), sans-serif; font-size: 16px; font-weight: 500; line-height: 24px; text-align: left; text-decoration: underline; text-underline-offset: 3px; }
+.jg-sc-guided-wrap.jg-next-only a.jg-next-link:hover { color: rgb(91, 144, 147); }
+.jg-next-only .jg-next-num { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: rgb(114, 135, 164); color: rgb(255, 255, 255); font-size: 14px; font-weight: 600; line-height: 1; text-decoration: none; }
+.jg-next-only .jg-next-complete { margin: 0; color: rgb(74, 74, 74); font-size: 16px; line-height: 24px; }
+@media (max-width: 767px) {
+  .jg-sc-guided-wrap.jg-next-only { max-width: calc(100% - 20px); }
+  .jg-next-only .jg-next-card { padding: 28px 16px; gap: 16px; }
+  .jg-next-only .jg-next-title { font-size: 20px; line-height: 28px; }
+  .jg-sc-guided-wrap.jg-next-only a.jg-next-link { align-items: flex-start; font-size: 15px; line-height: 22px; }
 }
