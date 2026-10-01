@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout4 from '../layouts/Layout-4';
+import { resolvePagePhone } from "@/lib/phone";
 
 const gridData0 = [
   {
@@ -285,6 +286,7 @@ const gridData6 = [
 
 
 export default function ThankYou(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const brand = props.brand ?? "Connections Mental Health";
   const drug = props.drug ?? "Drug";
   const near_in = props.near_in ?? "near";
@@ -594,7 +596,7 @@ export default function ThankYou(props: Record<string, string>) {
                             <div className="elementor-element elementor-element-5fd41b5 elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
                               <div className="elementor-widget-container">
                                 <div className="elementor-button-wrapper">
-                                  <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                                  <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                                     <span className="elementor-button-content-wrapper">
                                       <span className="elementor-button-text">Call us we will work with you</span>
                                     </span>
@@ -877,9 +879,9 @@ export default function ThankYou(props: Record<string, string>) {
                             <div className="elementor-element elementor-element-7477073a elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
                               <div className="elementor-widget-container">
                                 <div className="elementor-button-wrapper">
-                                  <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                                  <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                                     <span className="elementor-button-content-wrapper">
-                                      <span className="elementor-button-text">844-759-0999</span>
+                                      <span className="elementor-button-text">{__phone?.label ?? "844-759-0999"}</span>
                                     </span>
                                   </Link>
                                 </div>
@@ -1379,7 +1381,7 @@ export default function ThankYou(props: Record<string, string>) {
                   <div className="elementor-element elementor-element-7f3e9c6 elementor-align-left elementor-mobile-align-center elementor-tablet-align-left elementor-widget elementor-widget-button" data-widget_type="button.default">
                     <div className="elementor-widget-container">
                       <div className="elementor-button-wrapper">
-                        <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                        <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                           <span className="elementor-button-content-wrapper">
                             <span className="elementor-button-text">Call Now</span>
                           </span>

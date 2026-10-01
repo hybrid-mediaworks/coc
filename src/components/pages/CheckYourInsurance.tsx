@@ -1,9 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { resolvePagePhone } from "@/lib/phone";
 
 
 export default function CheckYourInsurance(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const year = props.year ?? "2025";
   return (
     <>
@@ -142,10 +144,10 @@ export default function CheckYourInsurance(props: Record<string, string>) {
             <div className="elementor-element elementor-element-e7d2beb elementor-align-justify elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget-mobile__width-inherit elementor-mobile-align-justify elementor-tablet-align-right elementor-widget elementor-widget-button" data-widget_type="button.default">
               <div className="elementor-widget-container">
                 <div className="elementor-button-wrapper">
-                  <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+                  <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                     <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                       <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                        844-759-0999
+                        {__phone?.label ?? "844-759-0999"}
                       </span>
                     </span>
                   </Link>

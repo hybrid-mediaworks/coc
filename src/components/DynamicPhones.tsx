@@ -44,9 +44,14 @@ function apply(link: HTMLAnchorElement, phone: PagePhone | null) {
   }
 }
 
+// Links that are not the page's CTA number: facility cards (the /our-facilities/ loop) call that
+// facility's own line, and data-phone-static marks other fixed contacts.
+const EXTERNAL = ".e-loop-item.type-facility, [data-phone-static]";
+
 const applyAll = (root: ParentNode, phone: PagePhone | null) => {
-  if (root instanceof HTMLAnchorElement && root.matches(TEL_LINKS)) apply(root, phone);
-  for (const link of root.querySelectorAll<HTMLAnchorElement>(TEL_LINKS)) apply(link, phone);
+  const links = Array.from(root.querySelectorAll<HTMLAnchorElement>(TEL_LINKS));
+  if (root instanceof HTMLAnchorElement && root.matches(TEL_LINKS)) links.push(root);
+  for (const link of links) if (!link.closest(EXTERNAL)) apply(link, phone);
 };
 
 const cache = new Map<string, Promise<PagePhone | null>>();
@@ -64,9 +69,10 @@ const phoneFor = (path: string) => {
   return pending;
 };
 
-// Points every tel: link on the page (header, footer, popups and CTAs) at the page's own
-// number from the builder API (tel_phone_call_now / tel_phone / phone): the tel: value goes
-// in href and the display value replaces link text that is a phone number. Links added later
+// Points every tel: link on the page (header, footer, popups and CTA buttons) at the page's
+// number from the builder API (see resolvePagePhone: href from tel_phone, text from phone):
+// the tel: value goes in href and the display value replaces link text that is a phone number.
+// Facility cards are left alone. Links added later
 // (carousel clones, lazily rendered widgets) get it too. CallTrackingMetrics then re-runs so
 // any tracking-number swap applies to the page's number.
 export default function DynamicPhones() {

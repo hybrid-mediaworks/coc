@@ -1083,7 +1083,7 @@ export default function ReviewsTustinCa(props: Record<string, string>) {
                     <p>Submit Review Screenshots To Your Staff Representative or to the phone/email below:</p>
                     <p>
                       <span>
-                        <Link href="tel:714-333-0434">
+                        <Link href="tel:714-333-0434" data-phone-static="">
                           <span>714-333-0434</span>
                         </Link>
                       </span>

@@ -2,9 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout4 from '../layouts/Layout-4';
+import { resolvePagePhone } from "@/lib/phone";
 
 
 export default function Trauma(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const brand = props.brand ?? "Connections Mental Health";
   return (
     <Layout4>
@@ -24,7 +26,7 @@ export default function Trauma(props: Record<string, string>) {
                     <div className="elementor-element elementor-element-bc9a1ad elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                          <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">Call Now</span>
                             </span>
@@ -561,7 +563,7 @@ export default function Trauma(props: Record<string, string>) {
                             <div className="elementor-element elementor-element-736d41b elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                               <div className="elementor-widget-container">
                                 <div className="elementor-button-wrapper">
-                                  <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                                  <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                                     <span className="elementor-button-content-wrapper">
                                       <span className="elementor-button-text">Call Now</span>
                                     </span>
@@ -829,7 +831,7 @@ export default function Trauma(props: Record<string, string>) {
                         <p>
                           <span>
                             {"Call us today at "}
-                            <Link href="tel:844-759-0999">844-759-0999</Link>
+                            <Link href={__phone?.href ?? "tel:844-759-0999"}>{__phone?.label ?? "844-759-0999"}</Link>
                             {" to discover more about our personalized trauma care plans and take the first step on your journey to healing at Connections Mental Health with our trauma-informed therapy programs."}
                           </span>
                         </p>

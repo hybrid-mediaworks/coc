@@ -2,9 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout4 from '../layouts/Layout-4';
+import { resolvePagePhone } from "@/lib/phone";
 
 
 export default function BipolarDisorder(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const brand = props.brand ?? "Connections Mental Health";
   return (
     <Layout4>
@@ -24,7 +26,7 @@ export default function BipolarDisorder(props: Record<string, string>) {
                     <div className="elementor-element elementor-element-bc9a1ad elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                          <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">Call Now</span>
                             </span>
@@ -685,7 +687,7 @@ export default function BipolarDisorder(props: Record<string, string>) {
                             <div className="elementor-element elementor-element-736d41b elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                               <div className="elementor-widget-container">
                                 <div className="elementor-button-wrapper">
-                                  <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                                  <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                                     <span className="elementor-button-content-wrapper">
                                       <span className="elementor-button-text">Call Now</span>
                                     </span>
@@ -817,8 +819,8 @@ export default function BipolarDisorder(props: Record<string, string>) {
                         <p>With a compassionate-first approach, we specialize in treating the individual, not just their symptoms. Our goal is to establish an atmosphere that feels more like home than a hospital – a place where you can heal while surrounded by the serene beauty of Southern California.</p>
                         <p>
                           {"Whether you or your loved one is dealing with bipolar disorder, seeking stability, or feeling off-balance, we are here to support you at our inpatient bipolar disorder treatment in Orange County. Call the friendly team today at "}
-                          <Link href="tel:844-759-0999">
-                            <span>844-759-0999</span>
+                          <Link href={__phone?.href ?? "tel:844-759-0999"}>
+                            <span>{__phone?.label ?? "844-759-0999"}</span>
                           </Link>
                           {" for immediate assistance."}
                         </p>

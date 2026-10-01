@@ -2,9 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout4 from '../layouts/Layout-4';
+import { resolvePagePhone } from "@/lib/phone";
 
 
 export default function MentalHealthMoodDisordersBipolar(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const __presentIds = (props.__present ?? "").split(",").filter(Boolean);
   const __present = (id: string) => __presentIds.length === 0 || __presentIds.includes(id);
   const brand = props.brand ?? "Connections Mental Health";
@@ -27,7 +29,7 @@ export default function MentalHealthMoodDisordersBipolar(props: Record<string, s
                     <div className="elementor-element elementor-element-bc9a1ad elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                          <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">Call Now</span>
                             </span>
@@ -636,7 +638,7 @@ export default function MentalHealthMoodDisordersBipolar(props: Record<string, s
                             <div className="elementor-element elementor-element-736d41b elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                               <div className="elementor-widget-container">
                                 <div className="elementor-button-wrapper">
-                                  <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                                  <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                                     <span className="elementor-button-content-wrapper">
                                       <span className="elementor-button-text">Call Now</span>
                                     </span>
@@ -923,8 +925,8 @@ export default function MentalHealthMoodDisordersBipolar(props: Record<string, s
                         </p>
                         <p>
                           <span>Call {brand} today at </span>
-                          <Link href="tel:844-759-0999">
-                            <span>844-759-0999</span>
+                          <Link href={__phone?.href ?? "tel:844-759-0999"}>
+                            <span>{__phone?.label ?? "844-759-0999"}</span>
                           </Link>
                           <span> to discover more about our treatment plans and start your journey to whole-body healing in Southern California with personalized cyclothymia therapy.</span>
                         </p>

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout2 from '../layouts/Layout-2';
+import { resolvePagePhone } from "@/lib/phone";
 
 const gridData0 = [
   {
@@ -65,6 +66,7 @@ const gridData0 = [
 
 
 export default function AboutUs(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const h1 = props.h1 ?? "About Us";
   return (
     <Layout2>
@@ -91,7 +93,7 @@ export default function AboutUs(props: Record<string, string>) {
                     <div className="elementor-element elementor-element-79921ac elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                          <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">Call Now</span>
                             </span>
@@ -292,7 +294,7 @@ export default function AboutUs(props: Record<string, string>) {
                             <div className="elementor-element elementor-element-c004959 elementor-align-left elementor-mobile-align-center elementor-tablet-align-center elementor-widget__width-initial elementor-widget elementor-widget-button" data-widget_type="button.default">
                               <div className="elementor-widget-container">
                                 <div className="elementor-button-wrapper">
-                                  <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                                  <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                                     <span className="elementor-button-content-wrapper">
                                       <span className="elementor-button-text">Call Now</span>
                                     </span>
@@ -589,7 +591,7 @@ export default function AboutUs(props: Record<string, string>) {
                     <div className="elementor-element elementor-element-7805b79 elementor-align-left elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                          <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">Call Now</span>
                             </span>
@@ -685,7 +687,7 @@ export default function AboutUs(props: Record<string, string>) {
                     <div className="elementor-element elementor-element-231f025 elementor-align-left elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                          <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">Call Now</span>
                             </span>

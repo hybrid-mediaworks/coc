@@ -1,30 +1,22 @@
 export type PagePhone = { href: string; label: string };
 
-// The builder fields that carry a page's phone number, most specific first. A value that
-// starts with "tel:" is a link target; any other value is display text.
-const PHONE_FIELDS = ["tel_phone_call_now", "tel_phone", "phone"] as const;
-
 const TEL = /^tel:/i;
 const digitsOf = (value: string) => value.replace(/\D/g, "").replace(/^1(?=\d{10}$)/, "");
 
-// The page's CTA phone: `href` from the first "tel:" value, `label` from a display value for
-// the same number (so a facility's tel_phone_call_now is never labelled with the site-wide
-// `phone`). With no matching display value the label is the tel: number itself; with no tel:
-// value at all, the display value becomes both. Null when the page has no phone fields.
+// The page's CTA phone, used by the header and every tel: button: link from `tel_phone`, label
+// from `phone`, as given. A page without `tel_phone` (a facility page) falls back to its own
+// `tel_phone_call_now` for both, then to `phone`. Null when the page has none of them.
 export function resolvePagePhone(fields: Record<string, unknown> | null | undefined): PagePhone | null {
-  if (!fields) return null;
-  const values = PHONE_FIELDS.map((key) => fields[key])
-    .filter((v): v is string => typeof v === "string")
-    .map((v) => v.trim())
-    .filter((v) => digitsOf(v).length >= 7);
-  const tel = values.find((v) => TEL.test(v));
-  const display = values.filter((v) => !TEL.test(v));
-  if (tel) {
-    const number = tel.replace(TEL, "").trim();
-    const label = display.find((v) => digitsOf(v) === digitsOf(number)) ?? number;
-    return { href: toHref(number), label };
-  }
-  if (display[0]) return { href: toHref(display[0]), label: display[0] };
+  const field = (key: string) => {
+    const value = fields?.[key];
+    return typeof value === "string" && digitsOf(value).length >= 7 ? value.replace(TEL, "").trim() : null;
+  };
+  const tel = field("tel_phone");
+  const label = field("phone");
+  if (tel) return { href: toHref(tel), label: label ?? tel };
+  const callNow = field("tel_phone_call_now");
+  if (callNow) return { href: toHref(callNow), label: callNow };
+  if (label) return { href: toHref(label), label };
   return null;
 }
 

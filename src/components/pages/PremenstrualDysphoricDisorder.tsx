@@ -2,9 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout4 from '../layouts/Layout-4';
+import { resolvePagePhone } from "@/lib/phone";
 
 
 export default function PremenstrualDysphoricDisorder(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const meta_title = props.meta_title ?? "Premenstrual Dysphoric Disorder (PMDD)";
   const brand = props.brand ?? "Connections Mental Health";
   return (
@@ -25,7 +27,7 @@ export default function PremenstrualDysphoricDisorder(props: Record<string, stri
                     <div className="elementor-element elementor-element-bc9a1ad elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                          <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">Call Now</span>
                             </span>
@@ -809,7 +811,7 @@ export default function PremenstrualDysphoricDisorder(props: Record<string, stri
                             <div className="elementor-element elementor-element-736d41b elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                               <div className="elementor-widget-container">
                                 <div className="elementor-button-wrapper">
-                                  <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                                  <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                                     <span className="elementor-button-content-wrapper">
                                       <span className="elementor-button-text">Call Now</span>
                                     </span>
@@ -1101,7 +1103,7 @@ export default function PremenstrualDysphoricDisorder(props: Record<string, stri
                           <span>
                             {"When you are ready to move beyond a life constrained by PMDD, access compassionate-first treatment at Connections Mental Health. Call us today at "}
                             <strong>
-                              <Link href="tel:844-759-0999">844-759-0999</Link>
+                              <Link href={__phone?.href ?? "tel:844-759-0999"}>{__phone?.label ?? "844-759-0999"}</Link>
                             </strong>
                             {"to find out more about our individualized treatment plans for premenstrual dysphoric disorder and other mental health disorders."}
                           </span>

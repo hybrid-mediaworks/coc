@@ -2,8 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout2 from '../layouts/Layout-2';
+import { resolvePagePhone } from "@/lib/phone";
 
 export default function Untitled(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const __presentIds = (props.__present ?? "").split(",").filter(Boolean);
   const __present = (id: string) => __presentIds.length === 0 || __presentIds.includes(id);
   return (
@@ -189,7 +191,7 @@ export default function Untitled(props: Record<string, string>) {
                   <p className="wp-block-paragraph">
                     <strong>
                       {"Get effective mental health therapy in Southern California by calling "}
-                      <Link href="tel:844-759-0999" rel="noreferrer noopener" target="_blank">844-759-0999</Link>
+                      <Link href={__phone?.href ?? "tel:844-759-0999"} rel="noreferrer noopener" target="_blank">{__phone?.label ?? "844-759-0999"}</Link>
                       {"."}
                     </strong>
                   </p>
@@ -277,7 +279,7 @@ export default function Untitled(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-8bbdfff elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                         <div className="elementor-widget-container">
                           <div className="elementor-button-wrapper">
-                            <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                            <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                               <span className="elementor-button-content-wrapper">
                                 <span className="elementor-button-text">Call Now</span>
                               </span>
@@ -430,7 +432,7 @@ export default function Untitled(props: Record<string, string>) {
                       <div className="elementor-element elementor-element-f2b81f1 elementor-align-left elementor-mobile-align-center elementor-widget__width-initial elementor-widget elementor-widget-button" data-widget_type="button.default">
                         <div className="elementor-widget-container">
                           <div className="elementor-button-wrapper">
-                            <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                            <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                               <span className="elementor-button-content-wrapper">
                                 <span className="elementor-button-text">Call Now</span>
                               </span>
@@ -503,7 +505,7 @@ export default function Untitled(props: Record<string, string>) {
               <div className="elementor-element elementor-element-3e1be7f elementor-align-left elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                 <div className="elementor-widget-container">
                   <div className="elementor-button-wrapper">
-                    <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                    <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                       <span className="elementor-button-content-wrapper">
                         <span className="elementor-button-text">Call Now</span>
                       </span>

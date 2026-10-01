@@ -3,9 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BlogPagination, FeaturedCard, GridCard, loadBlogArchive, parseBlogPage } from '@/components/BlogArchive';
+import { resolvePagePhone } from "@/lib/phone";
 
 
 export default async function Page55388(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const __presentIds = (props.__present ?? "").split(",").filter(Boolean);
   const __present = (id: string) => __presentIds.length === 0 || __presentIds.includes(id);
   const first_name = props.first_name ?? "";
@@ -184,7 +186,7 @@ export default async function Page55388(props: Record<string, string>) {
           <div className="elementor-element elementor-element-1e5935e8 elementor-align-justify elementor-widget__width-initial elementor-widget elementor-widget-button" data-widget_type="button.default">
             <div className="elementor-widget-container">
               <div className="elementor-button-wrapper">
-                <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+                <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                   <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                     <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                       Call us we will work with you
@@ -238,7 +240,7 @@ export default async function Page55388(props: Record<string, string>) {
           <div className="elementor-element elementor-element-69103579 elementor-align-justify elementor-widget__width-initial elementor-widget elementor-widget-button" data-widget_type="button.default">
             <div className="elementor-widget-container">
               <div className="elementor-button-wrapper">
-                <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+                <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                   <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                     <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                       Call us we will work with you
@@ -608,10 +610,10 @@ export default async function Page55388(props: Record<string, string>) {
                         <div className="elementor-widget-container">
                           <p style={{"fontSize":"16px"}}>
                             Yes, your treatment for mental health can be covered by an insurance provider. We work with most PPC insurance through employers. Call our helpful team now at
-                            <Link href="tel:888-255-211" style={{"fontSize":"16px"}}>
-                              {" "}888-255-211
+                            {" "}<Link href={__phone?.href ?? "tel:888-255-2112"} style={{"fontSize":"16px"}}>
+                              {__phone?.label ?? "888-255-2112"}
                             </Link>
-                            2 to find out what your coverage will be.
+                            {" "}to find out what your coverage will be.
                           </p>
                         </div>
                       </div>
@@ -844,10 +846,10 @@ export default async function Page55388(props: Record<string, string>) {
           <div className="elementor-element elementor-element-7f918e6 elementor-align-justify elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
             <div className="elementor-widget-container">
               <div className="elementor-button-wrapper">
-                <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+                <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                   <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                     <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                      844-759-0999
+                      {__phone?.label ?? "844-759-0999"}
                     </span>
                   </span>
                 </Link>
@@ -857,7 +859,7 @@ export default async function Page55388(props: Record<string, string>) {
           <div className="elementor-element elementor-element-420b38d elementor-align-justify elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-button" data-widget_type="button.default">
             <div className="elementor-widget-container">
               <div className="elementor-button-wrapper">
-                <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+                <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                   <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                     <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                       Call Now
@@ -901,7 +903,7 @@ export default async function Page55388(props: Record<string, string>) {
           <div className="elementor-element elementor-element-7ca413b elementor-align-left elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
             <div className="elementor-widget-container">
               <div className="elementor-button-wrapper">
-                <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+                <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                   <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                     <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                       Call Now

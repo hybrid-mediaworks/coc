@@ -3,9 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import GuidedTour from '@/components/GuidedTour';
 import ContinueJourney from '@/components/ContinueJourney';
+import { resolvePagePhone } from "@/lib/phone";
 
 
 export default function RehabAdmissions(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const brand = props.brand ?? "Connections Mental Health";
   const phone = props.phone ?? "844-759-0999";
   return (
@@ -73,10 +75,10 @@ Starts Here
         <div className="elementor-element elementor-element-e611b23 elementor-align-justify elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
           <div className="elementor-widget-container">
             <div className="elementor-button-wrapper">
-              <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+              <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                 <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                   <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                    844-759-0999
+                    {__phone?.label ?? "844-759-0999"}
                   </span>
                 </span>
               </Link>
@@ -534,10 +536,10 @@ Starts Here
             <div className="elementor-element elementor-element-529e5b4 elementor-align-justify elementor-widget__width-initial elementor-widget elementor-widget-button" data-widget_type="button.default">
               <div className="elementor-widget-container">
                 <div className="elementor-button-wrapper">
-                  <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:888-255-2112" style={{"fontSize":"16px"}}>
+                  <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:888-255-2112"} style={{"fontSize":"16px"}}>
                     <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                       <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                        888-255-2112
+                        {__phone?.label ?? "888-255-2112"}
                       </span>
                     </span>
                   </Link>
@@ -643,7 +645,7 @@ Starts Here
             <div className="elementor-element elementor-element-bb14346 elementor-align-left elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
               <div className="elementor-widget-container">
                 <div className="elementor-button-wrapper">
-                  <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+                  <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                     <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                       <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                         Call Now
@@ -918,7 +920,7 @@ Starts Here
             <div className="elementor-element elementor-element-07b02aa elementor-align-left elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
               <div className="elementor-widget-container">
                 <div className="elementor-button-wrapper">
-                  <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+                  <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                     <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                       <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                         Call Now

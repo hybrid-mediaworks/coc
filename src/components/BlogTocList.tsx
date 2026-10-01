@@ -4,15 +4,18 @@ import { useEffect, useRef, useState } from "react";
 type Item = { id: string; text: string };
 
 // Client-side table of contents. Renders Elementor's TOC spinner, then reads the
-// <h2> headings inside every element marked data-toc-source (the rendered h2___con
-// and blog_section_1___con), in page order, gives them anchor ids and lists them.
-// When none of them has a heading, the whole TOC column is hidden.
+// headings inside every element marked data-toc-source, in page order, gives them
+// anchor ids and lists them. data-toc-source="all" (the h2___head + h2___con column)
+// contributes every heading level; a bare data-toc-source (blog_section_1___con) only
+// its <h2>s. When none of them has a heading, the whole TOC column is hidden.
+const HEADINGS = '[data-toc-source] h2, [data-toc-source="all"] :is(h3, h4, h5, h6)';
+
 export default function BlogTocList({ column = ".e-con" }: { column?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [items, setItems] = useState<Item[] | null>(null);
 
   useEffect(() => {
-    const headings = Array.from(document.querySelectorAll("[data-toc-source] h2")).filter(
+    const headings = Array.from(document.querySelectorAll(HEADINGS)).filter(
       (h) => (h.textContent ?? "").trim() !== ""
     );
     const found = headings.map((h, i) => {

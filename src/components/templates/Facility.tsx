@@ -2,6 +2,7 @@ import React from 'react';
 import '@/app/shared/facility.css';
 import Image from 'next/image';
 import ElementorGallery, { type GalleryImage } from '@/components/ElementorGallery';
+import { resolvePagePhone } from "@/lib/phone";
 
 // Facility pages (WordPress "facility" posts, /facility/<slug>/), rebuilt from the live
 // Elementor single-post template 56813. The facility's name, address and its three photo
@@ -88,6 +89,7 @@ function LocationIcon() {
 }
 
 export default function Facility(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const facilityName = props.facility_name ?? '';
   const facilityLocation = props.facility_location ?? '';
   const tabs = TABS.map((tab) => ({ ...tab, images: galleryOf((props as Record<string, unknown>)[tab.key]) })).filter((tab) => tab.images.length > 0);
@@ -266,7 +268,7 @@ export default function Facility(props: Record<string, string>) {
               <div className="elementor-element elementor-element-3e25253 elementor-align-left elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                 <div className="elementor-widget-container">
                   <div className="elementor-button-wrapper">
-                    <a href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                    <a href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                       <span className="elementor-button-content-wrapper">
                         <span className="elementor-button-text">Call Now</span>
                       </span>

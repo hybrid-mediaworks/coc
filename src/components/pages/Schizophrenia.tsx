@@ -2,9 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout4 from '../layouts/Layout-4';
+import { resolvePagePhone } from "@/lib/phone";
 
 
 export default function Schizophrenia(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const brand = props.brand ?? "Connections Mental Health";
   return (
     <Layout4>
@@ -24,7 +26,7 @@ export default function Schizophrenia(props: Record<string, string>) {
                     <div className="elementor-element elementor-element-bc9a1ad elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                          <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">Call Now</span>
                             </span>
@@ -384,7 +386,7 @@ export default function Schizophrenia(props: Record<string, string>) {
                             <div className="elementor-element elementor-element-736d41b elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                               <div className="elementor-widget-container">
                                 <div className="elementor-button-wrapper">
-                                  <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                                  <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                                     <span className="elementor-button-content-wrapper">
                                       <span className="elementor-button-text">Call Now</span>
                                     </span>
@@ -687,8 +689,8 @@ export default function Schizophrenia(props: Record<string, string>) {
                         </p>
                         <p>
                           <span>If you or a loved one are battling schizophrenia, start the process of whole-body healing at {brand}. Our committed team will help you initiate meaningful change. Call admissions today at </span>
-                          <Link href="tel:844-759-0999">
-                            <b>844-759-0999</b>
+                          <Link href={__phone?.href ?? "tel:844-759-0999"}>
+                            <b>{__phone?.label ?? "844-759-0999"}</b>
                           </Link>
                           <span> for more information and immediate assistance.</span>
                         </p>

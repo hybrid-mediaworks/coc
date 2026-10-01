@@ -2,9 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout4 from '../layouts/Layout-4';
+import { resolvePagePhone } from "@/lib/phone";
 
 
 export default function DrugSubstanceInducedPsychosis(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const phone = props.phone ?? "844-759-0999";
   const drug = props.drug ?? "Drug";
   return (
@@ -371,7 +373,7 @@ export default function DrugSubstanceInducedPsychosis(props: Record<string, stri
                       <div className="elementor-element elementor-element-8bbdfff elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                         <div className="elementor-widget-container">
                           <div className="elementor-button-wrapper">
-                            <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                            <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                               <span className="elementor-button-content-wrapper">
                                 <span className="elementor-button-text">Call Now</span>
                               </span>
@@ -522,7 +524,7 @@ export default function DrugSubstanceInducedPsychosis(props: Record<string, stri
                       <div className="elementor-element elementor-element-f2b81f1 elementor-align-left elementor-mobile-align-center elementor-widget__width-initial elementor-widget elementor-widget-button" data-widget_type="button.default">
                         <div className="elementor-widget-container">
                           <div className="elementor-button-wrapper">
-                            <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                            <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                               <span className="elementor-button-content-wrapper">
                                 <span className="elementor-button-text">Call Now</span>
                               </span>
@@ -591,7 +593,7 @@ export default function DrugSubstanceInducedPsychosis(props: Record<string, stri
               <div className="elementor-element elementor-element-3e1be7f elementor-align-left elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                 <div className="elementor-widget-container">
                   <div className="elementor-button-wrapper">
-                    <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                    <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                       <span className="elementor-button-content-wrapper">
                         <span className="elementor-button-text">Call Now</span>
                       </span>

@@ -2,9 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout4 from '../layouts/Layout-4';
+import { resolvePagePhone } from "@/lib/phone";
 
 
 export default function PersistentDepressiveDisorder(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const meta_title = props.meta_title ?? "Persistent Depressive Disorder";
   const brand = props.brand ?? "Connections Mental Health";
   return (
@@ -25,7 +27,7 @@ export default function PersistentDepressiveDisorder(props: Record<string, strin
                     <div className="elementor-element elementor-element-bc9a1ad elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                          <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">Call Now</span>
                             </span>
@@ -551,7 +553,7 @@ export default function PersistentDepressiveDisorder(props: Record<string, strin
                             <div className="elementor-element elementor-element-736d41b elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                               <div className="elementor-widget-container">
                                 <div className="elementor-button-wrapper">
-                                  <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                                  <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                                     <span className="elementor-button-content-wrapper">
                                       <span className="elementor-button-text">Call Now</span>
                                     </span>
@@ -688,7 +690,7 @@ export default function PersistentDepressiveDisorder(props: Record<string, strin
                         <p>
                           <span>
                             {"Contact us today at "}
-                            <Link href="tel:844-759-0999">844-759-0999</Link>
+                            <Link href={__phone?.href ?? "tel:844-759-0999"}>{__phone?.label ?? "844-759-0999"}</Link>
                             {" to learn more about our personalized treatment plans and embark on your journey to healing at Connections Mental Health."}
                           </span>
                         </p>

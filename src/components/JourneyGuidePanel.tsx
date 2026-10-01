@@ -10,11 +10,10 @@ import { markVisited, TOUR_PAGES, type Visited } from "@/lib/journeyGuide";
 // Uses its own ids (#jgp-*, styled in base.css) so the preserved jQuery plugin script,
 // which binds #jg-toggle-btn and rewrites #jg-page-list, cannot interfere.
 
-// First visit on a phone: once the visitor scrolls past the section under the hero, slide the
-// panel open for AUTO_OPEN_MS, then close it unless they have toggled it themselves. It only
+// First visit (any viewport): once the visitor scrolls past the section under the hero, slide
+// the panel open for AUTO_OPEN_MS, then close it unless they have toggled it themselves. It only
 // ever happens once per browser (AUTO_OPEN_COOKIE); pages without two top-level sections
 // never trigger it, so the next page gets the chance instead.
-const MOBILE_QUERY = "(max-width: 767px)";
 const AUTO_OPEN_MS = 4500;
 const AUTO_OPEN_COOKIE = "jg_autoopened";
 const AUTO_OPEN_COOKIE_DAYS = 365;
@@ -63,7 +62,7 @@ export default function JourneyGuidePanel() {
   useEffect(() => () => cancelAutoClose(), []);
 
   useEffect(() => {
-    if (!window.matchMedia(MOBILE_QUERY).matches || hasAutoOpened()) return;
+    if (hasAutoOpened()) return;
     const target = sectionUnderHero();
     if (!target) return;
     let frame = 0;
@@ -71,7 +70,6 @@ export default function JourneyGuidePanel() {
       frame = 0;
       if (target.getBoundingClientRect().bottom > 0 || hasAutoOpened()) return;
       window.removeEventListener("scroll", onScroll);
-      if (!window.matchMedia(MOBILE_QUERY).matches) return;
       rememberAutoOpened();
       setOpen(true);
       autoCloseTimer.current = window.setTimeout(() => {

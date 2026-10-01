@@ -2,9 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Layout4 from '../layouts/Layout-4';
+import { resolvePagePhone } from "@/lib/phone";
 
 
 export default function MentalHealthNeurodevelopmentDisorder(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const __presentIds = (props.__present ?? "").split(",").filter(Boolean);
   const __present = (id: string) => __presentIds.length === 0 || __presentIds.includes(id);
   const h1 = props.h1 ?? "Autism Spectrum Disorder (ASD)";
@@ -28,7 +30,7 @@ export default function MentalHealthNeurodevelopmentDisorder(props: Record<strin
                     <div className="elementor-element elementor-element-bc9a1ad elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                          <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-text">Call Now</span>
                             </span>
@@ -600,7 +602,7 @@ export default function MentalHealthNeurodevelopmentDisorder(props: Record<strin
                             <div className="elementor-element elementor-element-736d41b elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                               <div className="elementor-widget-container">
                                 <div className="elementor-button-wrapper">
-                                  <Link href="tel:844-759-0999" className="elementor-button elementor-button-link elementor-size-sm">
+                                  <Link href={__phone?.href ?? "tel:844-759-0999"} className="elementor-button elementor-button-link elementor-size-sm">
                                     <span className="elementor-button-content-wrapper">
                                       <span className="elementor-button-text">Call Now</span>
                                     </span>
@@ -794,7 +796,7 @@ export default function MentalHealthNeurodevelopmentDisorder(props: Record<strin
                         <p>Whether you or a loved one is experiencing episodes of major depressive disorder, we’re here to support you and help you restore daily functioning and sound mental health. Engage with compassionate treatment that blends science-backed interventions and holistic therapies, and take the first step towards a brighter future at {brand}.</p>
                         <p>
                           {"Call us today at "}
-                          <Link href="tel:844-759-0999">844-759-0999</Link>
+                          <Link href={__phone?.href ?? "tel:844-759-0999"}>{__phone?.label ?? "844-759-0999"}</Link>
                           {" to learn more about our personalized treatment plans and begin your journey to healing at Connections."}
                         </p>
                       </div>

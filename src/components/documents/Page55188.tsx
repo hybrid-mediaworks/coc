@@ -8,6 +8,7 @@ import FaqAccordion, { parseFaqs } from '@/components/FaqAccordion';
 import RelatedPages from '@/components/RelatedPages';
 import GuidedTour from '@/components/GuidedTour';
 import ContinueJourney from '@/components/ContinueJourney';
+import { resolvePagePhone } from "@/lib/phone";
 
 const FACILITY_GALLERY: DmgGalleryImage[] = [
   { src: "/images/4675597e21eff4b4951bc5e1cb70e598.webp", width: 1920, height: 1280 },
@@ -40,6 +41,7 @@ const FACILITY_GALLERY: DmgGalleryImage[] = [
 
 
 export default function Page55188(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const __presentIds = (props.__present ?? "").split(",").filter(Boolean);
   const __present = (id: string) => __presentIds.length === 0 || __presentIds.includes(id);
   const h2___con = props.h2___con ?? "Substance dependency slowly consumes various dimensions of personal life, disrupting professional responsibilities, intimate relationships, and psychological health. Those recognizing their need for drug rehab acknowledge that change becomes necessary yet remain constrained by scheduling conflicts that prevent treatment participation. <strong>Concerns regarding job security, household responsibilities</strong>, or financial stability often postpone help-seeking behaviors, allowing substance use disorders to persistently erode overall quality of life.\r\nEvidence-based drug rehabilitation provides solutions through structured treatment approaches that work around practical limitations. Through systematic therapeutic programs and professional guidance, individuals can begin <strong>addressing their dependency, managing cravings, and rebuilding stability while preserving their everyday responsibilities.</strong>\r\n<ul>\r\n \t<li>Generates unique stressors that can impact the recovery process.</li>\r\n \t<li>Balancing community responsibilities with treatment requires a flexible approach.</li>\r\n \t<li><strong>Evidence-supported therapies</strong> help individuals navigate local obstacles safely.</li>\r\n \t<li>Comprehensive care coordination ensures all recovery elements receive proper focus.</li>\r\n \t<li><strong>Continuous advancement</strong> emerges through consistent, locally-centered therapeutic assistance.</li>\r\n</ul>\r\nAt <a href=\"https://www.renaissancerecovery.com/\">Renaissance Recovery</a>, our drug rehabilitation programs in Orange County function as part of the <a href=\"https://districtbehavioralhealth.com/\">District Behavioral Health network</a>. These services provide <strong>comprehensive outpatient care</strong> designed to address underlying causes of substance dependency using individualized treatment modalities. By utilizing <strong>proven therapeutic techniques</strong>, our treatment professionals help clients in Orange County rebuild their lives with <strong>strength and resilience</strong>, ensuring recovery remains both accessible and enduring.\r\nDiscover additional details about our Drug Rehab program described below.";
@@ -130,10 +132,10 @@ export default function Page55188(props: Record<string, string>) {
                 <div className="elementor-element elementor-element-d0b417a elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
                   <div className="elementor-widget-container">
                     <div className="elementor-button-wrapper">
-                      <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-576-0144" style={{"fontSize":"16px"}}>
+                      <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-576-0144"} style={{"fontSize":"16px"}}>
                         <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                           <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                            844-576-0144
+                            {__phone?.label ?? "844-576-0144"}
                           </span>
                         </span>
                       </Link>
@@ -1214,10 +1216,10 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
           <div className="elementor-element elementor-element-18c428e elementor-align-justify elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
             <div className="elementor-widget-container">
               <div className="elementor-button-wrapper">
-                <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-576-0144" style={{"fontSize":"16px"}}>
+                <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-576-0144"} style={{"fontSize":"16px"}}>
                   <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                     <span className="elementor-button-text" style={{"fontSize":"16px"}}>
-                      844-576-0144
+                      {__phone?.label ?? "844-576-0144"}
                     </span>
                   </span>
                 </Link>
@@ -2098,7 +2100,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
         <div className="elementor-element elementor-element-3b2fa2a elementor-align-justify elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
           <div className="elementor-widget-container">
             <div className="elementor-button-wrapper">
-              <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+              <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                 <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                   <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                     Call For Treatment
@@ -2111,7 +2113,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
         <div className="elementor-element elementor-element-3974a61 elementor-align-justify elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-button" data-widget_type="button.default">
           <div className="elementor-widget-container">
             <div className="elementor-button-wrapper">
-              <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+              <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                 <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                   <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                     Call For Treatment
@@ -2140,7 +2142,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
         <div className="elementor-element elementor-element-36c25ae elementor-align-justify elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-button" data-widget_type="button.default">
           <div className="elementor-widget-container">
             <div className="elementor-button-wrapper">
-              <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+              <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                 <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                   <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                     Call For Treatment
@@ -2153,7 +2155,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
         <div className="elementor-element elementor-element-1b638ea elementor-align-justify elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
           <div className="elementor-widget-container">
             <div className="elementor-button-wrapper">
-              <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+              <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                 <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                   <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                     Call For Treatment
@@ -2182,7 +2184,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
         <div className="elementor-element elementor-element-d03e9a4 elementor-align-justify elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-button" data-widget_type="button.default">
           <div className="elementor-widget-container">
             <div className="elementor-button-wrapper">
-              <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+              <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                 <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                   <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                     Call For Treatment
@@ -2195,7 +2197,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
         <div className="elementor-element elementor-element-674ec10 elementor-align-justify elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
           <div className="elementor-widget-container">
             <div className="elementor-button-wrapper">
-              <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-759-0999" style={{"fontSize":"16px"}}>
+              <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-759-0999"} style={{"fontSize":"16px"}}>
                 <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                   <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                     Call For Treatment
@@ -2417,7 +2419,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
             <div className="elementor-element elementor-element-e2c72ef elementor-align-left elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
               <div className="elementor-widget-container">
                 <div className="elementor-button-wrapper">
-                  <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-576-0144" style={{"fontSize":"16px"}}>
+                  <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-576-0144"} style={{"fontSize":"16px"}}>
                     <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                       <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                         Call Now
@@ -2921,7 +2923,7 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
                     <div className="elementor-element elementor-element-7862528 elementor-align-left elementor-mobile-align-center elementor-tablet-align-left elementor-widget elementor-widget-button" data-widget_type="button.default">
                       <div className="elementor-widget-container">
                         <div className="elementor-button-wrapper">
-                          <Link className="elementor-button elementor-button-link elementor-size-sm" href="tel:844-576-0144" style={{"fontSize":"16px"}}>
+                          <Link className="elementor-button elementor-button-link elementor-size-sm" href={__phone?.href ?? "tel:844-576-0144"} style={{"fontSize":"16px"}}>
                             <span className="elementor-button-content-wrapper" style={{"fontSize":"16px"}}>
                               <span className="elementor-button-text" style={{"fontSize":"16px"}}>
                                 Call Now

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import RelatedPages from '@/components/RelatedPages';
+import { resolvePagePhone } from "@/lib/phone";
 
 // Facility photo slider, in the live site's order (image-carousel 8d14275).
 const gridData0 = [
@@ -64,6 +65,7 @@ function withGeo(value: string, props: Record<string, string>): string {
 const escapeHtml = (s: string) => s.replace(/&(?![#\w]+;)/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 export default function Page7552(props: Record<string, string>) {
+  const __phone = resolvePagePhone(props);
   const __presentIds = (props.__present ?? "").split(",").filter(Boolean);
   const __present = (id: string) => __presentIds.length === 0 || __presentIds.includes(id);
   // A field's value with the town filled in; missing fields fall back to DEFAULTS.
@@ -93,7 +95,7 @@ export default function Page7552(props: Record<string, string>) {
               <div className="elementor-element elementor-element-aa95672 elementor-align-center elementor-mobile-align-center elementor-widget__width-auto elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-widget_type="button.default">
                 <div className="elementor-widget-container">
                   <div className="elementor-button-wrapper">
-                    <Link href="tel:657-298-1982" className="elementor-button elementor-button-link elementor-size-sm">
+                    <Link href={__phone?.href ?? "tel:657-298-1982"} className="elementor-button elementor-button-link elementor-size-sm">
                       <span className="elementor-button-content-wrapper">
                         <span className="elementor-button-text">Call Now</span>
                       </span>
@@ -475,7 +477,7 @@ export default function Page7552(props: Record<string, string>) {
               <div className="elementor-element elementor-element-bab471a elementor-align-left elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                 <div className="elementor-widget-container">
                   <div className="elementor-button-wrapper">
-                    <Link href="tel:657-298-1982" className="elementor-button elementor-button-link elementor-size-sm">
+                    <Link href={__phone?.href ?? "tel:657-298-1982"} className="elementor-button elementor-button-link elementor-size-sm">
                       <span className="elementor-button-content-wrapper">
                         <span className="elementor-button-text">Call Now</span>
                       </span>
@@ -863,7 +865,7 @@ export default function Page7552(props: Record<string, string>) {
               <div className="elementor-element elementor-element-cf9ea55 elementor-align-left elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button" data-widget_type="button.default">
                 <div className="elementor-widget-container">
                   <div className="elementor-button-wrapper">
-                    <Link href="tel:657-530-6117" className="elementor-button elementor-button-link elementor-size-sm">
+                    <Link href={__phone?.href ?? "tel:657-530-6117"} className="elementor-button elementor-button-link elementor-size-sm">
                       <span className="elementor-button-content-wrapper">
                         <span className="elementor-button-text">Call Now</span>
                       </span>
