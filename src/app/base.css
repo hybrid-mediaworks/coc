@@ -470,7 +470,12 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
 #jgp-wrapper.jg-open #jgp-sidebar { display: none; }
 #jgp-wrapper.jg-open #jgp-panel { left: 0; transform: translateX(0); }
 #jgp-panel-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px 10px; border-bottom: 1px solid rgb(238, 238, 238); flex-shrink: 0; }
-#jgp-panel-title { font-size: 15px; font-weight: 700; color: rgb(26, 46, 59); }
+#jgp-panel-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: rgb(26, 46, 59); }
+/* Shows only the loops mark: the left ~33px of the 24px-tall wordmark. */
+#jgp-panel-title .jgp-logo { flex-shrink: 0; width: 33px; height: 24px; overflow: hidden; }
+#jgp-panel-title .jgp-logo img { display: block; width: auto; height: 24px; max-width: none; }
+#jgp-panel-title .jgp-panel-heading { display: flex; flex-direction: column; }
+#jgp-panel-subtitle { margin-top: 2px; font-size: 12px; font-weight: 400; line-height: 1.4; color: rgb(107, 114, 128); }
 #jgp-panel-close { background: none; border: none; font-size: 22px; color: rgb(153, 153, 153); cursor: pointer; line-height: 1; padding: 0 2px; transition: color 0.2s; }
 #jgp-panel-close:hover, #jgp-panel-close:focus { color: rgb(51, 51, 51); background: none; }
 #jgp-progress-bar-wrap { height: 5px; background: rgb(229, 231, 235); flex-shrink: 0; }
@@ -487,6 +492,35 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
   #jgp-sidebar-label, #jgp-wrapper .jg-arrow-desktop { display: none; }
   #jgp-wrapper .jg-arrow-mobile { display: inline; }
   #jgp-sidebar-progress-wrap { display: none; }
+}
+/* Journey Guide tab attention animations. The tab slides in on load (not again after the panel
+   has been open: .jg-touched); until the visitor first opens the panel (.jg-attention) it also
+   "peeks" out once, a teal glow pulses around it and the chevron nudges every 8s. Off for
+   reduced-motion users. */
+@media (prefers-reduced-motion: no-preference) {
+  #jgp-wrapper:not(.jg-touched) #jgp-sidebar { animation: jgp-enter 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 1s both; }
+  #jgp-wrapper.jg-attention #jgp-sidebar { animation: jgp-glow 2.8s ease-out 4.5s infinite; }
+  #jgp-wrapper.jg-attention:not(.jg-touched) #jgp-sidebar { animation: jgp-enter 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 1s both, jgp-peek 0.9s ease-in-out 3s, jgp-glow 2.8s ease-out 4.5s infinite; }
+  #jgp-wrapper.jg-attention .jg-arrow svg { animation: jgp-nudge 8s ease-in-out 5s infinite; }
+}
+@keyframes jgp-enter {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+@keyframes jgp-peek {
+  0%, 100% { width: 36px; }
+  35% { width: 48px; }
+  60% { width: 33px; }
+  80% { width: 39px; }
+}
+/* Keeps the tab's own drop shadow under the growing ring. */
+@keyframes jgp-glow {
+  0% { box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 8px 0, rgba(61, 158, 143, 0.55) 0 0 4px 0; }
+  70%, 100% { box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 8px 0, rgba(61, 158, 143, 0) 0 0 14px 12px; }
+}
+@keyframes jgp-nudge {
+  0%, 84%, 90%, 96%, 100% { transform: translateX(0); }
+  87%, 93% { transform: translateX(4px); }
 }
 @media (max-width: 480px) {
   #jgp-panel { width: calc(100vw - 50px); }
@@ -509,7 +543,9 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
     width:100% !important;
   }
 }
-
+.elementor-element.elementor-element-4f01aad, .elementor-element.elementor-element-21e4d85,.elementor-element.elementor-element-9c056b0,.elementor-element.elementor-element-479018e,.elementor-element.elementor-element-db6f3fb,.elementor-element.elementor-element-73633d1,.elementor-element.elementor-element-b344e8a,.elementor-element.elementor-element-39f369d,.elementor-element.elementor-element-fad27f0,.elementor-element.elementor-element-8dd5ee7,.elementor-element.elementor-element-db6f3fb {
+  display: none !important;
+}
 /* Set by WidgetInteractions when a desktop dropdown link is clicked: the page changes
    client-side under a still-hovering pointer, so hide the dropdown until the pointer leaves. */
 .navbar .dropdown.is-dismissed .dropdown-content {
@@ -521,6 +557,11 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
 /* Guided tour widget (GuidedTour): a single "Next Page In Tour" card. The page stylesheets
    still carry the old three-column .jg-sc-guided-wrap rules and load after this file, so the
    wrapper overrides use the extra .jg-next-only class to win on specificity. */
+/* Subtext under the "Website Guide Progress..." heading above the next-page card; centred by the heading widget. */
+.elementor-widget-heading .jg-progress-subtitle { margin: 8px 0 0; font-family: var(--font-poppins), sans-serif; font-size: 18px; font-weight: 400; line-height: 1.5; color: rgb(74, 74, 74); }
+@media (max-width: 767px) {
+  .elementor-widget-heading .jg-progress-subtitle { font-size: 16px; }
+}
 .jg-sc-guided-wrap.jg-next-only { max-width: 695px; width: calc(100% - 20px); margin: 0 auto; box-shadow: none; font-family: var(--font-poppins), sans-serif; }
 .jg-next-only .jg-next-card { background: rgb(222, 233, 233); border-radius: 14px; padding: 36px 24px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
 .jg-next-only .jg-next-title { margin: 0; color: rgb(74, 74, 74); font-family: var(--font-poppins), sans-serif; font-size: 22px; font-weight: 400; line-height: 30px; }

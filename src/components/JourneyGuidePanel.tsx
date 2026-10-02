@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { markVisited, TOUR_PAGES, type Visited } from "@/lib/journeyGuide";
@@ -16,15 +17,20 @@ import { markVisited, TOUR_PAGES, type Visited } from "@/lib/journeyGuide";
 // never trigger it, so the next page gets the chance instead.
 const AUTO_OPEN_MS = 4500;
 const AUTO_OPEN_COOKIE = "jg_autoopened";
-const AUTO_OPEN_COOKIE_DAYS = 365;
+// Until the visitor opens the panel themselves (OPENED_COOKIE), the tab gets the attention
+// animations: a one-off "peek" and a periodic chevron nudge (.jg-attention in base.css).
+const OPENED_COOKIE = "jg_opened";
+const COOKIE_DAYS = 365;
 // Top-level Elementor sections: flexbox containers (.e-parent) and legacy sections.
 const SECTION_SELECTOR = "main .e-con.e-parent, main .elementor-section.elementor-top-section";
 
-const hasAutoOpened = () => document.cookie.split("; ").some((c) => c.startsWith(`${AUTO_OPEN_COOKIE}=`));
-const rememberAutoOpened = () => {
-  const expires = new Date(Date.now() + AUTO_OPEN_COOKIE_DAYS * 864e5).toUTCString();
-  document.cookie = `${AUTO_OPEN_COOKIE}=1; expires=${expires}; path=/; SameSite=Lax`;
+const hasCookie = (name: string) => document.cookie.split("; ").some((c) => c.startsWith(`${name}=`));
+const setCookie = (name: string) => {
+  const expires = new Date(Date.now() + COOKIE_DAYS * 864e5).toUTCString();
+  document.cookie = `${name}=1; expires=${expires}; path=/; SameSite=Lax`;
 };
+const hasAutoOpened = () => hasCookie(AUTO_OPEN_COOKIE);
+const rememberAutoOpened = () => setCookie(AUTO_OPEN_COOKIE);
 
 // The section directly under the hero: the second top-level section in the page content.
 const sectionUnderHero = () => {
@@ -42,6 +48,10 @@ export default function JourneyGuidePanel() {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [visited, setVisited] = useState<Visited>({});
+  // jg-touched: the panel has been open this session, so the tab's entrance slide must not
+  // replay when it reappears on close. jg-attention: the visitor has never opened it themselves.
+  const [touched, setTouched] = useState(false);
+  const [attention, setAttention] = useState(false);
 
   useEffect(() => {
     setVisited(markVisited(pathname));
@@ -57,9 +67,20 @@ export default function JourneyGuidePanel() {
   const toggle = (next: boolean) => {
     cancelAutoClose();
     setOpen(next);
+    if (next && attention) {
+      setAttention(false);
+      setCookie(OPENED_COOKIE);
+    }
   };
 
   useEffect(() => () => cancelAutoClose(), []);
+
+  useEffect(() => {
+    if (!hasCookie(OPENED_COOKIE)) setAttention(true);
+  }, []);
+  useEffect(() => {
+    if (open) setTouched(true);
+  }, [open]);
 
   useEffect(() => {
     if (hasAutoOpened()) return;
@@ -94,7 +115,7 @@ export default function JourneyGuidePanel() {
   const recommended = TOUR_PAGES.findIndex((p) => !visited[p.id]);
 
   return (
-    <div id="jgp-wrapper" className={open ? "jg-open" : undefined}>
+    <div id="jgp-wrapper" className={[open && "jg-open", touched && "jg-touched", attention && "jg-attention"].filter(Boolean).join(" ") || undefined}>
       <div id="jgp-sidebar">
         <button id="jgp-toggle-btn" type="button" aria-label="Open Journey Guide" aria-expanded={open} aria-controls="jgp-panel" onClick={() => toggle(!open)}>
           <span className="jg-arrow jg-arrow-desktop">
@@ -121,7 +142,16 @@ export default function JourneyGuidePanel() {
 
       <div id="jgp-panel" aria-hidden={!open}>
         <div id="jgp-panel-header">
-          <span id="jgp-panel-title">Your Journey Guide</span>
+          <span id="jgp-panel-title">
+            {/* The header wordmark, cropped to the loops mark by .jgp-logo (no icon-only asset exists). */}
+            <span className="jgp-logo" aria-hidden="true">
+              <Image src="/images/f9aeb5f0d1b26afe75118db15b3bb151.webp" alt="" width={648} height={118} />
+            </span>
+            <span className="jgp-panel-heading">
+              Website Guide
+              <span id="jgp-panel-subtitle">Hand-picked pages that help our visitors</span>
+            </span>
+          </span>
           <button id="jgp-panel-close" type="button" aria-label="Close panel" onClick={() => toggle(false)}>
             &times;
           </button>

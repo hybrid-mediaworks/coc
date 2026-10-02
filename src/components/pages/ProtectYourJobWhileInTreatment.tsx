@@ -1778,8 +1778,9 @@ Beyond his clinical role, Ryan is passionate about mindfulness, personal growth,
             <div className="elementor-element elementor-element-78ec3c8 elementor-widget elementor-widget-heading" data-widget_type="heading.default">
               <div className="elementor-widget-container">
                 <h2 className="elementor-heading-title elementor-size-default" style={{"fontSize":"39px"}}>
-                  Continue Your Journey
+                  Website Guide Progress...
                 </h2>
+                <p className="jg-progress-subtitle">What most patients want to know before they book</p>
               </div>
             </div>
             <div className="elementor-element elementor-element-11c0464 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">

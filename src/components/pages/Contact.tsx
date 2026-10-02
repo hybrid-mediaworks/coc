@@ -345,7 +345,8 @@ export default function Contact(props: Record<string, string>) {
               <div className="e-con-inner">
                 <div className="elementor-element elementor-element-9c9901a elementor-widget elementor-widget-heading" data-widget_type="heading.default">
                   <div className="elementor-widget-container">
-                    <h2 className="elementor-heading-title elementor-size-default">Continue Your Journey</h2>
+                    <h2 className="elementor-heading-title elementor-size-default">Website Guide Progress...</h2>
+                    <p className="jg-progress-subtitle">What most patients want to know before they book</p>
                   </div>
                 </div>
                 <div className="elementor-element elementor-element-1e7cb10 elementor-widget elementor-widget-shortcode" data-widget_type="shortcode.default">
