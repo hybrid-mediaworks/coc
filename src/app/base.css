@@ -495,11 +495,11 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
 }
 /* Journey Guide tab attention animations. The tab slides in on load (not again after the panel
    has been open: .jg-touched); until the visitor first opens the panel (.jg-attention) it also
-   "peeks" out once, a teal glow pulses around it and the chevron nudges every 8s. Off for
+   "peeks" out once, a heartbeat ring pulses around it and the chevron nudges every 8s. Off for
    reduced-motion users. */
 @media (prefers-reduced-motion: no-preference) {
   #jgp-wrapper:not(.jg-touched) #jgp-sidebar { animation: jgp-enter 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 1s both; }
-  #jgp-wrapper.jg-attention #jgp-sidebar { animation: jgp-glow 2.8s ease-out 4.5s infinite; }
+  #jgp-wrapper.jg-attention #jgp-sidebar { animation: jgp-glow 2.8s ease-out 1s infinite; }
   #jgp-wrapper.jg-attention:not(.jg-touched) #jgp-sidebar { animation: jgp-enter 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 1s both, jgp-peek 0.9s ease-in-out 3s, jgp-glow 2.8s ease-out 4.5s infinite; }
   #jgp-wrapper.jg-attention .jg-arrow svg { animation: jgp-nudge 8s ease-in-out 5s infinite; }
 }
@@ -513,10 +513,14 @@ body.rtl #elementor-popup-modal-407 .dialog-close-button { left: 2.5%; }
   60% { width: 33px; }
   80% { width: 39px; }
 }
-/* Keeps the tab's own drop shadow under the growing ring. */
+/* Heartbeat: two quick beats then a rest. A white ring inside a dark navy ring so it reads on
+   light, dark and green backgrounds alike. Keeps the tab's own drop shadow under the rings. */
 @keyframes jgp-glow {
-  0% { box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 8px 0, rgba(61, 158, 143, 0.55) 0 0 4px 0; }
-  70%, 100% { box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 8px 0, rgba(61, 158, 143, 0) 0 0 14px 12px; }
+  0% { box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 8px 0, rgba(255, 255, 255, 0.95) 0 0 0 0, rgba(26, 46, 59, 0.75) 0 0 0 0; }
+  18% { box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 8px 0, rgba(255, 255, 255, 0) 0 0 0 8px, rgba(26, 46, 59, 0) 0 0 0 12px; }
+  19% { box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 8px 0, rgba(255, 255, 255, 0.95) 0 0 0 0, rgba(26, 46, 59, 0.75) 0 0 0 0; }
+  42% { box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 8px 0, rgba(255, 255, 255, 0) 0 0 0 10px, rgba(26, 46, 59, 0) 0 0 0 15px; }
+  43%, 100% { box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 8px 0, rgba(255, 255, 255, 0) 0 0 0 0, rgba(26, 46, 59, 0) 0 0 0 0; }
 }
 @keyframes jgp-nudge {
   0%, 84%, 90%, 96%, 100% { transform: translateX(0); }

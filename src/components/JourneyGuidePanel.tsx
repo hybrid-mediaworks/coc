@@ -11,34 +11,38 @@ import { markVisited, TOUR_PAGES, type Visited } from "@/lib/journeyGuide";
 // Uses its own ids (#jgp-*, styled in base.css) so the preserved jQuery plugin script,
 // which binds #jg-toggle-btn and rewrites #jg-page-list, cannot interfere.
 
-// First visit (any viewport): once the visitor scrolls past the section under the hero, slide
-// the panel open for AUTO_OPEN_MS, then close it unless they have toggled it themselves. It only
-// ever happens once per browser (AUTO_OPEN_COOKIE); pages without two top-level sections
-// never trigger it, so the next page gets the chance instead.
+// On the first AUTO_OPEN_VIEWS page views (any pages), slide the panel open once the visitor
+// scrolls the hero off the screen (any viewport) — or AUTO_OPEN_DELAY_MS after load on pages
+// without a hero section — keep it open for AUTO_OPEN_MS,
+// then close it unless the visitor has toggled it themselves. Only views where it actually slid
+// out are counted, per browser, in AUTO_OPEN_COOKIE.
+const AUTO_OPEN_VIEWS = 2;
+const AUTO_OPEN_DELAY_MS = 1000;
 const AUTO_OPEN_MS = 4500;
-const AUTO_OPEN_COOKIE = "jg_autoopened";
-// Until the visitor opens the panel themselves (OPENED_COOKIE), the tab gets the attention
-// animations: a one-off "peek" and a periodic chevron nudge (.jg-attention in base.css).
-const OPENED_COOKIE = "jg_opened";
-const COOKIE_DAYS = 365;
+const AUTO_OPEN_COOKIE = "jg_autoopen_views";
 // Top-level Elementor sections: flexbox containers (.e-parent) and legacy sections.
 const SECTION_SELECTOR = "main .e-con.e-parent, main .elementor-section.elementor-top-section";
+// Until the visitor opens the panel themselves (OPENED_COOKIE), the tab gets the attention
+// animations: a one-off "peek", a heartbeat ring and a periodic chevron nudge (.jg-attention in base.css).
+const OPENED_COOKIE = "jg_opened";
+const COOKIE_DAYS = 365;
 
 const hasCookie = (name: string) => document.cookie.split("; ").some((c) => c.startsWith(`${name}=`));
-const setCookie = (name: string) => {
+const setCookie = (name: string, value = "1") => {
   const expires = new Date(Date.now() + COOKIE_DAYS * 864e5).toUTCString();
-  document.cookie = `${name}=1; expires=${expires}; path=/; SameSite=Lax`;
+  document.cookie = `${name}=${value}; expires=${expires}; path=/; SameSite=Lax`;
 };
-const hasAutoOpened = () => hasCookie(AUTO_OPEN_COOKIE);
-const rememberAutoOpened = () => setCookie(AUTO_OPEN_COOKIE);
+const readAutoOpenViews = () => {
+  const match = document.cookie.match(new RegExp(`(?:^|; )${AUTO_OPEN_COOKIE}=(\\d+)`));
+  return match ? Number(match[1]) : 0;
+};
 
-// The section directly under the hero: the second top-level section in the page content.
-const sectionUnderHero = () => {
-  const sections = Array.from(document.querySelectorAll<HTMLElement>(SECTION_SELECTOR)).filter(
+// The section the visitor must scroll past before the auto-open: the hero (first visible
+// top-level section in the page content).
+const autoOpenSection = () =>
+  Array.from(document.querySelectorAll<HTMLElement>(SECTION_SELECTOR)).find(
     (el) => !el.parentElement?.closest(SECTION_SELECTOR) && el.offsetHeight > 0
-  );
-  return sections[1] ?? null;
-};
+  ) ?? null;
 
 const LABEL = ["U", "S", "E", "R", null, "J", "O", "U", "R", "N", "E", "Y", null, "G", "U", "I", "D", "E"];
 const normalise = (path: string) => path.replace(/\/+$/, "") || "/";
@@ -57,23 +61,29 @@ export default function JourneyGuidePanel() {
     setVisited(markVisited(pathname));
   }, [pathname]);
 
-  // Pending auto-close. Any manual toggle cancels it, so the timer never closes a panel the
-  // visitor opened themselves. Kept across navigations: the panel lives in the layout.
-  const autoCloseTimer = useRef<number | null>(null);
-  const cancelAutoClose = () => {
-    if (autoCloseTimer.current !== null) window.clearTimeout(autoCloseTimer.current);
-    autoCloseTimer.current = null;
+  // Pending auto-open/auto-close. Any manual toggle cancels it, so the timer never opens or
+  // closes the panel against the visitor. Kept across renders: the panel lives in the layout.
+  const autoTimer = useRef<number | null>(null);
+  // The path whose view gets the auto-open (one of the first AUTO_OPEN_VIEWS), else null.
+  const autoOpenPath = useRef<string | null>(null);
+  const cancelAuto = () => {
+    if (autoTimer.current !== null) window.clearTimeout(autoTimer.current);
+    autoTimer.current = null;
   };
   const toggle = (next: boolean) => {
-    cancelAutoClose();
+    cancelAuto();
+    autoOpenPath.current = null; // also stops a mobile auto-open still waiting for the scroll
     setOpen(next);
     if (next && attention) {
       setAttention(false);
       setCookie(OPENED_COOKIE);
     }
   };
-
-  useEffect(() => () => cancelAutoClose(), []);
+  // Picking a page collapses the panel.
+  const goTo = (path: string) => {
+    toggle(false);
+    router.push(`${path}/`);
+  };
 
   useEffect(() => {
     if (!hasCookie(OPENED_COOKIE)) setAttention(true);
@@ -82,30 +92,51 @@ export default function JourneyGuidePanel() {
     if (open) setTouched(true);
   }, [open]);
 
+  // Decides once per page view (the ref stops a re-run effect for the same path deciding again)
+  // whether it may auto-open: only while fewer than AUTO_OPEN_VIEWS views have actually slid it out.
+  const checkedPath = useRef<string | null>(null);
   useEffect(() => {
-    if (hasAutoOpened()) return;
-    const target = sectionUnderHero();
-    if (!target) return;
+    if (checkedPath.current !== pathname) {
+      checkedPath.current = pathname;
+      autoOpenPath.current = readAutoOpenViews() < AUTO_OPEN_VIEWS ? pathname : null;
+    }
+    if (autoOpenPath.current !== pathname) return;
+    const autoOpen = () => {
+      autoOpenPath.current = null;
+      setCookie(AUTO_OPEN_COOKIE, String(readAutoOpenViews() + 1)); // only views that slid it out count
+      setOpen(true);
+      autoTimer.current = window.setTimeout(() => {
+        autoTimer.current = null;
+        setOpen(false);
+      }, AUTO_OPEN_MS);
+    };
+
+    // Wait until that section has scrolled out of view; pages without it fall back to the delay.
+    const target = autoOpenSection();
     let frame = 0;
     const check = () => {
       frame = 0;
-      if (target.getBoundingClientRect().bottom > 0 || hasAutoOpened()) return;
+      if (!target || autoOpenPath.current !== pathname || target.getBoundingClientRect().bottom > 0) return;
       window.removeEventListener("scroll", onScroll);
-      rememberAutoOpened();
-      setOpen(true);
-      autoCloseTimer.current = window.setTimeout(() => {
-        autoCloseTimer.current = null;
-        setOpen(false);
-      }, AUTO_OPEN_MS);
+      autoOpen();
     };
     const onScroll = () => {
       if (!frame) frame = window.requestAnimationFrame(check);
     };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    check(); // a restored scroll position may already be past it
+    if (target) {
+      window.addEventListener("scroll", onScroll, { passive: true });
+      check(); // a restored scroll position may already be past it
+    } else {
+      autoTimer.current = window.setTimeout(autoOpen, AUTO_OPEN_DELAY_MS);
+    }
+
+    // Leaving the page mid auto-open closes it, so the next page starts from a closed panel.
     return () => {
       window.removeEventListener("scroll", onScroll);
       if (frame) window.cancelAnimationFrame(frame);
+      if (autoTimer.current === null) return;
+      cancelAuto();
+      setOpen(false);
     };
   }, [pathname]);
 
@@ -174,9 +205,9 @@ export default function JourneyGuidePanel() {
                 className={cls || undefined}
                 role="link"
                 tabIndex={open ? 0 : -1}
-                onClick={() => router.push(`${page.path}/`)}
+                onClick={() => goTo(page.path)}
                 onKeyDown={(e) => {
-                  if (e.key === "Enter") router.push(`${page.path}/`);
+                  if (e.key === "Enter") goTo(page.path);
                 }}
               >
                 <span className={`jg-step-bubble ${isVisited ? "jg-visited" : "jg-unvisited"}`}>{isVisited ? null : i + 1}</span>
