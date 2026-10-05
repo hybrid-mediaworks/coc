@@ -21,7 +21,15 @@ const TEMPLATES: Record<string, Loader> = {
   "cro1-blog": () => import("./registry/Blog"),
 };
 
-type TemplateInfo = { template?: string; templates?: { slugs?: string[] } };
+type TemplateInfo = { template?: string; templates?: { slugs?: string[]; ids?: number[] } };
+
+// The "Blog" + "CRO1" builder term ids: a page carrying both is a blog post (Elementor 55021).
+const BLOG_TEMPLATE_IDS = [83, 84];
+
+// True when WordPress serves the page as a blog post. Converted one-off routes use it to switch
+// to the blog design at request time and keep their own component as the fallback.
+export const isBlogTemplate = (data: TemplateInfo | null): boolean =>
+  !!data && BLOG_TEMPLATE_IDS.every((id) => data.templates?.ids?.includes(id));
 
 const normalize = (value: string) => value.trim().toLowerCase();
 

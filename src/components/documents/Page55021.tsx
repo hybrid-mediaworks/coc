@@ -181,13 +181,15 @@ export default function Page55021(props: Record<string, string>) {
     <div className="elementor-element elementor-element-dc50cae e-flex e-con-boxed e-con e-parent e-lazyloaded">
       <div className="e-con-inner" style={{"position":"relative"}}>
         <div className="elementor-element elementor-element-eb81e19 e-con-full e-flex e-con e-child">
-          {__present("5adcc19") ? (
-<div className="elementor-element elementor-element-5adcc19 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
+          {/* The post body: shown whenever the page has its own content, even if WordPress
+              leaves this widget out of the page's `present` list (e.g. /mental-health/holidays-and-mental-health). */}
+          {__present("5adcc19") || props["blog-content"] ? (
+          <div className="elementor-element elementor-element-5adcc19 elementor-widget elementor-widget-text-editor" data-widget_type="text-editor.default">
             <div className="elementor-widget-container">
               <div dangerouslySetInnerHTML={{ __html: blog_content }} />
             </div>
           </div>
-) : null}
+          ) : null}
           <div className="elementor-element elementor-element-977a438 e-con-full e-flex e-con e-child">
             <div className="elementor-element elementor-element-e6c7e54 posts-nav-prev-next elementor-widget elementor-widget-post-navigation" data-widget_type="post-navigation.default">
               <div className="elementor-widget-container">
